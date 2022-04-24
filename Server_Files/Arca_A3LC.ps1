@@ -19,7 +19,30 @@ $Master_Server_Profile= 'F:\ArcaServer\Arca-Mission-Files\Server_Files\ArcaServe
 If ($Server -eq 1) {
     $Server_Dir='F:\ArcaServer\EU1'
 	$Server_port='2702'
-	$Server_Hostname='[ARCA] Arca Company | Secondary Server'
+	$Server_Hostname='[ARCA] Arca Company | Main Operations Server'
+	$RCON_Port = 2707
+	$ServerLocalMods = ''
+	$LogsDir = 'F:\ArcaServer\Logs Archive\EU1'
+	$Beta = ''
+
+	$steamcmd_Dir = 'F:\ArcaServer\steamcmd'
+	$Repo_Dir = 'F:\ArcaServer\Arca-Mission-Files'
+	$Mod_Dir = 'F:\ArcaServer\Mods'
+
+	#Master files used to create Server files
+	$Master_Server_Config = 'F:\ArcaServer\Arca-Mission-Files\Server_Files\MASTER SERVER CONFIG.cfg'
+	$Master_Server_Network = 'F:\ArcaServer\Arca-Mission-Files\Server_Files\Arma3.cfg'
+	$Master_Server_Key='F:\ArcaServer\Global\a3.bikey'
+
+	$Master_BEServer_x64 = 'F:\ArcaServer\Arca-Mission-Files\Server_Files\Master BEServer_x64.cfg'
+	$Master_Battleye_Config = 'F:\ArcaServer\Arca-Mission-Files\Server_Files\Master Battleye Config.cfg'
+	$Master_Server_Profile= 'F:\ArcaServer\Arca-Mission-Files\Server_Files\ArcaServer.Arma3Profile'
+}
+
+If ($Server -eq 2) {
+    $Server_Dir='F:\ArcaServer\EU1'
+	$Server_port='2702'
+	$Server_Hostname='[ARCA] Arca Company | Training & Skirmish Server'
 	$RCON_Port = 2707
 	$ServerLocalMods = ''
 	$LogsDir = 'F:\ArcaServer\Logs Archive\EU1'
@@ -58,7 +81,7 @@ Copy-Item $Master_Server_Key $Server_Keys
 if ($verifySignatures -eq 1){
 	#Always manually copy TFAR till I think of a better way
 	#get-childitem -path C:\Mods\@task_force_radio\keys *.bikey -recurse | copy-item -destination $Server_Keys
-	
+
 	#Client Mods
 	$ClientModsArray = $ClientMods.split(";")
 	Get-ChildItem -path $ClientModsArray -Filter "*.bikey" -File -Recurse | Foreach {
@@ -93,7 +116,7 @@ Move-Item -Path $Server_Profiles\*.RPT* -Destination $LogsDir
 $limit = (Get-Date).AddDays(-30)
 Get-ChildItem -Path $LogsDir -Recurse -Force | Where-Object { !$_.PSIsContainer -and $_.CreationTime -lt $limit } | Remove-Item -Force
 
-#Server Config Setup	
+#Server Config Setup
 if ($EnableVON -eq 1) {
 	$disableVON = 0
 	} else {
@@ -131,7 +154,7 @@ Copy-Item $Master_Server_Network $Server_Network_Config
 Write-Host "Packing Mission into Pbo and moving to selected server." -ForegroundColor red -BackgroundColor white
 Remove-Item $Server_mpmissions\*.pbo*
 $MissionDir=Get-ChildItem $Repo_Dir -attributes D -Recurse -include $MissionFolder
-set-location "C:\Program Files (x86)\Mikero\DePboTools\bin" 
+set-location "C:\Program Files (x86)\Mikero\DePboTools\bin"
 .\MakePbo.exe -P -X thumbs.db,*.cpp,*.bak,*.png,*.dep,*.log -B -G $MissionDir $Server_mpmissions
 
 #Boot the Server
