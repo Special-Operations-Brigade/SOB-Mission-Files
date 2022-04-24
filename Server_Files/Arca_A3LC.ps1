@@ -111,12 +111,12 @@ Write-Host "Creating Config" -ForegroundColor red -BackgroundColor white
 
 
 #Battleye Setup
-Write-Host "Configuring Battleye" -ForegroundColor red -BackgroundColor white
-(get-content $Master_BEServer_x64).replace('PSRCONPort', $RCON_Port) | Set-Content $Battleye_BEServer_x64
-(get-content $Battleye_BEServer_x64).replace('PSCommandPass', $Arma3_CommandPass) | Set-Content $Battleye_BEServer_x64
+#Write-Host "Configuring Battleye" -ForegroundColor red -BackgroundColor white
+#(get-content $Master_BEServer_x64).replace('PSRCONPort', $RCON_Port) | Set-Content $Battleye_BEServer_x64
+#(get-content $Battleye_BEServer_x64).replace('PSCommandPass', $Arma3_CommandPass) | Set-Content $Battleye_BEServer_x64
 
-(get-content $Master_Battleye_Config).replace('PSRCONPort', $RCON_Port) | Set-Content $Battleye_Config
-(get-content $Battleye_Config).replace('PSBePath', $Battleye_Profile_Path) | Set-Content $Battleye_Config
+#(get-content $Master_Battleye_Config).replace('PSRCONPort', $RCON_Port) | Set-Content $Battleye_Config
+#(get-content $Battleye_Config).replace('PSBePath', $Battleye_Profile_Path) | Set-Content $Battleye_Config
 
 #Server.Arma3Profile Setup
 Write-Host "Configuring Server Profile" -ForegroundColor red -BackgroundColor white
