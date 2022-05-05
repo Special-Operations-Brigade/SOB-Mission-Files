@@ -13,18 +13,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=199;
+		nextID=209;
 	};
 	class LayerIndexProvider
 	{
-		nextID=6;
+		nextID=9;
 	};
 	class Camera
 	{
-		pos[]={3920.4563,79.853363,3664.8901};
-		dir[]={-0.23317595,-0.57168889,0.78678179};
-		up[]={-0.16248938,0.82034749,0.54827136};
-		aside[]={0.95888156,2.2333261e-006,0.28418243};
+		pos[]={3891.9907,36.215263,3728.8105};
+		dir[]={0.242909,-0.63345134,0.73481858};
+		up[]={0.19886024,0.77365601,0.60156739};
+		aside[]={0.94956821,2.0960651e-006,-0.31389683};
 	};
 };
 binarizationWanted=0;
@@ -757,7 +757,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=118;
+		items=120;
 		class Item0
 		{
 			dataType="Object";
@@ -5003,6 +5003,497 @@ class Mission
 			{
 			};
 			id=193;
+		};
+		class Item118
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3901.293,5.7055311,3750.0129};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						description="Squad Leader @Alpha 4";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="lsd_gar_bodyGlove_uniform";
+								isBackpack=0;
+							};
+						};
+					};
+					id=200;
+					type="B_Soldier_SL_F";
+					atlOffset=4.7683716e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="arca_common_Group_Preset";
+							expression="[_this,_value] call arca_common_fnc_initPlayer";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=5;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3899.2935,5.7192512,3750.0127};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trooper Medic";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="lsd_gar_bodyGlove_uniform";
+								isBackpack=0;
+							};
+						};
+					};
+					id=201;
+					type="B_medic_F";
+					atlOffset=-4.7683716e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="arca_common_Group_Preset";
+							expression="[_this,_value] call arca_common_fnc_initPlayer";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=5;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3897.2935,5.7355328,3750.0127};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trooper";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="lsd_gar_bodyGlove_uniform";
+								isBackpack=0;
+							};
+						};
+					};
+					id=202;
+					type="B_Soldier_F";
+					atlOffset=1.4305115e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="arca_common_Group_Preset";
+							expression="[_this,_value] call arca_common_fnc_initPlayer";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=5;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3895.2935,5.7490654,3750.0127};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trooper";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="lsd_gar_bodyGlove_uniform";
+								isBackpack=0;
+							};
+						};
+					};
+					id=203;
+					type="B_Soldier_F";
+					atlOffset=4.7683716e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="arca_common_Group_Preset";
+							expression="[_this,_value] call arca_common_fnc_initPlayer";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=5;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=199;
+			atlOffset=4.7683716e-007;
+		};
+		class Item119
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3901.2549,5.7379279,3748.0981};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						description="Squad Leader @Alpha 5";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="lsd_gar_bodyGlove_uniform";
+								isBackpack=0;
+							};
+						};
+					};
+					id=205;
+					type="B_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="arca_common_Group_Preset";
+							expression="[_this,_value] call arca_common_fnc_initPlayer";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=5;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3899.2549,5.7544427,3748.0981};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trooper Medic";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="lsd_gar_bodyGlove_uniform";
+								isBackpack=0;
+							};
+						};
+					};
+					id=206;
+					type="B_medic_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="arca_common_Group_Preset";
+							expression="[_this,_value] call arca_common_fnc_initPlayer";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=5;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3897.2549,5.7644434,3748.0981};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trooper";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="lsd_gar_bodyGlove_uniform";
+								isBackpack=0;
+							};
+						};
+					};
+					id=207;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="arca_common_Group_Preset";
+							expression="[_this,_value] call arca_common_fnc_initPlayer";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=5;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3895.2549,5.7781682,3748.0981};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Trooper";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="lsd_gar_bodyGlove_uniform";
+								isBackpack=0;
+							};
+						};
+					};
+					id=208;
+					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="arca_common_Group_Preset";
+							expression="[_this,_value] call arca_common_fnc_initPlayer";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=5;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=204;
 		};
 	};
 	class Connections
