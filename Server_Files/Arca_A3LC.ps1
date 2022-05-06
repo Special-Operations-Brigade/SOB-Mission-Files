@@ -5,6 +5,7 @@ param ($Server, $verifySignatures, $EnableVON, $EnableBattleye, $Headless_Client
 $steamcmd_Dir = 'F:\ArcaServer\steamcmd'
 $Repo_Dir = 'F:\ArcaServer\Arca-Mission-Files'
 $Mod_Dir = 'F:\ArcaServer\Mods'
+$bg = 0
 
 #Master files used to create Server files
 $Master_Server_Config = 'F:\ArcaServer\Arca-Mission-Files\Server_Files\MASTER SERVER CONFIG.cfg'
@@ -17,26 +18,28 @@ $Master_Server_Profile= 'F:\ArcaServer\Arca-Mission-Files\Server_Files\ArcaServe
 
 #Set Server Specific Locations
 If ($Server -eq 1) {
-    $Server_Dir='F:\ArcaServer\EU1'
+    $Server_Dir='C:\Servers\Arma 3\EU2'
 	$Server_port='2702'
 	$Server_Hostname='[ARCA] Arca Company | Main Operations Server'
 	$RCON_Port = 2707
-	$ServerLocalMods = ''
-	$LogsDir = 'F:\ArcaServer\Logs Archive\EU1'
+	$ServerLocalMods = 'C:\Mods\@infiSTAR_A3_vision EU2;'
+	$LogsDir = 'C:\Servers\Arma 3\Logs Archive\EU2'
 	$Beta = ''
 
-	$steamcmd_Dir = 'F:\ArcaServer\steamcmd'
-	$Repo_Dir = 'F:\ArcaServer\Arca-Mission-Files'
-	$Mod_Dir = 'F:\ArcaServer\Mods'
+	$steamcmd_Dir = 'C:\steamcmd'
+	$Repo_Dir = 'C:\ARCA\Arca-Mission-Files'
+	$Mod_Dir = 'C:\Mods'
 
 	#Master files used to create Server files
-	$Master_Server_Config = 'F:\ArcaServer\Arca-Mission-Files\Server_Files\MASTER SERVER CONFIG.cfg'
-	$Master_Server_Network = 'F:\ArcaServer\Arca-Mission-Files\Server_Files\Arma3.cfg'
-	$Master_Server_Key='F:\ArcaServer\Global\a3.bikey'
+	$Master_Server_Config = 'C:\ARCA\Arca-Mission-Files\Server_Files\MASTER SERVER CONFIG.cfg'
+	$Master_Server_Network = 'C:\ARCA\Arca-Mission-Files\Server_Files\Arma3.cfg'
+	$Master_Server_Key='C:\Program Files (x86)\Steam\steamapps\common\Arma 3\Keys\a3.bikey'
 
-	$Master_BEServer_x64 = 'F:\ArcaServer\Arca-Mission-Files\Server_Files\Master BEServer_x64.cfg'
-	$Master_Battleye_Config = 'F:\ArcaServer\Arca-Mission-Files\Server_Files\Master Battleye Config.cfg'
-	$Master_Server_Profile= 'F:\ArcaServer\Arca-Mission-Files\Server_Files\ArcaServer.Arma3Profile'
+	$Master_BEServer_x64 = 'C:\ARCA\Arca-Mission-Files\Server_Files\Master BEServer_x64.cfg'
+	$Master_Battleye_Config = 'C:\ARCA\Arca-Mission-Files\Server_Files\Master Battleye Config.cfg'
+	$Master_Server_Profile= 'C:\ARCA\Arca-Mission-Files\Server_Files\ArcaServer.Arma3Profile'
+
+	$bg = 1
 }
 
 If ($Server -eq 2) {
@@ -159,14 +162,26 @@ set-location "C:\Program Files (x86)\Mikero\DePboTools\bin"
 
 #Boot the Server
 Write-Host "Booting the Server." -ForegroundColor red -BackgroundColor white
-Start-Process -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -port=$Server_port -name=ArcaServer `"-config=$Server_Config`" -autoinit -limitFPS=200 `"-ServerMod=$ServerMods`" `"-Mod=$ClientMods`""
-#Start-Process -WindowStyle Hidden -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -port=$Server_port -name=ArcaServer `"-config=$Server_Config`" -autoinit -limitFPS=200 `"-ServerMod=$ServerMods`" `"-Mod=$ClientMods`""
+
+if ($bg -eq 0) {
+	Start-Process -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -port=$Server_port -name=ArcaServer `"-config=$Server_Config`" -autoinit -limitFPS=200 `"-ServerMod=$ServerMods`" `"-Mod=$ClientMods`""
+}
+
+if ($bg -eq 1) {
+	Start-Process -WindowStyle Hidden -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -port=$Server_port -name=ArcaServer `"-config=$Server_Config`" -autoinit -limitFPS=200 `"-ServerMod=$ServerMods`" `"-Mod=$ClientMods`""
+}
 
 #Boot Headless Client/s
 for ($i=1; $i -le $Headless_Clients; $i++)
 {
 	Write-Host "Booting HC in 30 seconds." -ForegroundColor red -BackgroundColor white
 	sleep -seconds 30
-    Start-Process -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -client -connect=127.0.0.1 -port=$Server_port -password=$Password -limitFPS=200 `"-Mod=$HCMods`""
-#    Start-Process -WindowStyle Hidden -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -client -connect=127.0.0.1 -port=$Server_port -password=$Password -limitFPS=200 `"-Mod=$HCMods`""
+
+	if ($bg -eq 0) {
+    	Start-Process -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -client -connect=127.0.0.1 -port=$Server_port -password=$Password -limitFPS=200 `"-Mod=$HCMods`""
+	}
+
+	if ($bg -eq 1) {
+    	Start-Process -WindowStyle Hidden -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -client -connect=127.0.0.1 -port=$Server_port -password=$Password -limitFPS=200 `"-Mod=$HCMods`""
+	}
 }
