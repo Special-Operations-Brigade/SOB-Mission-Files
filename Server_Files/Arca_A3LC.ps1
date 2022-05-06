@@ -5,7 +5,12 @@ param ($Server, $verifySignatures, $EnableVON, $EnableBattleye, $Headless_Client
 $steamcmd_Dir = 'F:\ArcaServer\steamcmd'
 $Repo_Dir = 'F:\ArcaServer\Arca-Mission-Files'
 $Mod_Dir = 'F:\ArcaServer\Mods'
-$bg = 0
+
+if ($bg -eq $null) {
+	$bg = 0
+} else {
+	$bg = 1
+}
 
 #Master files used to create Server files
 $Master_Server_Config = 'F:\ArcaServer\Arca-Mission-Files\Server_Files\MASTER SERVER CONFIG.cfg'
@@ -38,8 +43,6 @@ If ($Server -eq 1) {
 	$Master_BEServer_x64 = 'C:\ARCA\Arca-Mission-Files\Server_Files\Master BEServer_x64.cfg'
 	$Master_Battleye_Config = 'C:\ARCA\Arca-Mission-Files\Server_Files\Master Battleye Config.cfg'
 	$Master_Server_Profile= 'C:\ARCA\Arca-Mission-Files\Server_Files\ArcaServer.Arma3Profile'
-
-	$bg = 1
 }
 
 If ($Server -eq 2) {
