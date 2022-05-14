@@ -243,7 +243,7 @@ force ace_maptools_rotateModifierKey = 1;
 // ACE Medical
 force ace_medical_ai_enabledFor = 2;
 force ace_medical_AIDamageThreshold = 1;
-force ace_medical_bleedingCoefficient = 0.2;
+force ace_medical_bleedingCoefficient = 0.3;
 force ace_medical_blood_bloodLifetime = 600;
 force ace_medical_blood_enabledFor = 2;
 force ace_medical_blood_maxBloodObjects = 500;
@@ -283,8 +283,8 @@ force ace_medical_gui_maxDistance = 3;
 force ace_medical_gui_openAfterTreatment = true;
 force ace_medical_ivFlowRate = 1;
 force ace_medical_limping = 1;
-force ace_medical_painCoefficient = 1;
-force ace_medical_painUnconsciousChance = 0.1;
+force ace_medical_painCoefficient = 1.5;
+force ace_medical_painUnconsciousChance = 0.2;
 force ace_medical_playerDamageThreshold = 2;
 force ace_medical_spontaneousWakeUpChance = 0.2;
 force ace_medical_spontaneousWakeUpEpinephrineBoost = 4;
@@ -306,8 +306,8 @@ force ace_medical_treatment_clearTrauma = 0;
 force ace_medical_treatment_consumePAK = 0;
 force ace_medical_treatment_consumeSurgicalKit = 0;
 force ace_medical_treatment_convertItems = 0;
-force ace_medical_treatment_cprSuccessChanceMax = 0.4;
-force ace_medical_treatment_cprSuccessChanceMin = 0.4;
+force ace_medical_treatment_cprSuccessChanceMax = 0.8;
+force ace_medical_treatment_cprSuccessChanceMin = 0.1;
 force ace_medical_treatment_holsterRequired = 0;
 force ace_medical_treatment_litterCleanupDelay = 500;
 force ace_medical_treatment_locationEpinephrine = 0;
@@ -384,7 +384,7 @@ force ace_pylons_enabledForZeus = true;
 force ace_pylons_enabledFromAmmoTrucks = true;
 force ace_pylons_rearmNewPylons = true;
 force ace_pylons_requireEngineer = false;
-force ace_pylons_requireToolkit = true;
+force ace_pylons_requireToolkit = false;
 force ace_pylons_searchDistance = 15;
 force ace_pylons_timePerPylon = 5;
 
@@ -549,17 +549,16 @@ force ace_zeus_revealMines = 0;
 force ace_zeus_zeusAscension = false;
 force ace_zeus_zeusBird = false;
 
-// ADV - ACE CPR
-force adv_aceCPR_addTime = 20;
-force adv_aceCPR_AED_stationType = """Land_Defibrillator_F""";
-force adv_aceCPR_chance_0 = 20;
-force adv_aceCPR_chance_1 = 40;
-force adv_aceCPR_chance_2 = 60;
-force adv_aceCPR_chance_aed = 85;
-force adv_aceCPR_enable = true;
-force adv_aceCPR_maxTime = 1200;
-force adv_aceCPR_onlyDoctors = 2;
-force adv_aceCPR_useLocation_AED = 3;
+// Advanced Vault System
+AVS_Jump_MAINWEAP_X = "4";
+AVS_Jump_MAINWEAP_Z = "1.7";
+AVS_Jump_PIST_X = "6";
+AVS_Jump_PIST_Z = "2.3";
+AVS_Jump_UNARMED_X = "8";
+AVS_Jump_UNARMED_Z = "2.7";
+AVS_Jumping = false;
+AVS_Rolling = true;
+AVS_Sliding = true;
 
 // AIME Ammo Type Menu
 UPSL_aime_change_ammo_setting_ammo_class = true;
@@ -606,7 +605,7 @@ force arca_aircraft_serviceTime_long = 60;
 force arca_aircraft_serviceTime_short = 20;
 
 // Arca Aux - Common
-force arca_common_wsway_adjust = 0.25;
+force arca_common_wsway_adjust = 0.1;
 force arca_common_wsway_enabled = true;
 
 // Arca Aux - Doors
@@ -621,7 +620,7 @@ force arca_doors_lockpick_slow_breakChance = 0.15;
 force arca_doors_lockpick_slow_failChance = 0.1;
 
 // Arca Aux - Intercom
-force arca_intercom_maxRange = 200;
+force arca_intercom_maxRange = 150;
 force arca_intercom_systemEnabled = true;
 
 // Arca Aux - Medical
@@ -810,7 +809,7 @@ IMS_ShowHealthHud = true;
 // Improved Melee System (Server Settings)
 force IMS_AddKnifeToUnit = false;
 force IMS_BayonetDistance = "10";
-force IMS_BayonetOnAI = true;
+force IMS_BayonetOnAI = false;
 force IMS_BluntWeapon = false;
 force IMS_CustomAIHEALTH = "2";
 force IMS_DamageMultiplierParam = "1";
@@ -1226,15 +1225,15 @@ force OPTRE_MJOLNIR_JUMP_UP_HIGH = 3;
 force OPTRE_MJOLNIR_JUMP_UP_LOW = 5;
 force OPTRE_MJOLNIR_PREVENT_FALLDAMAGE = false;
 force OPTRE_MJOLNIR_RECOIL_MODIFIER = 0.3;
-force OPTRE_MJOLNIR_SHIELD_ENERGY = 100;
+force OPTRE_MJOLNIR_SHIELD_ENERGY = 75;
 force OPTRE_MJOLNIR_SHIELD_ENERGY_AI = 100;
-force OPTRE_MJOLNIR_SHIELD_REGEN = 1;
+force OPTRE_MJOLNIR_SHIELD_REGEN = 0.8;
 force OPTRE_MJOLNIR_SHIELD_REGEN_AI = 1;
-force OPTRE_MJOLNIR_SHOW_ACTIVATE = true;
-force OPTRE_MJOLNIR_SHOW_DEACTIVATE = true;
+force OPTRE_MJOLNIR_SHOW_ACTIVATE = false;
+force OPTRE_MJOLNIR_SHOW_DEACTIVATE = false;
 force OPTRE_MJOLNIR_SPEED_MODIFIER = 1.1;
 force OPTRE_MJOLNIR_SUPPRESS_RECOIL = false;
-force OPTRE_POWERED_SUITS_SETTING = "ARCA_CloneVestKama_Celt,ARCA_CloneVestOfficer,ARCA_commando_vest,ARCA_commando_vest_eod,ARCA_commando_vest,ARCA_commando_vest_sl,ARCA_commando_vest_sniper,ARCA_commando_vest_tech,ARCA_commando_vest_tech_black,ARCA_commando_vest,ARCA_commando_vest_tech_grey";
+force OPTRE_POWERED_SUITS_SETTING = "ARCA_CloneVestKama_Celt,ARCA_CloneVestOfficer,ARCA_CloneVestKama_Assassin,ARCA_commando_vest,ARCA_commando_vest_eod,ARCA_commando_vest,ARCA_commando_vest_sl,ARCA_commando_vest_sniper,ARCA_commando_vest_tech,ARCA_commando_vest_tech_black,ARCA_commando_vest,ARCA_commando_vest_tech_grey";
 
 // TFAR - Clientside settings
 TFAR_curatorCamEars = true;
@@ -1305,7 +1304,7 @@ force TFAR_voiceCone = true;
 
 // WebKnight Droids
 force WBK_Droid_b1_damage = "4";
-force WBK_Droid_b2_damage = "30";
+force WBK_Droid_b2_damage = "100";
 
 // WebKnight HeadLamps
 force WBK_HeadLamps_IsAIActivateHeadlamps = true;
@@ -1407,3 +1406,4 @@ zen_faction_filter_3_DSA_Spooks = true;
 zen_faction_filter_3_IND_L_F = true;
 zen_faction_filter_3_LS_CIV = true;
 zen_faction_filter_3_OPTRE_UEG_Civ = true;
+
