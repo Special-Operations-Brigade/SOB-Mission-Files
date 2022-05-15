@@ -13,7 +13,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=5528;
+		nextID=5529;
 	};
 	class MarkerIDProvider
 	{
@@ -21,14 +21,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=185;
+		nextID=207;
 	};
 	class Camera
 	{
-		pos[]={1125.2733,1029.0001,2359.9792};
-		dir[]={0.81280863,-0.47677255,0.33479965};
-		up[]={0.44084755,0.87902039,0.18158779};
-		aside[]={0.38087165,7.2817784e-008,-0.92466009};
+		pos[]={1120.9769,883.65192,1713.9099};
+		dir[]={0.052415106,-0.45594442,0.88854104};
+		up[]={0.026850015,0.88999534,0.45517823};
+		aside[]={0.99833184,-1.8397986e-007,-0.058892861};
 	};
 };
 binarizationWanted=0;
@@ -573,7 +573,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -851,7 +851,7 @@ class CustomAttributes
 		};
 		nAttributes=3;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -3221,7 +3221,7 @@ class Mission
 					name="Logic";
 					class Entities
 					{
-						items=6;
+						items=7;
 						class Item0
 						{
 							dataType="Logic";
@@ -3832,9 +3832,23 @@ class Mission
 								nAttributes=6;
 							};
 						};
+						class Item6
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={653.56201,823.69214,1024.718};
+								angles[]={0,3.1415927,0};
+							};
+							name="HC2";
+							isPlayable=1;
+							id=5528;
+							type="HeadlessClient_F";
+							atlOffset=1.7340088;
+						};
 					};
 					id=67;
-					atlOffset=1.7299194;
+					atlOffset=1.7202759;
 				};
 				class Item57
 				{
@@ -11197,7 +11211,7 @@ class Mission
 			type="mil_arrow2";
 			colorName="ColorEAST";
 			alpha=0.75005651;
-			angle=226.7354;
+			angle=226.73538;
 			id=1592;
 			atlOffset=-2.8188477;
 		};
@@ -21835,7 +21849,7 @@ class Mission
 					};
 					id=5219;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=0.21099854;
+					atlOffset=0.21514893;
 				};
 				class Item2
 				{
@@ -21968,7 +21982,7 @@ class Mission
 				};
 			};
 			id=2731;
-			atlOffset=0.21099854;
+			atlOffset=0.42163086;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -22283,6 +22297,7 @@ class Mission
 					};
 					id=5222;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=-0.026184082;
 				};
 				class Item2
 				{
@@ -22457,6 +22472,7 @@ class Mission
 				};
 			};
 			id=2756;
+			atlOffset=-0.036010742;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -38027,7 +38043,7 @@ class Mission
 					};
 					id=5004;
 					type="O_UAV_AI";
-					atlOffset=-6.1035156e-005;
+					atlOffset=-0.026977539;
 				};
 			};
 			class Attributes
@@ -38098,7 +38114,7 @@ class Mission
 					};
 					id=5006;
 					type="O_UAV_AI";
-					atlOffset=-6.1035156e-005;
+					atlOffset=-0.026550293;
 				};
 			};
 			class Attributes
@@ -38169,7 +38185,7 @@ class Mission
 					};
 					id=5009;
 					type="O_UAV_AI";
-					atlOffset=-6.1035156e-005;
+					atlOffset=-0.027648926;
 				};
 			};
 			class Attributes
@@ -38240,7 +38256,7 @@ class Mission
 					};
 					id=5012;
 					type="O_UAV_AI";
-					atlOffset=-6.1035156e-005;
+					atlOffset=-0.027954102;
 				};
 			};
 			class Attributes
@@ -38305,12 +38321,13 @@ class Mission
 						angles[]={6.2681928,3.7386348,0.044959679};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=5028;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=1.9552002;
 				};
 			};
 			class Attributes
@@ -38341,6 +38358,7 @@ class Mission
 				};
 			};
 			id=5026;
+			atlOffset=-0.00036621094;
 		};
 		class Item265
 		{
@@ -38357,6 +38375,7 @@ class Mission
 			};
 			id=5027;
 			type="arca_factions_cis_ParticleCannon";
+			atlOffset=-0.00036621094;
 		};
 		class Item266
 		{
@@ -38374,12 +38393,13 @@ class Mission
 						angles[]={6.2764463,3.7386348,0.012983232};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=5033;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=1.9555664;
 				};
 			};
 			class Attributes
@@ -38410,6 +38430,7 @@ class Mission
 				};
 			};
 			id=5032;
+			atlOffset=-0.00012207031;
 		};
 		class Item267
 		{
@@ -38426,6 +38447,7 @@ class Mission
 			};
 			id=5034;
 			type="arca_factions_cis_ParticleCannon";
+			atlOffset=-0.00012207031;
 		};
 		class Item268
 		{
@@ -38443,12 +38465,13 @@ class Mission
 						angles[]={0.027490277,4.3757515,0.022514425};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=5036;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=1.9857178;
 				};
 			};
 			class Attributes
@@ -38479,6 +38502,7 @@ class Mission
 				};
 			};
 			id=5035;
+			atlOffset=0.0035400391;
 		};
 		class Item269
 		{
@@ -38495,6 +38519,7 @@ class Mission
 			};
 			id=5037;
 			type="arca_factions_cis_ParticleCannon";
+			atlOffset=0.0035400391;
 		};
 		class Item270
 		{
@@ -38512,12 +38537,12 @@ class Mission
 						angles[]={6.2756925,3.4801188,0.0050033992};
 					};
 					side="East";
-					flags=4;
 					class Attributes
 					{
 					};
 					id=5040;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=4.239563;
 				};
 				class Item1
 				{
@@ -38528,12 +38553,13 @@ class Mission
 						angles[]={6.2756925,3.4801188,0.0050033992};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=5041;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=4.239563;
 				};
 			};
 			class Attributes
@@ -38613,7 +38639,7 @@ class Mission
 					};
 					id=5044;
 					type="JLTS_Droid_B1_Crew";
-					atlOffset=0.61993408;
+					atlOffset=4.4624023;
 				};
 			};
 			class Attributes
@@ -38644,7 +38670,7 @@ class Mission
 				};
 			};
 			id=5042;
-			atlOffset=0.61993408;
+			atlOffset=0.60137939;
 		};
 		class Item273
 		{
@@ -38662,7 +38688,7 @@ class Mission
 			};
 			id=5043;
 			type="arca_factions_cis_FlakCannon";
-			atlOffset=0.61993408;
+			atlOffset=0.60137939;
 		};
 		class Item274
 		{
@@ -41123,7 +41149,6 @@ class Mission
 					};
 					id=5201;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
 				};
 				class Item1
 				{
@@ -41140,7 +41165,7 @@ class Mission
 					};
 					id=5202;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=0.0030517578;
 				};
 			};
 			class Attributes
@@ -41223,7 +41248,6 @@ class Mission
 					};
 					id=5205;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
 				};
 				class Item1
 				{
@@ -41240,7 +41264,7 @@ class Mission
 					};
 					id=5206;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=0.023681641;
 				};
 			};
 			class Attributes
@@ -41323,7 +41347,6 @@ class Mission
 					};
 					id=5209;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
 				};
 				class Item1
 				{
@@ -41340,7 +41363,7 @@ class Mission
 					};
 					id=5210;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=-0.0087890625;
 				};
 			};
 			class Attributes
@@ -41423,6 +41446,7 @@ class Mission
 					};
 					id=5213;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=-0.10137939;
 				};
 				class Item1
 				{
@@ -41439,6 +41463,7 @@ class Mission
 					};
 					id=5214;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=-0.27947998;
 				};
 				class Item2
 				{
@@ -41455,6 +41480,7 @@ class Mission
 					};
 					id=5215;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=-0.27947998;
 				};
 			};
 			class Attributes
@@ -41507,6 +41533,7 @@ class Mission
 				};
 			};
 			id=5212;
+			atlOffset=0.00024414063;
 		};
 		class Item291
 		{
@@ -41523,6 +41550,7 @@ class Mission
 			};
 			id=5216;
 			type="arca_factions_cis_MTT";
+			atlOffset=0.00024414063;
 		};
 		class Item292
 		{
@@ -41533,7 +41561,7 @@ class Mission
 				angles[]={6.1196656,0,6.0833802};
 			};
 			side="East";
-			flags=6;
+			flags=2;
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
@@ -41541,7 +41569,7 @@ class Mission
 			};
 			id=5217;
 			type="arca_factions_cis_GAT_Light";
-			atlOffset=0.21099854;
+			atlOffset=0.42163086;
 		};
 		class Item293
 		{
@@ -41560,6 +41588,7 @@ class Mission
 			};
 			id=5220;
 			type="arca_factions_cis_GAT_Light";
+			atlOffset=-0.036010742;
 		};
 		class Item294
 		{
@@ -41793,7 +41822,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1321.7947,834.44537,2103.3882};
-						angles[]={0,3.970583,-0};
+						angles[]={0,3.970583,0};
 					};
 					side="East";
 					flags=7;
@@ -42086,7 +42115,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1654.4635,841.39789,2629.6484};
-						angles[]={0,3.8368104,-0};
+						angles[]={0,3.8368104,0};
 					};
 					side="East";
 					flags=7;
@@ -42160,7 +42189,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1839.1416,848.67932,2484.4966};
-						angles[]={0,4.3719873,-0};
+						angles[]={0,4.3719873,0};
 					};
 					side="East";
 					flags=7;
@@ -42456,12 +42485,12 @@ class Mission
 						angles[]={0.066203468,5.4092727,0.1219357};
 					};
 					side="East";
-					flags=4;
 					class Attributes
 					{
 					};
 					id=5248;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=4.2397461;
 				};
 				class Item1
 				{
@@ -42472,12 +42501,13 @@ class Mission
 						angles[]={0.066203468,5.4092727,0.1219357};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=5249;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=4.2397461;
 				};
 			};
 			class Attributes
@@ -43200,6 +43230,7 @@ class Mission
 					};
 					id=5259;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=0.0061035156;
 				};
 				class Item2
 				{
@@ -43216,6 +43247,7 @@ class Mission
 					};
 					id=5260;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=0.0061035156;
 				};
 			};
 			class Attributes
@@ -43267,6 +43299,7 @@ class Mission
 				};
 			};
 			id=5256;
+			atlOffset=0.00012207031;
 		};
 		class Item310
 		{
@@ -43284,6 +43317,7 @@ class Mission
 			};
 			id=5257;
 			type="arca_factions_cis_Hailfire_Rocket";
+			atlOffset=0.00012207031;
 		};
 		class Item311
 		{
@@ -43307,6 +43341,7 @@ class Mission
 					};
 					id=5262;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=0.13378906;
 				};
 				class Item1
 				{
@@ -43323,6 +43358,7 @@ class Mission
 					};
 					id=5263;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=0.14978027;
 				};
 				class Item2
 				{
@@ -43339,6 +43375,7 @@ class Mission
 					};
 					id=5264;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=0.14978027;
 				};
 			};
 			class Attributes
@@ -43390,6 +43427,7 @@ class Mission
 				};
 			};
 			id=5261;
+			atlOffset=-0.0014648438;
 		};
 		class Item312
 		{
@@ -43407,6 +43445,7 @@ class Mission
 			};
 			id=5265;
 			type="arca_factions_cis_Hailfire_Rocket";
+			atlOffset=-0.0014648438;
 		};
 		class Item313
 		{
@@ -43430,6 +43469,7 @@ class Mission
 					};
 					id=5267;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=-0.18151855;
 				};
 				class Item1
 				{
@@ -43446,6 +43486,7 @@ class Mission
 					};
 					id=5268;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=-0.17230225;
 				};
 				class Item2
 				{
@@ -43462,6 +43503,7 @@ class Mission
 					};
 					id=5269;
 					type="arca_factions_cis_B1_Crew";
+					atlOffset=-0.17230225;
 				};
 			};
 			class Attributes
@@ -43544,7 +43586,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={2675.2139,869.5495,3679.4893};
-						angles[]={-0,3.5415218,0.0024897563};
+						angles[]={0,3.5415218,0.0024897563};
 					};
 					side="East";
 					flags=4;
@@ -43553,7 +43595,6 @@ class Mission
 					};
 					id=5277;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
 				};
 				class Item1
 				{
@@ -43561,7 +43602,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={2675.1782,869.55554,3679.3789};
-						angles[]={-0,3.5415218,0.0024897563};
+						angles[]={0,3.5415218,0.0024897563};
 					};
 					side="East";
 					flags=4;
@@ -43570,7 +43611,7 @@ class Mission
 					};
 					id=5278;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=0.0061645508;
 				};
 				class Item2
 				{
@@ -43578,7 +43619,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={2675.1782,869.55554,3679.3789};
-						angles[]={-0,3.5415218,0.0024897563};
+						angles[]={0,3.5415218,0.0024897563};
 					};
 					side="East";
 					flags=6;
@@ -43587,7 +43628,7 @@ class Mission
 					};
 					id=5279;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=0.0061645508;
 				};
 			};
 			class Attributes
@@ -43647,7 +43688,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2675.178,869.55402,3679.3284};
-				angles[]={-0,3.5415218,0.0024897563};
+				angles[]={0,3.5415218,0.0024897563};
 			};
 			side="East";
 			flags=6;
@@ -43698,7 +43739,7 @@ class Mission
 					};
 					id=5283;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=0.007019043;
 				};
 				class Item2
 				{
@@ -43715,7 +43756,7 @@ class Mission
 					};
 					id=5284;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=0.007019043;
 				};
 			};
 			class Attributes
@@ -43826,7 +43867,7 @@ class Mission
 					};
 					id=5288;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=0.017089844;
 				};
 				class Item2
 				{
@@ -43843,7 +43884,7 @@ class Mission
 					};
 					id=5289;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=0.017089844;
 				};
 			};
 			class Attributes
@@ -43937,7 +43978,7 @@ class Mission
 					};
 					id=5292;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=6.1035156e-005;
 				};
 				class Item1
 				{
@@ -43954,7 +43995,7 @@ class Mission
 					};
 					id=5293;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=-0.0069580078;
 				};
 				class Item2
 				{
@@ -43971,7 +44012,7 @@ class Mission
 					};
 					id=5294;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=-0.0069580078;
 				};
 			};
 			class Attributes
@@ -44065,7 +44106,6 @@ class Mission
 					};
 					id=5297;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
 				};
 				class Item1
 				{
@@ -44082,7 +44122,7 @@ class Mission
 					};
 					id=5298;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=0.0075073242;
 				};
 				class Item2
 				{
@@ -44099,7 +44139,7 @@ class Mission
 					};
 					id=5299;
 					type="arca_factions_cis_B1_Crew";
-					atlOffset=-6.1035156e-005;
+					atlOffset=0.0075073242;
 				};
 			};
 			class Attributes
@@ -47457,7 +47497,7 @@ class Mission
 					};
 					id=5523;
 					type="arca_factions_cis_OOM_Pilot";
-					atlOffset=248.16272;
+					atlOffset=248.16284;
 				};
 				class Item1
 				{
@@ -47473,7 +47513,7 @@ class Mission
 					};
 					id=5524;
 					type="lsd_cis_oomPilot_standard";
-					atlOffset=248.16272;
+					atlOffset=250.07977;
 				};
 				class Item2
 				{
@@ -47488,7 +47528,7 @@ class Mission
 					};
 					id=5525;
 					type="lsd_cis_oomPilot_standard";
-					atlOffset=248.16272;
+					atlOffset=250.07977;
 				};
 				class Item3
 				{
@@ -47503,7 +47543,7 @@ class Mission
 					};
 					id=5526;
 					type="lsd_cis_oomPilot_standard";
-					atlOffset=248.16272;
+					atlOffset=250.07977;
 				};
 				class Item4
 				{
@@ -47578,7 +47618,7 @@ class Mission
 				};
 			};
 			id=5520;
-			atlOffset=248.16272;
+			atlOffset=248.05078;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47608,7 +47648,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={545.11853,1142.2516,3654.2847};
+				position[]={545.11853,1142.2515,3654.2847};
 			};
 			side="East";
 			class Attributes
@@ -47617,7 +47657,7 @@ class Mission
 			};
 			id=5522;
 			type="arca_factions_cis_hmp_transport";
-			atlOffset=248.16272;
+			atlOffset=248.05078;
 		};
 	};
 	class Connections
