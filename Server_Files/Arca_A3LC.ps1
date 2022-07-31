@@ -27,7 +27,7 @@ If ($Server -eq 1) {
 	$Server_port='2702'
 	$Server_Hostname='[ARCA] Arca Company | Main Operations Server'
 	$RCON_Port = 2707
-	$ServerLocalMods = 'C:\Mods\@infiSTAR_A3_vision EU2;'
+	$ServerLocalMods = 'C:\Mods\@A3Log;'
 	$LogsDir = 'C:\Servers\Arma 3\Logs Archive\EU2'
 	$Beta = ''
 
