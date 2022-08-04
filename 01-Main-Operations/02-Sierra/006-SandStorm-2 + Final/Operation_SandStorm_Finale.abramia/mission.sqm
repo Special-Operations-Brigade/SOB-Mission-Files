@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=636;
+		nextID=639;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=6;
 	};
 	class Camera
 	{
-		pos[]={4160.0801,158.72388,2944.5193};
-		dir[]={0.26312056,-0.66150105,0.70235139};
-		up[]={0.23207606,0.74991697,0.61948472};
-		aside[]={0.93649364,-5.0349627e-008,-0.35083529};
+		pos[]={4342.1313,103.28796,2993.4834};
+		dir[]={0.1758332,-0.59128755,0.78713548};
+		up[]={0.12891552,0.80642891,0.57710475};
+		aside[]={0.97600347,-2.9955117e-008,-0.21802178};
 	};
 };
 binarizationWanted=0;
@@ -66,13 +66,15 @@ addons[]=
 	"ace_gforces",
 	"ace_parachute",
 	"3as_GNK_Prop",
-	"arca_aircraft"
+	"arca_aircraft",
+	"OPTRE_Vehicles_Cart",
+	"arca_modules"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=30;
+		items=32;
 		class Item0
 		{
 			className="3as_structures_fob";
@@ -269,23 +271,439 @@ class AddonsMetaData
 			author="Arca Company";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
+		class Item30
+		{
+			className="OPTRE_Vehicles_Cart";
+			name="OPTRE_Vehicles_Cart";
+		};
+		class Item31
+		{
+			className="arca_modules";
+			name="ARCA - Modules";
+			author="Arca Company";
+			url="https://discord.gg/Pu2gdBd7Te/";
+		};
+	};
+};
+class DynamicSimulation
+{
+	class EnableRadiuses
+	{
+		EmptyVehicle=2000;
+		Vehicle=2000;
+		Group=2000;
+	};
+	class EnableRadiuseCoefs
+	{
+		IsMoving=2.5;
 	};
 };
 dlcs[]=
 {
-	"Expansion"
+	"Expansion",
+	"OPTRE"
 };
 randomSeed=16501515;
 class ScenarioData
 {
-	author="Absolute Unit";
+	author="CSM-1607 JakubPii";
+	overviewText="Operation SandStorm Finale";
+	overviewTextLocked="Operation SandStorm Finale";
+	overViewPicture="z\ARCA\Addons\common\data\arca_company_logo.paa";
+	overViewPictureLocked="z\ARCA\Addons\common\data\arca_company_logo.paa";
+	onLoadMission="Operation SandStorm Finale";
+	loadScreen="z\ARCA\Addons\common\data\arca_company_logo.paa";
+	disabledAI=1;
+	respawn=3;
+	respawnDelay=5;
+	class Header
+	{
+		gameType="Coop";
+		maxPlayers=50;
+	};
+	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes
 {
 	class Category0
 	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="ENH_dynamicSkill";
+			expression="if (!is3DEN && _value # 0 && isServer) then      {        _value params        [          '_enable',          '_skillMinBLUFOR',          '_skillAimMinBLUFOR',          '_skillMaxBLUFOR',          '_skillAimMaxBlUFOR',          '_skillMinOPFOR',          '_skillAimMinOPFOR',          '_skillMaxOPFOR',          '_skillAimMaxOPFOR',          '_skillMinINDFOR',          '_skillAimMinINDFOR',          '_skillMaxINDFOR',          '_skillAimMaxINDFOR'        ];        [          true,          [            [WEST, _skillMinBLUFOR, _skillAimMinBLUFOR, _skillMaxBLUFOR, _skillAimMaxBlUFOR],            [EAST, _skillMinOPFOR, _skillAimMinOPFOR, _skillMaxOPFOR, _skillAimMaxOPFOR],            [INDEPENDENT, _skillMinINDFOR, _skillAimMinINDFOR, _skillMaxINDFOR, _skillAimMaxINDFOR]          ]        ] call BIS_fnc_EXP_camp_dynamicAISkill;      }";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=13;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.30000001;
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.80000001;
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item5
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item6
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.30000001;
+							};
+						};
+						class Item7
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.80000001;
+							};
+						};
+						class Item8
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item9
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item10
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.30000001;
+							};
+						};
+						class Item11
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.80000001;
+							};
+						};
+						class Item12
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=2;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="LRG_RespawnOnStartPosition";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Counter";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=3;
+	};
+	class Category1
+	{
 		name="Scenario";
 		class Attribute0
+		{
+			property="ENH_AddObjectsToZeus";
+			expression="    if (!is3DEN && isServer && _value && !(allCurators isEqualTo [])) then    {      [] spawn      {        scriptName 'ENH_Attribute_AddObjectsToZeus';        while {true} do        {          {          _x addCuratorEditableObjects            [              entities [[], ['Logic'], true],              true            ];          } count allCurators;          sleep 60;        };      };    }";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="ENH_mapIndicators";
+			expression="if (!is3DEN && !(_value isEqualTo [false, false, false, false]) && hasInterface) then {disableMapIndicators _value}";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=4;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute2
 		{
 			property="cba_settings_hasSettingsFile";
 			expression="false";
@@ -304,13 +722,110 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		class Attribute3
+		{
+			property="ENH_SPR";
+			expression="if (!is3DEN && _value # 0 > 0 && !isMultiplayer) then      {        ENH_SPR_Ruleset = _value param [0, 0];        ENH_SPR_Delay = _value param [1, 20];        ENH_SPR_CanDie = _value param [2, false];        ENH_SPR_RestoreLoadout = _value param [3, false];        ENH_SPR_OnRespawnCode = compile (_value param [4, '']);        ENH_SPR_Positions =        [          allMapMarkers select {'respawn_east' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_west' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_guerilla' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_civilian' in toLower _x} apply {getMarkerPos _x}        ];        {          _x setVariable ['ENH_SPR_OriginalSide', side group _x];          _x setVariable ['ENH_SPR_OriginalLoadout', getUnitLoadout _x];          _x addEventHandler ['handleDamage',          {            params ['_unit', '', '_damage', '', '', '_index'];            if (!alive _unit || lifeState _unit isEqualTo 'INCAPACITATED') exitWith {0};            if (_unit getVariable ['ENH_SPR_Tickets', 0] == 0) then            {              _unit removeEventHandler ['handleDamage', _thisEventHandler];              _damage;            };            if (ENH_SPR_CanDie && _index in [1, 2] && _damage >= 1) exitWith            {              _unit removeEventHandler ['handleDamage', _thisEventHandler];              1;            };            if (_index < 8 && (_damage min 0.95) == 0.95) then            {              setAccTime 1;              _unit allowDamage false;              _unit setCaptive true;              _unit setUnconscious true;              _unit setVariable ['ENH_SPR_Tickets', (_unit getVariable ['ENH_SPR_Tickets', 0]) - 1];              if (isPlayer _unit) then {enableTeamSwitch false} else {removeSwitchableUnit _unit};              moveOut _unit;              _unit spawn ENH_fnc_SPR_respawnTimer;            };            _damage min 0.95;          }];        } forEach (allUnits select {_x getVariable ['ENH_SPR_Tickets', 0] > 0});                ENH_fnc_SPR_respawn =        {          scriptName 'ENH_Attribute_SPR_Respawn';          params ['_unit'];          if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};          if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};          private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;          private _positions = ENH_SPR_Positions select _sideID;          if (_positions isNotEqualTo []) then          {            switch (ENH_SPR_Ruleset) do            {              case 3:              {                _unit setPos (([_positions, [], {_unit distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0);              };              case 2:              {                _unit setPos selectRandom _positions;              };            };          };          _unit setUnconscious false;          _unit allowDamage true;          _unit setDamage 0;          _unit switchMove '';          _unit call ENH_SPR_OnRespawnCode;          _unit spawn          {            sleep 8;            _this setCaptive false;          };        };                ENH_fnc_SPR_respawnTimer =        {          scriptName 'ENH_Attribute_SPR_RespawnTimer';          params ['_unit'];          private _respawnTime = time + ENH_SPR_Delay;          if (isPlayer _unit) then          {            private _ctrlRespawnTimer = (call BIS_fnc_displayMission) ctrlCreate ['RscStructuredText',-1];            _ctrlRespawnTimer ctrlSetPosition [0.25, 0, 0.5, 0.06];            _ctrlRespawnTimer ctrlSetBackgroundColor [0, 0, 0, 0.1];            _ctrlRespawnTimer ctrlCommit 0;            ENH_SPR_OriginalVolume = [soundVolume, musicVolume, radioVolume, speechVolume, environmentVolume];            0 cutText ['', 'BLACK OUT', 0.3];            0.3 fadeSound 0;            0.3 fadeMusic 0;            0.3 fadeRadio 0;            0.3 fadeSpeech 0;            0.3 fadeEnvironment 0;            showChat false;            while {time < _respawnTime} do            {              _ctrlRespawnTimer ctrlSetStructuredText parseText format ['<t size=''1.25'' color=''#218a36'' align=''center''>%1</t>', [(_respawnTime - time), 'HH:MM'] call BIS_fnc_timeToString];              sleep 0.1;            };            ctrlDelete _ctrlRespawnTimer;            0 cutText ['', 'BLACK IN', 8];            8 fadeSound (ENH_SPR_OriginalVolume # 0);            8 fadeMusic (ENH_SPR_OriginalVolume # 1);            8 fadeRadio (ENH_SPR_OriginalVolume # 2);            8 fadeSpeech (ENH_SPR_OriginalVolume # 3);            8 fadeEnvironment (ENH_SPR_OriginalVolume # 4);            showChat true;            [              ['Respawned'],              [format ['GRID: %1', mapGridPosition _unit]],              [format ['Tickets left: %1', _unit getVariable 'ENH_SPR_Tickets']]            ] spawn BIS_fnc_EXP_camp_SITREP;          }          else          {            if ((side player getFriend (_unit getVariable 'ENH_SPR_OriginalSide')) >= 0.6) then            {              [                str _unit, 'onEachFrame',                {                  drawIcon3D ['\a3\Modules_f\data\portraitRespawn_ca.paa', [0.13, 0.54, 0.21, 0.8], ASLToAGL ((_this # 0) modelToWorldVisualWorld [0, 0, 1]), 1, 1, 0, str round ((_this # 1) - time), 2];                },                [_unit, _respawnTime]              ] call BIS_fnc_addStackedEventHandler;            };            sleep ENH_SPR_Delay;          };          [str _unit, 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;          _unit call ENH_fnc_SPR_respawn;        };      }";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=5;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0;
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=20;
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=4;
 	};
 };
 class Mission
 {
+	assetType="Free";
 	class Intel
 	{
+		briefingName="Operation SandStorm Finale";
+		overviewText="Operation SandStorm Finale";
+		resistanceWest=0;
+		resistanceEast=1;
 		timeOfChanges=1800.0002;
 		startWeather=0.44999999;
 		startFog=0.2;
@@ -333,7 +848,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=131;
+		items=134;
 		class Item0
 		{
 			dataType="Object";
@@ -15944,16 +16459,83 @@ class Mission
 			id=635;
 			type="ARCA_LAATi_Mk2";
 		};
+		class Item131
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4352.4614,13.713426,3075.3586};
+				angles[]={0.0038271386,3.1000252,0.0041593062};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=636;
+			type="OPTRE_cart";
+		};
+		class Item132
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4359.459,13.718154,3075.1064};
+				angles[]={0.0038271386,3.1000252,0.0041593062};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=637;
+			type="OPTRE_cart";
+			atlOffset=-0.0003490448;
+		};
+		class Item133
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4376.4785,11.681848,3091.2913};
+			};
+			id=638;
+			type="ARCA_Module_SetServicingKart";
+			atlOffset=-1.8119812e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="arca_modules_repairOnly";
+					expression="_this setVariable ['arca_modules_repairOnly',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=4;
+			nextID=6;
 		};
 		class Links
 		{
-			items=4;
+			items=6;
 			class Item0
 			{
 				linkID=0;
@@ -15989,6 +16571,26 @@ class Mission
 				linkID=3;
 				item0=550;
 				item1=546;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item4
+			{
+				linkID=4;
+				item0=638;
+				item1=637;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item5
+			{
+				linkID=5;
+				item0=638;
+				item1=636;
 				class CustomData
 				{
 					type="Sync";
