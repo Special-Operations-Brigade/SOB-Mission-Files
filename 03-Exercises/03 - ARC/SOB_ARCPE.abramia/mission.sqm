@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1551;
+		nextID=1553;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=39;
+		nextID=48;
 	};
 	class Camera
 	{
-		pos[]={7835.6372,129.22989,1863.6759};
-		dir[]={-0.65245056,-0.53002661,-0.54167843};
-		up[]={-0.40781614,0.84797049,-0.33857855};
-		aside[]={-0.63878047,5.8935257e-009,0.76941234};
+		pos[]={788.09216,90.609497,6158.7524};
+		dir[]={0.16706891,-0.45311403,-0.8756817};
+		up[]={0.084919296,0.89144498,-0.44509724};
+		aside[]={-0.98230839,3.8556755e-007,-0.18741472};
 	};
 };
 binarizationWanted=0;
@@ -77,13 +77,14 @@ addons[]=
 	"ls_coreship",
 	"A3_Weapons_F_Explosives",
 	"arca_units_c",
-	"arca_equipment_c"
+	"arca_equipment_c",
+	"arca_supplies"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=42;
+		items=43;
 		class Item0
 		{
 			className="ace_spectator";
@@ -347,6 +348,13 @@ class AddonsMetaData
 		{
 			className="arca_equipment_c";
 			name="ARCA - Commando Equipment";
+			author="Arca Company";
+			url="https://discord.gg/Pu2gdBd7Te/";
+		};
+		class Item42
+		{
+			className="arca_supplies";
+			name="ARCA - Supplies";
 			author="Arca Company";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
@@ -932,7 +940,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=227;
+		items=228;
 		class Item0
 		{
 			dataType="Logic";
@@ -1342,7 +1350,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=2;
+									value=1;
 								};
 							};
 						};
@@ -1373,30 +1381,31 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={785.44604,86.385536,6157.1763};
-						angles[]={0,1.4769114,0};
+						position[]={785.44598,86.385445,6157.1758};
+						angles[]={0,1.4769151,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
-						description="Haran 2 - Battalion Executive Officer";
+						name="Control_Alpha";
+						description="Haran 3 - Battalion Adjutant";
 						isPlayable=1;
 						class Inventory
 						{
 							class uniform
 							{
-								typeName="ARCA_CloneArmor_Mokka";
+								typeName="ARCA_CloneArmor_M0XLY";
 								isBackpack=0;
 							};
 							class vest
 							{
-								typeName="ARCA_CloneVestOfficer";
+								typeName="ARCA_CloneVestCompanyCommand";
 								isBackpack=0;
 							};
 							class backpack
 							{
-								typeName="ARCA_Clone_LR_attachment_Mokka";
+								typeName="ARCA_Clone_LR_attachment";
 								isBackpack=1;
 							};
 							map="ItemMap";
@@ -1405,11 +1414,12 @@ class Mission
 							radio="JLTS_clone_comlink";
 							gps="ItemGPS";
 							hmd="ARCA_CloneNVGCC";
-							headgear="ARCA_CloneHelmetP2_Mokka";
+							headgear="ARCA_CloneHelmetP2_M0XLY";
 						};
 					};
 					id=95;
 					type="B_officer_F";
+					atlOffset=0.09400177;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1560,7 +1570,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=2;
+									value=1;
 								};
 							};
 						};
@@ -1634,8 +1644,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isMedic";
-							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							property="arca_common_Group_Preset";
+							expression="[_this, _value] call arca_common_fnc_initPlayer";
 							class Value
 							{
 								class data
@@ -1672,8 +1682,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="QUOTE(LRG_Mission_Maker)";
+							expression="_this setUnitTrait ['Mission Maker', _value, true];";
 							class Value
 							{
 								class data
@@ -1682,14 +1692,33 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Male06ENG";
+									value=1;
 								};
 							};
 						};
 						class Attribute3
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD', _value, true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute4
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1708,10 +1737,29 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute5
 						{
-							property="arca_common_Group_Preset";
-							expression="[_this, _value] call arca_common_fnc_initPlayer";
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
@@ -1723,11 +1771,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=2;
+									value=1;
 								};
 							};
 						};
-						nAttributes=5;
+						class Attribute7
+						{
+							property="arca_common_Pilot";
+							expression="[_this, 'pilot', _value] call arca_common_fnc_setUnitTrait;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=8;
 					};
 				};
 			};
@@ -1773,7 +1840,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={794.89288,86.385521,6159.8149};
-						angles[]={0,4.5211601,0};
+						angles[]={0,4.521153,0};
 					};
 					side="West";
 					flags=7;
@@ -1815,6 +1882,44 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -1832,7 +1937,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute3
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1851,7 +1956,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="arca_common_Group_Preset";
 							expression="[_this, _value] call arca_common_fnc_initPlayer";
@@ -1866,11 +1971,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=4;
+									value=10;
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute5
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD', _value, true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 				class Item1
@@ -1879,7 +2003,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={795.05841,86.385521,6158.6362};
-						angles[]={0,4.5211601,0};
+						angles[]={0,4.521153,0};
 					};
 					side="West";
 					flags=5;
@@ -1921,6 +2045,44 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -1938,7 +2100,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute3
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -1957,7 +2119,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="arca_common_Group_Preset";
 							expression="[_this, _value] call arca_common_fnc_initPlayer";
@@ -1972,11 +2134,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=4;
+									value=10;
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute5
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD', _value, true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 				class Item2
@@ -1985,7 +2166,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={795.2298,86.385521,6157.6738};
-						angles[]={0,4.5211601,0};
+						angles[]={0,4.521153,0};
 					};
 					side="West";
 					flags=5;
@@ -2027,6 +2208,44 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -2044,7 +2263,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute3
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2063,7 +2282,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="arca_common_Group_Preset";
 							expression="[_this, _value] call arca_common_fnc_initPlayer";
@@ -2078,11 +2297,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=4;
+									value=10;
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute5
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD', _value, true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 				class Item3
@@ -2091,7 +2329,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={795.29095,86.385521,6156.2637};
-						angles[]={0,4.5211601,0};
+						angles[]={0,4.521153,0};
 					};
 					side="West";
 					flags=5;
@@ -2132,6 +2370,44 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -2149,7 +2425,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute3
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2168,7 +2444,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute4
 						{
 							property="arca_common_Group_Preset";
 							expression="[_this, _value] call arca_common_fnc_initPlayer";
@@ -2183,11 +2459,30 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=4;
+									value=10;
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute5
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD', _value, true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 			};
@@ -4055,10 +4350,9 @@ class Mission
 		{
 			dataType="Layer";
 			name="Logic";
-			state=1;
 			class Entities
 			{
-				items=6;
+				items=7;
 				class Item0
 				{
 					dataType="Logic";
@@ -4553,9 +4847,139 @@ class Mission
 					type="HeadlessClient_F";
 					atlOffset=1.0000229;
 				};
+				class Item6
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={690.79999,90.086349,6226.7671};
+						angles[]={0,3.1415927,0};
+					};
+					id=1552;
+					type="ModuleCurator_F";
+					atlOffset=1;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="QUOTE(LRG_Config_Zeus)";
+							expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Control_Alpha";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Zeus";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ModuleInfo";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=3;
+								};
+							};
+						};
+						nAttributes=6;
+					};
+				};
 			};
 			id=9;
-			atlOffset=0.99534607;
+			atlOffset=0.97386169;
 		};
 		class Item15
 		{
@@ -23518,16 +23942,56 @@ class Mission
 				nAttributes=1;
 			};
 		};
+		class Item227
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={789.901,86.384003,6144.749};
+				angles[]={0,1.475449,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1551;
+			type="ARCA_Supplies_Empty";
+			atlOffset=0.09400177;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""ARCA_RD4""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=3;
+			nextID=4;
 		};
 		class Links
 		{
-			items=3;
+			items=4;
 			class Item0
 			{
 				linkID=0;
@@ -23552,6 +24016,16 @@ class Mission
 			{
 				linkID=2;
 				item0=15;
+				item1=11;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item3
+			{
+				linkID=3;
+				item0=1552;
 				item1=11;
 				class CustomData
 				{
