@@ -25,30 +25,53 @@ $Master_Server_Profile= 'F:\ArcaServer\Arca-Mission-Files\Server_Files\ArcaServe
 If ($Server -eq 1) {
     $Server_Dir='C:\Servers\Arma 3\EU2'
 	$Server_port='2702'
-	$Server_Hostname='[ARCA] Arca Company | Main Operations Server'
+	$Server_Hostname='[SOB] Special Operations Brigade | Operations Server'
 	$RCON_Port = 2707
 	$ServerLocalMods = 'C:\Mods\@A3Log;'
 	$LogsDir = 'C:\Servers\Arma 3\Logs Archive\EU2'
 	$Beta = ''
 
 	$steamcmd_Dir = 'C:\steamcmd'
-	$Repo_Dir = 'C:\ARCA\Arca-Mission-Files'
+	$Repo_Dir = 'C:\SOB\SOB-Mission-Files'
 	$Mod_Dir = 'C:\Mods'
 
 	#Master files used to create Server files
-	$Master_Server_Config = 'C:\ARCA\Arca-Mission-Files\Server_Files\MASTER SERVER CONFIG.cfg'
-	$Master_Server_Network = 'C:\ARCA\Arca-Mission-Files\Server_Files\Arma3.cfg'
+	$Master_Server_Config = 'C:\SOB\SOB-Mission-Files\Server_Files\MASTER SERVER CONFIG.cfg'
+	$Master_Server_Network = 'C:\SOB\SOB-Mission-Files\Server_Files\Arma3.cfg'
 	$Master_Server_Key='C:\Program Files (x86)\Steam\steamapps\common\Arma 3\Keys\a3.bikey'
 
-	$Master_BEServer_x64 = 'C:\ARCA\Arca-Mission-Files\Server_Files\Master BEServer_x64.cfg'
-	$Master_Battleye_Config = 'C:\ARCA\Arca-Mission-Files\Server_Files\Master Battleye Config.cfg'
-	$Master_Server_Profile= 'C:\ARCA\Arca-Mission-Files\Server_Files\ArcaServer.Arma3Profile'
+	$Master_BEServer_x64 = 'C:\SOB\SOB-Mission-Files\Server_Files\Master BEServer_x64.cfg'
+	$Master_Battleye_Config = 'C:\SOB\SOB-Mission-Files\Server_Files\Master Battleye Config.cfg'
+	$Master_Server_Profile= 'C:\SOB\SOB-Mission-Files\Server_Files\ArcaServer.Arma3Profile'
 }
 
 If ($Server -eq 2) {
+    $Server_Dir='C:\Servers\Arma 3\EU3'
+	$Server_port='2502'
+	$Server_Hostname='[SOB] Special Operations Brigade | Training Server'
+	$RCON_Port = 2507
+	$ServerLocalMods = 'C:\Mods\@A3Log;'
+	$LogsDir = 'C:\Servers\Arma 3\Logs Archive\EU3'
+	$Beta = ''
+
+	$steamcmd_Dir = 'C:\steamcmd'
+	$Repo_Dir = 'C:\SOB\SOB-Mission-Files'
+	$Mod_Dir = 'C:\Mods'
+
+	#Master files used to create Server files
+	$Master_Server_Config = 'C:\SOB\SOB-Mission-Files\Server_Files\MASTER SERVER CONFIG.cfg'
+	$Master_Server_Network = 'C:\SOB\SOB-Mission-Files\Server_Files\Arma3.cfg'
+	$Master_Server_Key='C:\Program Files (x86)\Steam\steamapps\common\Arma 3\Keys\a3.bikey'
+
+	$Master_BEServer_x64 = 'C:\SOB\SOB-Mission-Files\Server_Files\Master BEServer_x64.cfg'
+	$Master_Battleye_Config = 'C:\SOB\SOB-Mission-Files\Server_Files\Master Battleye Config.cfg'
+	$Master_Server_Profile= 'C:\SOB\SOB-Mission-Files\Server_Files\ArcaServer.Arma3Profile'
+}
+
+If ($Server -eq 3) {
     $Server_Dir='F:\ArcaServer\EU1'
 	$Server_port='2702'
-	$Server_Hostname='[ARCA] Arca Company | Training & Skirmish Server'
+	$Server_Hostname='[SOB] Special Operations Brigade | Reserve Server'
 	$RCON_Port = 2707
 	$ServerLocalMods = ''
 	$LogsDir = 'F:\ArcaServer\Logs Archive\EU1'
