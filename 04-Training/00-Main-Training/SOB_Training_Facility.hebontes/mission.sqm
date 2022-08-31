@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=535;
+		nextID=560;
 	};
 	class Camera
 	{
-		pos[]={13377.164,282.91763,8166.2681};
-		dir[]={-0.38227814,-0.52300525,0.76182073};
-		up[]={-0.23457892,0.85232037,0.46747434};
-		aside[]={0.89380449,3.8993312e-007,0.44851011};
+		pos[]={13446.948,361.01889,8061.9336};
+		dir[]={-0.60564166,-0.6954118,0.38683787};
+		up[]={-0.5860799,0.71860266,0.37434059};
+		aside[]={0.53830189,-2.0675361e-007,0.84278154};
 	};
 };
 binarizationWanted=0;
@@ -9203,7 +9203,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="[this, true] call arca_common_fnc_lockDoors;";
+						init="[this, true] call mti_common_fnc_lockDoors;";
 						dynamicSimulation=1;
 					};
 					id=544;
@@ -9326,7 +9326,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="[this, true] call arca_common_fnc_lockDoors;";
+						init="[this, true] call mti_common_fnc_lockDoors;";
 						dynamicSimulation=1;
 					};
 					id=557;
@@ -9344,7 +9344,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="[this, true] call arca_common_fnc_lockDoors;";
+						init="[this, true] call mti_common_fnc_lockDoors;";
 						dynamicSimulation=1;
 					};
 					id=558;
@@ -9517,7 +9517,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="[this, true] call arca_common_fnc_lockDoors;";
+						init="[this, true] call mti_common_fnc_lockDoors;";
 						dynamicSimulation=1;
 					};
 					id=562;
@@ -12326,7 +12326,7 @@ class Mission
 							fillName="SolidFull";
 							a=30;
 							b=6.4499998;
-							angle=109.73825;
+							angle=109.73824;
 							id=4962;
 							atlOffset=192.58154;
 						};
@@ -17167,9 +17167,9 @@ class Mission
 										{
 											class primaryWeapon
 											{
-												name="ARCA_WestarM5";
-												optics="ARCA_HRCO_blu";
-												firemode="ARCA_WestarM5:Single";
+												name="mti_WestarM5";
+												optics="mti_HRCO_blu";
+												firemode="mti_WestarM5:Single";
 												class primaryMuzzleMag
 												{
 													name="3AS_60Rnd_EC50_Mag";
@@ -17183,7 +17183,7 @@ class Mission
 											};
 											class handgun
 											{
-												name="ARCA_DC17s_dual";
+												name="mti_DC17s_dual";
 												class primaryMuzzleMag
 												{
 													name="JLTS_DC17SA_mag";
@@ -17203,7 +17203,7 @@ class Mission
 													items=4;
 													class Item0
 													{
-														name="ARCA_Mag_DC17s_dual";
+														name="mti_DC17s_dual_mag";
 														count=2;
 														ammoLeft=60;
 													};
@@ -17275,12 +17275,12 @@ class Mission
 													items=5;
 													class Item0
 													{
-														name="ARCA_BactaSpray";
+														name="mti_BactaSpray";
 														count=10;
 													};
 													class Item1
 													{
-														name="ARCA_BactaPatch";
+														name="mti_BactaPatch";
 														count=4;
 													};
 													class Item2
@@ -17438,9 +17438,9 @@ class Mission
 										{
 											class primaryWeapon
 											{
-												name="ARCA_WestarM5";
-												optics="ARCA_HRCO_blu";
-												firemode="ARCA_WestarM5:Single";
+												name="mti_WestarM5";
+												optics="mti_HRCO_blu";
+												firemode="mti_WestarM5:Single";
 												class primaryMuzzleMag
 												{
 													name="3AS_60Rnd_EC50_Mag";
@@ -17454,7 +17454,7 @@ class Mission
 											};
 											class handgun
 											{
-												name="ARCA_DC17s_dual";
+												name="mti_DC17s_dual";
 												class primaryMuzzleMag
 												{
 													name="JLTS_DC17SA_mag";
@@ -17474,7 +17474,7 @@ class Mission
 													items=4;
 													class Item0
 													{
-														name="ARCA_Mag_DC17s_dual";
+														name="mti_DC17s_dual_mag";
 														count=2;
 														ammoLeft=60;
 													};
@@ -17546,12 +17546,12 @@ class Mission
 													items=5;
 													class Item0
 													{
-														name="ARCA_BactaSpray";
+														name="mti_BactaSpray";
 														count=10;
 													};
 													class Item1
 													{
-														name="ARCA_BactaPatch";
+														name="mti_BactaPatch";
 														count=4;
 													};
 													class Item2
@@ -17709,9 +17709,9 @@ class Mission
 										{
 											class primaryWeapon
 											{
-												name="ARCA_WestarM5";
-												optics="ARCA_HRCO_blu";
-												firemode="ARCA_WestarM5:Single";
+												name="mti_WestarM5";
+												optics="mti_HRCO_blu";
+												firemode="mti_WestarM5:Single";
 												class primaryMuzzleMag
 												{
 													name="3AS_60Rnd_EC50_Mag";
@@ -17725,7 +17725,7 @@ class Mission
 											};
 											class handgun
 											{
-												name="ARCA_DC17s_dual";
+												name="mti_DC17s_dual";
 												class primaryMuzzleMag
 												{
 													name="JLTS_DC17SA_mag";
@@ -17745,7 +17745,7 @@ class Mission
 													items=4;
 													class Item0
 													{
-														name="ARCA_Mag_DC17s_dual";
+														name="mti_DC17s_dual_mag";
 														count=2;
 														ammoLeft=60;
 													};
@@ -17817,12 +17817,12 @@ class Mission
 													items=5;
 													class Item0
 													{
-														name="ARCA_BactaSpray";
+														name="mti_BactaSpray";
 														count=10;
 													};
 													class Item1
 													{
-														name="ARCA_BactaPatch";
+														name="mti_BactaPatch";
 														count=4;
 													};
 													class Item2
@@ -17980,9 +17980,9 @@ class Mission
 										{
 											class primaryWeapon
 											{
-												name="ARCA_WestarM5";
-												optics="ARCA_HRCO_blu";
-												firemode="ARCA_WestarM5:Single";
+												name="mti_WestarM5";
+												optics="mti_HRCO_blu";
+												firemode="mti_WestarM5:Single";
 												class primaryMuzzleMag
 												{
 													name="3AS_60Rnd_EC50_Mag";
@@ -17996,7 +17996,7 @@ class Mission
 											};
 											class handgun
 											{
-												name="ARCA_DC17s_dual";
+												name="mti_DC17s_dual";
 												class primaryMuzzleMag
 												{
 													name="JLTS_DC17SA_mag";
@@ -18016,7 +18016,7 @@ class Mission
 													items=4;
 													class Item0
 													{
-														name="ARCA_Mag_DC17s_dual";
+														name="mti_DC17s_dual_mag";
 														count=2;
 														ammoLeft=60;
 													};
@@ -18088,12 +18088,12 @@ class Mission
 													items=5;
 													class Item0
 													{
-														name="ARCA_BactaSpray";
+														name="mti_BactaSpray";
 														count=10;
 													};
 													class Item1
 													{
-														name="ARCA_BactaPatch";
+														name="mti_BactaPatch";
 														count=4;
 													};
 													class Item2
@@ -19749,7 +19749,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_WestarM5";
+																	value="mti_WestarM5";
 																};
 															};
 															class Item3
@@ -19757,7 +19757,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Valken38X";
+																	value="mti_Valken38X";
 																};
 															};
 															class Item4
@@ -19765,7 +19765,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DP23";
+																	value="mti_DP23";
 																};
 															};
 															class Item5
@@ -19773,7 +19773,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17M";
+																	value="mti_DC17M";
 																};
 															};
 															class Item6
@@ -19781,7 +19781,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15X";
+																	value="mti_DC15X";
 																};
 															};
 															class Item7
@@ -19789,7 +19789,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15S";
+																	value="mti_DC15S";
 																};
 															};
 															class Item8
@@ -19797,7 +19797,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15L";
+																	value="mti_DC15L";
 																};
 															};
 															class Item9
@@ -19805,7 +19805,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15C";
+																	value="mti_DC15C";
 																};
 															};
 															class Item10
@@ -19813,7 +19813,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15A";
+																	value="mti_DC15A";
 																};
 															};
 															class Item11
@@ -19821,7 +19821,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_PLX1";
+																	value="mti_PLX1";
 																};
 															};
 															class Item12
@@ -19829,7 +19829,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_RPS6";
+																	value="mti_RPS6";
 																};
 															};
 															class Item13
@@ -19837,7 +19837,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_RPS6_D_Loaded";
+																	value="mti_RPS6_D_Loaded";
 																};
 															};
 															class Item14
@@ -19845,7 +19845,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Z6";
+																	value="mti_Z6";
 																};
 															};
 															class Item15
@@ -19853,7 +19853,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17s_dual";
+																	value="mti_DC17s_dual";
 																};
 															};
 															class Item16
@@ -19861,7 +19861,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17s";
+																	value="mti_DC17s";
 																};
 															};
 															class Item17
@@ -19869,7 +19869,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17mc3c";
+																	value="mti_DC17mc3c";
 																};
 															};
 															class Item18
@@ -19877,7 +19877,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15SA";
+																	value="mti_DC15SA";
 																};
 															};
 															class Item19
@@ -19885,7 +19885,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetARC";
+																	value="mti_CloneHelmetARC";
 																};
 															};
 															class Item20
@@ -19893,7 +19893,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_Mokka";
+																	value="mti_CloneHelmetP2_Mokka";
 																};
 															};
 															class Item21
@@ -19901,7 +19901,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_mc_Celt";
+																	value="mti_CloneHelmetP2_mc_Celt";
 																};
 															};
 															class Item22
@@ -19909,7 +19909,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP1_CR";
+																	value="mti_CloneHelmetP1_CR";
 																};
 															};
 															class Item23
@@ -19917,7 +19917,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_CT";
+																	value="mti_CloneHelmetP2_CT";
 																};
 															};
 															class Item24
@@ -19925,7 +19925,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_EOD";
+																	value="mti_CloneHelmetP2_EOD";
 																};
 															};
 															class Item25
@@ -19933,7 +19933,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_Medic";
+																	value="mti_CloneHelmetP2_Medic";
 																};
 															};
 															class Item26
@@ -19941,7 +19941,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_NCO";
+																	value="mti_CloneHelmetP2_NCO";
 																};
 															};
 															class Item27
@@ -19949,7 +19949,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_VCT";
+																	value="mti_CloneHelmetP2_VCT";
 																};
 															};
 															class Item28
@@ -19957,7 +19957,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_EliteHelmet";
+																	value="mti_EliteHelmet";
 																};
 															};
 															class Item29
@@ -19965,7 +19965,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_helmet";
+																	value="mti_commando_helmet";
 																};
 															};
 															class Item30
@@ -19973,7 +19973,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_helmet_celt";
+																	value="mti_commando_helmet_celt";
 																};
 															};
 															class Item31
@@ -19981,7 +19981,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_Mokka";
+																	value="mti_CloneArmor_Mokka";
 																};
 															};
 															class Item32
@@ -19989,7 +19989,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmorMC_Celt";
+																	value="mti_CloneArmorMC_Celt";
 																};
 															};
 															class Item33
@@ -19997,7 +19997,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_CR";
+																	value="mti_CloneArmor_CR";
 																};
 															};
 															class Item34
@@ -20005,7 +20005,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_CT";
+																	value="mti_CloneArmor_CT";
 																};
 															};
 															class Item35
@@ -20013,7 +20013,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_EOD";
+																	value="mti_CloneArmor_EOD";
 																};
 															};
 															class Item36
@@ -20021,7 +20021,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_Medic";
+																	value="mti_CloneArmor_Medic";
 																};
 															};
 															class Item37
@@ -20029,7 +20029,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_NCO";
+																	value="mti_CloneArmor_NCO";
 																};
 															};
 															class Item38
@@ -20037,7 +20037,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_VCT";
+																	value="mti_CloneArmor_VCT";
 																};
 															};
 															class Item39
@@ -20045,7 +20045,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_EliteArmor";
+																	value="mti_EliteArmor";
 																};
 															};
 															class Item40
@@ -20053,7 +20053,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_uniform";
+																	value="mti_commando_uniform";
 																};
 															};
 															class Item41
@@ -20061,7 +20061,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_uniform_Celt";
+																	value="mti_commando_uniform_Celt";
 																};
 															};
 															class Item42
@@ -20069,7 +20069,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestARCCadet";
+																	value="mti_CloneVestARCCadet";
 																};
 															};
 															class Item43
@@ -20077,7 +20077,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestARC";
+																	value="mti_CloneVestARC";
 																};
 															};
 															class Item44
@@ -20085,7 +20085,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestOfficer";
+																	value="mti_CloneVestOfficer";
 																};
 															};
 															class Item45
@@ -20093,7 +20093,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestKama_Celt";
+																	value="mti_CloneVestKama_Celt";
 																};
 															};
 															class Item46
@@ -20101,7 +20101,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestKama";
+																	value="mti_CloneVestKama";
 																};
 															};
 															class Item47
@@ -20109,7 +20109,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestReconNCO";
+																	value="mti_CloneVestReconNCO";
 																};
 															};
 															class Item48
@@ -20117,7 +20117,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestHolster";
+																	value="mti_CloneVestHolster";
 																};
 															};
 															class Item49
@@ -20125,7 +20125,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestReconOfficer";
+																	value="mti_CloneVestReconOfficer";
 																};
 															};
 															class Item50
@@ -20133,7 +20133,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestRecon";
+																	value="mti_CloneVestRecon";
 																};
 															};
 															class Item51
@@ -20141,7 +20141,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest";
+																	value="mti_commando_vest";
 																};
 															};
 															class Item52
@@ -20149,7 +20149,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_eod";
+																	value="mti_commando_vest_eod";
 																};
 															};
 															class Item53
@@ -20157,7 +20157,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_sl";
+																	value="mti_commando_vest_sl";
 																};
 															};
 															class Item54
@@ -20165,7 +20165,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_sniper";
+																	value="mti_commando_vest_sniper";
 																};
 															};
 															class Item55
@@ -20173,7 +20173,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_tech";
+																	value="mti_commando_vest_tech";
 																};
 															};
 															class Item56
@@ -20181,7 +20181,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_tech_black";
+																	value="mti_commando_vest_tech_black";
 																};
 															};
 															class Item57
@@ -20189,7 +20189,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_tech_grey";
+																	value="mti_commando_vest_tech_grey";
 																};
 															};
 															class Item58
@@ -20197,7 +20197,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_ARC_backpack";
+																	value="mti_Clone_ARC_backpack";
 																};
 															};
 															class Item59
@@ -20205,7 +20205,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_backpack";
+																	value="mti_Clone_backpack";
 																};
 															};
 															class Item60
@@ -20213,7 +20213,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_backpack_eod";
+																	value="mti_Clone_backpack_eod";
 																};
 															};
 															class Item61
@@ -20221,7 +20221,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_backpack_medic";
+																	value="mti_Clone_backpack_medic";
 																};
 															};
 															class Item62
@@ -20229,7 +20229,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_belt_bag";
+																	value="mti_Clone_belt_bag";
 																};
 															};
 															class Item63
@@ -20237,7 +20237,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_LR_attachment";
+																	value="mti_Clone_LR_attachment";
 																};
 															};
 															class Item64
@@ -20245,7 +20245,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_RTO_pack";
+																	value="mti_Clone_RTO_pack";
 																};
 															};
 															class Item65
@@ -20253,7 +20253,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack";
+																	value="mti_commando_backpack";
 																};
 															};
 															class Item66
@@ -20261,7 +20261,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_Celt";
+																	value="mti_commando_backpack_Celt";
 																};
 															};
 															class Item67
@@ -20269,7 +20269,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_EOD";
+																	value="mti_commando_backpack_EOD";
 																};
 															};
 															class Item68
@@ -20277,7 +20277,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_EOD_Celt";
+																	value="mti_commando_backpack_EOD_Celt";
 																};
 															};
 															class Item69
@@ -20285,7 +20285,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_RTO";
+																	value="mti_commando_backpack_RTO";
 																};
 															};
 															class Item70
@@ -20293,7 +20293,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_RTO_Celt";
+																	value="mti_commando_backpack_RTO_Celt";
 																};
 															};
 															class Item71
@@ -20301,7 +20301,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_tech";
+																	value="mti_commando_backpack_tech";
 																};
 															};
 															class Item72
@@ -20309,7 +20309,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_tech_Celt";
+																	value="mti_commando_backpack_tech_Celt";
 																};
 															};
 															class Item73
@@ -20317,7 +20317,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGCC";
+																	value="mti_CloneNVGCC";
 																};
 															};
 															class Item74
@@ -20325,7 +20325,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGMC";
+																	value="mti_CloneNVGMC";
 																};
 															};
 															class Item75
@@ -20333,7 +20333,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_black";
+																	value="mti_CloneNVG_black";
 																};
 															};
 															class Item76
@@ -20341,7 +20341,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG";
+																	value="mti_CloneNVG";
 																};
 															};
 															class Item77
@@ -20349,7 +20349,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_white";
+																	value="mti_CloneNVG_white";
 																};
 															};
 															class Item78
@@ -20357,7 +20357,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGRange_black";
+																	value="mti_CloneNVGRange_black";
 																};
 															};
 															class Item79
@@ -20365,7 +20365,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGRange";
+																	value="mti_CloneNVGRange";
 																};
 															};
 															class Item80
@@ -20373,7 +20373,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGRange_white";
+																	value="mti_CloneNVGRange_white";
 																};
 															};
 															class Item81
@@ -20381,7 +20381,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_spec_black";
+																	value="mti_CloneNVG_spec_black";
 																};
 															};
 															class Item82
@@ -20389,7 +20389,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_spec";
+																	value="mti_CloneNVG_spec";
 																};
 															};
 															class Item83
@@ -20397,7 +20397,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_spec_white";
+																	value="mti_CloneNVG_spec_white";
 																};
 															};
 															class Item84
@@ -20405,7 +20405,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_antenna";
+																	value="mti_commando_nvg_antenna";
 																};
 															};
 															class Item85
@@ -20413,7 +20413,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg";
+																	value="mti_commando_nvg";
 																};
 															};
 															class Item86
@@ -20421,7 +20421,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_black";
+																	value="mti_commando_nvg_black";
 																};
 															};
 															class Item87
@@ -20429,7 +20429,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_antenna_Celt";
+																	value="mti_commando_nvg_antenna_Celt";
 																};
 															};
 															class Item88
@@ -20437,7 +20437,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_Mokka";
+																	value="mti_commando_nvg_Mokka";
 																};
 															};
 															class Item89
@@ -20445,7 +20445,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_P2_NVG_Chip";
+																	value="mti_P2_NVG_Chip";
 																};
 															};
 															class Item90
@@ -20797,7 +20797,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HRCO_blu";
+																	value="mti_HRCO_blu";
 																};
 															};
 															class Item134
@@ -20805,7 +20805,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HRCO_grn";
+																	value="mti_HRCO_grn";
 																};
 															};
 															class Item135
@@ -20813,7 +20813,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HRCO_red";
+																	value="mti_HRCO_red";
 																};
 															};
 															class Item136
@@ -20821,7 +20821,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRCO_blu";
+																	value="mti_HMRCO_blu";
 																};
 															};
 															class Item137
@@ -20829,7 +20829,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRCO_grn";
+																	value="mti_HMRCO_grn";
 																};
 															};
 															class Item138
@@ -20837,7 +20837,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRCO_red";
+																	value="mti_HMRCO_red";
 																};
 															};
 															class Item139
@@ -20845,7 +20845,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Holosight_blu";
+																	value="mti_Holosight_blu";
 																};
 															};
 															class Item140
@@ -20853,7 +20853,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Holosight_grn";
+																	value="mti_Holosight_grn";
 																};
 															};
 															class Item141
@@ -20861,7 +20861,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Holosight_red";
+																	value="mti_Holosight_red";
 																};
 															};
 															class Item142
@@ -20869,7 +20869,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HDMS_blu";
+																	value="mti_HDMS_blu";
 																};
 															};
 															class Item143
@@ -20877,7 +20877,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HDMS_grn";
+																	value="mti_HDMS_grn";
 																};
 															};
 															class Item144
@@ -20885,7 +20885,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HDMS_red";
+																	value="mti_HDMS_red";
 																};
 															};
 															class Item145
@@ -20893,7 +20893,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HLRPS_blu";
+																	value="mti_HLRPS_blu";
 																};
 															};
 															class Item146
@@ -20901,7 +20901,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HLRPS_grn";
+																	value="mti_HLRPS_grn";
 																};
 															};
 															class Item147
@@ -20909,7 +20909,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HLRPS_red";
+																	value="mti_HLRPS_red";
 																};
 															};
 															class Item148
@@ -20917,7 +20917,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRD_blu";
+																	value="mti_HMRD_blu";
 																};
 															};
 															class Item149
@@ -20925,7 +20925,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRD_grn";
+																	value="mti_HMRD_grn";
 																};
 															};
 															class Item150
@@ -20933,7 +20933,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRD_red";
+																	value="mti_HMRD_red";
 																};
 															};
 															class Item151
@@ -21490,7 +21490,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_WestarM5";
+																	value="mti_WestarM5";
 																};
 															};
 															class Item3
@@ -21498,7 +21498,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Valken38X";
+																	value="mti_Valken38X";
 																};
 															};
 															class Item4
@@ -21506,7 +21506,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DP23";
+																	value="mti_DP23";
 																};
 															};
 															class Item5
@@ -21514,7 +21514,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17M";
+																	value="mti_DC17M";
 																};
 															};
 															class Item6
@@ -21522,7 +21522,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15X";
+																	value="mti_DC15X";
 																};
 															};
 															class Item7
@@ -21530,7 +21530,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15S";
+																	value="mti_DC15S";
 																};
 															};
 															class Item8
@@ -21538,7 +21538,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15L";
+																	value="mti_DC15L";
 																};
 															};
 															class Item9
@@ -21546,7 +21546,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15C";
+																	value="mti_DC15C";
 																};
 															};
 															class Item10
@@ -21554,7 +21554,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15A";
+																	value="mti_DC15A";
 																};
 															};
 															class Item11
@@ -21562,7 +21562,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_PLX1";
+																	value="mti_PLX1";
 																};
 															};
 															class Item12
@@ -21570,7 +21570,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_RPS6";
+																	value="mti_RPS6";
 																};
 															};
 															class Item13
@@ -21578,7 +21578,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_RPS6_D_Loaded";
+																	value="mti_RPS6_D_Loaded";
 																};
 															};
 															class Item14
@@ -21586,7 +21586,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Z6";
+																	value="mti_Z6";
 																};
 															};
 															class Item15
@@ -21594,7 +21594,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17s_dual";
+																	value="mti_DC17s_dual";
 																};
 															};
 															class Item16
@@ -21602,7 +21602,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17s";
+																	value="mti_DC17s";
 																};
 															};
 															class Item17
@@ -21610,7 +21610,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17mc3c";
+																	value="mti_DC17mc3c";
 																};
 															};
 															class Item18
@@ -21618,7 +21618,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15SA";
+																	value="mti_DC15SA";
 																};
 															};
 															class Item19
@@ -21626,7 +21626,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetARC";
+																	value="mti_CloneHelmetARC";
 																};
 															};
 															class Item20
@@ -21634,7 +21634,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_Mokka";
+																	value="mti_CloneHelmetP2_Mokka";
 																};
 															};
 															class Item21
@@ -21642,7 +21642,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_mc_Celt";
+																	value="mti_CloneHelmetP2_mc_Celt";
 																};
 															};
 															class Item22
@@ -21650,7 +21650,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP1_CR";
+																	value="mti_CloneHelmetP1_CR";
 																};
 															};
 															class Item23
@@ -21658,7 +21658,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_CT";
+																	value="mti_CloneHelmetP2_CT";
 																};
 															};
 															class Item24
@@ -21666,7 +21666,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_EOD";
+																	value="mti_CloneHelmetP2_EOD";
 																};
 															};
 															class Item25
@@ -21674,7 +21674,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_Medic";
+																	value="mti_CloneHelmetP2_Medic";
 																};
 															};
 															class Item26
@@ -21682,7 +21682,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_NCO";
+																	value="mti_CloneHelmetP2_NCO";
 																};
 															};
 															class Item27
@@ -21690,7 +21690,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_VCT";
+																	value="mti_CloneHelmetP2_VCT";
 																};
 															};
 															class Item28
@@ -21698,7 +21698,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_EliteHelmet";
+																	value="mti_EliteHelmet";
 																};
 															};
 															class Item29
@@ -21706,7 +21706,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_helmet";
+																	value="mti_commando_helmet";
 																};
 															};
 															class Item30
@@ -21714,7 +21714,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_helmet_celt";
+																	value="mti_commando_helmet_celt";
 																};
 															};
 															class Item31
@@ -21722,7 +21722,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_Mokka";
+																	value="mti_CloneArmor_Mokka";
 																};
 															};
 															class Item32
@@ -21730,7 +21730,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmorMC_Celt";
+																	value="mti_CloneArmorMC_Celt";
 																};
 															};
 															class Item33
@@ -21738,7 +21738,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_CR";
+																	value="mti_CloneArmor_CR";
 																};
 															};
 															class Item34
@@ -21746,7 +21746,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_CT";
+																	value="mti_CloneArmor_CT";
 																};
 															};
 															class Item35
@@ -21754,7 +21754,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_EOD";
+																	value="mti_CloneArmor_EOD";
 																};
 															};
 															class Item36
@@ -21762,7 +21762,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_Medic";
+																	value="mti_CloneArmor_Medic";
 																};
 															};
 															class Item37
@@ -21770,7 +21770,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_NCO";
+																	value="mti_CloneArmor_NCO";
 																};
 															};
 															class Item38
@@ -21778,7 +21778,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_VCT";
+																	value="mti_CloneArmor_VCT";
 																};
 															};
 															class Item39
@@ -21786,7 +21786,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_EliteArmor";
+																	value="mti_EliteArmor";
 																};
 															};
 															class Item40
@@ -21794,7 +21794,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_uniform";
+																	value="mti_commando_uniform";
 																};
 															};
 															class Item41
@@ -21802,7 +21802,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_uniform_Celt";
+																	value="mti_commando_uniform_Celt";
 																};
 															};
 															class Item42
@@ -21810,7 +21810,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestARCCadet";
+																	value="mti_CloneVestARCCadet";
 																};
 															};
 															class Item43
@@ -21818,7 +21818,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestARC";
+																	value="mti_CloneVestARC";
 																};
 															};
 															class Item44
@@ -21826,7 +21826,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestOfficer";
+																	value="mti_CloneVestOfficer";
 																};
 															};
 															class Item45
@@ -21834,7 +21834,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestKama_Celt";
+																	value="mti_CloneVestKama_Celt";
 																};
 															};
 															class Item46
@@ -21842,7 +21842,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestKama";
+																	value="mti_CloneVestKama";
 																};
 															};
 															class Item47
@@ -21850,7 +21850,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestReconNCO";
+																	value="mti_CloneVestReconNCO";
 																};
 															};
 															class Item48
@@ -21858,7 +21858,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestHolster";
+																	value="mti_CloneVestHolster";
 																};
 															};
 															class Item49
@@ -21866,7 +21866,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestReconOfficer";
+																	value="mti_CloneVestReconOfficer";
 																};
 															};
 															class Item50
@@ -21874,7 +21874,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestRecon";
+																	value="mti_CloneVestRecon";
 																};
 															};
 															class Item51
@@ -21882,7 +21882,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest";
+																	value="mti_commando_vest";
 																};
 															};
 															class Item52
@@ -21890,7 +21890,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_eod";
+																	value="mti_commando_vest_eod";
 																};
 															};
 															class Item53
@@ -21898,7 +21898,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_sl";
+																	value="mti_commando_vest_sl";
 																};
 															};
 															class Item54
@@ -21906,7 +21906,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_sniper";
+																	value="mti_commando_vest_sniper";
 																};
 															};
 															class Item55
@@ -21914,7 +21914,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_tech";
+																	value="mti_commando_vest_tech";
 																};
 															};
 															class Item56
@@ -21922,7 +21922,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_tech_black";
+																	value="mti_commando_vest_tech_black";
 																};
 															};
 															class Item57
@@ -21930,7 +21930,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_tech_grey";
+																	value="mti_commando_vest_tech_grey";
 																};
 															};
 															class Item58
@@ -21938,7 +21938,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_ARC_backpack";
+																	value="mti_Clone_ARC_backpack";
 																};
 															};
 															class Item59
@@ -21946,7 +21946,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_backpack";
+																	value="mti_Clone_backpack";
 																};
 															};
 															class Item60
@@ -21954,7 +21954,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_backpack_eod";
+																	value="mti_Clone_backpack_eod";
 																};
 															};
 															class Item61
@@ -21962,7 +21962,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_backpack_medic";
+																	value="mti_Clone_backpack_medic";
 																};
 															};
 															class Item62
@@ -21970,7 +21970,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_belt_bag";
+																	value="mti_Clone_belt_bag";
 																};
 															};
 															class Item63
@@ -21978,7 +21978,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_LR_attachment";
+																	value="mti_Clone_LR_attachment";
 																};
 															};
 															class Item64
@@ -21986,7 +21986,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_RTO_pack";
+																	value="mti_Clone_RTO_pack";
 																};
 															};
 															class Item65
@@ -21994,7 +21994,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack";
+																	value="mti_commando_backpack";
 																};
 															};
 															class Item66
@@ -22002,7 +22002,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_Celt";
+																	value="mti_commando_backpack_Celt";
 																};
 															};
 															class Item67
@@ -22010,7 +22010,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_EOD";
+																	value="mti_commando_backpack_EOD";
 																};
 															};
 															class Item68
@@ -22018,7 +22018,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_EOD_Celt";
+																	value="mti_commando_backpack_EOD_Celt";
 																};
 															};
 															class Item69
@@ -22026,7 +22026,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_RTO";
+																	value="mti_commando_backpack_RTO";
 																};
 															};
 															class Item70
@@ -22034,7 +22034,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_RTO_Celt";
+																	value="mti_commando_backpack_RTO_Celt";
 																};
 															};
 															class Item71
@@ -22042,7 +22042,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_tech";
+																	value="mti_commando_backpack_tech";
 																};
 															};
 															class Item72
@@ -22050,7 +22050,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_tech_Celt";
+																	value="mti_commando_backpack_tech_Celt";
 																};
 															};
 															class Item73
@@ -22058,7 +22058,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGCC";
+																	value="mti_CloneNVGCC";
 																};
 															};
 															class Item74
@@ -22066,7 +22066,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGMC";
+																	value="mti_CloneNVGMC";
 																};
 															};
 															class Item75
@@ -22074,7 +22074,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_black";
+																	value="mti_CloneNVG_black";
 																};
 															};
 															class Item76
@@ -22082,7 +22082,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG";
+																	value="mti_CloneNVG";
 																};
 															};
 															class Item77
@@ -22090,7 +22090,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_white";
+																	value="mti_CloneNVG_white";
 																};
 															};
 															class Item78
@@ -22098,7 +22098,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGRange_black";
+																	value="mti_CloneNVGRange_black";
 																};
 															};
 															class Item79
@@ -22106,7 +22106,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGRange";
+																	value="mti_CloneNVGRange";
 																};
 															};
 															class Item80
@@ -22114,7 +22114,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGRange_white";
+																	value="mti_CloneNVGRange_white";
 																};
 															};
 															class Item81
@@ -22122,7 +22122,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_spec_black";
+																	value="mti_CloneNVG_spec_black";
 																};
 															};
 															class Item82
@@ -22130,7 +22130,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_spec";
+																	value="mti_CloneNVG_spec";
 																};
 															};
 															class Item83
@@ -22138,7 +22138,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_spec_white";
+																	value="mti_CloneNVG_spec_white";
 																};
 															};
 															class Item84
@@ -22146,7 +22146,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_antenna";
+																	value="mti_commando_nvg_antenna";
 																};
 															};
 															class Item85
@@ -22154,7 +22154,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg";
+																	value="mti_commando_nvg";
 																};
 															};
 															class Item86
@@ -22162,7 +22162,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_black";
+																	value="mti_commando_nvg_black";
 																};
 															};
 															class Item87
@@ -22170,7 +22170,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_antenna_Celt";
+																	value="mti_commando_nvg_antenna_Celt";
 																};
 															};
 															class Item88
@@ -22178,7 +22178,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_Mokka";
+																	value="mti_commando_nvg_Mokka";
 																};
 															};
 															class Item89
@@ -22186,7 +22186,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_P2_NVG_Chip";
+																	value="mti_P2_NVG_Chip";
 																};
 															};
 															class Item90
@@ -22538,7 +22538,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HRCO_blu";
+																	value="mti_HRCO_blu";
 																};
 															};
 															class Item134
@@ -22546,7 +22546,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HRCO_grn";
+																	value="mti_HRCO_grn";
 																};
 															};
 															class Item135
@@ -22554,7 +22554,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HRCO_red";
+																	value="mti_HRCO_red";
 																};
 															};
 															class Item136
@@ -22562,7 +22562,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRCO_blu";
+																	value="mti_HMRCO_blu";
 																};
 															};
 															class Item137
@@ -22570,7 +22570,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRCO_grn";
+																	value="mti_HMRCO_grn";
 																};
 															};
 															class Item138
@@ -22578,7 +22578,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRCO_red";
+																	value="mti_HMRCO_red";
 																};
 															};
 															class Item139
@@ -22586,7 +22586,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Holosight_blu";
+																	value="mti_Holosight_blu";
 																};
 															};
 															class Item140
@@ -22594,7 +22594,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Holosight_grn";
+																	value="mti_Holosight_grn";
 																};
 															};
 															class Item141
@@ -22602,7 +22602,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Holosight_red";
+																	value="mti_Holosight_red";
 																};
 															};
 															class Item142
@@ -22610,7 +22610,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HDMS_blu";
+																	value="mti_HDMS_blu";
 																};
 															};
 															class Item143
@@ -22618,7 +22618,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HDMS_grn";
+																	value="mti_HDMS_grn";
 																};
 															};
 															class Item144
@@ -22626,7 +22626,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HDMS_red";
+																	value="mti_HDMS_red";
 																};
 															};
 															class Item145
@@ -22634,7 +22634,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HLRPS_blu";
+																	value="mti_HLRPS_blu";
 																};
 															};
 															class Item146
@@ -22642,7 +22642,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HLRPS_grn";
+																	value="mti_HLRPS_grn";
 																};
 															};
 															class Item147
@@ -22650,7 +22650,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HLRPS_red";
+																	value="mti_HLRPS_red";
 																};
 															};
 															class Item148
@@ -22658,7 +22658,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRD_blu";
+																	value="mti_HMRD_blu";
 																};
 															};
 															class Item149
@@ -22666,7 +22666,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRD_grn";
+																	value="mti_HMRD_grn";
 																};
 															};
 															class Item150
@@ -22674,7 +22674,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRD_red";
+																	value="mti_HMRD_red";
 																};
 															};
 															class Item151
@@ -23231,7 +23231,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_WestarM5";
+																	value="mti_WestarM5";
 																};
 															};
 															class Item3
@@ -23239,7 +23239,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Valken38X";
+																	value="mti_Valken38X";
 																};
 															};
 															class Item4
@@ -23247,7 +23247,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DP23";
+																	value="mti_DP23";
 																};
 															};
 															class Item5
@@ -23255,7 +23255,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17M";
+																	value="mti_DC17M";
 																};
 															};
 															class Item6
@@ -23263,7 +23263,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15X";
+																	value="mti_DC15X";
 																};
 															};
 															class Item7
@@ -23271,7 +23271,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15S";
+																	value="mti_DC15S";
 																};
 															};
 															class Item8
@@ -23279,7 +23279,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15L";
+																	value="mti_DC15L";
 																};
 															};
 															class Item9
@@ -23287,7 +23287,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15C";
+																	value="mti_DC15C";
 																};
 															};
 															class Item10
@@ -23295,7 +23295,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15A";
+																	value="mti_DC15A";
 																};
 															};
 															class Item11
@@ -23303,7 +23303,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_PLX1";
+																	value="mti_PLX1";
 																};
 															};
 															class Item12
@@ -23311,7 +23311,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_RPS6";
+																	value="mti_RPS6";
 																};
 															};
 															class Item13
@@ -23319,7 +23319,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_RPS6_D_Loaded";
+																	value="mti_RPS6_D_Loaded";
 																};
 															};
 															class Item14
@@ -23327,7 +23327,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Z6";
+																	value="mti_Z6";
 																};
 															};
 															class Item15
@@ -23335,7 +23335,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17s_dual";
+																	value="mti_DC17s_dual";
 																};
 															};
 															class Item16
@@ -23343,7 +23343,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17s";
+																	value="mti_DC17s";
 																};
 															};
 															class Item17
@@ -23351,7 +23351,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC17mc3c";
+																	value="mti_DC17mc3c";
 																};
 															};
 															class Item18
@@ -23359,7 +23359,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_DC15SA";
+																	value="mti_DC15SA";
 																};
 															};
 															class Item19
@@ -23367,7 +23367,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetARC";
+																	value="mti_CloneHelmetARC";
 																};
 															};
 															class Item20
@@ -23375,7 +23375,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_Mokka";
+																	value="mti_CloneHelmetP2_Mokka";
 																};
 															};
 															class Item21
@@ -23383,7 +23383,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_mc_Celt";
+																	value="mti_CloneHelmetP2_mc_Celt";
 																};
 															};
 															class Item22
@@ -23391,7 +23391,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP1_CR";
+																	value="mti_CloneHelmetP1_CR";
 																};
 															};
 															class Item23
@@ -23399,7 +23399,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_CT";
+																	value="mti_CloneHelmetP2_CT";
 																};
 															};
 															class Item24
@@ -23407,7 +23407,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_EOD";
+																	value="mti_CloneHelmetP2_EOD";
 																};
 															};
 															class Item25
@@ -23415,7 +23415,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_Medic";
+																	value="mti_CloneHelmetP2_Medic";
 																};
 															};
 															class Item26
@@ -23423,7 +23423,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_NCO";
+																	value="mti_CloneHelmetP2_NCO";
 																};
 															};
 															class Item27
@@ -23431,7 +23431,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneHelmetP2_VCT";
+																	value="mti_CloneHelmetP2_VCT";
 																};
 															};
 															class Item28
@@ -23439,7 +23439,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_EliteHelmet";
+																	value="mti_EliteHelmet";
 																};
 															};
 															class Item29
@@ -23447,7 +23447,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_helmet";
+																	value="mti_commando_helmet";
 																};
 															};
 															class Item30
@@ -23455,7 +23455,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_helmet_celt";
+																	value="mti_commando_helmet_celt";
 																};
 															};
 															class Item31
@@ -23463,7 +23463,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_Mokka";
+																	value="mti_CloneArmor_Mokka";
 																};
 															};
 															class Item32
@@ -23471,7 +23471,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmorMC_Celt";
+																	value="mti_CloneArmorMC_Celt";
 																};
 															};
 															class Item33
@@ -23479,7 +23479,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_CR";
+																	value="mti_CloneArmor_CR";
 																};
 															};
 															class Item34
@@ -23487,7 +23487,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_CT";
+																	value="mti_CloneArmor_CT";
 																};
 															};
 															class Item35
@@ -23495,7 +23495,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_EOD";
+																	value="mti_CloneArmor_EOD";
 																};
 															};
 															class Item36
@@ -23503,7 +23503,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_Medic";
+																	value="mti_CloneArmor_Medic";
 																};
 															};
 															class Item37
@@ -23511,7 +23511,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_NCO";
+																	value="mti_CloneArmor_NCO";
 																};
 															};
 															class Item38
@@ -23519,7 +23519,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneArmor_VCT";
+																	value="mti_CloneArmor_VCT";
 																};
 															};
 															class Item39
@@ -23527,7 +23527,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_EliteArmor";
+																	value="mti_EliteArmor";
 																};
 															};
 															class Item40
@@ -23535,7 +23535,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_uniform";
+																	value="mti_commando_uniform";
 																};
 															};
 															class Item41
@@ -23543,7 +23543,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_uniform_Celt";
+																	value="mti_commando_uniform_Celt";
 																};
 															};
 															class Item42
@@ -23551,7 +23551,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestARCCadet";
+																	value="mti_CloneVestARCCadet";
 																};
 															};
 															class Item43
@@ -23559,7 +23559,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestARC";
+																	value="mti_CloneVestARC";
 																};
 															};
 															class Item44
@@ -23567,7 +23567,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestOfficer";
+																	value="mti_CloneVestOfficer";
 																};
 															};
 															class Item45
@@ -23575,7 +23575,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestKama_Celt";
+																	value="mti_CloneVestKama_Celt";
 																};
 															};
 															class Item46
@@ -23583,7 +23583,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestKama";
+																	value="mti_CloneVestKama";
 																};
 															};
 															class Item47
@@ -23591,7 +23591,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestReconNCO";
+																	value="mti_CloneVestReconNCO";
 																};
 															};
 															class Item48
@@ -23599,7 +23599,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestHolster";
+																	value="mti_CloneVestHolster";
 																};
 															};
 															class Item49
@@ -23607,7 +23607,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestReconOfficer";
+																	value="mti_CloneVestReconOfficer";
 																};
 															};
 															class Item50
@@ -23615,7 +23615,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneVestRecon";
+																	value="mti_CloneVestRecon";
 																};
 															};
 															class Item51
@@ -23623,7 +23623,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest";
+																	value="mti_commando_vest";
 																};
 															};
 															class Item52
@@ -23631,7 +23631,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_eod";
+																	value="mti_commando_vest_eod";
 																};
 															};
 															class Item53
@@ -23639,7 +23639,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_sl";
+																	value="mti_commando_vest_sl";
 																};
 															};
 															class Item54
@@ -23647,7 +23647,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_sniper";
+																	value="mti_commando_vest_sniper";
 																};
 															};
 															class Item55
@@ -23655,7 +23655,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_tech";
+																	value="mti_commando_vest_tech";
 																};
 															};
 															class Item56
@@ -23663,7 +23663,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_tech_black";
+																	value="mti_commando_vest_tech_black";
 																};
 															};
 															class Item57
@@ -23671,7 +23671,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_vest_tech_grey";
+																	value="mti_commando_vest_tech_grey";
 																};
 															};
 															class Item58
@@ -23679,7 +23679,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_ARC_backpack";
+																	value="mti_Clone_ARC_backpack";
 																};
 															};
 															class Item59
@@ -23687,7 +23687,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_backpack";
+																	value="mti_Clone_backpack";
 																};
 															};
 															class Item60
@@ -23695,7 +23695,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_backpack_eod";
+																	value="mti_Clone_backpack_eod";
 																};
 															};
 															class Item61
@@ -23703,7 +23703,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_backpack_medic";
+																	value="mti_Clone_backpack_medic";
 																};
 															};
 															class Item62
@@ -23711,7 +23711,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_belt_bag";
+																	value="mti_Clone_belt_bag";
 																};
 															};
 															class Item63
@@ -23719,7 +23719,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_LR_attachment";
+																	value="mti_Clone_LR_attachment";
 																};
 															};
 															class Item64
@@ -23727,7 +23727,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Clone_RTO_pack";
+																	value="mti_Clone_RTO_pack";
 																};
 															};
 															class Item65
@@ -23735,7 +23735,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack";
+																	value="mti_commando_backpack";
 																};
 															};
 															class Item66
@@ -23743,7 +23743,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_Celt";
+																	value="mti_commando_backpack_Celt";
 																};
 															};
 															class Item67
@@ -23751,7 +23751,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_EOD";
+																	value="mti_commando_backpack_EOD";
 																};
 															};
 															class Item68
@@ -23759,7 +23759,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_EOD_Celt";
+																	value="mti_commando_backpack_EOD_Celt";
 																};
 															};
 															class Item69
@@ -23767,7 +23767,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_RTO";
+																	value="mti_commando_backpack_RTO";
 																};
 															};
 															class Item70
@@ -23775,7 +23775,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_RTO_Celt";
+																	value="mti_commando_backpack_RTO_Celt";
 																};
 															};
 															class Item71
@@ -23783,7 +23783,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_tech";
+																	value="mti_commando_backpack_tech";
 																};
 															};
 															class Item72
@@ -23791,7 +23791,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_backpack_tech_Celt";
+																	value="mti_commando_backpack_tech_Celt";
 																};
 															};
 															class Item73
@@ -23799,7 +23799,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGCC";
+																	value="mti_CloneNVGCC";
 																};
 															};
 															class Item74
@@ -23807,7 +23807,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGMC";
+																	value="mti_CloneNVGMC";
 																};
 															};
 															class Item75
@@ -23815,7 +23815,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_black";
+																	value="mti_CloneNVG_black";
 																};
 															};
 															class Item76
@@ -23823,7 +23823,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG";
+																	value="mti_CloneNVG";
 																};
 															};
 															class Item77
@@ -23831,7 +23831,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_white";
+																	value="mti_CloneNVG_white";
 																};
 															};
 															class Item78
@@ -23839,7 +23839,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGRange_black";
+																	value="mti_CloneNVGRange_black";
 																};
 															};
 															class Item79
@@ -23847,7 +23847,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGRange";
+																	value="mti_CloneNVGRange";
 																};
 															};
 															class Item80
@@ -23855,7 +23855,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVGRange_white";
+																	value="mti_CloneNVGRange_white";
 																};
 															};
 															class Item81
@@ -23863,7 +23863,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_spec_black";
+																	value="mti_CloneNVG_spec_black";
 																};
 															};
 															class Item82
@@ -23871,7 +23871,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_spec";
+																	value="mti_CloneNVG_spec";
 																};
 															};
 															class Item83
@@ -23879,7 +23879,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_CloneNVG_spec_white";
+																	value="mti_CloneNVG_spec_white";
 																};
 															};
 															class Item84
@@ -23887,7 +23887,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_antenna";
+																	value="mti_commando_nvg_antenna";
 																};
 															};
 															class Item85
@@ -23895,7 +23895,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg";
+																	value="mti_commando_nvg";
 																};
 															};
 															class Item86
@@ -23903,7 +23903,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_black";
+																	value="mti_commando_nvg_black";
 																};
 															};
 															class Item87
@@ -23911,7 +23911,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_antenna_Celt";
+																	value="mti_commando_nvg_antenna_Celt";
 																};
 															};
 															class Item88
@@ -23919,7 +23919,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_commando_nvg_Mokka";
+																	value="mti_commando_nvg_Mokka";
 																};
 															};
 															class Item89
@@ -23927,7 +23927,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_P2_NVG_Chip";
+																	value="mti_P2_NVG_Chip";
 																};
 															};
 															class Item90
@@ -24279,7 +24279,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HRCO_blu";
+																	value="mti_HRCO_blu";
 																};
 															};
 															class Item134
@@ -24287,7 +24287,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HRCO_grn";
+																	value="mti_HRCO_grn";
 																};
 															};
 															class Item135
@@ -24295,7 +24295,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HRCO_red";
+																	value="mti_HRCO_red";
 																};
 															};
 															class Item136
@@ -24303,7 +24303,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRCO_blu";
+																	value="mti_HMRCO_blu";
 																};
 															};
 															class Item137
@@ -24311,7 +24311,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRCO_grn";
+																	value="mti_HMRCO_grn";
 																};
 															};
 															class Item138
@@ -24319,7 +24319,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRCO_red";
+																	value="mti_HMRCO_red";
 																};
 															};
 															class Item139
@@ -24327,7 +24327,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Holosight_blu";
+																	value="mti_Holosight_blu";
 																};
 															};
 															class Item140
@@ -24335,7 +24335,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Holosight_grn";
+																	value="mti_Holosight_grn";
 																};
 															};
 															class Item141
@@ -24343,7 +24343,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_Holosight_red";
+																	value="mti_Holosight_red";
 																};
 															};
 															class Item142
@@ -24351,7 +24351,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HDMS_blu";
+																	value="mti_HDMS_blu";
 																};
 															};
 															class Item143
@@ -24359,7 +24359,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HDMS_grn";
+																	value="mti_HDMS_grn";
 																};
 															};
 															class Item144
@@ -24367,7 +24367,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HDMS_red";
+																	value="mti_HDMS_red";
 																};
 															};
 															class Item145
@@ -24375,7 +24375,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HLRPS_blu";
+																	value="mti_HLRPS_blu";
 																};
 															};
 															class Item146
@@ -24383,7 +24383,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HLRPS_grn";
+																	value="mti_HLRPS_grn";
 																};
 															};
 															class Item147
@@ -24391,7 +24391,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HLRPS_red";
+																	value="mti_HLRPS_red";
 																};
 															};
 															class Item148
@@ -24399,7 +24399,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRD_blu";
+																	value="mti_HMRD_blu";
 																};
 															};
 															class Item149
@@ -24407,7 +24407,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRD_grn";
+																	value="mti_HMRD_grn";
 																};
 															};
 															class Item150
@@ -24415,7 +24415,7 @@ class Mission
 																class data
 																{
 																	singleType="STRING";
-																	value="ARCA_HMRD_red";
+																	value="mti_HMRD_red";
 																};
 															};
 															class Item151
@@ -32418,7 +32418,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4974.812,67.288963,1299.6074};
-				angles[]={0,3.1827826,-0};
+				angles[]={0,3.1827826,0};
 			};
 			side="Empty";
 			class Attributes
@@ -32434,7 +32434,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5584.709,7.1232128,1423.084};
-				angles[]={0,5.4781523,-0};
+				angles[]={0,5.4781523,0};
 			};
 			side="Empty";
 			class Attributes
@@ -32491,7 +32491,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8867.8594,2.995213,3522.4387};
-				angles[]={0,3.1505985,-0};
+				angles[]={0,3.1505985,0};
 			};
 			side="Empty";
 			flags=4;
@@ -32547,7 +32547,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={13523.592,7.495213,7656.5166};
-				angles[]={0,2.2607074,-0};
+				angles[]={0,2.2607074,0};
 			};
 			side="Empty";
 			flags=4;
@@ -32603,7 +32603,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4085.6411,2.995213,15584.284};
-				angles[]={0,4.8433414,-0};
+				angles[]={0,4.8433414,0};
 			};
 			side="Empty";
 			flags=4;
@@ -32666,7 +32666,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4938.127,65.836441,1306.4491};
-						angles[]={0,4.712389,-0};
+						angles[]={0,4.712389,0};
 					};
 					side="West";
 					flags=7;
@@ -32715,7 +32715,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4938.1509,65.836441,1307.847};
-						angles[]={0,4.712389,-0};
+						angles[]={0,4.712389,0};
 					};
 					side="West";
 					flags=5;
@@ -33427,7 +33427,7 @@ class Mission
 			};
 			id=6150;
 			type="MTI_Module_LockDoors";
-			atlOffset=0.34877205;
+			atlOffset=0.3487711;
 			class CustomAttributes
 			{
 				class Attribute0
