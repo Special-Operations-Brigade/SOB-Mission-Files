@@ -3,6 +3,19 @@ force TAS_jetcoolset = 1;
 force TAS_jetfuelset = 1;
 force TAS_jetheatset = 1;
 force TAS_jetsoundvol = 0.6;
+force TAS_lcLoadDist = 20;
+force TAS_lcLoadSpeed = 10;
+
+// A3TI
+A3TI_ACE_JAVELIN = false;
+A3TI_ALLOW_TANK_DRIVER = false;
+A3TI_ALLOW_VANILLA_TI = true;
+A3TI_ENABLE_ZEUS = true;
+A3TI_HD_VISION_FIGHTER = false;
+A3TI_HD_VISION_LANDVEH = true;
+A3TI_HD_VISION_SHIP = false;
+A3TI_HD_VISION_UAV = true;
+A3TI_REMOVE_FILMGRAIN_RHS = true;
 
 // ACE Advanced Ballistics
 force ace_advanced_ballistics_ammoTemperatureEnabled = true;
@@ -47,6 +60,10 @@ force ace_captives_allowSurrender = true;
 force ace_captives_requireSurrender = 1;
 force ace_captives_requireSurrenderAi = false;
 
+// ACE Casings
+force ace_casings_enabled = true;
+force ace_casings_maxCasings = 250;
+
 // ACE Common
 force ace_common_allowFadeMusic = true;
 force ace_common_checkPBOsAction = 0;
@@ -58,7 +75,6 @@ ace_common_epilepsyFriendlyMode = false;
 ace_common_progressBarInfo = 2;
 force ace_common_settingFeedbackIcons = 1;
 force ace_common_settingProgressBarLocation = 0;
-force ace_noradio_enabled = true;
 
 // ACE Cook off
 force ace_cookoff_ammoCookoffDuration = 0.1;
@@ -73,6 +89,7 @@ force ace_csw_ammoHandling = 2;
 force ace_csw_defaultAssemblyMode = false;
 force ace_csw_dragAfterDeploy = true;
 force ace_csw_handleExtraMagazines = false;
+force ace_csw_handleExtraMagazinesType = 0;
 force ace_csw_progressBarTimeCoefficent = 1;
 
 // ACE Dragging
@@ -100,15 +117,15 @@ force acex_field_rations_timeWithoutWater = 2;
 force acex_field_rations_waterSourceActions = 2;
 
 // ACE Fire
-ace_fire_dropWeapon = 1;
+force ace_fire_dropWeapon = 2;
 force ace_fire_enabled = true;
 force ace_fire_enableFlare = false;
-ace_fire_enableScreams = true;
+force ace_fire_enableScreams = true;
 
 // ACE Fortify
-ace_fortify_markObjectsOnMap = 1;
-ace_fortify_timeCostCoefficient = 1;
-ace_fortify_timeMin = 1.5;
+force ace_fortify_markObjectsOnMap = 1;
+force ace_fortify_timeCostCoefficient = 1;
+force ace_fortify_timeMin = 1.5;
 force acex_fortify_settingHint = 1;
 
 // ACE Fragmentation Simulation
@@ -194,7 +211,7 @@ force ace_repair_engineerSetting_fullRepair = 1;
 force ace_repair_engineerSetting_repair = 1;
 force ace_repair_engineerSetting_wheel = 0;
 force ace_repair_fullRepairLocation = 0;
-ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
+force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
 force ace_repair_locationsBoostTraining = false;
 force ace_repair_miscRepairRequiredItems = [];
 force ace_repair_repairDamageThreshold = 0.6;
@@ -202,10 +219,11 @@ force ace_repair_repairDamageThreshold_engineer = 0.4;
 force ace_repair_wheelRepairRequiredItems = [];
 
 // ACE Magazine Repack
+force ace_magazinerepack_repackAnimation = true;
 force ace_magazinerepack_repackLoadedMagazines = true;
-force ace_magazinerepack_timePerAmmo = 1.5;
+force ace_magazinerepack_timePerAmmo = 1;
 force ace_magazinerepack_timePerBeltLink = 8;
-force ace_magazinerepack_timePerMagazine = 2;
+force ace_magazinerepack_timePerMagazine = 1;
 
 // ACE Map
 force ace_map_BFT_Enabled = false;
@@ -224,17 +242,17 @@ force ace_markers_timestampFormat = "HH:MM";
 force ace_markers_timestampHourFormat = 24;
 
 // ACE Map Gestures
-ace_map_gestures_allowCurator = true;
-ace_map_gestures_allowSpectator = true;
-ace_map_gestures_briefingMode = 0;
+force ace_map_gestures_allowCurator = true;
+force ace_map_gestures_allowSpectator = true;
+force ace_map_gestures_briefingMode = 0;
 force ace_map_gestures_defaultColor = [1,0.88,0,0.7];
 force ace_map_gestures_defaultLeadColor = [1,0.88,0,0.95];
 force ace_map_gestures_enabled = true;
 force ace_map_gestures_interval = 0.03;
 force ace_map_gestures_maxRange = 50;
-ace_map_gestures_maxRangeCamera = 14;
+force ace_map_gestures_maxRangeCamera = 14;
 force ace_map_gestures_nameTextColor = [0.2,0.2,0.2,0.3];
-ace_map_gestures_onlyShowFriendlys = false;
+force ace_map_gestures_onlyShowFriendlys = false;
 
 // ACE Map Tools
 force ace_maptools_drawStraightLines = true;
@@ -281,6 +299,7 @@ force ace_medical_gui_enableSelfActions = true;
 force ace_medical_gui_interactionMenuShowTriage = 1;
 force ace_medical_gui_maxDistance = 3;
 force ace_medical_gui_openAfterTreatment = true;
+force ace_medical_gui_showBloodlossEntry = true;
 force ace_medical_ivFlowRate = 1;
 force ace_medical_limping = 1;
 force ace_medical_painCoefficient = 1.5;
@@ -378,6 +397,8 @@ force ace_finger_enabled = true;
 force ace_finger_indicatorColor = [0.83,0.68,0.21,0.75];
 force ace_finger_indicatorForSelf = true;
 force ace_finger_maxRange = 50;
+ace_finger_proximityScaling = false;
+ace_finger_sizeCoef = 1;
 
 // ACE Pylons
 force ace_pylons_enabledForZeus = true;
@@ -417,7 +438,7 @@ force acex_sitting_enable = true;
 
 // ACE Spectator
 force ace_spectator_enableAI = false;
-ace_spectator_maxFollowDistance = 5;
+force ace_spectator_maxFollowDistance = 5;
 force ace_spectator_restrictModes = 0;
 force ace_spectator_restrictVisions = 0;
 
@@ -442,8 +463,11 @@ force ace_gunbag_swapGunbagEnabled = true;
 force ace_hitreactions_minDamageToTrigger = 0.1;
 ace_inventory_inventoryDisplaySize = 0;
 force ace_laser_dispersionCount = 2;
+force ace_laser_showLaserOnMap = 0;
+force ace_marker_flags_placeAnywhere = false;
 force ace_microdagr_mapDataAvailable = 2;
 force ace_microdagr_waypointPrecision = 3;
+force ace_noradio_enabled = true;
 force ace_optionsmenu_showNewsOnMainMenu = true;
 force ace_overpressure_distanceCoefficient = 1;
 force ace_parachute_failureChance = 0.02;
@@ -468,6 +492,7 @@ ace_ui_gunnerWeaponLowerInfoBackground = true;
 ace_ui_gunnerWeaponName = true;
 ace_ui_gunnerWeaponNameBackground = true;
 ace_ui_gunnerZeroing = true;
+ace_ui_hideDefaultActionIcon = false;
 ace_ui_magCount = true;
 ace_ui_soldierVehicleWeaponInfo = true;
 ace_ui_staminaBar = true;
@@ -497,6 +522,7 @@ force ace_vehiclelock_vehicleStartingLockState = -1;
 ace_vehicles_hideEjectAction = true;
 ace_vehicles_keepEngineRunning = false;
 ace_vehicles_speedLimiterStep = 5;
+force ace_viewports_enabled = true;
 
 // ACE View Distance Limiter
 force ace_viewdistance_enabled = false;
@@ -512,7 +538,7 @@ force acex_viewrestriction_modeSelectiveAir = 0;
 force acex_viewrestriction_modeSelectiveFoot = 0;
 force acex_viewrestriction_modeSelectiveLand = 0;
 force acex_viewrestriction_modeSelectiveSea = 0;
-acex_viewrestriction_preserveView = false;
+force acex_viewrestriction_preserveView = false;
 
 // ACE Volume
 force acex_volume_enabled = false;
@@ -526,12 +552,12 @@ force acex_volume_showNotification = true;
 force ace_common_persistentLaserEnabled = true;
 force ace_laserpointer_enabled = true;
 force ace_reload_displayText = true;
-ace_reload_showCheckAmmoSelf = false;
+force ace_reload_showCheckAmmoSelf = false;
 force ace_weaponselect_displayText = true;
 
 // ACE Weather
 force ace_weather_enabled = false;
-ace_weather_showCheckAirTemperature = true;
+force ace_weather_showCheckAirTemperature = true;
 force ace_weather_updateInterval = 300;
 force ace_weather_windSimulation = true;
 
@@ -599,49 +625,9 @@ UPSL_aime_vehicle_seats_setting_getin_action = true;
 UPSL_aime_vehicle_seats_setting_getout_action = true;
 UPSL_aime_vehicle_seats_setting_turnout_action = true;
 
-// Arca Aux - Aircraft
-force arca_aircraft_requirePilot = true;
-force arca_aircraft_serviceTime_long = 60;
-force arca_aircraft_serviceTime_short = 20;
-
-// Arca Aux - Common
-force arca_common_wsway_adjust = 0.1;
-force arca_common_wsway_enabled = true;
-
-// Arca Aux - Doors
-force arca_doors_axe_time_coefficient = 0.7;
-force arca_doors_buttkick_default_strength = 5;
-force arca_doors_default_lockstrength = 20;
-force arca_doors_kick_default_strength = 25;
-force arca_doors_lockpick_fast_breakChance = 0.5;
-force arca_doors_lockpick_fast_coefficient = 0.5;
-force arca_doors_lockpick_fast_failChance = 0.3;
-force arca_doors_lockpick_slow_breakChance = 0.15;
-force arca_doors_lockpick_slow_failChance = 0.1;
-
-// Arca Aux - Intercom
-force arca_intercom_maxRange = 150;
-force arca_intercom_systemEnabled = true;
-
-// Arca Aux - Medical
-force arca_medical_bactaPatch_timeMod = 1.8;
-force arca_medical_bactaSpray_timeMod = 0.5;
-force arca_medical_locationMedisensor = 0;
-force arca_medical_medicMedisensor = 1;
-force arca_medical_pba_od_enabled = true;
-force arca_medical_pba_od_time = 90;
-force arca_medical_pba_pain_boost = 10;
-force arca_medical_pba_speed_boost = 1.2;
-force arca_medical_pba_sway_boost = 1.15;
-force arca_medical_requireMedic = 1;
-force arca_medical_showBloodLevel = true;
-force arca_medical_systemEnabled = true;
-force arca_medical_timeMedisensor = 10;
-force arca_medical_vutalamine_speed_reduction = 0.8;
-force arca_medical_vutalamine_sway_reduction = 0.5;
-
 // Community Base Addons
 cba_diagnostic_ConsoleIndentType = -1;
+cba_diagnostic_watchInfoRefreshRate = 0.2;
 force cba_disposable_dropUsedLauncher = 2;
 force cba_disposable_replaceDisposableLauncher = true;
 cba_events_repetitionMode = 1;
@@ -801,6 +787,8 @@ force grad_trenches_functions_vehicleEnvelopeDigTime = 120;
 force grad_trenches_functions_vehicleEnvelopeRemovalTime = -1;
 
 // Improved Melee System (Client Settings)
+IMS_CustomCamer_Y = 3;
+IMS_CustomCameraUsedByUserAllowed = true;
 IMS_EnablePlayerSounds = true;
 IMS_HudCoordinate_X = 0.01;
 IMS_HudCoordinate_Y = 0.9;
@@ -818,8 +806,10 @@ force IMS_isHumansCanHitSM = false;
 force IMS_isImsCanHitAllies = true;
 force IMS_isKickButtInstaKill = false;
 force IMS_isStaticDeaths = false;
+IMS_RifleDodgeSet = true;
 force IMS_StealthAI_Ears = 15;
 force IMS_StealthAI_Eyes = 40;
+IMS_WBK_CUSTOMCAMSERVER = false;
 
 // JLTS - Debug
 force JLTS_settings_Debug_chat = true;
@@ -860,7 +850,7 @@ force lambs_danger_disableAIHideFromTanksAndAircraft = true;
 force lambs_danger_disableAIPlayerGroup = false;
 force lambs_danger_disableAIPlayerGroupReaction = false;
 force lambs_danger_disableAutonomousFlares = true;
-lambs_danger_disableAutonomousSmokeGrenades = false;
+force lambs_danger_disableAutonomousSmokeGrenades = false;
 force lambs_danger_panicChance = 0;
 
 // LAMBS Danger Eventhandlers
@@ -898,12 +888,12 @@ force lambs_main_radioWest = 500;
 
 // Lightsaber's And Force
 force IMS_ForceKillFriendlies = false;
-force IMS_LightSabers_GlobalDamageKnight = "100";
-force IMS_LightSabers_GlobalDamageMaster = "150";
+force IMS_LightSabers_GlobalDamageKnight = "75";
+force IMS_LightSabers_GlobalDamageMaster = "100";
 force IMS_LightSabers_GlobalDamagePadawan = "50";
-force IMS_LightSabers_Mana_Knight = "0.00012";
-force IMS_LightSabers_Mana_Master = "0.00018";
-force IMS_LightSabers_Mana_Padawan = "0.00008";
+force IMS_LightSabers_Mana_Knight = "0.00015";
+force IMS_LightSabers_Mana_Master = "0.0002";
+force IMS_LightSabers_Mana_Padawan = "0.0001";
 
 // LRG AI
 force LRG_AI_AimingAccuracy = 0.1;
@@ -1063,133 +1053,75 @@ force LRG_Zeus_Module_CivilianSpawns = true;
 force LRG_Zeus_Module_MedicalDummy = true;
 force LRG_Zeus_Module_SafeZone = true;
 
-// Necroplague - Infected
-force dev_zombie_agroDistance = 50;
-force dev_zombie_attack_launchVeh = "[0,1,1]";
-force dev_zombie_attackDistanceMan = 3.5;
-force dev_zombie_attackDistanceVeh = 8;
-force dev_zombie_attackTimeout = 0.5;
-force dev_zombie_damageMan = 0.125;
-force dev_zombie_damageVeh = 0.001;
-force dev_zombie_distance_roam = 75;
-force dev_zombie_greenEyes = true;
-force dev_zombie_headExplosionChance = 0.5;
-force dev_zombie_headExplosionDamage = 1.3;
-force dev_zombie_health = 0.5;
-force dev_zombie_huntDistance = 100;
-force dev_zombie_infectionChance = 0.5;
-force dev_zombie_maxDistance = 500;
-force dev_zombie_removeWeapon = true;
-force dev_zombie_uniformFix = true;
-force dev_zombie_useGlasses = false;
-force dev_zombie_useIdentity = false;
+// MokTech Industries - Aircraft
+force mti_aircraft_requirePilot = true;
+force mti_aircraft_serviceTime_long = 60;
+force mti_aircraft_serviceTime_short = 20;
 
-// Necroplague - Spitter
-dev_toxmut_attack_damageMan = 0.3;
-dev_toxmut_attack_damageManSpit = 0.5;
-dev_toxmut_attack_damageVeh = 0.01;
-dev_toxmut_attack_launchVeh = "[0,1,0.1]";
-dev_toxmut_attack_reachMan = 3.5;
-dev_toxmut_attack_reachSpit = 30;
-dev_toxmut_attack_reachVeh = 8;
-dev_toxmut_attack_specialChance = 0.5;
-dev_toxmut_attack_timeout = 0.5;
-dev_toxmut_attack_timeoutSpit = 15;
-dev_toxmut_distance_agro = 75;
-dev_toxmut_distance_hunt = 300;
-dev_toxmut_distance_max = 1000;
-dev_toxmut_distance_roam = 75;
-dev_toxmut_health = 1;
+// MokTech Industries - CIS
+force mti_factions_cis_deka_defaultShieldHealth = 750;
+force mti_factions_cis_deka_shieldCooldown = 80;
+force mti_factions_cis_deka_shieldTimeout = 60;
 
-// Necroplague - Stalker
-dev_form939_attack_damageMan = 0.5;
-dev_form939_attack_damageVeh = 0.01;
-dev_form939_attack_launchVeh = "[0,1,1]";
-dev_form939_attack_psychChance = 0.1;
-dev_form939_attack_psychDuration = 15;
-dev_form939_attack_psychTimeout = 30;
-dev_form939_attack_reachMan = 5;
-dev_form939_attack_reachVeh = 8;
-dev_form939_attack_timeout = 0.5;
-dev_form939_distance_agro = 100;
-dev_form939_distance_hunt = 1400;
-dev_form939_distance_max = 1500;
-dev_form939_distance_roam = 75;
-dev_form939_health = 0.11;
+// MokTech Industries - Common
+force mti_common_wsway_adjust = 0.9;
+force mti_common_wsway_enabled = true;
 
-// Necroplague - The Bully
-dev_asymhuman_attack_bigArmChance = 0.5;
-dev_asymhuman_attack_damageMan = 0.5;
-dev_asymhuman_attack_damageVeh = 0.2;
-dev_asymhuman_attack_infectionChance = 0.5;
-dev_asymhuman_attack_launchMan = "[0,6,5]";
-dev_asymhuman_attack_launchVeh = "[0,10,5]";
-dev_asymhuman_attack_reachMan = 3.5;
-dev_asymhuman_attack_reachVeh = 8;
-dev_asymhuman_attack_timeout = 0.5;
-dev_asymhuman_distance_agro = 75;
-dev_asymhuman_distance_hunt = 300;
-dev_asymhuman_distance_max = 1000;
-dev_asymhuman_distance_roam = 75;
-dev_asymhuman_health = 1;
+// MokTech Industries - Doors
+force mti_doors_axe_time_coefficient = 1.25;
+force mti_doors_buttkick_default_strength = 4;
+force mti_doors_default_lockstrength = 20;
+force mti_doors_kick_default_strength = 20;
+force mti_doors_lockpick_fast_breakChance = 0.75;
+force mti_doors_lockpick_fast_coefficient = 0.5;
+force mti_doors_lockpick_fast_failChance = 0.25;
+force mti_doors_lockpick_slow_breakChance = 0.25;
+force mti_doors_lockpick_slow_failChance = 0.05;
 
-// Necroplague - The Hivemind
-dev_hivemind_hallucinate2Distance = 50;
-dev_hivemind_hallucinateProbabilityClose = 20;
-dev_hivemind_hallucinateProbabilityFar = 20;
-dev_hivemind_health = 0.2;
-dev_hivemind_maxCooldown = 40;
-dev_hivemind_maxDistance = 150;
-dev_hivemind_minCooldown = 15;
-dev_hivemind_suicideTime = 180;
+// MokTech Industries - Explosives
+force mti_explosives_advSetup_requireDemo = true;
+force mti_explosives_DP3_destroyAttached = true;
 
-// Necroplague - The Jumper
-dev_asymhuman_stage2_agroDistance = 50;
-dev_asymhuman_stage2_attack2Timeout = 10;
-dev_asymhuman_stage2_attackDistanceMan = 2.5;
-dev_asymhuman_stage2_attackDistanceVeh = 8;
-dev_asymhuman_stage2_attackTimeout = 1;
-dev_asymhuman_stage2_damageMan = 0.2;
-dev_asymhuman_stage2_damageManAttack2 = 0.3;
-dev_asymhuman_stage2_damageVeh = 0.1;
-dev_asymhuman_stage2_distance_roam = 50;
-dev_asymhuman_stage2_health = 0.1;
-dev_asymhuman_stage2_huntDistance = 75;
-dev_asymhuman_stage2_infectionChance = 0.5;
-dev_asymhuman_stage2_jumpTimeout = 30;
-dev_asymhuman_stage2_maxDistance = 500;
+// MokTech Industries - Field Defibrillator
+force mti_medical_defib_arrest_chance = 0.1;
+force mti_medical_defib_success_chance = 0.6;
 
-// Necroplague - The Parasite
-dev_parasite_agroDistance = 1000;
-dev_parasite_attack2Timeout = 4;
-dev_parasite_attack3Timeout = 20;
-dev_parasite_attackDistanceMan = 3.5;
-dev_parasite_attackDistanceVeh = 7;
-dev_parasite_attackTimeout = 1;
-dev_parasite_damageMan = 0.2;
-dev_parasite_damageManAttack2 = 0.2;
-dev_parasite_damageManAttack3 = 0.25;
-dev_parasite_damageVeh = 0.001;
-dev_parasite_distance_roam = 75;
-dev_parasite_health = 0.05;
-dev_parasite_huntDistance = 1500;
-dev_parasite_infectionChance = 1;
-dev_parasite_jumpTimeout = 20;
-dev_parasite_maxDistance = 2000;
-dev_parasite_specialChance = 0.1;
+// MokTech Industries - Intercom
+force mti_intercom_maxRange = 200;
+force mti_intercom_systemEnabled = true;
 
-// Necroplague Mutants
-dev_cba_damageMultiplier = 1;
-dev_cba_friendly = "[""VirtualCurator_F"", ""B_VirtualCurator_F"", ""O_VirtualCurator_F"", ""I_VirtualCurator_F"", ""C_VirtualCurator_F""]";
-dev_cba_friendlySide = false;
-dev_cba_infection = true;
-dev_cba_infection_prolongTime = 900;
-dev_cba_infection_resurrectParasite = true;
-dev_cba_infection_resurrectParasiteChance = 0.1;
-dev_cba_infection_resurrectTime = "[25,30,35]";
-dev_cba_infection_resurrectZombie = true;
-dev_cba_infection_totalTime = 180;
-dev_cba_killswitch = false;
+// MokTech Industries - Katarn_OS
+force mti_katarnOS_intercom_enabled = true;
+force mti_katarnOS_lowLight_enabled = true;
+force mti_katarnOS_shield_duration = 240;
+force mti_katarnOS_shield_maxCharges = 3;
+
+// MokTech Industries - Medical
+force mti_medical_bactaPatch_timeMod = 1.8;
+force mti_medical_bactaSpray_timeMod = 0.5;
+force mti_medical_enableDiary = true;
+force mti_medical_locationMedisensor = 0;
+force mti_medical_medicMedisensor = 1;
+force mti_medical_nevastrin8_maxCount = 5;
+force mti_medical_pba_cpr_boost = 5;
+force mti_medical_pba_od_enabled = true;
+force mti_medical_pba_od_time = 90;
+force mti_medical_pba_pain_boost = 10;
+force mti_medical_pba_speed_boost = 1.2;
+force mti_medical_pba_sway_boost = 1.15;
+force mti_medical_requireMedic = 1;
+force mti_medical_showBloodLevel = true;
+force mti_medical_systemEnabled = true;
+force mti_medical_timeMedisensor = 12;
+force mti_medical_vutalamine_speed_reduction = 0.8;
+force mti_medical_vutalamine_sway_reduction = 0.5;
+
+// MokTech Industries - Weapons
+force mti_weapons_core_ion_charge_max = 5;
+force mti_weapons_core_stun_charge_max = 5;
+
+// MokTech Industries - Zeus
+force mti_zeus_ZEN_useTraits = true;
 
 // OPTRE Powered MJOLNIR
 force OPTRE_HELMET_HUD_EVA = "OPTRE_MJOLNIR_EVAHelmet,OPTRE_MJOLNIR_EVAHelmet_Emily";
@@ -1200,6 +1132,11 @@ force OPTRE_HELMET_HUD_MARKVI = "OPTRE_FC_MJOLNIR_Mark_VI_Helmet,OPTRE_FC_MJOLNI
 force OPTRE_HELMET_HUD_MP = "OPTRE_MJOLNIR_MPHelmet";
 force OPTRE_HELMET_HUD_RECON = "OPTRE_MJOLNIR_ReconHelmet";
 force OPTRE_HELMET_HUD_SANGHEILI = "OPTRE_FC_Elite_Helmet_FieldMarshal,OPTRE_FC_Elite_Helmet_HonorGuard_Ultra,OPTRE_FC_Elite_Helmet_HonorGuard,OPTRE_FC_Elite_Helmet_Major,OPTRE_FC_Elite_Helmet_Minor,OPTRE_FC_Elite_Helmet_SpecOps,OPTRE_FC_Elite_Helmet_Ultra,OPTRE_FC_Elite_Helmet_Zealot";
+OPTRE_HUD_SHIELD_BAR_HEIGHT = "0.057079";
+OPTRE_HUD_SHIELD_BAR_POS_X = "0.396875";
+OPTRE_HUD_SHIELD_BAR_POS_Y = "0.055897";
+OPTRE_HUD_SHIELD_BAR_TEXTURE = "\A3\ui_f\data\GUI\RscCommon\RscProgress\progressbar_ca.paa";
+OPTRE_HUD_SHIELD_BAR_WIDTH = "0.206250";
 force OPTRE_HUD_TEXTURE_EVA = "\OPTRE_Suit_Scripts\textures\EVA_Hud_No_Crosshair.paa";
 force OPTRE_HUD_TEXTURE_MARKIV = "\OPTRE_Suit_Scripts\textures\MarkIV_Hud_No_Crosshair.paa";
 force OPTRE_HUD_TEXTURE_MARKV = "\OPTRE_Suit_Scripts\textures\MarkV_Hud_No_Crosshair.paa";
@@ -1215,8 +1152,7 @@ force OPTRE_MJOLNIR_ENABLE_JUMP = false;
 force OPTRE_MJOLNIR_ENABLE_SPARKS_HIT = true;
 force OPTRE_MJOLNIR_ENABLE_SPARKS_SHIELD = true;
 force OPTRE_MJOLNIR_ENERGY_BAR_ACTIVE = false;
-force OPTRE_MJOLNIR_ENERGY_BAR_COLOR = 0;
-force OPTRE_MJOLNIR_ENERGY_BAR_SIZE = 1;
+OPTRE_MJOLNIR_ENERGY_BAR_COLOR = [0.5,0.9,0.9,0.8];
 force OPTRE_MJOLNIR_HUD_ACTIVE_INTRO = false;
 force OPTRE_MJOLNIR_HUD_OVERLAY = false;
 force OPTRE_MJOLNIR_INCREASED_SPEED = true;
@@ -1227,6 +1163,16 @@ force OPTRE_MJOLNIR_PREVENT_FALLDAMAGE = false;
 force OPTRE_MJOLNIR_RECOIL_MODIFIER = 0.3;
 force OPTRE_MJOLNIR_SHIELD_ENERGY = 75;
 force OPTRE_MJOLNIR_SHIELD_ENERGY_AI = 100;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_1 = 1;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_2 = 1.5;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_3 = 2;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_4 = 2.5;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_5 = 3;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_SUITS_1 = "OPTRE_FC_Elite_Armor_Minor";
+OPTRE_MJOLNIR_SHIELD_MODIFIER_SUITS_2 = "OPTRE_FC_Elite_Armor_Major,OPTRE_FC_Elite_Armor_SpecOps";
+OPTRE_MJOLNIR_SHIELD_MODIFIER_SUITS_3 = "OPTRE_FC_Elite_Armor_Ultra";
+OPTRE_MJOLNIR_SHIELD_MODIFIER_SUITS_4 = "OPTRE_FC_Elite_Armor_Zealot,OPTRE_FC_Elite_Armor_FieldMarshal";
+OPTRE_MJOLNIR_SHIELD_MODIFIER_SUITS_5 = "OPTRE_FC_Elite_Armor_HonorGuard,OPTRE_FC_Elite_Armor_HonorGuard_Ultra";
 force OPTRE_MJOLNIR_SHIELD_REGEN = 0.8;
 force OPTRE_MJOLNIR_SHIELD_REGEN_AI = 1;
 force OPTRE_MJOLNIR_SHOW_ACTIVATE = false;
@@ -1302,6 +1248,17 @@ force TFAR_Teamspeak_Channel_Password = "Arca";
 force tfar_terrain_interception_coefficient = 7;
 force TFAR_voiceCone = true;
 
+// Turret Enhanced
+Fat_Lurch_Grid = true;
+Fat_Lurch_GridNum = 6;
+Fat_Lurch_MapSlew = true;
+Fat_Lurch_Markers = true;
+Fat_Lurch_Measure = true;
+Fat_Lurch_ShowAz = true;
+Fat_Lurch_ShowEl = true;
+Fat_Lurch_ShowNorth = true;
+Fat_Lurch_ShowTarget = true;
+
 // WebKnight Droids
 force WBK_Droid_b1_damage = "4";
 force WBK_Droid_b2_damage = "100";
@@ -1320,7 +1277,7 @@ force zen_common_autoAddObjects = true;
 force zen_common_cameraBird = false;
 zen_common_darkMode = false;
 force zen_common_disableGearAnim = true;
-zen_common_preferredArsenal = 1;
+force zen_common_preferredArsenal = 1;
 force zen_compat_ace_hideModules = false;
 zen_context_menu_enabled = 2;
 zen_context_menu_overrideWaypoints = false;
@@ -1349,12 +1306,9 @@ zen_vision_enableWhiteHotRedCold = false;
 // Zeus Enhanced - Faction Filter
 zen_faction_filter_0_3AS_CIS = true;
 zen_faction_filter_0_3AS_CIS_Human = true;
-zen_faction_filter_0_dev_mutants = true;
 zen_faction_filter_0_JLTS_CIS = true;
-zen_faction_filter_0_JMSLLTE_mimbLibA = true;
-zen_faction_filter_0_JMSLLTE_scumFact = true;
-zen_faction_filter_0_JMSLLTE_scumFact_groups = true;
 zen_faction_filter_0_LS_CIS = true;
+zen_faction_filter_0_mti_factions_cis = true;
 zen_faction_filter_0_O_3AS_CISV3 = true;
 zen_faction_filter_0_OPF_F = true;
 zen_faction_filter_0_OPF_G_F = true;
@@ -1368,42 +1322,35 @@ zen_faction_filter_0_WBK_AI_Melee = true;
 zen_faction_filter_0_WBK_AI_StarWars_Droids = true;
 zen_faction_filter_0_WBK_Droid_groups = true;
 zen_faction_filter_1_3AS_Rep = true;
-zen_faction_filter_1_ARCA_Units = true;
 zen_faction_filter_1_BLU_CTRG_F = true;
 zen_faction_filter_1_BLU_F = true;
 zen_faction_filter_1_BLU_G_F = true;
 zen_faction_filter_1_BLU_GEN_F = true;
 zen_faction_filter_1_BLU_T_F = true;
 zen_faction_filter_1_BLU_W_F = true;
-zen_faction_filter_1_CG_Bastion = true;
-zen_faction_filter_1_dev_mutants = true;
-zen_faction_filter_1_DSA_DeltaX = true;
-zen_faction_filter_1_DSA_DeltaX_groups = true;
 zen_faction_filter_1_JLTS_GAR = true;
-zen_faction_filter_1_JMSLLTE_empire_fact = true;
+zen_faction_filter_1_JLTS_PA_Zeus_Main = true;
 zen_faction_filter_1_LS_CSF = true;
 zen_faction_filter_1_LS_GAR = true;
 zen_faction_filter_1_LS_ORSF = true;
 zen_faction_filter_1_LS_REPNAVY = true;
+zen_faction_filter_1_lsb_turret = true;
+zen_faction_filter_1_mti_faction_SOB = true;
 zen_faction_filter_1_OPTRE_UNSC = true;
 zen_faction_filter_1_SWLB_GAR = true;
 zen_faction_filter_1_SWLB_GAR_SOB = true;
 zen_faction_filter_1_WBK_AI = true;
 zen_faction_filter_1_WBK_AI_Melee = true;
-zen_faction_filter_2_dev_mutants = true;
 zen_faction_filter_2_IND_C_F = true;
 zen_faction_filter_2_IND_E_F = true;
 zen_faction_filter_2_IND_F = true;
 zen_faction_filter_2_IND_G_F = true;
 zen_faction_filter_2_IND_L_F = true;
 zen_faction_filter_2_LS_MANDALORIAN = true;
+zen_faction_filter_2_LS_MEMEFOR = true;
 zen_faction_filter_2_OPTRE_PD = true;
-zen_faction_filter_3_ = true;
 zen_faction_filter_3_CIV_F = true;
 zen_faction_filter_3_CIV_IDAP_F = true;
-zen_faction_filter_3_dev_mutants = true;
-zen_faction_filter_3_DSA_Spooks = true;
 zen_faction_filter_3_IND_L_F = true;
 zen_faction_filter_3_LS_CIV = true;
 zen_faction_filter_3_OPTRE_UEG_Civ = true;
-
