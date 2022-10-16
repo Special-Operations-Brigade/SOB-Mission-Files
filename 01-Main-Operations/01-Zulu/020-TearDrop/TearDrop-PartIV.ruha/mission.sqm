@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=10113;
+		nextID=10116;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1127;
+		nextID=1257;
 	};
 	class Camera
 	{
-		pos[]={6593.6172,128.63791,1366.8154};
-		dir[]={0.58296055,-0.58140463,-0.56770891};
-		up[]={0.41657916,0.81356323,-0.40568119};
-		aside[]={-0.69773352,5.7573197e-007,-0.71647179};
+		pos[]={6592.3081,77.74855,1255.5916};
+		dir[]={-0.065154269,-0.83175975,0.55132067};
+		up[]={-0.09761674,0.55513024,0.82601655};
+		aside[]={0.99310195,-2.0922744e-007,0.11736408};
 	};
 };
 binarizationWanted=0;
@@ -352,23 +352,23 @@ dlcs[]=
 randomSeed=16341685;
 class ScenarioData
 {
-	author="CMS-1607 ""JakubPii""";
-	overviewText="Operation Tear Drop Part 4";
-	overviewTextLocked="Operation Tear Drop Part 4";
+	author="CSM-1607 ""JakubPii""";
+	overviewText="Operation Tear Drop Part IV";
+	overviewTextLocked="Operation Tear Drop Part IV";
 	overViewPicture="\z\mti\Addons\common\data\insignias\SOB_insignia_ca.paa";
 	overViewPictureLocked="\z\mti\Addons\common\data\insignias\SOB_insignia_ca.paa";
-	onLoadMission="Operation Tear Drop Part 4";
+	onLoadMission="Operation Tear Drop Part IV";
 	loadScreen="\z\mti\Addons\common\data\insignias\SOB_insignia_ca.paa";
 	briefing=0;
 	debriefing=0;
 	saving=0;
 	disabledAI=1;
 	respawn=3;
-	respawnDelay=10;
+	respawnDelay=5;
 	class Header
 	{
 		gameType="Coop";
-		maxPlayers=40;
+		maxPlayers=100;
 	};
 	wreckRemovalMaxTime=3600;
 };
@@ -698,7 +698,7 @@ class Mission
 	assetType="Free";
 	class Intel
 	{
-		briefingName="Operation Tear Drop Part 4";
+		briefingName="Operation Tear Drop Part IV";
 		overviewText="Operation Tear Drop Part 4";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
@@ -12225,7 +12225,7 @@ class Mission
 							fillName="SolidFull";
 							a=145.25256;
 							b=8.8327637;
-							angle=44.999981;
+							angle=44.999973;
 							id=5262;
 							atlOffset=722.57349;
 						};
@@ -12295,7 +12295,7 @@ class Mission
 							fillName="SolidFull";
 							a=70.094604;
 							b=50;
-							angle=44.999981;
+							angle=44.999973;
 							id=5267;
 							atlOffset=730.07544;
 						};
@@ -12309,7 +12309,7 @@ class Mission
 							fillName="SolidFull";
 							a=70.094604;
 							b=50;
-							angle=44.999981;
+							angle=44.999973;
 							id=5268;
 							atlOffset=729.97229;
 						};
@@ -12351,7 +12351,7 @@ class Mission
 							fillName="SolidFull";
 							a=246.66223;
 							b=50;
-							angle=44.999981;
+							angle=44.999973;
 							id=5271;
 							atlOffset=725.91333;
 						};
@@ -12365,7 +12365,7 @@ class Mission
 							fillName="SolidFull";
 							a=353.16846;
 							b=66.5;
-							angle=44.999981;
+							angle=44.999973;
 							id=5272;
 							atlOffset=727.71881;
 						};
@@ -12379,7 +12379,7 @@ class Mission
 							fillName="SolidFull";
 							a=85.124634;
 							b=64.993896;
-							angle=224.99982;
+							angle=224.99979;
 							id=5273;
 							atlOffset=729.97955;
 						};
@@ -12393,7 +12393,7 @@ class Mission
 							fillName="SolidFull";
 							a=68.187012;
 							b=15.708252;
-							angle=44.999981;
+							angle=44.999973;
 							id=5274;
 							atlOffset=730.0722;
 						};
@@ -12407,7 +12407,7 @@ class Mission
 							fillName="SolidFull";
 							a=68.32605;
 							b=14.320068;
-							angle=44.999981;
+							angle=44.999973;
 							id=5275;
 							atlOffset=729.48779;
 						};
@@ -12421,7 +12421,7 @@ class Mission
 							fillName="SolidFull";
 							a=50;
 							b=50;
-							angle=44.999981;
+							angle=44.999973;
 							id=5276;
 							atlOffset=730.18164;
 						};
@@ -12435,7 +12435,7 @@ class Mission
 							fillName="SolidFull";
 							a=50;
 							b=50;
-							angle=44.999981;
+							angle=44.999973;
 							id=5277;
 							atlOffset=730.2215;
 						};
@@ -12509,18 +12509,17 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6094.6392,1156.1069,6318.4189};
-								angles[]={0,1.5707965,0};
+								position[]={6094.6392,1156.1067,6318.4189};
+								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							class Attributes
 							{
-								name="BRIGE_CIS_4";
+								name="BRIGE_CIS_8";
 								disableSimulation=1;
 							};
 							id=7392;
 							type="Land_HelipadEmpty_F";
-							atlOffset=0.00024414063;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -12576,7 +12575,7 @@ class Mission
 						};
 					};
 					id=7391;
-					atlOffset=1033.462;
+					atlOffset=1033.4619;
 				};
 				class Item1
 				{
@@ -12590,41 +12589,42 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6094.7749,1101.9497,6520.4688};
+								position[]={6094.7749,1101.9493,6520.4692};
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							class Attributes
 							{
-								name="LOWER_DECK_CIS_4";
+								name="LOWER_DECK_CIS_9";
 							};
 							id=7394;
 							type="Land_HelipadEmpty_F";
+							atlOffset=1094.426;
 						};
 						class Item1
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={815.98584,905.23584,6521.8545};
+								position[]={815.98602,905.23553,6521.854};
 								angles[]={0,4.712389,0};
 							};
 							side="Empty";
 							class Attributes
 							{
-								name="LOWER_DECK_CIS_5";
+								name="LOWER_DECK_CIS_3";
 							};
 							id=8588;
 							type="Land_HelipadEmpty_F";
-							atlOffset=6.1035156e-005;
+							atlOffset=882.35901;
 						};
 					};
 					id=7393;
-					atlOffset=979.30475;
+					atlOffset=979.30438;
 				};
 			};
 			id=7390;
-			atlOffset=1006.3834;
+			atlOffset=1006.3831;
 		};
 		class Item91
 		{
@@ -43837,18 +43837,18 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6094.7397,1103.6403,6518.0137};
+								position[]={6094.7402,1103.6409,6518.0142};
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							class Attributes
 							{
-								init="call{this addAction [""To The Bridge"", {player setPosATL (getPosATL BRIGE_CIS_3)}]; }";
+								init="call{this addAction [""To The Bridge"", {player setPosATL (getPosATL BRIGE_CIS_8)}]; }";
 								disableSimulation=1;
 							};
 							id=8314;
 							type="3AS_CIS_Door_Static_Prop";
-							atlOffset=1094.3905;
+							atlOffset=1094.391;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -47758,7 +47758,7 @@ class Mission
 							fillName="SolidFull";
 							a=145.25256;
 							b=8.8327637;
-							angle=89.999962;
+							angle=89.999947;
 							id=8700;
 							atlOffset=774.7417;
 						};
@@ -47800,7 +47800,7 @@ class Mission
 							fillName="SolidFull";
 							a=52.384338;
 							b=161.14261;
-							angle=1.3660374e-005;
+							angle=1.3660372e-005;
 							id=8703;
 							atlOffset=774.48773;
 						};
@@ -47814,7 +47814,7 @@ class Mission
 							fillName="SolidFull";
 							a=64.873108;
 							b=245.1907;
-							angle=1.3660374e-005;
+							angle=1.3660372e-005;
 							id=8704;
 							atlOffset=774.80621;
 						};
@@ -47828,7 +47828,7 @@ class Mission
 							fillName="SolidFull";
 							a=70.094604;
 							b=50;
-							angle=89.999962;
+							angle=89.999947;
 							id=8705;
 							atlOffset=774.02832;
 						};
@@ -47842,7 +47842,7 @@ class Mission
 							fillName="SolidFull";
 							a=70.094604;
 							b=50;
-							angle=89.999962;
+							angle=89.999947;
 							id=8706;
 							atlOffset=774.30945;
 						};
@@ -47884,7 +47884,7 @@ class Mission
 							fillName="SolidFull";
 							a=246.66223;
 							b=50;
-							angle=89.999962;
+							angle=89.999947;
 							id=8709;
 							atlOffset=774.10498;
 						};
@@ -47898,7 +47898,7 @@ class Mission
 							fillName="SolidFull";
 							a=353.16846;
 							b=66.5;
-							angle=89.999962;
+							angle=89.999947;
 							id=8710;
 							atlOffset=776.15094;
 						};
@@ -47912,7 +47912,7 @@ class Mission
 							fillName="SolidFull";
 							a=85.124634;
 							b=64.993896;
-							angle=269.99976;
+							angle=269.99973;
 							id=8711;
 							atlOffset=794.93518;
 						};
@@ -47926,7 +47926,7 @@ class Mission
 							fillName="SolidFull";
 							a=68.187012;
 							b=15.708252;
-							angle=89.999962;
+							angle=89.999947;
 							id=8712;
 							atlOffset=794.64063;
 						};
@@ -47940,7 +47940,7 @@ class Mission
 							fillName="SolidFull";
 							a=68.32605;
 							b=14.320068;
-							angle=89.999962;
+							angle=89.999947;
 							id=8713;
 							atlOffset=794.2677;
 						};
@@ -47954,7 +47954,7 @@ class Mission
 							fillName="SolidFull";
 							a=50;
 							b=50;
-							angle=89.999962;
+							angle=89.999947;
 							id=8714;
 							atlOffset=774.72601;
 						};
@@ -47968,7 +47968,7 @@ class Mission
 							fillName="SolidFull";
 							a=50;
 							b=50;
-							angle=89.999962;
+							angle=89.999947;
 							id=8715;
 							atlOffset=775.25671;
 						};
@@ -75134,18 +75134,18 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={816.021,906.92639,6524.3096};
+								position[]={816.021,906.92639,6524.3101};
 								angles[]={0,4.712389,0};
 							};
 							side="Empty";
 							class Attributes
 							{
-								init="call{this addAction [""To The Bridge"", {player setPosATL (getPosATL BRIGE_CIS_3)}]; }";
+								init="call{this addAction [""To The Bridge"", {player setPosATL (getPosATL BRIGE_CIS_5)}]; }";
 								disableSimulation=1;
 							};
 							id=9506;
 							type="3AS_CIS_Door_Static_Prop";
-							atlOffset=882.0741;
+							atlOffset=882.07397;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -77859,19 +77859,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6094.6167,1157.9016,6321.084};
+						position[]={6094.6172,1157.9012,6321.084};
 						angles[]={0,1.5707964,0};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction [""Lower Deck"", {player setPosATL (getPosATL LOWER_DECK_CIS_3)}];}";
+						init="call{this addAction [""Lower Deck"", {player setPosATL (getPosATL LOWER_DECK_CIS_8)}];}";
 						dynamicSimulation=1;
 					};
 					id=8466;
 					type="3AS_CIS_Door_Static_Prop";
-					atlOffset=0.016479492;
+					atlOffset=0.016113281;
 				};
 				class Item151
 				{
