@@ -1243,8 +1243,8 @@ force TFAR_setting_DefaultRadio_Rifleman_West = "TFAR_rf7800str";
 force TFAR_spectatorCanHearEnemyUnits = true;
 force TFAR_spectatorCanHearFriendlies = true;
 force TFAR_takingRadio = 2;
-force TFAR_Teamspeak_Channel_Name = "ARCA TFAR";
-force TFAR_Teamspeak_Channel_Password = "Arca";
+force TFAR_Teamspeak_Channel_Name = "TRAINING TFAR";
+force TFAR_Teamspeak_Channel_Password = "SOB";
 force tfar_terrain_interception_coefficient = 7;
 force TFAR_voiceCone = true;
 
