@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=10;
+	toggles=1034;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=3240;
+		nextID=3241;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=148;
+		nextID=185;
 	};
 	class Camera
 	{
-		pos[]={8976.4414,158.1312,2466.9832};
-		dir[]={0.27086806,-0.75578701,0.59622252};
-		up[]={0.31261176,0.65481651,0.6881063};
-		aside[]={0.91047728,4.2375177e-007,-0.41363648};
+		pos[]={9165.1357,224.12503,4542.8608};
+		dir[]={-0.53735495,-0.49931422,-0.67970449};
+		up[]={-0.30966952,0.86641204,-0.39170316};
+		aside[]={-0.78448641,7.9367601e-007,0.62019676};
 	};
 };
 binarizationWanted=0;
@@ -50,7 +50,6 @@ addons[]=
 	"ls_commandPost",
 	"LRG_Medical",
 	"3as_GNK_Prop",
-	"mti_aircraft",
 	"mti_props",
 	"3AS_Prop_Terminals",
 	"mti_armoury_arc",
@@ -59,6 +58,7 @@ addons[]=
 	"mti_armoury_phase2",
 	"mti_armoury_fieldsupport",
 	"mti_armoury_commando",
+	"mti_aircraft",
 	"OPTRE_Vehicles_Cart",
 	"mti_modules",
 	"A3_Characters_F",
@@ -138,13 +138,14 @@ addons[]=
 	"OPTRE_BW_DoorConsole",
 	"A3_Modules_F",
 	"A3_Modules_F_Curator_Curator",
-	"JLTS_PA_Core"
+	"JLTS_PA_Core",
+	"lsb_modules"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=93;
+		items=94;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -248,59 +249,59 @@ class AddonsMetaData
 		};
 		class Item16
 		{
-			className="mti_aircraft";
-			name="MokTech Industries - Aircraft";
-			author="MokTech Industries";
-			url="https://discord.gg/Pu2gdBd7Te/";
-		};
-		class Item17
-		{
 			className="mti_props";
 			name="MokTech Industries - Props";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item18
+		class Item17
 		{
 			className="3AS_Prop_Terminals";
 			name="3AS_Prop_Terminals";
 			author="3rd Army Studios";
 		};
-		class Item19
+		class Item18
 		{
 			className="mti_armoury_arc";
 			name="MokTech Industries - ARC";
 			author="MokTech Industries";
 		};
-		class Item20
+		class Item19
 		{
 			className="mti_armoury_assassin";
 			name="MokTech Industries - Assassin";
 			author="MokTech Industries";
 		};
-		class Item21
+		class Item20
 		{
 			className="mti_armoury_pilot";
 			name="MokTech Industries - Pilot";
 			author="MokTech Industries";
 		};
-		class Item22
+		class Item21
 		{
 			className="mti_armoury_phase2";
 			name="MokTech Industries - Phase 2";
 			author="MokTech Industries";
 		};
-		class Item23
+		class Item22
 		{
 			className="mti_armoury_fieldsupport";
 			name="MokTech Industries - Field Support";
 			author="MokTech Industries";
 		};
-		class Item24
+		class Item23
 		{
 			className="mti_armoury_commando";
 			name="MokTech Industries - Commando";
 			author="MokTech Industries";
+		};
+		class Item24
+		{
+			className="mti_aircraft";
+			name="MokTech Industries - Aircraft";
+			author="MokTech Industries";
+			url="https://discord.gg/Pu2gdBd7Te/";
 		};
 		class Item25
 		{
@@ -733,6 +734,12 @@ class AddonsMetaData
 			className="JLTS_PA_Core";
 			name="JLTS_PA_Core";
 		};
+		class Item93
+		{
+			className="lsb_modules";
+			name="Legion Studios - Battlefields: Modules";
+			author="Legion Studios";
+		};
 	};
 };
 class DynamicSimulation
@@ -763,6 +770,10 @@ class ScenarioData
 	overViewPictureLocked="\z\mti\Addons\common\data\insignias\SOB_insignia_ca.paa";
 	onLoadMission="Alpine Rush!";
 	loadScreen="\z\mti\Addons\common\data\insignias\SOB_insignia_ca.paa";
+	briefing=0;
+	debriefing=0;
+	saving=0;
+	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
 	respawnDelay=5;
@@ -1108,7 +1119,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=104;
+		items=105;
 		class Item0
 		{
 			dataType="Marker";
@@ -1180,10 +1191,9 @@ class Mission
 		{
 			dataType="Layer";
 			name="Prosecutor";
-			state=1;
 			class Entities
 			{
-				items=62;
+				items=60;
 				class Item0
 				{
 					dataType="Layer";
@@ -9621,7 +9631,6 @@ class Mission
 				{
 					dataType="Layer";
 					name="Bridge";
-					state=1;
 					class Entities
 					{
 						items=165;
@@ -20545,61 +20554,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8991.458,549.33105,8864.7139};
-						angles[]={0,1.4426527,0};
-					};
-					side="Empty";
-					class Attributes
-					{
-						ammo=0;
-						lock="LOCKED";
-						fuel=0;
-						init="call{this addAction [""Take Shuttle to The Resurgence"", {player setPosATL (getPosATL resurgence_shuttle)}];}";
-						disableSimulation=1;
-					};
-					id=680;
-					type="MTI_LAATle_Gunship";
-					atlOffset=530.87549;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item31
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={8992.9014,547.91815,8859.6211};
-						angles[]={0,5.3696437,0};
-					};
-					side="Empty";
-					class Attributes
-					{
-						name="prosecutor_shuttle";
-					};
-					id=681;
-					type="Land_HelipadEmpty_F";
-					atlOffset=532.78381;
-				};
-				class Item32
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={9078.7891,548.04816,8828.0469};
 						angles[]={0,5.3696437,0};
 					};
@@ -20630,7 +20584,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item33
+				class Item31
 				{
 					dataType="Object";
 					class PositionInfo
@@ -20664,7 +20618,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item34
+				class Item32
 				{
 					dataType="Object";
 					class PositionInfo
@@ -20699,7 +20653,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item35
+				class Item33
 				{
 					dataType="Object";
 					class PositionInfo
@@ -20734,7 +20688,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item36
+				class Item34
 				{
 					dataType="Object";
 					class PositionInfo
@@ -20769,7 +20723,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item37
+				class Item35
 				{
 					dataType="Object";
 					class PositionInfo
@@ -20804,7 +20758,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item38
+				class Item36
 				{
 					dataType="Object";
 					class PositionInfo
@@ -20839,7 +20793,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item39
+				class Item37
 				{
 					dataType="Object";
 					class PositionInfo
@@ -20874,7 +20828,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item40
+				class Item38
 				{
 					dataType="Object";
 					class PositionInfo
@@ -20909,7 +20863,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item41
+				class Item39
 				{
 					dataType="Object";
 					class PositionInfo
@@ -20957,7 +20911,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item42
+				class Item40
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21005,7 +20959,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item43
+				class Item41
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21053,7 +21007,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item44
+				class Item42
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21117,7 +21071,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item45
+				class Item43
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21151,7 +21105,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item46
+				class Item44
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21185,7 +21139,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item47
+				class Item45
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21219,7 +21173,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item48
+				class Item46
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21253,7 +21207,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item49
+				class Item47
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21287,7 +21241,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item50
+				class Item48
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21321,7 +21275,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item51
+				class Item49
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21338,7 +21292,7 @@ class Mission
 					type="MTI_arc_170";
 					atlOffset=0.35852051;
 				};
-				class Item52
+				class Item50
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21355,7 +21309,7 @@ class Mission
 					type="MTI_BTLB";
 					atlOffset=0.37475586;
 				};
-				class Item53
+				class Item51
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21389,7 +21343,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item54
+				class Item52
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21423,7 +21377,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item55
+				class Item53
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21457,7 +21411,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item56
+				class Item54
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21491,7 +21445,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item57
+				class Item55
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21525,7 +21479,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item58
+				class Item56
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21559,7 +21513,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item59
+				class Item57
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21593,7 +21547,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item60
+				class Item58
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -21622,7 +21576,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item61
+				class Item59
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -21659,7 +21613,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Player Slots";
-			state=1;
 			class Entities
 			{
 				items=25;
@@ -21958,7 +21911,6 @@ class Mission
 					{
 					};
 					id=713;
-					atlOffset=29.77;
 				};
 				class Item1
 				{
@@ -22467,7 +22419,6 @@ class Mission
 					{
 					};
 					id=716;
-					atlOffset=29.77;
 				};
 				class Item2
 				{
@@ -22734,7 +22685,6 @@ class Mission
 					{
 					};
 					id=720;
-					atlOffset=29.77;
 				};
 				class Item3
 				{
@@ -23002,7 +22952,6 @@ class Mission
 					{
 					};
 					id=723;
-					atlOffset=29.77;
 				};
 				class Item4
 				{
@@ -23397,7 +23346,6 @@ class Mission
 					{
 					};
 					id=726;
-					atlOffset=29.77;
 				};
 				class Item5
 				{
@@ -23763,7 +23711,6 @@ class Mission
 					{
 					};
 					id=730;
-					atlOffset=29.77;
 				};
 				class Item6
 				{
@@ -24129,7 +24076,6 @@ class Mission
 					{
 					};
 					id=735;
-					atlOffset=29.77;
 				};
 				class Item7
 				{
@@ -24495,7 +24441,6 @@ class Mission
 					{
 					};
 					id=740;
-					atlOffset=29.77;
 				};
 				class Item8
 				{
@@ -24861,7 +24806,6 @@ class Mission
 					{
 					};
 					id=745;
-					atlOffset=29.77;
 				};
 				class Item9
 				{
@@ -25539,7 +25483,6 @@ class Mission
 					{
 					};
 					id=750;
-					atlOffset=29.77;
 				};
 				class Item10
 				{
@@ -26217,7 +26160,6 @@ class Mission
 					{
 					};
 					id=755;
-					atlOffset=29.77;
 				};
 				class Item11
 				{
@@ -26895,7 +26837,6 @@ class Mission
 					{
 					};
 					id=760;
-					atlOffset=29.77;
 				};
 				class Item12
 				{
@@ -27573,7 +27514,6 @@ class Mission
 					{
 					};
 					id=765;
-					atlOffset=29.77;
 				};
 				class Item13
 				{
@@ -27939,7 +27879,6 @@ class Mission
 					{
 					};
 					id=770;
-					atlOffset=29.77;
 				};
 				class Item14
 				{
@@ -28305,7 +28244,6 @@ class Mission
 					{
 					};
 					id=775;
-					atlOffset=29.77;
 				};
 				class Item15
 				{
@@ -28671,7 +28609,6 @@ class Mission
 					{
 					};
 					id=780;
-					atlOffset=29.77;
 				};
 				class Item16
 				{
@@ -29037,7 +28974,6 @@ class Mission
 					{
 					};
 					id=785;
-					atlOffset=29.77;
 				};
 				class Item17
 				{
@@ -29490,7 +29426,6 @@ class Mission
 					{
 					};
 					id=790;
-					atlOffset=29.77;
 				};
 				class Item18
 				{
@@ -29956,7 +29891,6 @@ class Mission
 					{
 					};
 					id=795;
-					atlOffset=29.77;
 				};
 				class Item19
 				{
@@ -30296,7 +30230,6 @@ class Mission
 					{
 					};
 					id=800;
-					atlOffset=29.77;
 				};
 				class Item20
 				{
@@ -31014,7 +30947,6 @@ class Mission
 					{
 					};
 					id=805;
-					atlOffset=29.77;
 				};
 				class Item21
 				{
@@ -31204,7 +31136,6 @@ class Mission
 					{
 					};
 					id=814;
-					atlOffset=29.77;
 				};
 				class Item22
 				{
@@ -31922,7 +31853,6 @@ class Mission
 					{
 					};
 					id=817;
-					atlOffset=29.77;
 				};
 				class Item23
 				{
@@ -32640,7 +32570,6 @@ class Mission
 					{
 					};
 					id=826;
-					atlOffset=29.77;
 				};
 				class Item24
 				{
@@ -32980,17 +32909,15 @@ class Mission
 					{
 					};
 					id=835;
-					atlOffset=29.77;
 				};
 			};
 			id=712;
-			atlOffset=29.77;
+			atlOffset=538.91309;
 		};
 		class Item8
 		{
 			dataType="Layer";
 			name="CIS Vertical Combat Outpost";
-			state=1;
 			class Entities
 			{
 				items=44;
@@ -33006,6 +32933,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33024,6 +32952,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33041,6 +32970,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33059,6 +32989,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33078,6 +33009,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33096,6 +33028,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33115,6 +33048,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33134,6 +33068,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33153,6 +33088,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33172,6 +33108,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33191,6 +33128,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33210,6 +33148,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33229,6 +33168,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33248,6 +33188,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33267,6 +33208,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33286,6 +33228,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33304,6 +33247,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33323,6 +33267,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33341,6 +33286,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33358,6 +33304,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33377,6 +33324,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1350;
@@ -33395,6 +33343,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33414,6 +33363,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33433,6 +33383,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33452,6 +33403,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1352;
@@ -33469,6 +33421,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33487,6 +33440,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33506,6 +33460,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33523,6 +33478,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33541,6 +33497,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33560,6 +33517,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33579,6 +33537,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33598,6 +33557,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33616,6 +33576,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33635,6 +33596,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33654,6 +33616,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33673,6 +33636,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33692,6 +33656,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33711,6 +33676,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33730,6 +33696,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33749,6 +33716,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33767,6 +33735,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33785,6 +33754,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33803,6 +33773,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -33826,6 +33797,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
+				init="this disableAI ""PATH"";";
 			};
 			id=1406;
 			type="mti_factions_cis_ParticleCannon";
@@ -33842,6 +33814,7 @@ class Mission
 			side="Independent";
 			class Attributes
 			{
+				init="this disableAI ""PATH"";";
 			};
 			id=1409;
 			type="mti_factions_cis_ParticleCannon";
@@ -33912,6 +33885,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				init="this disableAI ""PATH"";";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -33984,6 +33958,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
+				init="this disableAI ""PATH"";";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -34013,6 +33988,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -34105,6 +34081,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -34203,6 +34180,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -34291,6 +34269,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -34393,6 +34372,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -34525,6 +34505,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -34617,6 +34598,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -34715,6 +34697,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -34803,6 +34786,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -34905,6 +34889,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -35454,6 +35439,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -35547,6 +35533,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -35635,6 +35622,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -35737,6 +35725,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -35941,6 +35930,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						class Inventory
 						{
 							class primaryWeapon
@@ -36088,6 +36078,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						class Inventory
 						{
 							class primaryWeapon
@@ -36170,6 +36161,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						class Inventory
 						{
 							class primaryWeapon
@@ -36300,7 +36292,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="CIS Radar Dish Array 2";
-			state=1;
 			class Entities
 			{
 				items=303;
@@ -36316,6 +36307,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2127;
@@ -36334,6 +36326,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2128;
@@ -36351,6 +36344,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36369,6 +36363,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36388,6 +36383,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1819;
@@ -36406,6 +36402,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1820;
@@ -36423,6 +36420,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36441,6 +36439,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36460,6 +36459,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36478,6 +36478,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36496,6 +36497,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36514,6 +36516,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36532,6 +36535,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36550,6 +36554,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36568,6 +36573,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36586,6 +36592,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36604,6 +36611,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36622,6 +36630,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36641,6 +36650,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36658,6 +36668,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36676,6 +36687,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36694,6 +36706,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36712,6 +36725,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36730,6 +36744,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36748,6 +36763,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36766,6 +36782,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36784,6 +36801,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36802,6 +36820,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36820,6 +36839,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36838,6 +36858,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36856,6 +36877,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36874,6 +36896,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36892,6 +36915,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36910,6 +36934,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36928,6 +36953,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36946,6 +36972,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36964,6 +36991,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -36982,6 +37010,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -37000,6 +37029,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -37018,6 +37048,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -37036,6 +37067,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -37055,6 +37087,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1856;
@@ -37073,6 +37106,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1857;
@@ -37091,6 +37125,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1858;
@@ -37109,6 +37144,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1859;
@@ -37127,6 +37163,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1860;
@@ -37144,6 +37181,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -37162,6 +37200,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -37181,6 +37220,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1863;
@@ -37199,6 +37239,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1864;
@@ -37217,6 +37258,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1865;
@@ -37235,6 +37277,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1866;
@@ -37253,6 +37296,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1867;
@@ -37271,6 +37315,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1868;
@@ -37289,6 +37334,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1869;
@@ -37307,6 +37353,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1870;
@@ -37325,6 +37372,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1871;
@@ -37343,6 +37391,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1872;
@@ -37361,6 +37410,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1873;
@@ -37379,6 +37429,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1874;
@@ -37397,6 +37448,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1875;
@@ -37415,6 +37467,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1876;
@@ -37433,6 +37486,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1877;
@@ -37451,6 +37505,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1878;
@@ -37469,6 +37524,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1879;
@@ -37487,6 +37543,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1880;
@@ -37505,6 +37562,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1881;
@@ -37523,6 +37581,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1882;
@@ -37541,6 +37600,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1883;
@@ -37559,6 +37619,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1884;
@@ -37577,6 +37638,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1885;
@@ -37595,6 +37657,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1886;
@@ -37613,6 +37676,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1887;
@@ -37631,6 +37695,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1888;
@@ -37649,6 +37714,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1889;
@@ -37667,6 +37733,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1890;
@@ -37685,6 +37752,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1891;
@@ -37703,6 +37771,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1892;
@@ -37721,6 +37790,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1893;
@@ -37739,6 +37809,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1894;
@@ -37757,6 +37828,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1895;
@@ -37775,6 +37847,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1896;
@@ -37793,6 +37866,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1897;
@@ -37811,6 +37885,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1898;
@@ -37829,6 +37904,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1899;
@@ -37847,6 +37923,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1900;
@@ -37865,6 +37942,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1901;
@@ -37883,6 +37961,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1902;
@@ -37901,6 +37980,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1903;
@@ -37919,6 +37999,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1904;
@@ -37937,6 +38018,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1905;
@@ -37955,6 +38037,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1906;
@@ -37972,6 +38055,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -37990,6 +38074,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38008,6 +38093,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38026,6 +38112,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38044,6 +38131,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38062,6 +38150,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38080,6 +38169,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38098,6 +38188,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38116,6 +38207,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38134,6 +38226,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38152,6 +38245,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38170,6 +38264,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38188,6 +38283,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38206,6 +38302,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38224,6 +38321,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38243,6 +38341,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38262,6 +38361,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38281,6 +38381,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38300,6 +38401,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38319,6 +38421,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38338,6 +38441,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38357,6 +38461,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38376,6 +38481,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38395,6 +38501,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38414,6 +38521,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38433,6 +38541,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38452,6 +38561,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38471,6 +38581,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38490,6 +38601,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38509,6 +38621,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38528,6 +38641,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38547,6 +38661,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38566,6 +38681,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38585,6 +38701,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38604,6 +38721,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38623,6 +38741,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38642,6 +38761,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38661,6 +38781,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38679,6 +38800,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38698,6 +38820,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38716,6 +38839,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38735,6 +38859,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38753,6 +38878,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38772,6 +38898,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38790,6 +38917,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38809,6 +38937,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38828,6 +38957,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1953;
@@ -38846,6 +38976,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38865,6 +38996,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38884,6 +39016,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38903,6 +39036,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38921,6 +39055,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38940,6 +39075,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38959,6 +39095,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38978,6 +39115,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -38997,6 +39135,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39016,6 +39155,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39035,6 +39175,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39054,6 +39195,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39073,6 +39215,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39092,6 +39235,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39111,6 +39255,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39130,6 +39275,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39149,6 +39295,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39168,6 +39315,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39187,6 +39335,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39206,6 +39355,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39225,6 +39375,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39244,6 +39395,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39263,6 +39415,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39282,6 +39435,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39301,6 +39455,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39320,6 +39475,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39339,6 +39495,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39358,6 +39515,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39377,6 +39535,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39396,6 +39555,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39415,6 +39575,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39434,6 +39595,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39453,6 +39615,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39472,6 +39635,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39490,6 +39654,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39509,6 +39674,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39528,6 +39694,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39547,6 +39714,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39566,6 +39734,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39585,6 +39754,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39604,6 +39774,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39623,6 +39794,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39641,6 +39813,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1996;
@@ -39658,6 +39831,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=1997;
@@ -39676,6 +39850,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39695,6 +39870,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39714,6 +39890,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39733,6 +39910,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39752,6 +39930,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39771,6 +39950,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39790,6 +39970,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39808,6 +39989,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39827,6 +40009,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39846,6 +40029,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39865,6 +40049,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39884,6 +40069,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39903,6 +40089,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2010;
@@ -39921,6 +40108,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39940,6 +40128,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39959,6 +40148,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39978,6 +40168,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -39997,6 +40188,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40015,6 +40207,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40033,6 +40226,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40052,6 +40246,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40070,6 +40265,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40088,6 +40284,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40107,6 +40304,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40126,6 +40324,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40144,6 +40343,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40162,6 +40362,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40180,6 +40381,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40198,6 +40400,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40217,6 +40420,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40235,6 +40439,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40253,6 +40458,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40271,6 +40477,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40289,6 +40496,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40307,6 +40515,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40325,6 +40534,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40343,6 +40553,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40361,6 +40572,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40379,6 +40591,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40397,6 +40610,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40415,6 +40629,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40433,6 +40648,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40451,6 +40667,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40469,6 +40686,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40487,6 +40705,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40505,6 +40724,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40523,6 +40743,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40541,6 +40762,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40559,6 +40781,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40577,6 +40800,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40595,6 +40819,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40614,6 +40839,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2044;
@@ -40632,6 +40858,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2045;
@@ -40649,6 +40876,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40667,6 +40895,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 						receiveRemoteTargets=1;
 					};
@@ -40685,6 +40914,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 						receiveRemoteTargets=1;
 					};
@@ -40703,6 +40933,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40721,6 +40952,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40739,6 +40971,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40757,6 +40990,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2066;
@@ -40774,6 +41008,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2067;
@@ -40791,6 +41026,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2068;
@@ -40808,6 +41044,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2069;
@@ -40826,6 +41063,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2070;
@@ -40843,6 +41081,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40861,6 +41100,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40879,6 +41119,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40897,6 +41138,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40915,6 +41157,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40934,6 +41177,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40952,6 +41196,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40969,6 +41214,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -40987,6 +41233,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41005,6 +41252,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41024,6 +41272,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41043,6 +41292,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41061,6 +41311,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41079,6 +41330,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41097,6 +41349,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41115,6 +41368,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41133,6 +41387,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41151,6 +41406,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41169,6 +41425,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41187,6 +41444,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41205,6 +41463,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41223,6 +41482,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41241,6 +41501,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41260,6 +41521,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41278,6 +41540,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41297,6 +41560,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41314,6 +41578,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2097;
@@ -41331,6 +41596,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2098;
@@ -41348,6 +41614,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2099;
@@ -41366,6 +41633,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41385,6 +41653,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41404,6 +41673,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41422,6 +41692,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41441,6 +41712,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41459,6 +41731,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41478,6 +41751,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41496,6 +41770,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41515,6 +41790,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41534,6 +41810,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41552,6 +41829,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41571,6 +41849,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2111;
@@ -41588,6 +41867,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2112;
@@ -41606,6 +41886,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2113;
@@ -41624,6 +41905,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2114;
@@ -41642,6 +41924,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2115;
@@ -41660,6 +41943,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2116;
@@ -41678,6 +41962,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2117;
@@ -41696,6 +41981,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2118;
@@ -41714,6 +42000,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2119;
@@ -41732,6 +42019,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2120;
@@ -41750,6 +42038,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2121;
@@ -41768,6 +42057,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2122;
@@ -41786,6 +42076,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2123;
@@ -41803,6 +42094,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						createAsSimpleObject=1;
 						dynamicSimulation=1;
 					};
@@ -41822,6 +42114,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2125;
@@ -41840,6 +42133,7 @@ class Mission
 					flags=1;
 					class Attributes
 					{
+						init="this disableAI ""PATH"";";
 						dynamicSimulation=1;
 					};
 					id=2126;
@@ -41912,6 +42206,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				init="this disableAI ""PATH"";";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -41984,6 +42279,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				init="this disableAI ""PATH"";";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -42055,6 +42351,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
+				init="this disableAI ""PATH"";";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -42127,6 +42424,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
+				init="this disableAI ""PATH"";";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -42227,6 +42525,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this disableAI ""PATH"";";
 				dynamicSimulation=1;
 			};
 			id=2275;
@@ -42243,6 +42542,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="this disableAI ""PATH"";";
 				dynamicSimulation=1;
 			};
 			id=2280;
@@ -42507,6 +42807,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
+				init="this disableAI ""PATH"";";
 				dynamicSimulation=1;
 			};
 			id=2300;
@@ -42533,6 +42834,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -42608,6 +42910,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -42689,6 +42992,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -42760,6 +43064,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -42845,6 +43150,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -42960,6 +43266,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43035,6 +43342,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43116,6 +43424,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43187,6 +43496,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43272,6 +43582,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43387,6 +43698,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43462,6 +43774,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43543,6 +43856,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43614,6 +43928,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43699,6 +44014,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43814,6 +44130,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43889,6 +44206,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -43970,6 +44288,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44041,6 +44360,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44126,6 +44446,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44241,6 +44562,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44316,6 +44638,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44397,6 +44720,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44468,6 +44792,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44553,6 +44878,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44668,6 +44994,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44743,6 +45070,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44824,6 +45152,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44895,6 +45224,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -44980,6 +45310,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -45095,6 +45426,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -45170,6 +45502,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -45251,6 +45584,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -45322,6 +45656,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -45407,6 +45742,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -45522,6 +45858,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -45597,6 +45934,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -45678,6 +46016,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -45749,6 +46088,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -45834,6 +46174,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -45949,6 +46290,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46024,6 +46366,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46105,6 +46448,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46176,6 +46520,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46261,6 +46606,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46376,6 +46722,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46451,6 +46798,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46532,6 +46880,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46603,6 +46952,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46688,6 +47038,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46803,6 +47154,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46878,6 +47230,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -46959,6 +47312,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47030,6 +47384,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47115,6 +47470,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47230,6 +47586,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47305,6 +47662,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47386,6 +47744,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47457,6 +47816,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47542,6 +47902,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47657,6 +48018,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47732,6 +48094,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47813,6 +48176,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47884,6 +48248,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -47969,6 +48334,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -48084,6 +48450,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -48159,6 +48526,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -48240,6 +48608,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -48311,6 +48680,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -48396,6 +48766,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -48511,6 +48882,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -48586,6 +48958,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -48667,6 +49040,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -48738,6 +49112,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -48823,6 +49198,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -48938,6 +49314,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49013,6 +49390,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49094,6 +49472,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49165,6 +49544,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49250,6 +49630,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49365,6 +49746,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49440,6 +49822,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49521,6 +49904,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49592,6 +49976,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49677,6 +50062,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49792,6 +50178,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49867,6 +50254,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -49948,6 +50336,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -50019,6 +50408,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -50104,6 +50494,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -50219,6 +50610,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -50294,6 +50686,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -50375,6 +50768,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -50446,6 +50840,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -50531,6 +50926,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -50646,6 +51042,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -50721,6 +51118,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this disableAI ""PATH"";";
 						stance="Up";
 						class Inventory
 						{
@@ -55140,7 +55538,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2765;
 											type="3AS_Tent";
@@ -55174,7 +55572,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2766;
 											type="3AS_Tent";
@@ -55208,7 +55606,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2767;
 											type="3AS_Tent";
@@ -55242,7 +55640,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2768;
 											type="3AS_Tent";
@@ -55276,7 +55674,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2769;
 											type="3AS_Tent";
@@ -55310,7 +55708,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2770;
 											type="3AS_Tent";
@@ -55344,7 +55742,7 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2771;
 											type="3AS_Tent";
@@ -55390,7 +55788,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2773;
 											type="Land_ModularOutPostBuildingQuaters";
@@ -55425,7 +55823,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2774;
 											type="Land_ModularOutPostBuildingQuaters";
@@ -55460,7 +55858,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2775;
 											type="Land_ModularOutPostBuildingQuaters";
@@ -55495,7 +55893,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2776;
 											type="Land_ModularOutPostBuildingQuaters";
@@ -55530,7 +55928,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2777;
 											type="Land_ModularOutPostBuildingQuaters";
@@ -55565,7 +55963,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2778;
 											type="Land_ModularOutPostBuildingQuaters";
@@ -55600,7 +55998,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2779;
 											type="Land_ModularOutPostBuildingQuaters";
@@ -55635,7 +56033,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2780;
 											type="Land_ModularOutPostBuildingQuaters";
@@ -55670,7 +56068,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=2781;
 											type="Land_ModularOutPostBuildingQuaters";
@@ -58590,7 +58988,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												dynamicSimulation=1;
 											};
 											id=2868;
@@ -58626,7 +59023,6 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												dynamicSimulation=1;
 											};
 											id=2869;
@@ -58662,7 +59058,6 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												dynamicSimulation=1;
 											};
 											id=2870;
@@ -58698,7 +59093,6 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												dynamicSimulation=1;
 											};
 											id=2871;
@@ -58734,7 +59128,6 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												dynamicSimulation=1;
 											};
 											id=2872;
@@ -58770,7 +59163,6 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												dynamicSimulation=1;
 											};
 											id=2873;
@@ -68637,7 +69029,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3163;
 											type="land_3as_cis_wall_door_v2";
@@ -68672,7 +69064,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3164;
 											type="land_3as_cis_wall_tower_v2";
@@ -68707,7 +69099,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3165;
 											type="land_3as_cis_wall_tower_v2";
@@ -68742,7 +69134,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3166;
 											type="land_3as_cis_wall_tower_v2";
@@ -68777,7 +69169,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3167;
 											type="land_3as_cis_wall_door_v2";
@@ -68812,7 +69204,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3168;
 											type="land_3as_cis_wall_tower_v2";
@@ -68847,7 +69239,7 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3169;
 											type="land_3as_cis_wall_Gate_v2";
@@ -68882,7 +69274,7 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3170;
 											type="land_3as_cis_wall_Gate_v2";
@@ -68917,7 +69309,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3171;
 											type="land_3as_cis_wall_tower_v2";
@@ -68952,7 +69344,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3172;
 											type="land_3as_cis_wall_tower_v2";
@@ -68980,18 +69372,18 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={767.83051,34.099777,3073.0095};
-												angles[]={0,3.3513486,0};
+												position[]={767.83099,34.099861,3073.01};
+												angles[]={0,3.3513465,0};
 											};
 											side="Empty";
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3173;
 											type="land_3as_cis_wall_tower_v2";
-											atlOffset=13.209408;
+											atlOffset=13.209428;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -69022,7 +69414,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3174;
 											type="land_3as_cis_wall_tower_v2";
@@ -69057,7 +69449,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												createAsSimpleObject=1;
+												dynamicSimulation=1;
 											};
 											id=3175;
 											type="Land_ModularOutPostBuildingEmpty";
@@ -69082,11 +69474,11 @@ class Mission
 										};
 									};
 									id=3162;
-									atlOffset=5.7940483;
+									atlOffset=5.794178;
 								};
 							};
 							id=3020;
-							atlOffset=6.0976105;
+							atlOffset=6.0976162;
 						};
 						class Item4
 						{
@@ -70754,11 +71146,11 @@ class Mission
 						};
 					};
 					id=2668;
-					atlOffset=-3.2804623;
+					atlOffset=-3.2804613;
 				};
 			};
 			id=3223;
-			atlOffset=-3.2804623;
+			atlOffset=-3.2804613;
 		};
 		class Item97
 		{
@@ -71362,6 +71754,21 @@ class Mission
 			description="welp, when first you dont succeed, grab something old and re use it";
 			id=3239;
 			atlOffset=-0.00044822693;
+		};
+		class Item104
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9030.9688,613.5036,8842.1641};
+				angles[]={0,2.2244024,-0};
+			};
+			areaSize[]={124.85079,89.492462,119.50929};
+			areaIsRectangle=1;
+			flags=1;
+			id=3240;
+			type="lsb_module_removeFreeFall_3den";
+			atlOffset=30.638489;
 		};
 	};
 	class Connections
