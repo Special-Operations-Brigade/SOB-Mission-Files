@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=585;
+		nextID=610;
 	};
 	class Camera
 	{
-		pos[]={4975.2563,70.229416,1308.8698};
-		dir[]={0.69657981,-0.43573317,0.57020128};
-		up[]={0.33722121,0.90004355,0.27603859};
-		aside[]={0.63348436,8.9372043e-007,-0.77389544};
+		pos[]={5001.7451,68.20343,1302.5117};
+		dir[]={0.31103611,-0.50975639,-0.80226243};
+		up[]={0.18428385,0.86028796,-0.47533002};
+		aside[]={-0.93248397,1.071021e-006,-0.36151889};
 	};
 };
 binarizationWanted=0;
@@ -102,7 +102,7 @@ addons[]=
 	"cba_ai",
 	"NCA_vehicles_AAT",
 	"3as_MTT",
-	"JLTS_PA_Core",
+	"Desert",
 	"A3_Structures_F_Mil_Helipads",
 	"cTab",
 	"mti_modules",
@@ -110,6 +110,7 @@ addons[]=
 	"mti_armoury_phase2",
 	"mti_weapons_handgun",
 	"mti_weapons_core",
+	"PhoenixCore",
 	"mti_medical",
 	"aceAresenalCatagoryFramework",
 	"ace_medical_treatment",
@@ -122,6 +123,7 @@ addons[]=
 	"3AS_Equipment",
 	"ace_explosives",
 	"ace_captives",
+	"mti_cuffbreak",
 	"WBK_Headlamps",
 	"mti_common",
 	"lsb_modules"
@@ -130,7 +132,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=80;
+		items=82;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -490,8 +492,8 @@ class AddonsMetaData
 		};
 		class Item58
 		{
-			className="JLTS_PA_Core";
-			name="JLTS_PA_Core";
+			className="Desert";
+			name="Desert";
 		};
 		class Item59
 		{
@@ -533,96 +535,110 @@ class AddonsMetaData
 		};
 		class Item65
 		{
+			className="PhoenixCore";
+			name="Phoenix Core";
+			author="Marco";
+			url="https://discord.gg/sM7krRhPmh";
+		};
+		class Item66
+		{
 			className="mti_medical";
 			name="MokTech Industries - Medical";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item66
+		class Item67
 		{
 			className="aceAresenalCatagoryFramework";
 			name="aceAresenalCatagoryFramework";
 			author="Arcanist";
 		};
-		class Item67
+		class Item68
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item68
+		class Item69
 		{
 			className="WBK_SomeSciFiWeapons";
 			name="WBK_SomeSciFiWeapons";
 			author="WebKnight";
 		};
-		class Item69
+		class Item70
 		{
 			className="mti_explosives";
 			name="MokTech Industries - Explosives";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item70
+		class Item71
 		{
 			className="mti_doors";
 			name="MokTech Industries - Doors";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item71
+		class Item72
 		{
 			className="mti_minedetector";
 			name="MokTech Industries - MineDetector";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item72
+		class Item73
 		{
 			className="mti_armoury_trooper";
 			name="MokTech Industries - Trooper";
 			author="MokTech Industries";
 		};
-		class Item73
+		class Item74
 		{
 			className="ace_grenades";
 			name="ACE3 - Grenades";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item74
+		class Item75
 		{
 			className="3AS_Equipment";
 			name="3AS_Equipment";
 		};
-		class Item75
+		class Item76
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item76
+		class Item77
 		{
 			className="ace_captives";
 			name="ACE3 - Captives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item77
+		class Item78
+		{
+			className="mti_cuffbreak";
+			name="MokTech Industries - CuffBreak";
+			author="MokTech Industries";
+			url="https://discord.gg/Pu2gdBd7Te/";
+		};
+		class Item79
 		{
 			className="WBK_Headlamps";
 			name="WBK_Headlamps";
 		};
-		class Item78
+		class Item80
 		{
 			className="mti_common";
 			name="MokTech Industries - Common";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item79
+		class Item81
 		{
 			className="lsb_modules";
 			name="Legion Studios - Battlefields: Modules";
@@ -669,7 +685,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -826,7 +842,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -24527,7 +24543,7 @@ class Mission
 						};
 					};
 					id=5195;
-					atlOffset=0.031394958;
+					atlOffset=0.5054245;
 				};
 				class Item5
 				{
@@ -30823,7 +30839,7 @@ class Mission
 				};
 			};
 			id=4949;
-			atlOffset=40.942898;
+			atlOffset=40.95771;
 		};
 		class Item15
 		{
@@ -34119,7 +34135,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4993.8574,66.640564,1299.4916};
-				angles[]={0,2.3841858e-007,-0};
+				angles[]={0,2.3841858e-007,0};
 			};
 			side="Empty";
 			flags=4;
