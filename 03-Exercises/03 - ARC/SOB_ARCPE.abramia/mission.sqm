@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=1.5707964;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1537;
+	toggles=1025;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=2843;
+		nextID=2856;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=75;
+		nextID=84;
 	};
 	class Camera
 	{
-		pos[]={9452.4736,63.197334,1162.0192};
-		dir[]={-0.28747457,-0.37797782,0.88019335};
-		up[]={-0.11738655,0.92573798,0.35941246};
-		aside[]={0.95067102,1.4711986e-007,0.31050259};
+		pos[]={789.8399,89.778793,6149.2461};
+		dir[]={0.31523111,-0.46912411,-0.82497293};
+		up[]={0.16745162,0.88312852,-0.43822703};
+		aside[]={-0.93414378,4.9709342e-008,-0.35694566};
 	};
 };
 binarizationWanted=0;
@@ -42,7 +42,7 @@ addons[]=
 	"JLTS_weapons_Core",
 	"JLTS_radios",
 	"cTab",
-	"JLTS_PA_Core",
+	"PhoenixCore",
 	"mti_armoury_phase2",
 	"mti_medical",
 	"aceAresenalCatagoryFramework",
@@ -55,6 +55,7 @@ addons[]=
 	"3AS_Equipment",
 	"ace_explosives",
 	"ace_captives",
+	"mti_cuffbreak",
 	"WBK_Headlamps",
 	"ace_flashlights",
 	"JLTS_characters_CloneArmor",
@@ -89,7 +90,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=48;
+		items=49;
 		class Item0
 		{
 			className="ace_spectator";
@@ -144,8 +145,10 @@ class AddonsMetaData
 		};
 		class Item8
 		{
-			className="JLTS_PA_Core";
-			name="JLTS_PA_Core";
+			className="PhoenixCore";
+			name="Phoenix Core";
+			author="Marco";
+			url="https://discord.gg/sM7krRhPmh";
 		};
 		class Item9
 		{
@@ -228,165 +231,172 @@ class AddonsMetaData
 		};
 		class Item21
 		{
+			className="mti_cuffbreak";
+			name="MokTech Industries - CuffBreak";
+			author="MokTech Industries";
+			url="https://discord.gg/Pu2gdBd7Te/";
+		};
+		class Item22
+		{
 			className="WBK_Headlamps";
 			name="WBK_Headlamps";
 		};
-		class Item22
+		class Item23
 		{
 			className="ace_flashlights";
 			name="ACE3 - Flashlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item23
+		class Item24
 		{
 			className="JLTS_characters_CloneArmor";
 			name="JLTS The Great War - Clones I";
 			author="MrClock";
 		};
-		class Item24
+		class Item25
 		{
 			className="armyDressu";
 			name="armyDressu";
 		};
-		class Item25
+		class Item26
 		{
 			className="mti_armoury_arc";
 			name="MokTech Industries - ARC";
 			author="MokTech Industries";
 		};
-		class Item26
+		class Item27
 		{
 			className="A3_Drones_F";
 			name="Arma 3 Beta - Drones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item27
+		class Item28
 		{
 			className="ls_static_holoprojectors";
 			name="Legion: Holoprojectors";
 			author="Legion Studios";
 		};
-		class Item28
+		class Item29
 		{
 			className="lsd_units_redfor";
 			name="Legion Studios - Dissension: Redfor Units";
 			author="Legion Studios";
 		};
-		class Item29
+		class Item30
 		{
 			className="3AS_Prop_Barricades";
 			name="3AS_Prop_Barricades";
 			author="3rd Army Studios";
 		};
-		class Item30
+		class Item31
 		{
 			className="A3_Structures_F_Exp_Industrial";
 			name="Arma 3 Apex - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item31
+		class Item32
 		{
 			className="3AS_Prop_Platforms";
 			name="3AS_Prop_Platforms";
 			author="3rd Army Studios";
 		};
-		class Item32
+		class Item33
 		{
 			className="3as_structures_fob";
 			name="3as_structures_fob";
 			author="3rd Army Studios";
 		};
-		class Item33
+		class Item34
 		{
 			className="3as_ModularPlatforms";
 			name="3as_ModularPlatforms";
 			author="3rd Army Studios";
 		};
-		class Item34
+		class Item35
 		{
 			className="3AS_Prop_Crates";
 			name="3AS_Prop_Crates";
 			author="3rd Army Studios";
 		};
-		class Item35
+		class Item36
 		{
 			className="3AS_Prop_Terminals";
 			name="3AS_Prop_Terminals";
 			author="3rd Army Studios";
 		};
-		class Item36
+		class Item37
 		{
 			className="lsb_structures_deflector";
 			name="Legion Battlefields : Deflector Shields";
 			author="Legion Studios";
 		};
-		class Item37
+		class Item38
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item38
+		class Item39
 		{
 			className="ls_hallway";
 			name="ls_hallway";
 			author="kripto202";
 		};
-		class Item39
+		class Item40
 		{
 			className="A3_Rocks_F";
 			name="Arma 3 - Rocks and Stones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item40
+		class Item41
 		{
 			className="3AS_Prop_Interiors";
 			name="3AS_Prop_Interiors";
 			author="3rd Army Studios";
 		};
-		class Item41
+		class Item42
 		{
 			className="3AS_Prop_orto_plut_interiors";
 			name="3AS_Prop_orto_plut_interiors";
 			author="3rd Army Studios";
 		};
-		class Item42
+		class Item43
 		{
 			className="OPTRE_UNSC_Structure_Military";
 			name="OPTRE_UNSC_Structure_Military";
 		};
-		class Item43
+		class Item44
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item44
+		class Item45
 		{
 			className="ls_coreship";
 			name="ls_coreship";
 			author="kripto202";
 		};
-		class Item45
+		class Item46
 		{
 			className="mti_factions_cis";
 			name="MokTech Industries - CIS";
 			author="MokTech Industries";
 		};
-		class Item46
+		class Item47
 		{
 			className="mti_aircraft";
 			name="MokTech Industries - Aircraft";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item47
+		class Item48
 		{
 			className="mti_supplies";
 			name="MokTech Industries - Supplies";
@@ -434,7 +444,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -604,7 +614,7 @@ class CustomAttributes
 		};
 		nAttributes=3;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -783,7 +793,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=224;
+		items=230;
 		class Item0
 		{
 			dataType="Logic";
@@ -10173,7 +10183,7 @@ class Mission
 					};
 					id=1624;
 					type="mti_factions_cis_B1_AT";
-					atlOffset=9.5367432e-007;
+					atlOffset=4.7683716e-007;
 				};
 				class Item7
 				{
@@ -15934,6 +15944,7 @@ class Mission
 					};
 					id=2047;
 					type="mti_factions_cis_B1_AT";
+					atlOffset=-7.6293945e-006;
 				};
 				class Item4
 				{
@@ -18205,6 +18216,7 @@ class Mission
 					};
 					id=2204;
 					type="mti_factions_cis_B1_SL";
+					atlOffset=1.9073486e-006;
 				};
 				class Item1
 				{
@@ -18236,6 +18248,7 @@ class Mission
 					};
 					id=2206;
 					type="mti_factions_cis_B1_E5";
+					atlOffset=1.9073486e-006;
 				};
 				class Item3
 				{
@@ -18297,6 +18310,7 @@ class Mission
 					};
 					id=2210;
 					type="mti_factions_cis_B1_AT";
+					atlOffset=1.9073486e-006;
 				};
 				class Item7
 				{
@@ -24628,7 +24642,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[""MTI_RD4"",""MTI_WestarM5"",""MTI_RPS6_D_Loaded""],[4,5,4]],[[],[]],[[""MTI_HMRCO_blu""],[4]],[[],[]]],false]";
+							value="[[[[""MTI_RD4"",""MTI_RPS6_D_Loaded""],[4,4]],[[""MTI_Valken38X_mag""],[4]],[[""MTI_HDMS_blu"",""MTI_HDMS_grn"",""MTI_HDMS_red""],[4,4,4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -24646,11 +24660,12 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				lock="LOCKEDPLAYER";
 				dynamicSimulation=1;
 			};
 			id=2835;
 			type="mti_factions_cis_AAT_CIS";
-			atlOffset=1.8545485;
+			atlOffset=1.8630829;
 		};
 		class Item220
 		{
@@ -24663,6 +24678,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				lock="LOCKEDPLAYER";
 				dynamicSimulation=1;
 			};
 			id=2836;
@@ -24680,11 +24696,12 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				lock="LOCKEDPLAYER";
 				dynamicSimulation=1;
 			};
 			id=2837;
 			type="mti_factions_cis_AAT_CIS";
-			atlOffset=1.1226864;
+			atlOffset=1.1298356;
 		};
 		class Item222
 		{
@@ -24697,6 +24714,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				lock="LOCKEDPLAYER";
 				dynamicSimulation=1;
 			};
 			id=2838;
@@ -24753,6 +24771,326 @@ class Mission
 			};
 			id=2841;
 			atlOffset=5.510582;
+		};
+		class Item224
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8052.4277,50.882214,1768.9117};
+						angles[]={0,2.0126455,-0};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=2845;
+					type="O_UAV_AI";
+					atlOffset=0.61386108;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=2845;
+						item1=2844;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=2843;
+			atlOffset=0.61386108;
+		};
+		class Item225
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8052.4277,50.880775,1768.8617};
+				angles[]={0,2.0126455,-0};
+			};
+			side="East";
+			flags=2;
+			class Attributes
+			{
+			};
+			id=2844;
+			type="mti_factions_cis_Deka_Static_Rockets";
+			atlOffset=0.61386108;
+		};
+		class Item226
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8845.2383,108.31508,1608.28};
+						angles[]={0.0079935296,0,0.16449876};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=2848;
+					type="mti_factions_cis_B1_Crew";
+					atlOffset=-0.0001373291;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8845.1631,108.30607,1607.8004};
+						angles[]={0.0079935296,0,0.16449876};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=2849;
+					type="mti_factions_cis_B1_Crew";
+					atlOffset=-0.00042724609;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8845.1631,108.30607,1607.8004};
+						angles[]={0.0079935296,0,0.16449876};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=2850;
+					type="mti_factions_cis_B1_Crew";
+					atlOffset=-0.00042724609;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=2848;
+						item1=2847;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=2849;
+						item1=2847;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=2850;
+						item1=2847;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+				};
+			};
+			id=2846;
+			atlOffset=-0.0001373291;
+		};
+		class Item227
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8845.1631,108.30463,1607.7504};
+				angles[]={0.0079935296,0,0.16449876};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+			};
+			id=2847;
+			type="mti_factions_cis_AAT_CIS";
+			atlOffset=-0.0001373291;
+		};
+		class Item228
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8420.5635,61.719135,2074.8669};
+						angles[]={6.2651882,0,0.12533878};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=2853;
+					type="mti_factions_cis_B1_Crew";
+					atlOffset=7.6293945e-006;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8420.4902,61.700806,2074.3875};
+						angles[]={6.2631893,0,0.12730782};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=2854;
+					type="mti_factions_cis_B1_Crew";
+					atlOffset=-0.00011444092;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8420.4902,61.700806,2074.3875};
+						angles[]={6.2631893,0,0.12730782};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=2855;
+					type="mti_factions_cis_B1_Crew";
+					atlOffset=-0.00011444092;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=2853;
+						item1=2852;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=2854;
+						item1=2852;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=2855;
+						item1=2852;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+				};
+			};
+			id=2851;
+			atlOffset=7.6293945e-006;
+		};
+		class Item229
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8420.4902,61.699368,2074.3374};
+				angles[]={6.2651882,0,0.12533878};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+			};
+			id=2852;
+			type="mti_factions_cis_AAT_CIS";
+			atlOffset=7.6293945e-006;
 		};
 	};
 	class Connections
