@@ -651,6 +651,41 @@ UPSL_aime_vehicle_seats_setting_getin_action = true;
 UPSL_aime_vehicle_seats_setting_getout_action = true;
 UPSL_aime_vehicle_seats_setting_turnout_action = true;
 
+// AWR Settings
+force awr_ai_enableSurrender = false;
+force awr_ai_goProne = true;
+force awr_ai_handgunChance = 25;
+force awr_ai_incapacitationType = 0;
+force force awr_ai_isEnabled = false;
+force awr_ai_limbHandleMode = 0;
+force awr_ai_painThreshold = 0.55;
+force awr_ai_playFallAnimation = true;
+force awr_ai_surrenderChance = 25;
+force awr_ai_surrenderChancePerEnemy = 5;
+force awr_ai_surrenderDistance = 80;
+force awr_ai_weaponHandleMode = 1;
+force awr_main_ai_armsDamageThreshold = 1;
+force awr_main_ai_bodyDamageThreshold = 1;
+force awr_main_ai_legsDamageThreshold = 1;
+force awr_main_bandagingMultiplier = 2;
+force force awr_main_damageIgnoreLevel = 0;
+force awr_main_displayHints = true;
+force awr_main_ignoreBurnDamage = true;
+force awr_main_ignoreChanceClasses = "[]";
+force force awr_main_player_armsDamageThreshold = 100;
+force force awr_main_player_bodyDamageThreshold = 100;
+force force awr_main_player_legsDamageThreshold = 0.5;
+force force awr_player_concussionEnabled = false;
+force force awr_player_concussionTime = 5;
+force force awr_player_goProne = true;
+force force awr_player_handgunChance = 25;
+force force awr_player_incapacitationType = 1;
+force force awr_player_isEnabled = true;
+force force awr_player_limbHandleMode = 2;
+force force awr_player_painThreshold = 0.55;
+force force awr_player_playFallAnimation = true;
+force force awr_player_weaponHandleMode = 0;
+
 // Community Base Addons
 cba_diagnostic_ConsoleIndentType = -1;
 cba_diagnostic_watchInfoRefreshRate = 0.2;

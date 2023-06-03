@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1620;
+		nextID=1621;
 	};
 	class LayerIndexProvider
 	{
-		nextID=12;
+		nextID=16;
 	};
 	class Camera
 	{
-		pos[]={744.63489,94.771286,6203.1235};
-		dir[]={0.91810852,-0.31107524,-0.24574412};
-		up[]={0.30051389,0.95037574,-0.080437005};
-		aside[]={-0.2585707,-7.1886461e-009,-0.96603191};
+		pos[]={786.15948,89.156929,6151.624};
+		dir[]={-0.52086818,-0.26022607,0.81307286};
+		up[]={-0.14038733,0.96553177,0.21914355};
+		aside[]={0.84207857,2.6905036e-007,0.53945214};
 	};
 };
 binarizationWanted=0;
@@ -42,7 +42,7 @@ addons[]=
 	"JLTS_weapons_Core",
 	"JLTS_radios",
 	"cTab",
-	"JLTS_PA_Core",
+	"PhoenixCore",
 	"mti_armoury_phase2",
 	"mti_medical",
 	"aceAresenalCatagoryFramework",
@@ -55,6 +55,7 @@ addons[]=
 	"3AS_Equipment",
 	"ace_explosives",
 	"ace_captives",
+	"mti_cuffbreak",
 	"JLTS_weapons_DC15S",
 	"JLTS_weapons_DC17SA",
 	"JLTS_characters_CloneArmor",
@@ -86,7 +87,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=48;
+		items=49;
 		class Item0
 		{
 			className="mti_aircraft";
@@ -167,8 +168,10 @@ class AddonsMetaData
 		};
 		class Item12
 		{
-			className="JLTS_PA_Core";
-			name="JLTS_PA_Core";
+			className="PhoenixCore";
+			name="Phoenix Core";
+			author="Marco";
+			url="https://discord.gg/sM7krRhPmh";
 		};
 		class Item13
 		{
@@ -251,143 +254,150 @@ class AddonsMetaData
 		};
 		class Item25
 		{
+			className="mti_cuffbreak";
+			name="MokTech Industries - CuffBreak";
+			author="MokTech Industries";
+			url="https://discord.gg/Pu2gdBd7Te/";
+		};
+		class Item26
+		{
 			className="JLTS_weapons_DC15S";
 			name="JLTS The Great War - Weapons DC-15S";
 			author="MrClock";
 		};
-		class Item26
+		class Item27
 		{
 			className="JLTS_weapons_DC17SA";
 			name="JLTS The Great War - Weapons DC-17SA";
 			author="MrClock";
 		};
-		class Item27
+		class Item28
 		{
 			className="JLTS_characters_CloneArmor";
 			name="JLTS The Great War - Clones I";
 			author="MrClock";
 		};
-		class Item28
+		class Item29
 		{
 			className="ace_medical_engine";
 			name="ACE3 - Medical Engine";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item29
+		class Item30
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item30
+		class Item31
 		{
 			className="ace_chemlights";
 			name="ace_chemlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item31
+		class Item32
 		{
 			className="armyDressu";
 			name="armyDressu";
 		};
-		class Item32
+		class Item33
 		{
 			className="mti_armoury_arc";
 			name="MokTech Industries - ARC";
 			author="MokTech Industries";
 		};
-		class Item33
+		class Item34
 		{
 			className="ace_spectator";
 			name="ACE3 - Spectator";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item34
+		class Item35
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item35
+		class Item36
 		{
 			className="JLTS_characters_DroidArmor";
 			name="JLTS The Great War - Droids";
 			author="MrClock";
 		};
-		class Item36
+		class Item37
 		{
 			className="3AS_Imperial";
 			name="3AS_Imperial";
 			author="3rd Army Studios";
 		};
-		class Item37
+		class Item38
 		{
 			className="3as_ModularPlatforms";
 			name="3as_ModularPlatforms";
 			author="3rd Army Studios";
 		};
-		class Item38
+		class Item39
 		{
 			className="3AS_Prop_orto_plut_interiors";
 			name="3AS_Prop_orto_plut_interiors";
 			author="3rd Army Studios";
 		};
-		class Item39
+		class Item40
 		{
 			className="ls_hallway";
 			name="ls_hallway";
 			author="kripto202";
 		};
-		class Item40
+		class Item41
 		{
 			className="3as_structures_fob";
 			name="3as_structures_fob";
 			author="3rd Army Studios";
 		};
-		class Item41
+		class Item42
 		{
 			className="3AS_Prop_Platforms";
 			name="3AS_Prop_Platforms";
 			author="3rd Army Studios";
 		};
-		class Item42
+		class Item43
 		{
 			className="A3_Rocks_F";
 			name="Arma 3 - Rocks and Stones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item43
+		class Item44
 		{
 			className="3AS_Static";
 			name="3AS_Static_ParticleCannon";
 		};
-		class Item44
+		class Item45
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item45
+		class Item46
 		{
 			className="A3_Characters_F_AoW";
 			name="Arma 3 Art of War - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item46
+		class Item47
 		{
 			className="ls_units_purplefor";
 			name="Legion Studios - Core: Civilian Units";
 			author="Legion Studios";
 		};
-		class Item47
+		class Item48
 		{
 			className="A3_Characters_F_Enoch";
 			name="Arma 3 Contact Platform - Characters and Clothing";
@@ -774,7 +784,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=309;
+		items=310;
 		class Item0
 		{
 			dataType="Object";
@@ -871,7 +881,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[""MTI_RPS6_D_Loaded"",""MTI_RD4"",""MTI_WestarM5"",""MTI_Valken38X""],[2,2,2,2]],[[],[]],[[""MTI_HMRCO_blu"",""MTI_HDMS_blu""],[2,2]],[[],[]]],false]";
+							value="[[[[""MTI_RPS6_D_Loaded"",""MTI_RD4"",""MTI_WestarM5"",""MTI_Valken38X""],[2,2,2,2]],[[],[]],[[""MTI_HMRCO_blu"",""MTI_HDMS_blu"",""3AS_Bipod_VK38X_f""],[2,2,2]],[[],[]]],false]";
 						};
 					};
 				};
@@ -23147,6 +23157,18 @@ class Mission
 			};
 			id=1615;
 			atlOffset=0.094078064;
+		};
+		class Item309
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={775.979,86.269508,6185.1211};
+			};
+			isPlayable=1;
+			description="Death Cam";
+			id=1620;
+			type="ace_spectator_virtual";
 		};
 	};
 	class Connections
