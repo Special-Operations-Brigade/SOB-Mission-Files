@@ -1532,3 +1532,6 @@ zen_faction_filter_3_I_DBA_Civillian_F = true;
 zen_faction_filter_3_IND_L_F = true;
 zen_faction_filter_3_LS_CIV = true;
 zen_faction_filter_3_OPTRE_UEG_Civ = true;
+
+// MokTech Industries - Equipment
+force force mti_equipment_knifeEnabled = false;
