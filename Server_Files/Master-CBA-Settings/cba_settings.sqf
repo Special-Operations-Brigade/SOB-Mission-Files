@@ -80,7 +80,7 @@ force ace_arsenal_loadoutsSaveVoice = false;
 
 // ACE Artillery
 force ace_artillerytables_advancedCorrections = false;
-force ace_artillerytables_disableArtilleryComputer = false;
+force ace_artillerytables_disableArtilleryComputer = true;
 force ace_mk6mortar_airResistanceEnabled = false;
 force ace_mk6mortar_allowCompass = true;
 force ace_mk6mortar_allowComputerRangefinder = true;
@@ -1363,7 +1363,7 @@ force TFAR_AICanHearSpeaker = true;
 force TFAR_allowDebugging = false;
 tfar_core_noTSNotConnectedHint = false;
 force TFAR_defaultIntercomSlot = -0.857932;
-force TFAR_disableAutoMute = true;
+force TFAR_disableAutoMute = false;
 force TFAR_enableIntercom = true;
 force TFAR_experimentalVehicleIsolation = true;
 force TFAR_fullDuplex = true;
