@@ -1532,3 +1532,22 @@ zen_faction_filter_3_I_DBA_Civillian_F = true;
 zen_faction_filter_3_IND_L_F = true;
 zen_faction_filter_3_LS_CIV = true;
 zen_faction_filter_3_OPTRE_UEG_Civ = true;
+
+// Lightsaber's And Force
+force IMS_ForceKillFriendlies = false;
+force IMS_LightSabers_GlobalDamageKnight = "35";
+force IMS_LightSabers_GlobalDamageMaster = "50";
+force force IMS_LightSabers_GlobalDamagePadawan = "25";
+force IMS_LightSabers_Mana_Knight = "0.00012";
+force IMS_LightSabers_Mana_Master = "0.00025";
+force IMS_LightSabers_Mana_Padawan = "0.00008";
+
+// Necroplague
+force dev_cba_infection = false;
+dev_cba_infection_prolongTime = 900;
+dev_cba_infection_resurrectAmugusChance = 0;
+dev_cba_infection_resurrectParasiteChance = 0.1;
+dev_cba_infection_resurrectTime = "[25,30,35]";
+force dev_cba_infection_resurrectWebknight = false;
+force dev_cba_infection_resurrectZombie = true;
+dev_cba_infection_totalTime = 180;
