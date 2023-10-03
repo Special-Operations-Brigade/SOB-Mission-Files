@@ -1,21 +1,50 @@
+// 101st Aux Mod
+force DBA_CapitalShips_Barrage_Velocity = 100;
+force DBA_CapitalShips_MoveShip_ExternalCamera = true;
+force DBA_Common_Debug = false;
+force DBA_Holomap_Enabled = false;
+force DBA_Holomap_RefreshTime = 6;
+force DBA_Holomap_ViewDistance = 50;
+force DBA_Hyperspace_Offset_Acclamator = 90;
+force DBA_Hyperspace_Offset_Default = 0;
+force DBA_Hyperspace_Offset_Munificent = 90;
+force DBA_Hyperspace_Offset_Quasar = 270;
+force DBA_LAAT_InteriorLight_PositionY = -5;
+force DBA_LAAT_InteriorLight_PositionZ = 2;
+force DBA_Stims_Adrenal_Duration = 30;
+force DBA_Stims_Adrenal_Side_Effect_Duration = 60;
+force DBA_Stims_Adrenal_Side_Effect_Speed = 0.75;
+force DBA_Stims_Adrenal_Speed = 1.25;
+force DBA_Stims_Battle_Stim_Duration = 120;
+force DBA_Stims_Battle_Stim_Side_Effect_Duration = 60;
+force DBA_Stims_Battle_Stim_Side_Effect_Pain_Multiplier = 2;
+force DBA_Stims_Inject_Duration = 5;
+
 // 3AS
+force TAS_fullShieldTime = 30;
 force TAS_jetcoolset = 1;
 force TAS_jetfuelset = 1;
 force TAS_jetheatset = 1;
 force TAS_jetsoundvol = 0.6;
 force TAS_lcLoadDist = 20;
 force TAS_lcLoadSpeed = 10;
+force TAS_shieldTime = 30;
+force TAS_SquadShieldTime = 240;
+
+// 3AS Shields
+force TAS_DroidekaDisabledShieldTime = 1;
+force TAS_DroidekaShieldsRegenDisabled = false;
 
 // A3TI
-A3TI_ACE_JAVELIN = false;
-A3TI_ALLOW_TANK_DRIVER = false;
-A3TI_ALLOW_VANILLA_TI = true;
-A3TI_ENABLE_ZEUS = true;
-A3TI_HD_VISION_FIGHTER = false;
-A3TI_HD_VISION_LANDVEH = true;
-A3TI_HD_VISION_SHIP = false;
-A3TI_HD_VISION_UAV = true;
-A3TI_REMOVE_FILMGRAIN_RHS = true;
+force A3TI_ACE_JAVELIN = false;
+force A3TI_ALLOW_TANK_DRIVER = false;
+force A3TI_ALLOW_VANILLA_TI = true;
+force A3TI_ENABLE_ZEUS = true;
+force A3TI_HD_VISION_FIGHTER = false;
+force A3TI_HD_VISION_LANDVEH = true;
+force A3TI_HD_VISION_SHIP = false;
+force A3TI_HD_VISION_UAV = true;
+force A3TI_REMOVE_FILMGRAIN_RHS = true;
 
 // ACE Advanced Ballistics
 force ace_advanced_ballistics_ammoTemperatureEnabled = true;
@@ -45,10 +74,13 @@ force ace_arsenal_enableIdentityTabs = true;
 force ace_arsenal_enableModIcons = true;
 force ace_arsenal_EnableRPTLog = false;
 force ace_arsenal_fontHeight = 4.5;
+force ace_arsenal_loadoutsSaveFace = false;
+force ace_arsenal_loadoutsSaveInsignia = true;
+force ace_arsenal_loadoutsSaveVoice = false;
 
 // ACE Artillery
 force ace_artillerytables_advancedCorrections = false;
-force ace_artillerytables_disableArtilleryComputer = false;
+force ace_artillerytables_disableArtilleryComputer = true;
 force ace_mk6mortar_airResistanceEnabled = false;
 force ace_mk6mortar_allowCompass = true;
 force ace_mk6mortar_allowComputerRangefinder = true;
@@ -78,6 +110,7 @@ force ace_common_settingProgressBarLocation = 0;
 
 // ACE Cook off
 force ace_cookoff_ammoCookoffDuration = 0.1;
+force ace_cookoff_destroyVehicleAfterCookoff = false;
 force ace_cookoff_enable = 2;
 force ace_cookoff_enableAmmobox = true;
 force ace_cookoff_enableAmmoCookoff = false;
@@ -193,6 +226,7 @@ ace_interact_menu_useListMenu = true;
 ace_interact_menu_useListMenuSelf = true;
 
 // ACE Logistics
+ace_cargo_carryAfterUnload = true;
 force ace_cargo_enable = true;
 force ace_cargo_enableRename = true;
 force ace_cargo_loadTimeCoefficient = 5;
@@ -202,6 +236,7 @@ force ace_rearm_distance = 20;
 force ace_rearm_level = 0;
 force ace_rearm_supply = 0;
 force ace_refuel_hoseLength = 12;
+force ace_refuel_progressDuration = 2;
 force ace_refuel_rate = 1;
 force ace_repair_addSpareParts = true;
 force ace_repair_autoShutOffEngineWhenStartingRepair = true;
@@ -215,8 +250,9 @@ force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
 force ace_repair_locationsBoostTraining = false;
 force ace_repair_miscRepairRequiredItems = [];
 force ace_repair_repairDamageThreshold = 0.6;
-force ace_repair_repairDamageThreshold_engineer = 0.4;
+force ace_repair_repairDamageThreshold_engineer = 0.3;
 force ace_repair_wheelRepairRequiredItems = [];
+force ace_towing_addRopeToVehicleInventory = true;
 
 // ACE Magazine Repack
 force ace_magazinerepack_repackAnimation = true;
@@ -299,7 +335,7 @@ force ace_medical_gui_enableSelfActions = true;
 force ace_medical_gui_interactionMenuShowTriage = 1;
 force ace_medical_gui_maxDistance = 3;
 force ace_medical_gui_openAfterTreatment = true;
-force ace_medical_gui_showBloodlossEntry = true;
+force ace_medical_gui_showBloodlossEntry = false;
 force ace_medical_ivFlowRate = 1;
 force ace_medical_limping = 1;
 force ace_medical_painCoefficient = 1.5;
@@ -339,15 +375,15 @@ force ace_medical_treatment_medicEpinephrine = 0;
 force ace_medical_treatment_medicIV = 1;
 force ace_medical_treatment_medicPAK = 2;
 force ace_medical_treatment_medicSurgicalKit = 1;
-force ace_medical_treatment_timeCoefficientPAK = 1;
-force ace_medical_treatment_treatmentTimeAutoinjector = 5;
+force ace_medical_treatment_timeCoefficientPAK = 0.1;
+force ace_medical_treatment_treatmentTimeAutoinjector = 2.5;
 force ace_medical_treatment_treatmentTimeBodyBag = 10;
 force ace_medical_treatment_treatmentTimeCPR = 15;
-force ace_medical_treatment_treatmentTimeIV = 12;
+force ace_medical_treatment_treatmentTimeIV = 8;
 force ace_medical_treatment_treatmentTimeSplint = 7;
-force ace_medical_treatment_treatmentTimeTourniquet = 7;
+force ace_medical_treatment_treatmentTimeTourniquet = 3;
 force ace_medical_treatment_woundReopenChance = 1;
-force ace_medical_treatment_woundStitchTime = 4;
+force ace_medical_treatment_woundStitchTime = 3;
 
 // ACE Name Tags
 ace_nametags_ambientBrightnessAffectViewDist = 1;
@@ -377,7 +413,7 @@ force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
 force ace_overheating_cookoffCoef = 0;
-ace_overheating_coolingCoef = 1;
+force ace_overheating_coolingCoef = 1;
 force ace_overheating_displayTextOnJam = true;
 force ace_overheating_enabled = true;
 force ace_overheating_heatCoef = 0.2;
@@ -387,7 +423,7 @@ force ace_overheating_overheatingRateOfFire = true;
 force ace_overheating_particleEffectsAndDispersionDistance = 3000;
 force ace_overheating_showParticleEffects = true;
 force ace_overheating_showParticleEffectsForEveryone = false;
-ace_overheating_suppressorCoef = 1;
+force ace_overheating_suppressorCoef = 1;
 force ace_overheating_unJamFailChance = 0.1;
 force ace_overheating_unJamOnreload = false;
 force ace_overheating_unJamOnSwapBarrel = false;
@@ -439,7 +475,7 @@ force acex_sitting_enable = true;
 // ACE Spectator
 force ace_spectator_enableAI = false;
 force ace_spectator_maxFollowDistance = 5;
-force ace_spectator_restrictModes = 0;
+force ace_spectator_restrictModes = 1;
 force ace_spectator_restrictVisions = 0;
 
 // ACE Switch Units
@@ -519,6 +555,7 @@ force ace_vehiclelock_lockVehicleInventory = false;
 force ace_vehiclelock_vehicleStartingLockState = -1;
 
 // ACE Vehicles
+force ace_novehicleclanlogo_enabled = false;
 ace_vehicles_hideEjectAction = true;
 ace_vehicles_keepEngineRunning = false;
 ace_vehicles_speedLimiterStep = 5;
@@ -575,17 +612,6 @@ force ace_zeus_revealMines = 0;
 force ace_zeus_zeusAscension = false;
 force ace_zeus_zeusBird = false;
 
-// Advanced Vault System
-AVS_Jump_MAINWEAP_X = "4";
-AVS_Jump_MAINWEAP_Z = "1.7";
-AVS_Jump_PIST_X = "6";
-AVS_Jump_PIST_Z = "2.3";
-AVS_Jump_UNARMED_X = "8";
-AVS_Jump_UNARMED_Z = "2.7";
-AVS_Jumping = false;
-AVS_Rolling = true;
-AVS_Sliding = true;
-
 // AIME Ammo Type Menu
 UPSL_aime_change_ammo_setting_ammo_class = true;
 UPSL_aime_change_ammo_setting_vehicle_ammo_class = true;
@@ -625,6 +651,41 @@ UPSL_aime_vehicle_seats_setting_getin_action = true;
 UPSL_aime_vehicle_seats_setting_getout_action = true;
 UPSL_aime_vehicle_seats_setting_turnout_action = true;
 
+// AWR Settings
+force awr_ai_enableSurrender = false;
+force awr_ai_goProne = true;
+force awr_ai_handgunChance = 25;
+force awr_ai_incapacitationType = 0;
+force force awr_ai_isEnabled = false;
+force awr_ai_limbHandleMode = 0;
+force awr_ai_painThreshold = 0.55;
+force awr_ai_playFallAnimation = true;
+force awr_ai_surrenderChance = 25;
+force awr_ai_surrenderChancePerEnemy = 5;
+force awr_ai_surrenderDistance = 80;
+force awr_ai_weaponHandleMode = 1;
+force awr_main_ai_armsDamageThreshold = 1;
+force awr_main_ai_bodyDamageThreshold = 1;
+force awr_main_ai_legsDamageThreshold = 1;
+force awr_main_bandagingMultiplier = 2;
+force force awr_main_damageIgnoreLevel = 0;
+force awr_main_displayHints = true;
+force awr_main_ignoreBurnDamage = true;
+force awr_main_ignoreChanceClasses = "[]";
+force force awr_main_player_armsDamageThreshold = 100;
+force force awr_main_player_bodyDamageThreshold = 100;
+force force awr_main_player_legsDamageThreshold = 0.5;
+force force awr_player_concussionEnabled = false;
+force force awr_player_concussionTime = 5;
+force force awr_player_goProne = true;
+force force awr_player_handgunChance = 25;
+force force awr_player_incapacitationType = 1;
+force force awr_player_isEnabled = true;
+force force awr_player_limbHandleMode = 2;
+force force awr_player_painThreshold = 0.55;
+force force awr_player_playFallAnimation = true;
+force force awr_player_weaponHandleMode = 0;
+
 // Community Base Addons
 cba_diagnostic_ConsoleIndentType = -1;
 cba_diagnostic_watchInfoRefreshRate = 0.2;
@@ -635,6 +696,37 @@ force cba_network_loadoutValidation = 2;
 cba_optics_usePipOptics = false;
 cba_ui_notifyLifetime = 4;
 cba_ui_StorePasswords = 1;
+
+// DBA CIS
+force DBA_B2Revive = true;
+force DBA_B2ReviveChanceOverride = 0.2;
+force DBA_B2ReviveOverride = false;
+force DBA_BuffLevel = 1;
+force DBA_CentralComputerBuff = true;
+force DBA_CentralComputerBuffOther = 0;
+force DBA_CentralComputerDisable = 0;
+force DBA_CentralComputerEnable = 0;
+force DBA_CentralComputerSwitch = true;
+force DBA_DisabledSuperTacticalDroidSystem = 0.5;
+force DBA_DisabledSystem = 0.5;
+force DBA_DisabledTacticalDroidSystem = 0.5;
+force DBA_OOMStatus = false;
+force DBA_SuperTacticalBuffLevel = 0.95;
+force DBA_SuperTacticalDroidBuff = true;
+force DBA_SuperTacticalDroidBuffOther = 2;
+force DBA_TacticalBuffLevel = 0.85;
+force DBA_TacticalDroidBuff = true;
+force DBA_TacticalDroidBuffOther = 2;
+
+// DBA Core
+force DBA_JammerBaseRange = 2000;
+force DBA_OverLoadTimer = 2;
+force DBA_PowerAmplification = 1;
+force DBA_StunArmoured = false;
+force DBA_StunDroids = false;
+force DBA_StunDuration = 5;
+force DBA_StunEnable = true;
+force DBA_StunHeavyDroids = false;
 
 // DUI - Squad Radar - Indicators
 diwako_dui_indicators_crew_range_enabled = false;
@@ -739,6 +831,29 @@ diwako_dui_radar_syncGroup = false;
 diwako_dui_radar_vehicleCompassEnabled = false;
 diwako_dui_use_layout_editor = false;
 
+// Fire support PLUS
+force FSPLUS_105mmTrainingShell = true;
+force FSPLUS_122Rocket = true;
+force FSPLUS_122RocketBarrage = true;
+force FSPLUS_155Barrage = true;
+force FSPLUS_230HE = true;
+force FSPLUS_230HEBarrage = true;
+force FSPLUS_230mmAP = true;
+force FSPLUS_230mmFletchette = true;
+force FSPLUS_230mmHeatSeeking = true;
+force FSPLUS_230mmMine = true;
+force FSPLUS_230mmTrainingRocket = true;
+force FSPLUS_82mmTrainingShell = true;
+force FSPLUS_82MortarBarrage = true;
+force FSPLUS_Big_Nuke = false;
+force FSPLUS_CruiseMissile = true;
+force FSPLUS_JDAM = true;
+force FSPLUS_Napalm = false;
+force FSPLUS_Not230mmBarrage = true;
+force FSPLUS_RodsfromGod = true;
+force FSPLUS_Smoke_white = true;
+force FSPLUS_Variable_Nuke = false;
+
 // Freestyle's Crash Landing
 force fscl_captiveSystem = true;
 force fscl_damageTreshold = 99;
@@ -748,6 +863,19 @@ force fscl_ejectionSystem = true;
 force fscl_gForceThreshold = 0;
 force fscl_ignoreNonPlayerVehicles = true;
 force fscl_stateThreshold = 50;
+
+// Freestyle's Nukes
+FSN_AI_Nuke_Bias = "STANDARD";
+FSN_AI_Nuke_maxColleteral = 10;
+FSN_AI_Nuke_maxFriendly = 10;
+FSN_AI_Nuke_maxRatioColleteralEnemy = 1;
+FSN_AI_Nuke_maxRatioFriendlyEnemy = 1;
+FSN_AI_Nuke_minEnemy = 10;
+FSN_AI_Nuke_NonEnemyEnemy = 1;
+FSN_AI_Nuke_order = 0;
+FSN_Auto_Nuking = false;
+FSN_Debug = false;
+FSN_Fallout = true;
 
 // GRAD Trenches
 force grad_trenches_functions_allowBigEnvelope = true;
@@ -801,15 +929,18 @@ force IMS_BayonetOnAI = false;
 force IMS_BluntWeapon = false;
 force IMS_CustomAIHEALTH = "2";
 force IMS_DamageMultiplierParam = "1";
+force IMS_DamageMultiplierParamPlayer = "1";
 force IMS_ExecutionChanceParametr = "20";
+force IMS_isFistsAllowd = true;
 force IMS_isHumansCanHitSM = false;
 force IMS_isImsCanHitAllies = true;
 force IMS_isKickButtInstaKill = false;
 force IMS_isStaticDeaths = false;
-IMS_RifleDodgeSet = true;
+force IMS_RifleDodgeSet = true;
 force IMS_StealthAI_Ears = 15;
 force IMS_StealthAI_Eyes = 40;
-IMS_WBK_CUSTOMCAMSERVER = false;
+force IMS_WBK_CUSTOMCAMSERVER = false;
+force IMS_WBK_MAINFPTP = true;
 
 // JLTS - Debug
 force JLTS_settings_Debug_chat = true;
@@ -834,10 +965,10 @@ force JLTS_settings_jumppack_stances = 1;
 force JLTS_settings_Common_dropShield = true;
 force JLTS_settings_EMP_EMPEffectScope = 0;
 force JLTS_settings_EMP_mainSwitch = 0;
-JLTS_settings_EMP_notifyPlayer = true;
-JLTS_settings_EMP_repairTimeHandgun = 20;
-JLTS_settings_EMP_repairTimePrimary = 30;
-JLTS_settings_EMP_repairTimeSecondary = 40;
+force JLTS_settings_EMP_notifyPlayer = true;
+force JLTS_settings_EMP_repairTimeHandgun = 20;
+force JLTS_settings_EMP_repairTimePrimary = 30;
+force JLTS_settings_EMP_repairTimeSecondary = 40;
 force JLTS_settings_Stun_mainSwitch = 1;
 force JLTS_settings_Stun_worksInVehicles = false;
 
@@ -980,15 +1111,15 @@ force LRG_Logistics_axeTimeFactor = 1;
 force LRG_Main_ArsenalSaveLoad = true;
 force LRG_Main_CHViewDistance = true;
 force LRG_Main_CueCards = true;
-force LRG_Main_Diary = true;
+force LRG_Main_Diary = false;
 force LRG_Main_DynamicGroups = false;
 force LRG_Main_DynamicSim = false;
 force LRG_Main_Earplugs = false;
 force LRG_Main_FatigueVanilla = false;
-force LRG_Main_FlipVehicle = false;
+force LRG_Main_FlipVehicle = true;
 force LRG_Main_FPSCounter = true;
 force LRG_Main_LockCamVehicle = false;
-force LRG_Main_Logging = true;
+force LRG_Main_Logging = false;
 force LRG_Main_MapIcons = true;
 force LRG_Main_MaydayAccess = 2;
 force LRG_Main_PilotCheck = true;
@@ -1019,7 +1150,7 @@ force LRG_QS_ST_iconMapText = false;
 force LRG_QS_ST_iconTextFonts = 5;
 force LRG_QS_ST_iconUpdatePulseDelay = 30;
 force LRG_QS_ST_map_enableUnitIcons = true;
-force LRG_QS_ST_MasterEnable = true;
+force LRG_QS_ST_MasterEnable = false;
 LRG_QS_ST_MedicalIconColor = [1,0.41,0,1];
 force LRG_QS_ST_MedicalSystem = 3;
 force LRG_QS_ST_showAI = false;
@@ -1054,16 +1185,22 @@ force LRG_Zeus_Module_MedicalDummy = true;
 force LRG_Zeus_Module_SafeZone = true;
 
 // MokTech Industries - Aircraft
+force mti_aircraft_laatc_loadDistance = 20;
+force mti_aircraft_laatc_loadSpeed = 10;
 force mti_aircraft_requirePilot = true;
 force mti_aircraft_serviceTime_long = 60;
 force mti_aircraft_serviceTime_short = 20;
 
 // MokTech Industries - CIS
+force mti_factions_cis_b2_health = 100;
 force mti_factions_cis_deka_defaultShieldHealth = 750;
 force mti_factions_cis_deka_shieldCooldown = 80;
 force mti_factions_cis_deka_shieldTimeout = 60;
 
 // MokTech Industries - Common
+force mti_common_enableLogging = true;
+force mti_common_respawnUpdateEnabled = true;
+force mti_common_teleporterDuration = 2;
 force mti_common_wsway_adjust = 0.9;
 force mti_common_wsway_enabled = true;
 
@@ -1083,8 +1220,17 @@ force mti_explosives_advSetup_requireDemo = true;
 force mti_explosives_DP3_destroyAttached = true;
 
 // MokTech Industries - Field Defibrillator
-force mti_medical_defib_arrest_chance = 0.1;
-force mti_medical_defib_success_chance = 0.6;
+force mti_medical_defib_arrest_chance = 0.25;
+force mti_medical_defib_success_chance = 0.8;
+
+// MokTech Industries - Fortify
+force mti_fortify_allowSaving = true;
+force mti_fortify_fortifyAllowed = true;
+force mti_fortify_markObjectsOnMap = 1;
+force mti_fortify_recallTimeCoef = 0.25;
+force mti_fortify_timeCostCoefficient = 0.25;
+force mti_fortify_timeMax = 30;
+force mti_fortify_timeMin = 1.5;
 
 // MokTech Industries - Intercom
 force mti_intercom_maxRange = 200;
@@ -1099,6 +1245,7 @@ force mti_katarnOS_shield_maxCharges = 3;
 // MokTech Industries - Medical
 force mti_medical_bactaPatch_timeMod = 1.8;
 force mti_medical_bactaSpray_timeMod = 0.5;
+force mti_medical_bodybagDisposalEnabled = true;
 force mti_medical_enableDiary = true;
 force mti_medical_locationMedisensor = 0;
 force mti_medical_medicMedisensor = 1;
@@ -1114,11 +1261,17 @@ force mti_medical_showBloodLevel = true;
 force mti_medical_systemEnabled = true;
 force mti_medical_timeMedisensor = 12;
 force mti_medical_vutalamine_speed_reduction = 0.8;
-force mti_medical_vutalamine_sway_reduction = 0.5;
+force mti_medical_vutalamine_sway_reduction = 0.75;
 
 // MokTech Industries - Weapons
+force mti_weapons_core_acid_duration = 300;
 force mti_weapons_core_ion_charge_max = 5;
+force mti_weapons_core_ion_duration = 10;
 force mti_weapons_core_stun_charge_max = 5;
+force mti_weapons_core_stun_duration = 10;
+force mti_weapons_core_tracking_duration = 900;
+force mti_weapons_core_tracking_enabled = true;
+force mti_weapons_core_tracking_scanDelay = 10;
 
 // MokTech Industries - Zeus
 force mti_zeus_ZEN_useTraits = true;
@@ -1180,6 +1333,11 @@ force OPTRE_MJOLNIR_SHOW_DEACTIVATE = false;
 force OPTRE_MJOLNIR_SPEED_MODIFIER = 1.1;
 force OPTRE_MJOLNIR_SUPPRESS_RECOIL = false;
 force OPTRE_POWERED_SUITS_SETTING = "ARCA_CloneVestKama_Celt,ARCA_CloneVestOfficer,ARCA_CloneVestKama_Assassin,ARCA_commando_vest,ARCA_commando_vest_eod,ARCA_commando_vest,ARCA_commando_vest_sl,ARCA_commando_vest_sniper,ARCA_commando_vest_tech,ARCA_commando_vest_tech_black,ARCA_commando_vest,ARCA_commando_vest_tech_grey";
+
+// OPTRE Settings
+force OPTRE_Debug_Mode = false;
+force OPTRE_Hijack_FriendlyFireEnabled = false;
+force OPTRE_Hijack_Mode = 0;
 
 // TFAR - Clientside settings
 TFAR_curatorCamEars = true;
@@ -1249,15 +1407,15 @@ force tfar_terrain_interception_coefficient = 7;
 force TFAR_voiceCone = true;
 
 // Turret Enhanced
-Fat_Lurch_Grid = true;
+force Fat_Lurch_Grid = true;
 Fat_Lurch_GridNum = 6;
-Fat_Lurch_MapSlew = true;
-Fat_Lurch_Markers = true;
-Fat_Lurch_Measure = true;
-Fat_Lurch_ShowAz = true;
-Fat_Lurch_ShowEl = true;
-Fat_Lurch_ShowNorth = true;
-Fat_Lurch_ShowTarget = true;
+force Fat_Lurch_MapSlew = true;
+force Fat_Lurch_Markers = true;
+force Fat_Lurch_Measure = true;
+force Fat_Lurch_ShowAz = true;
+force Fat_Lurch_ShowEl = true;
+force Fat_Lurch_ShowNorth = true;
+force Fat_Lurch_ShowTarget = true;
 
 // WebKnight Droids
 force WBK_Droid_b1_damage = "4";
@@ -1306,10 +1464,19 @@ zen_vision_enableWhiteHotRedCold = false;
 // Zeus Enhanced - Faction Filter
 zen_faction_filter_0_3AS_CIS = true;
 zen_faction_filter_0_3AS_CIS_Human = true;
+zen_faction_filter_0_EMP_Greystone_PMC = true;
 zen_faction_filter_0_JLTS_CIS = true;
 zen_faction_filter_0_LS_CIS = true;
+zen_faction_filter_0_lsi_redfor_strmc = true;
+zen_faction_filter_0_LSI_STRMC = true;
 zen_faction_filter_0_mti_factions_cis = true;
+zen_faction_filter_0_mti_factions_revanites = true;
+zen_faction_filter_0_NCA_categoryPyrishiCollective = true;
+zen_faction_filter_0_NCA_categorySeparatistAlliance = true;
 zen_faction_filter_0_O_3AS_CISV3 = true;
+zen_faction_filter_0_O_DBA_CIS_F = true;
+zen_faction_filter_0_O_DBA_CISOOM_F = true;
+zen_faction_filter_0_O_DBA_CISOOM_F_groups = true;
 zen_faction_filter_0_OPF_F = true;
 zen_faction_filter_0_OPF_G_F = true;
 zen_faction_filter_0_OPF_GEN_F = true;
@@ -1322,6 +1489,8 @@ zen_faction_filter_0_WBK_AI_Melee = true;
 zen_faction_filter_0_WBK_AI_StarWars_Droids = true;
 zen_faction_filter_0_WBK_Droid_groups = true;
 zen_faction_filter_1_3AS_Rep = true;
+zen_faction_filter_1_B_DBA_Imperial_F = true;
+zen_faction_filter_1_B_DBA_Neutral_F_Faction = true;
 zen_faction_filter_1_BLU_CTRG_F = true;
 zen_faction_filter_1_BLU_F = true;
 zen_faction_filter_1_BLU_G_F = true;
@@ -1336,11 +1505,14 @@ zen_faction_filter_1_LS_ORSF = true;
 zen_faction_filter_1_LS_REPNAVY = true;
 zen_faction_filter_1_lsb_turret = true;
 zen_faction_filter_1_mti_faction_SOB = true;
+zen_faction_filter_1_NCA_categoryGalacticRepublic = true;
 zen_faction_filter_1_OPTRE_UNSC = true;
 zen_faction_filter_1_SWLB_GAR = true;
 zen_faction_filter_1_SWLB_GAR_SOB = true;
 zen_faction_filter_1_WBK_AI = true;
 zen_faction_filter_1_WBK_AI_Melee = true;
+zen_faction_filter_2_I_DBA_Dalek_F = true;
+zen_faction_filter_2_I_DBA_Mando_F = true;
 zen_faction_filter_2_IND_C_F = true;
 zen_faction_filter_2_IND_E_F = true;
 zen_faction_filter_2_IND_F = true;
@@ -1348,9 +1520,34 @@ zen_faction_filter_2_IND_G_F = true;
 zen_faction_filter_2_IND_L_F = true;
 zen_faction_filter_2_LS_MANDALORIAN = true;
 zen_faction_filter_2_LS_MEMEFOR = true;
+zen_faction_filter_2_mti_factions_jarotsad = true;
+zen_faction_filter_2_OPTRE_CAA = true;
+zen_faction_filter_2_OPTRE_FC_Covenant = true;
+zen_faction_filter_2_OPTRE_Ins = true;
 zen_faction_filter_2_OPTRE_PD = true;
+zen_faction_filter_2_OPTRE_UEG_Civ = true;
 zen_faction_filter_3_CIV_F = true;
 zen_faction_filter_3_CIV_IDAP_F = true;
+zen_faction_filter_3_I_DBA_Civillian_F = true;
 zen_faction_filter_3_IND_L_F = true;
 zen_faction_filter_3_LS_CIV = true;
 zen_faction_filter_3_OPTRE_UEG_Civ = true;
+
+// Lightsaber's And Force
+force IMS_ForceKillFriendlies = false;
+force IMS_LightSabers_GlobalDamageKnight = "35";
+force IMS_LightSabers_GlobalDamageMaster = "50";
+force force IMS_LightSabers_GlobalDamagePadawan = "25";
+force IMS_LightSabers_Mana_Knight = "0.00012";
+force IMS_LightSabers_Mana_Master = "0.00025";
+force IMS_LightSabers_Mana_Padawan = "0.00008";
+
+// Necroplague
+force dev_cba_infection = false;
+dev_cba_infection_prolongTime = 900;
+dev_cba_infection_resurrectAmugusChance = 0;
+dev_cba_infection_resurrectParasiteChance = 0.1;
+dev_cba_infection_resurrectTime = "[25,30,35]";
+force dev_cba_infection_resurrectWebknight = false;
+force dev_cba_infection_resurrectZombie = true;
+dev_cba_infection_totalTime = 180;
