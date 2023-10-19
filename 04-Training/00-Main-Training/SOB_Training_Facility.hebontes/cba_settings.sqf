@@ -80,7 +80,7 @@ force ace_arsenal_loadoutsSaveVoice = false;
 
 // ACE Artillery
 force ace_artillerytables_advancedCorrections = false;
-force ace_artillerytables_disableArtilleryComputer = false;
+force ace_artillerytables_disableArtilleryComputer = true;
 force ace_mk6mortar_airResistanceEnabled = false;
 force ace_mk6mortar_allowCompass = true;
 force ace_mk6mortar_allowComputerRangefinder = true;
@@ -650,6 +650,41 @@ UPSL_aime_vehicle_seats_setting_force_eject = false;
 UPSL_aime_vehicle_seats_setting_getin_action = true;
 UPSL_aime_vehicle_seats_setting_getout_action = true;
 UPSL_aime_vehicle_seats_setting_turnout_action = true;
+
+// AWR Settings
+force awr_ai_enableSurrender = false;
+force awr_ai_goProne = true;
+force awr_ai_handgunChance = 25;
+force awr_ai_incapacitationType = 0;
+force force awr_ai_isEnabled = false;
+force awr_ai_limbHandleMode = 0;
+force awr_ai_painThreshold = 0.55;
+force awr_ai_playFallAnimation = true;
+force awr_ai_surrenderChance = 25;
+force awr_ai_surrenderChancePerEnemy = 5;
+force awr_ai_surrenderDistance = 80;
+force awr_ai_weaponHandleMode = 1;
+force awr_main_ai_armsDamageThreshold = 1;
+force awr_main_ai_bodyDamageThreshold = 1;
+force awr_main_ai_legsDamageThreshold = 1;
+force awr_main_bandagingMultiplier = 2;
+force force awr_main_damageIgnoreLevel = 0;
+force awr_main_displayHints = true;
+force awr_main_ignoreBurnDamage = true;
+force awr_main_ignoreChanceClasses = "[]";
+force force awr_main_player_armsDamageThreshold = 100;
+force force awr_main_player_bodyDamageThreshold = 100;
+force force awr_main_player_legsDamageThreshold = 0.5;
+force force awr_player_concussionEnabled = false;
+force force awr_player_concussionTime = 5;
+force force awr_player_goProne = true;
+force force awr_player_handgunChance = 25;
+force force awr_player_incapacitationType = 1;
+force force awr_player_isEnabled = true;
+force force awr_player_limbHandleMode = 2;
+force force awr_player_painThreshold = 0.55;
+force force awr_player_playFallAnimation = true;
+force force awr_player_weaponHandleMode = 0;
 
 // Community Base Addons
 cba_diagnostic_ConsoleIndentType = -1;
@@ -1497,3 +1532,22 @@ zen_faction_filter_3_I_DBA_Civillian_F = true;
 zen_faction_filter_3_IND_L_F = true;
 zen_faction_filter_3_LS_CIV = true;
 zen_faction_filter_3_OPTRE_UEG_Civ = true;
+
+// Lightsaber's And Force
+force IMS_ForceKillFriendlies = false;
+force IMS_LightSabers_GlobalDamageKnight = "35";
+force IMS_LightSabers_GlobalDamageMaster = "50";
+force force IMS_LightSabers_GlobalDamagePadawan = "25";
+force IMS_LightSabers_Mana_Knight = "0.00012";
+force IMS_LightSabers_Mana_Master = "0.00025";
+force IMS_LightSabers_Mana_Padawan = "0.00008";
+
+// Necroplague
+force dev_cba_infection = false;
+dev_cba_infection_prolongTime = 900;
+dev_cba_infection_resurrectAmugusChance = 0;
+dev_cba_infection_resurrectParasiteChance = 0.1;
+dev_cba_infection_resurrectTime = "[25,30,35]";
+force dev_cba_infection_resurrectWebknight = false;
+force dev_cba_infection_resurrectZombie = true;
+dev_cba_infection_totalTime = 180;
