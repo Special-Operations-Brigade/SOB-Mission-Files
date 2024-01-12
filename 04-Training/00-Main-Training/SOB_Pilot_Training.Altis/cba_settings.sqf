@@ -84,7 +84,7 @@ force ace_captives_requireSurrender = 1;
 force ace_captives_requireSurrenderAi = false;
 
 // ACE Casings
-ace_casings_enabled = false;
+force ace_casings_enabled = false;
 force ace_casings_maxCasings = 250;
 
 // ACE Common
@@ -120,6 +120,7 @@ force ace_csw_progressBarTimeCoefficent = 1;
 force ace_dragging_allowRunWithLightweight = true;
 force ace_dragging_dragAndFire = true;
 force ace_dragging_skipContainerWeight = true;
+force ace_dragging_weightCoefficient = 2;
 
 // ACE Explosives
 force ace_explosives_customTimerDefault = 30;
@@ -335,11 +336,15 @@ ace_interact_menu_moveToRoot__ACE_Equipment__ace_trenches__grad_trenches_digEnve
 ace_interact_menu_moveToRoot__ACE_Equipment__ace_tripod_place = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__ls_holomap_deploy = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__ls_meme_eatChocolate = false;
+ace_interact_menu_moveToRoot__ACE_Equipment__mti_boc_onBack = false;
+ace_interact_menu_moveToRoot__ACE_Equipment__mti_boc_onChest = false;
+ace_interact_menu_moveToRoot__ACE_Equipment__mti_boc_swap = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_drones_unpack = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_drones_unpack__Auto_Turret = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_drones_unpack__Blaster_Turret = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_drones_unpack__MSE6 = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_drones_unpack__MSE6_GMC = false;
+ace_interact_menu_moveToRoot__ACE_Equipment__mti_drones_unpack__Prowler1500 = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_drones_unpack__Prowler500 = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_equip_cis_disguise = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_equip_heavy_cis_disguise = false;
@@ -350,7 +355,13 @@ ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_knifePull = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_knifeStow = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9 = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_prepare = false;
+ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_EMP = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_HE = false;
+ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_Ion = false;
+ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_RTD = false;
+ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_Smoke = false;
+ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_Stun = false;
+ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_Training = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_stow = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_remove_disguise = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_repairRadio = false;
@@ -384,9 +395,6 @@ ace_interact_menu_moveToRoot__ACE_Equipment__SCH_Unpack__SCH_Unpack_LTD_BW = fal
 ace_interact_menu_moveToRoot__ACE_Equipment__UPSL_aime_uav_terminal_gps_action = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__UPSL_aime_uav_terminal_term_action = false;
 ace_interact_menu_moveToRoot__ACE_Equipment__UPSL_aime_uav_terminal_uav_action = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__zade_boc_onBack = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__zade_boc_onChest = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__zade_boc_swap = false;
 ace_interact_menu_moveToRoot__ACE_Explosives__ACE_Cellphone = false;
 ace_interact_menu_moveToRoot__ACE_Explosives__ACE_Place = false;
 ace_interact_menu_moveToRoot__ACE_Explosives__mti_explosives_clacker = false;
@@ -470,6 +478,9 @@ ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_
 ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_nvSettings__mti_katarnOS_lowlightOff = false;
 ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_nvSettings__mti_katarnOS_lowlightOn = false;
 ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit = false;
+ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_RepulsorBlast = false;
+ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_RepulsorBlast__mti_katarnOS_activate = false;
+ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_RepulsorBlast__mti_katarnOS_reload = false;
 ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_shield = false;
 ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_shield__mti_katarnOS_shieldOff = false;
 ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_shield__mti_katarnOS_shieldOn = false;
@@ -553,11 +564,67 @@ force ace_medical_dropWeaponUnconsciousChance = 0;
 force ace_medical_enableVehicleCrashes = false;
 force ace_medical_engine_damagePassThroughEffect = 1;
 force ace_medical_fatalDamageSource = 1;
+force ace_medical_fractureChance = 0.15;
+force ace_medical_fractures = 1;
+force ace_medical_ivFlowRate = 1;
+force ace_medical_limping = 1;
+force ace_medical_painCoefficient = 1.5;
+force ace_medical_painUnconsciousChance = 0.1;
+force ace_medical_painUnconsciousThreshold = 0.85;
+force ace_medical_playerDamageThreshold = 2;
+force ace_medical_spontaneousWakeUpChance = 0.25;
+force ace_medical_spontaneousWakeUpEpinephrineBoost = 4;
+force ace_medical_statemachine_AIUnconsciousness = true;
+force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
+force ace_medical_statemachine_cardiacArrestTime = 900;
+force ace_medical_statemachine_fatalInjuriesAI = 0;
+force ace_medical_statemachine_fatalInjuriesPlayer = 1;
+force ace_medical_treatment_advancedBandages = 2;
+force ace_medical_treatment_advancedDiagnose = 1;
+force ace_medical_treatment_advancedMedication = true;
+force ace_medical_treatment_allowBodyBagUnconscious = true;
+force ace_medical_treatment_allowGraveDigging = 2;
+force ace_medical_treatment_allowLitterCreation = true;
+force ace_medical_treatment_allowSelfIV = 1;
+force ace_medical_treatment_allowSelfPAK = 1;
+force ace_medical_treatment_allowSelfStitch = 1;
+force ace_medical_treatment_allowSharedEquipment = 0;
+force ace_medical_treatment_bandageEffectiveness = 1;
+force ace_medical_treatment_bandageRollover = true;
+force ace_medical_treatment_clearTrauma = 0;
+force ace_medical_treatment_consumePAK = 0;
+force ace_medical_treatment_consumeSurgicalKit = 2;
+force ace_medical_treatment_convertItems = 0;
+force ace_medical_treatment_cprSuccessChanceMax = 0.8;
+force ace_medical_treatment_cprSuccessChanceMin = 0.1;
+force ace_medical_treatment_graveDiggingMarker = true;
+force ace_medical_treatment_holsterRequired = 0;
+force ace_medical_treatment_litterCleanupDelay = 240;
+force ace_medical_treatment_locationEpinephrine = 0;
+force ace_medical_treatment_locationIV = 0;
+force ace_medical_treatment_locationPAK = 3;
+force ace_medical_treatment_locationsBoostTraining = false;
+force ace_medical_treatment_locationSurgicalKit = 0;
+force ace_medical_treatment_maxLitterObjects = 300;
+force ace_medical_treatment_medicEpinephrine = 0;
+force ace_medical_treatment_medicIV = 1;
+force ace_medical_treatment_medicPAK = 2;
+force ace_medical_treatment_medicSurgicalKit = 1;
+force ace_medical_treatment_timeCoefficientPAK = 0.1;
+force ace_medical_treatment_treatmentTimeAutoinjector = 2;
+force ace_medical_treatment_treatmentTimeBodyBag = 10;
+force ace_medical_treatment_treatmentTimeCPR = 15;
+force ace_medical_treatment_treatmentTimeGrave = 20;
+force ace_medical_treatment_treatmentTimeIV = 8;
+force ace_medical_treatment_treatmentTimeSplint = 7;
+force ace_medical_treatment_treatmentTimeTourniquet = 3;
+force ace_medical_treatment_woundReopenChance = 1;
+force ace_medical_treatment_woundStitchTime = 3;
+
+// ACE Medical Interface
 ace_medical_feedback_bloodVolumeEffectType = 0;
 force ace_medical_feedback_enableHUDIndicators = true;
 ace_medical_feedback_painEffectType = 0;
-force ace_medical_fractureChance = 0.15;
-force ace_medical_fractures = 1;
 ace_medical_gui_bloodLossColor_0 = [1,1,1,1];
 ace_medical_gui_bloodLossColor_1 = [1,0.95,0.64,1];
 ace_medical_gui_bloodLossColor_2 = [1,0.87,0.46,1];
@@ -591,60 +658,6 @@ force ace_medical_gui_peekMedicalOnHitDuration = 0;
 force ace_medical_gui_showBloodlossEntry = true;
 force ace_medical_gui_showDamageEntry = false;
 ace_medical_gui_tourniquetWarning = true;
-force ace_medical_ivFlowRate = 1;
-force ace_medical_limping = 1;
-force ace_medical_painCoefficient = 1.5;
-force ace_medical_painUnconsciousChance = 0.15;
-force ace_medical_painUnconsciousThreshold = 0.75;
-force ace_medical_playerDamageThreshold = 2;
-force ace_medical_spontaneousWakeUpChance = 0.25;
-force ace_medical_spontaneousWakeUpEpinephrineBoost = 4;
-force ace_medical_statemachine_AIUnconsciousness = true;
-force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
-force ace_medical_statemachine_cardiacArrestTime = 900;
-force ace_medical_statemachine_fatalInjuriesAI = 0;
-force ace_medical_statemachine_fatalInjuriesPlayer = 1;
-force ace_medical_treatment_advancedBandages = 2;
-force ace_medical_treatment_advancedDiagnose = 1;
-force ace_medical_treatment_advancedMedication = true;
-force ace_medical_treatment_allowBodyBagUnconscious = true;
-force ace_medical_treatment_allowGraveDigging = 2;
-force ace_medical_treatment_allowLitterCreation = true;
-force ace_medical_treatment_allowSelfIV = 1;
-force ace_medical_treatment_allowSelfPAK = 1;
-force ace_medical_treatment_allowSelfStitch = 1;
-force ace_medical_treatment_allowSharedEquipment = 1;
-force ace_medical_treatment_bandageEffectiveness = 1;
-ace_medical_treatment_bandageRollover = true;
-force ace_medical_treatment_clearTrauma = 0;
-force ace_medical_treatment_consumePAK = 0;
-force ace_medical_treatment_consumeSurgicalKit = 0;
-force ace_medical_treatment_convertItems = 0;
-force ace_medical_treatment_cprSuccessChanceMax = 0.8;
-force ace_medical_treatment_cprSuccessChanceMin = 0.1;
-force ace_medical_treatment_graveDiggingMarker = true;
-force ace_medical_treatment_holsterRequired = 0;
-force ace_medical_treatment_litterCleanupDelay = 240;
-force ace_medical_treatment_locationEpinephrine = 0;
-force ace_medical_treatment_locationIV = 0;
-force ace_medical_treatment_locationPAK = 3;
-force ace_medical_treatment_locationsBoostTraining = false;
-force ace_medical_treatment_locationSurgicalKit = 0;
-force ace_medical_treatment_maxLitterObjects = 300;
-force ace_medical_treatment_medicEpinephrine = 0;
-force ace_medical_treatment_medicIV = 1;
-force ace_medical_treatment_medicPAK = 2;
-force ace_medical_treatment_medicSurgicalKit = 1;
-force ace_medical_treatment_timeCoefficientPAK = 0.1;
-force ace_medical_treatment_treatmentTimeAutoinjector = 2;
-force ace_medical_treatment_treatmentTimeBodyBag = 10;
-force ace_medical_treatment_treatmentTimeCPR = 15;
-force ace_medical_treatment_treatmentTimeGrave = 20;
-force ace_medical_treatment_treatmentTimeIV = 8;
-force ace_medical_treatment_treatmentTimeSplint = 7;
-force ace_medical_treatment_treatmentTimeTourniquet = 3;
-force ace_medical_treatment_woundReopenChance = 1;
-force ace_medical_treatment_woundStitchTime = 3;
 
 // ACE Name Tags
 force ace_nametags_ambientBrightnessAffectViewDist = 1;
@@ -726,7 +739,7 @@ force ace_repair_fullRepairLocation = 0;
 force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
 force ace_repair_locationsBoostTraining = false;
 force ace_repair_miscRepairRequiredItems = [];
-force ace_repair_miscRepairTime = 15;
+force ace_repair_miscRepairTime = 10;
 force ace_repair_patchWheelEnabled = 0;
 force ace_repair_patchWheelLocation = ["ground","vehicle"];
 force ace_repair_patchWheelMaximumRepair = 0.3;
@@ -734,7 +747,7 @@ force ace_repair_patchWheelRequiredItems = ["ace_repair_anyToolKit"];
 force ace_repair_patchWheelTime = 5;
 force ace_repair_repairDamageThreshold = 0.6;
 force ace_repair_repairDamageThreshold_engineer = 0.3;
-force ace_repair_timeCoefficientFullRepair = 1.5;
+force ace_repair_timeCoefficientFullRepair = 0.25;
 force ace_repair_wheelChangeTime = 10;
 force ace_repair_wheelRepairRequiredItems = [];
 
@@ -899,6 +912,10 @@ force ace_zeus_revealMines = 0;
 force ace_zeus_zeusAscension = false;
 force ace_zeus_zeusBird = false;
 
+// Advanced Developer Tools
+force DBUG_alwaysShowConsole = false;
+force DBUG_replaceDebugConsole = true;
+
 // AIME Ammo Type Menu
 UPSL_aime_change_ammo_setting_ammo_class = true;
 UPSL_aime_change_ammo_setting_vehicle_ammo_class = true;
@@ -943,7 +960,7 @@ force awr_ai_enableSurrender = false;
 force awr_ai_goProne = true;
 force awr_ai_handgunChance = 25;
 force awr_ai_incapacitationType = 0;
-force force awr_ai_isEnabled = false;
+force awr_ai_isEnabled = false;
 force awr_ai_limbHandleMode = 0;
 force awr_ai_painThreshold = 0.55;
 force awr_ai_playFallAnimation = true;
@@ -955,23 +972,23 @@ force awr_main_ai_armsDamageThreshold = 1;
 force awr_main_ai_bodyDamageThreshold = 1;
 force awr_main_ai_legsDamageThreshold = 1;
 force awr_main_bandagingMultiplier = 2;
-force force awr_main_damageIgnoreLevel = 0;
+force awr_main_damageIgnoreLevel = 0;
 force awr_main_displayHints = true;
 force awr_main_ignoreBurnDamage = true;
 force awr_main_ignoreChanceClasses = "[]";
-force force awr_main_player_armsDamageThreshold = 100;
-force force awr_main_player_bodyDamageThreshold = 100;
-force force awr_main_player_legsDamageThreshold = 1;
-force force awr_player_concussionEnabled = false;
-force force awr_player_concussionTime = 5;
-force force awr_player_goProne = true;
-force force awr_player_handgunChance = 100;
-force force awr_player_incapacitationType = 1;
-force force awr_player_isEnabled = true;
-force force awr_player_limbHandleMode = 1;
-force force awr_player_painThreshold = 0.55;
-force force awr_player_playFallAnimation = true;
-force force awr_player_weaponHandleMode = 0;
+force awr_main_player_armsDamageThreshold = 100;
+force awr_main_player_bodyDamageThreshold = 100;
+force awr_main_player_legsDamageThreshold = 1;
+force awr_player_concussionEnabled = false;
+force awr_player_concussionTime = 5;
+force awr_player_goProne = true;
+force awr_player_handgunChance = 100;
+force awr_player_incapacitationType = 1;
+force awr_player_isEnabled = true;
+force awr_player_limbHandleMode = 1;
+force awr_player_painThreshold = 0.55;
+force awr_player_playFallAnimation = true;
+force awr_player_weaponHandleMode = 0;
 
 // BC Two Primary Weapons
 force BC_TPW_action = false;
@@ -988,6 +1005,23 @@ force cba_network_loadoutValidation = 2;
 cba_optics_usePipOptics = false;
 cba_ui_notifyLifetime = 4;
 cba_ui_StorePasswords = 1;
+
+// Crows Electronic Warfare
+force crowsEW_spectrum_spectrumEnable = true;
+force crowsEW_spectrum_tfarSideTrack = true;
+
+// Crows Zeus Additions
+force crowsza_pingbox_CBA_Setting_enabled = true;
+force crowsza_pingbox_CBA_Setting_fade_duration = 300;
+force crowsza_pingbox_CBA_Setting_fade_enabled = true;
+force crowsza_pingbox_CBA_Setting_oldLimit = 600;
+force crowsza_zeus_text_CBA_Setting_rc_helper = true;
+force crowsza_zeus_text_CBA_Setting_rc_helper_color = [1,1,1,1];
+force crowsza_zeus_text_CBA_Setting_surrender_helper = true;
+force crowsza_zeus_text_CBA_Setting_surrender_helper_color = [1,1,1,1];
+force crowsza_zeus_text_CBA_Setting_zeusTextLine1 = true;
+force crowsza_zeus_text_CBA_Setting_zeusTextLine2 = true;
+force crowsza_zeus_text_CBA_Setting_zeusTextLine3 = true;
 
 // DBA CIS
 force DBA_B2Revive = true;
@@ -1147,7 +1181,7 @@ force FSPLUS_Fireworks = true;
 force FSPLUS_JDAM = true;
 force FSPLUS_Napalm = false;
 force FSPLUS_Not230mmBarrage = true;
-force FSPLUS_RodsfromGod = true;
+force FSPLUS_RodsfromGod = false;
 force FSPLUS_Smoke_white = true;
 force FSPLUS_Variable_Nuke = false;
 
@@ -1162,7 +1196,7 @@ force fscl_ignoreNonPlayerVehicles = false;
 force fscl_stateThreshold = 50;
 
 // Goobin's Gameplay Enhancements Core
-gge_core_var_debugMode = false;
+force gge_core_var_debugMode = false;
 
 // GRAD Trenches
 force grad_trenches_functions_allowBigEnvelope = true;
@@ -1315,7 +1349,7 @@ ls_setting_impulseHintDisplay = 2;
 force IMS_ForceKillFriendlies = false;
 force IMS_LightSabers_GlobalDamageKnight = "25";
 force IMS_LightSabers_GlobalDamageMaster = "50";
-force force IMS_LightSabers_GlobalDamagePadawan = "25";
+force IMS_LightSabers_GlobalDamagePadawan = "25";
 force IMS_LightSabers_Mana_Knight = "0.001";
 force IMS_LightSabers_Mana_Master = "0.001";
 force IMS_LightSabers_Mana_Padawan = "0.001";
@@ -1489,6 +1523,9 @@ force mti_aircraft_requirePilot = true;
 force mti_aircraft_serviceTime_long = 60;
 force mti_aircraft_serviceTime_short = 20;
 
+// MokTech Industries - Backpack on Chest
+force mti_boc_disabled = false;
+
 // MokTech Industries - catTab (UI)
 mti_catTab_ui_androidDesktopBackgroundMode = 0;
 mti_catTab_ui_androidDesktopBackgroundPreset = "\z\mti\addons\catTab_data\img\ui\desktop\classic\android_desktop_background_0_co.paa";
@@ -1565,6 +1602,8 @@ force mti_intercom_systemEnabled = true;
 // MokTech Industries - Katarn_OS
 force mti_katarnOS_intercom_enabled = true;
 force mti_katarnOS_lowLight_enabled = true;
+force mti_katarnOS_repulsorAngle = 90;
+force mti_katarnOS_repulsorRange = 10;
 force mti_katarnOS_shield_duration = 210;
 force mti_katarnOS_shield_maxCharges = 3;
 
@@ -1600,7 +1639,7 @@ force mti_medical_pba_cpr_boost = 5;
 force mti_medical_pba_od_enabled = true;
 force mti_medical_pba_od_time = 90;
 force mti_medical_pba_pain_boost = 10;
-force mti_medical_pba_speed_boost = 1.1;
+force mti_medical_pba_speed_boost = 1.2;
 force mti_medical_pba_sway_boost = 1.15;
 force mti_medical_showBloodLevel = true;
 force mti_medical_systemEnabled = true;
@@ -1612,6 +1651,7 @@ force mti_medical_vutalamine_sway_reduction = 0.75;
 force mti_pangolin_baseShieldRegen = 2;
 force mti_pangolin_baseShieldStrength = 100;
 force mti_pangolin_cqcShieldRegenBoost = 1.5;
+force mti_pangolin_cqcShieldTimeoutMod = 0.5;
 mti_pangolin_disableBreachVoice = false;
 force mti_pangolin_enabled = true;
 force mti_pangolin_medicShieldBoost = 1.25;
@@ -1816,8 +1856,8 @@ force TFAR_setting_externalIntercomWirelessHeadgear = "";
 force TFAR_spectatorCanHearEnemyUnits = true;
 force TFAR_spectatorCanHearFriendlies = true;
 force TFAR_takingRadio = 2;
-force TFAR_Teamspeak_Channel_Name = "ARCATFAR";
-force TFAR_Teamspeak_Channel_Password = "Arca";
+force TFAR_Teamspeak_Channel_Name = "TRAINING TFAR";
+force TFAR_Teamspeak_Channel_Password = "SOB123";
 force tfar_terrain_interception_coefficient = 7;
 force TFAR_voiceCone = true;
 
@@ -1832,6 +1872,17 @@ force tts_beam_structureFireMinDuration = 60;
 force tts_beam_structureFiresEnabled = true;
 force tts_beam_vaporiseBodies = true;
 
+// Turret Enhanced
+Fat_Lurch_Grid = true;
+Fat_Lurch_GridNum = 6;
+Fat_Lurch_MapSlew = true;
+Fat_Lurch_Markers = true;
+Fat_Lurch_Measure = true;
+Fat_Lurch_ShowAz = true;
+Fat_Lurch_ShowEl = true;
+Fat_Lurch_ShowNorth = true;
+Fat_Lurch_ShowTarget = true;
+
 // WebKnight Droids
 force WBK_Droid_b1_damage = "4";
 force WBK_Droid_b2_damage = "120";
@@ -1842,7 +1893,7 @@ force WBK_HeadLamps_IsVolumetricAppearOnAIParam = true;
 
 // Zeus Enhanced
 force zen_area_markers_editableMarkers = 0;
-zen_building_markers_enabled = false;
+force zen_building_markers_enabled = false;
 zen_camera_adaptiveSpeed = true;
 zen_camera_defaultSpeedCoef = 1;
 zen_camera_fastSpeedCoef = 1;
@@ -1942,9 +1993,6 @@ zen_faction_filter_0_mti_factions_cis = true;
 zen_faction_filter_0_mti_factions_revanites = true;
 zen_faction_filter_0_NCA_categoryPyrishiCollective = true;
 zen_faction_filter_0_NCA_categorySeparatistArmy = true;
-zen_faction_filter_0_O_3AS_CISV1 = true;
-zen_faction_filter_0_O_3AS_CISV2 = true;
-zen_faction_filter_0_O_3AS_CISV3 = true;
 zen_faction_filter_0_O_DBA_CIS_F = true;
 zen_faction_filter_0_O_DBA_CISOOM_F = true;
 zen_faction_filter_0_O_DBA_CISOOM_F_groups = true;
@@ -1987,6 +2035,7 @@ zen_faction_filter_1_PhoenixCore_Faction = true;
 zen_faction_filter_1_SSV_Aux_Androids = true;
 zen_faction_filter_1_SWLB_GAR = true;
 zen_faction_filter_1_SWLB_GAR_SOB = true;
+zen_faction_filter_1_TKE_UCN_Drop_Pods = true;
 zen_faction_filter_1_WBK_AI = true;
 zen_faction_filter_1_WBK_AI_Melee = true;
 zen_faction_filter_2_IND_C_F = true;
@@ -1999,6 +2048,7 @@ zen_faction_filter_2_LS_MEMEFOR = true;
 zen_faction_filter_2_LS_MERC = true;
 zen_faction_filter_2_mti_factions_jarotsad = true;
 zen_faction_filter_2_OPTRE_CAA = true;
+zen_faction_filter_2_OPTRE_DME = true;
 zen_faction_filter_2_OPTRE_FC_Covenant = true;
 zen_faction_filter_2_OPTRE_Ins = true;
 zen_faction_filter_2_OPTRE_PD = true;
