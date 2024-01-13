@@ -120,7 +120,7 @@ force ace_csw_progressBarTimeCoefficent = 1;
 force ace_dragging_allowRunWithLightweight = true;
 force ace_dragging_dragAndFire = true;
 force ace_dragging_skipContainerWeight = true;
-force ace_dragging_weightCoefficient = 2;
+force ace_dragging_weightCoefficient = 0.25;
 
 // ACE Explosives
 force ace_explosives_customTimerDefault = 30;
@@ -593,7 +593,7 @@ force ace_medical_treatment_bandageEffectiveness = 1;
 force ace_medical_treatment_bandageRollover = true;
 force ace_medical_treatment_clearTrauma = 0;
 force ace_medical_treatment_consumePAK = 0;
-force ace_medical_treatment_consumeSurgicalKit = 2;
+force ace_medical_treatment_consumeSurgicalKit = 0;
 force ace_medical_treatment_convertItems = 0;
 force ace_medical_treatment_cprSuccessChanceMax = 0.8;
 force ace_medical_treatment_cprSuccessChanceMin = 0.1;
@@ -1011,10 +1011,10 @@ force crowsEW_spectrum_spectrumEnable = true;
 force crowsEW_spectrum_tfarSideTrack = true;
 
 // Crows Zeus Additions
-force crowsza_pingbox_CBA_Setting_enabled = true;
-force crowsza_pingbox_CBA_Setting_fade_duration = 300;
-force crowsza_pingbox_CBA_Setting_fade_enabled = true;
-force crowsza_pingbox_CBA_Setting_oldLimit = 600;
+crowsza_pingbox_CBA_Setting_enabled = true;
+crowsza_pingbox_CBA_Setting_fade_duration = 300;
+crowsza_pingbox_CBA_Setting_fade_enabled = true;
+crowsza_pingbox_CBA_Setting_oldLimit = 600;
 force crowsza_zeus_text_CBA_Setting_rc_helper = true;
 force crowsza_zeus_text_CBA_Setting_rc_helper_color = [1,1,1,1];
 force crowsza_zeus_text_CBA_Setting_surrender_helper = true;
