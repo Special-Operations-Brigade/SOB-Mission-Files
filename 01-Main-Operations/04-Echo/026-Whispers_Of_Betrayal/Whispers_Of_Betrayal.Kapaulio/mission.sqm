@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=18265;
+		nextID=18295;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1714;
+		nextID=1891;
 	};
 	class Camera
 	{
-		pos[]={1586.7494,315.36304,17554.008};
-		dir[]={-0.83837301,-0.54454738,-0.02466638};
-		up[]={-0.54431301,0.83872819,-0.01601452};
-		aside[]={-0.02940915,-4.5449269e-008,0.99957311};
+		pos[]={11366.472,311.39621,15051.814};
+		dir[]={0.6534276,-0.49183735,-0.57547611};
+		up[]={0.36913866,0.87065625,-0.32510275};
+		aside[]={-0.66093904,-6.0664024e-007,-0.7504648};
 	};
 };
 binarizationWanted=0;
@@ -103,8 +103,6 @@ addons[]=
 	"A3_Structures_F_Mil_BagFence",
 	"CUP_Misc_e_Config",
 	"CUP_CAMisc_E_WF",
-	"JLTS_characters_DroidArmor",
-	"mti_factions_cis",
 	"JLTS_core_droids",
 	"3AS_Imperial",
 	"3AS_Prop_StaticVehicles",
@@ -119,7 +117,9 @@ addons[]=
 	"A3_Structures_F_Tank_Military_Fortifications",
 	"OPTRE_UNSC_Structure_Arctic_Military",
 	"OPTRE_BW_WarehouseRS",
-	"A3_Characters_F_Common"
+	"A3_Characters_F_Common",
+	"mti_factions_cis",
+	"JLTS_characters_DroidArmor"
 };
 class AddonsMetaData
 {
@@ -475,86 +475,86 @@ class AddonsMetaData
 		};
 		class Item56
 		{
-			className="JLTS_characters_DroidArmor";
-			name="JLTS The Great War - Droids";
-			author="MrClock";
-		};
-		class Item57
-		{
-			className="mti_factions_cis";
-			name="MokTech Industries - CIS";
-			author="MokTech Industries";
-		};
-		class Item58
-		{
 			className="JLTS_core_droids";
 			name="JLTS The Great War - Core droids";
 			author="MrClock";
 		};
-		class Item59
+		class Item57
 		{
 			className="3AS_Imperial";
 			name="3AS_Imperial";
 			author="3rd Army Studios";
 		};
-		class Item60
+		class Item58
 		{
 			className="3AS_Prop_StaticVehicles";
 			name="3AS_Prop_StaticVehicles";
 			author="3rd Army Studios";
 		};
-		class Item61
+		class Item59
 		{
 			className="3AS_Prop_Interiors";
 			name="3AS_Prop_Interiors";
 			author="3rd Army Studios";
 		};
-		class Item62
+		class Item60
 		{
 			className="3AS_Prop_Platforms";
 			name="3AS_Prop_Platforms";
 			author="3rd Army Studios";
 		};
-		class Item63
+		class Item61
 		{
 			className="3AS_Structures_Lights";
 			name="3AS_Structures_Lights";
 			author="3rd Army Studios";
 		};
-		class Item64
+		class Item62
 		{
 			className="3AS_Prop_Trenches";
 			name="3AS_Prop_Trenches";
 			author="3rd Army Studios";
 		};
-		class Item65
+		class Item63
 		{
 			className="3AS_Structures2_StairsLadderElevator";
 			name="3AS_Structures2_StairsLadderElevator";
 			author="3rd Army Studios";
 		};
-		class Item66
+		class Item64
 		{
 			className="3AS_Static";
 			name="3AS_Static_Repeater";
 		};
-		class Item67
+		class Item65
 		{
 			className="ls_flags";
 			name="ls_flags";
 			author="Legion Studios";
 		};
-		class Item68
+		class Item66
 		{
 			className="A3_Structures_F_Tank";
 			name="Arma 3 Tank - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item69
+		class Item67
 		{
 			className="OPTRE_UNSC_Structure_Arctic_Military";
 			name="OPTRE_UNSC_Structure_Arctic_Military";
+		};
+		class Item68
+		{
+			className="mti_factions_cis";
+			name="MokTech Industries - CIS";
+			author="MokTech Industries";
+		};
+		class Item69
+		{
+			className="JLTS_characters_DroidArmor";
+			name="JLTS The Great War - Droids";
+			author="MrClock";
 		};
 	};
 };
@@ -612,6 +612,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -639,19 +652,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
 				};
 			};
 		};
@@ -64039,716 +64039,13 @@ class Mission
 		};
 		class Item104
 		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12467.919,216.51309,15326.022};
-					};
-					side="East";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=15401;
-					type="JLTS_Droid_B1_Crew";
-					atlOffset=4.2103729;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=15401;
-						item1=15400;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=15399;
-			atlOffset=4.5776367e-005;
-		};
-		class Item105
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12467.919,216.51166,15325.973};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-			};
-			id=15400;
-			type="mti_factions_cis_Scythe";
-			atlOffset=4.5776367e-005;
-		};
-		class Item106
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12470.36,214.78143,15299.816};
-						angles[]={6.2775545,0,0.00034526698};
-					};
-					side="East";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=15404;
-					type="JLTS_Droid_B1_Crew";
-					atlOffset=4.2107086;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=15404;
-						item1=15403;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=15402;
-			atlOffset=0.00030517578;
-		};
-		class Item107
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12470.36,214.78,15299.767};
-				angles[]={6.2775545,0,0.00034526698};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-			};
-			id=15403;
-			type="mti_factions_cis_Scythe";
-			atlOffset=0.00030517578;
-		};
-		class Item108
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12490.718,216.95203,15278.277};
-					};
-					side="East";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=15407;
-					type="JLTS_Droid_B1_Crew";
-					atlOffset=4.2104797;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=15407;
-						item1=15406;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=15405;
-			atlOffset=0.00015258789;
-		};
-		class Item109
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12490.718,216.95059,15278.228};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-			};
-			id=15406;
-			type="mti_factions_cis_Scythe";
-			atlOffset=0.00015258789;
-		};
-		class Item110
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12438.063,217.72601,15312.795};
-					};
-					side="East";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=15410;
-					type="JLTS_Droid_B1_Crew";
-					atlOffset=4.2101593;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=15410;
-						item1=15409;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=15408;
-		};
-		class Item111
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12438.213,217.72475,15314.16};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-			};
-			id=15409;
-			type="mti_factions_cis_Scythe";
-		};
-		class Item112
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12493.2,209.6853,15303.566};
-						angles[]={0.0020132356,0,0};
-					};
-					side="East";
-					flags=6;
-					class Attributes
-					{
-					};
-					id=15413;
-					type="JLTS_Droid_B1_Crew";
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=15413;
-						item1=15412;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=15411;
-		};
-		class Item113
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12493.751,213.89388,15303.628};
-				angles[]={0.0020132356,0,0};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-			};
-			id=15412;
-			type="mti_factions_cis_Scythe";
-		};
-		class Item114
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12490.386,216.927,15250.927};
-						angles[]={0,0,6.2826972};
-					};
-					side="East";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=15416;
-					type="JLTS_Droid_B1_Crew";
-					atlOffset=4.2103882;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=15416;
-						item1=15415;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=15414;
-		};
-		class Item115
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12490.7,216.92535,15252.326};
-				angles[]={0,0,6.2826972};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-			};
-			id=15415;
-			type="mti_factions_cis_Scythe";
-		};
-		class Item116
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12466.631,216.8246,15256.776};
-						angles[]={0,0,6.2826972};
-					};
-					side="East";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=15419;
-					type="JLTS_Droid_B1_Crew";
-					atlOffset=4.2104492;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=15419;
-						item1=15418;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=15417;
-		};
-		class Item117
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12466.93,216.82289,15258.399};
-				angles[]={0,0,6.2826972};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-			};
-			id=15418;
-			type="mti_factions_cis_Scythe";
-		};
-		class Item118
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12472.066,216.74344,15267.621};
-					};
-					side="East";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=15422;
-					type="JLTS_Droid_B1_Crew";
-					atlOffset=4.2103729;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=15422;
-						item1=15421;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=15420;
-		};
-		class Item119
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12472.458,216.74196,15269.003};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-			};
-			id=15421;
-			type="mti_factions_cis_Scythe";
-		};
-		class Item120
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12459.323,218.60364,15282.244};
-					};
-					side="East";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=15425;
-					type="JLTS_Droid_B1_Crew";
-					atlOffset=4.2102814;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=15425;
-						item1=15424;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=15423;
-		};
-		class Item121
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12459.087,218.60225,15283.304};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-			};
-			id=15424;
-			type="mti_factions_cis_Scythe";
-		};
-		class Item122
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12441.93,217.28502,15293.862};
-					};
-					side="East";
-					flags=2;
-					class Attributes
-					{
-					};
-					id=15428;
-					type="JLTS_Droid_B1_Crew";
-					atlOffset=5.9052277;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=1;
-				};
-				class Links
-				{
-					items=1;
-					class Item0
-					{
-						linkID=0;
-						item0=15428;
-						item1=15427;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=15426;
-		};
-		class Item123
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12442.898,215.58868,15295.232};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				reportRemoteTargets=1;
-				receiveRemoteTargets=1;
-				reportOwnPosition=1;
-			};
-			id=15427;
-			type="mti_factions_cis_Scythe";
-		};
-		class Item124
-		{
 			dataType="Marker";
 			position[]={12478.144,206.17,15245.66};
 			name="marker_18";
 			type="JLTS_CIS_antiair";
 			id=15429;
 		};
-		class Item125
+		class Item105
 		{
 			dataType="Layer";
 			name="Anti-Air Radar #O";
@@ -65323,7 +64620,7 @@ class Mission
 			id=15531;
 			atlOffset=0.004119873;
 		};
-		class Item126
+		class Item106
 		{
 			dataType="Object";
 			class PositionInfo
@@ -65340,7 +64637,7 @@ class Mission
 			type="land_3AS_Imperial_Radar";
 			atlOffset=0.26319122;
 		};
-		class Item127
+		class Item107
 		{
 			dataType="Layer";
 			name="Star Wars [CIS] - Checkpoint";
@@ -65828,7 +65125,7 @@ class Mission
 			id=15636;
 			atlOffset=0.032691956;
 		};
-		class Item128
+		class Item108
 		{
 			dataType="Layer";
 			name="CIS - AMMO - DUMP";
@@ -66319,7 +65616,7 @@ class Mission
 			id=16106;
 			atlOffset=0.0069961548;
 		};
-		class Item129
+		class Item109
 		{
 			dataType="Object";
 			class PositionInfo
@@ -66337,7 +65634,7 @@ class Mission
 			type="3as_StaticVehicle_CISLander";
 			atlOffset=-7.6293945e-006;
 		};
-		class Item130
+		class Item110
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -66381,7 +65678,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item131
+		class Item111
 		{
 			dataType="Object";
 			class PositionInfo
@@ -66399,7 +65696,7 @@ class Mission
 			type="3as_StaticVehicle_CISLander";
 			atlOffset=0.01651001;
 		};
-		class Item132
+		class Item112
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -66444,7 +65741,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item133
+		class Item113
 		{
 			dataType="Object";
 			class PositionInfo
@@ -66462,7 +65759,7 @@ class Mission
 			type="3as_StaticVehicle_CISLander";
 			atlOffset=-1.5258789e-005;
 		};
-		class Item134
+		class Item114
 		{
 			dataType="Object";
 			class PositionInfo
@@ -66480,7 +65777,7 @@ class Mission
 			type="3as_StaticVehicle_CISLander";
 			atlOffset=0.01651001;
 		};
-		class Item135
+		class Item115
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -66524,7 +65821,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item136
+		class Item116
 		{
 			dataType="Layer";
 			name="CIS Fuel Depo";
@@ -68027,7 +67324,7 @@ class Mission
 			id=16468;
 			atlOffset=3.5513229;
 		};
-		class Item137
+		class Item117
 		{
 			dataType="Layer";
 			name="CIS Large Comms";
@@ -69817,7 +69114,7 @@ class Mission
 			id=16519;
 			atlOffset=-74.482483;
 		};
-		class Item138
+		class Item118
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -69861,7 +69158,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item139
+		class Item119
 		{
 			dataType="Layer";
 			name="CIS Road Bunker";
@@ -70118,7 +69415,7 @@ class Mission
 			id=16592;
 			atlOffset=0.39100647;
 		};
-		class Item140
+		class Item120
 		{
 			dataType="Layer";
 			name="CIS Road Bunker";
@@ -70372,7 +69669,7 @@ class Mission
 			id=16614;
 			atlOffset=0.7587738;
 		};
-		class Item141
+		class Item121
 		{
 			dataType="Layer";
 			name="CIS Command Post V2";
@@ -70875,7 +70172,7 @@ class Mission
 			id=16748;
 			atlOffset=-0.29800415;
 		};
-		class Item142
+		class Item122
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -70920,7 +70217,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item143
+		class Item123
 		{
 			dataType="Layer";
 			name="CIS Propaganda Roadblock";
@@ -71261,7 +70558,7 @@ class Mission
 			id=16823;
 			atlOffset=-0.43904114;
 		};
-		class Item144
+		class Item124
 		{
 			dataType="Layer";
 			name="CIS Checkpoint (Small)";
@@ -71556,14 +70853,14 @@ class Mission
 			id=16854;
 			atlOffset=2.3454742;
 		};
-		class Item145
+		class Item125
 		{
 			dataType="Layer";
 			name="Small CIS Fob, Single Tower";
 			id=16967;
 			atlOffset=25.16;
 		};
-		class Item146
+		class Item126
 		{
 			dataType="Layer";
 			name="CIS Artillery Base";
@@ -79755,7 +79052,7 @@ class Mission
 			id=17529;
 			atlOffset=0.76792908;
 		};
-		class Item147
+		class Item127
 		{
 			dataType="Group";
 			side="East";
@@ -79834,7 +79131,7 @@ class Mission
 			};
 			id=17995;
 		};
-		class Item148
+		class Item128
 		{
 			dataType="Object";
 			class PositionInfo
@@ -79850,7 +79147,7 @@ class Mission
 			id=17996;
 			type="mti_factions_cis_bawhag";
 		};
-		class Item149
+		class Item129
 		{
 			dataType="Group";
 			side="East";
@@ -79929,7 +79226,7 @@ class Mission
 			};
 			id=17999;
 		};
-		class Item150
+		class Item130
 		{
 			dataType="Object";
 			class PositionInfo
@@ -79945,7 +79242,7 @@ class Mission
 			id=18000;
 			type="mti_factions_cis_bawhag";
 		};
-		class Item151
+		class Item131
 		{
 			dataType="Group";
 			side="East";
@@ -80024,7 +79321,7 @@ class Mission
 			};
 			id=18003;
 		};
-		class Item152
+		class Item132
 		{
 			dataType="Object";
 			class PositionInfo
@@ -80040,7 +79337,7 @@ class Mission
 			id=18004;
 			type="mti_factions_cis_bawhag";
 		};
-		class Item153
+		class Item133
 		{
 			dataType="Group";
 			side="East";
@@ -80119,7 +79416,7 @@ class Mission
 			};
 			id=18011;
 		};
-		class Item154
+		class Item134
 		{
 			dataType="Object";
 			class PositionInfo
@@ -80135,7 +79432,7 @@ class Mission
 			id=18012;
 			type="mti_factions_cis_bawhag";
 		};
-		class Item155
+		class Item135
 		{
 			dataType="Group";
 			side="East";
@@ -80213,7 +79510,7 @@ class Mission
 			};
 			id=18015;
 		};
-		class Item156
+		class Item136
 		{
 			dataType="Object";
 			class PositionInfo
@@ -80229,7 +79526,7 @@ class Mission
 			id=18016;
 			type="mti_factions_cis_bawhag";
 		};
-		class Item157
+		class Item137
 		{
 			dataType="Group";
 			side="East";
@@ -80307,7 +79604,7 @@ class Mission
 			};
 			id=18019;
 		};
-		class Item158
+		class Item138
 		{
 			dataType="Object";
 			class PositionInfo
@@ -80323,7 +79620,7 @@ class Mission
 			id=18020;
 			type="mti_factions_cis_bawhag";
 		};
-		class Item159
+		class Item139
 		{
 			dataType="Group";
 			side="East";
@@ -80401,7 +79698,7 @@ class Mission
 			};
 			id=18023;
 		};
-		class Item160
+		class Item140
 		{
 			dataType="Object";
 			class PositionInfo
@@ -80417,7 +79714,7 @@ class Mission
 			id=18024;
 			type="mti_factions_cis_bawhag";
 		};
-		class Item161
+		class Item141
 		{
 			dataType="Group";
 			side="East";
@@ -80468,7 +79765,7 @@ class Mission
 			};
 			id=18027;
 		};
-		class Item162
+		class Item142
 		{
 			dataType="Object";
 			class PositionInfo
@@ -80486,7 +79783,7 @@ class Mission
 			id=18028;
 			type="mti_factions_cis_Scythe";
 		};
-		class Item163
+		class Item143
 		{
 			dataType="Group";
 			side="East";
@@ -80538,7 +79835,7 @@ class Mission
 			};
 			id=18030;
 		};
-		class Item164
+		class Item144
 		{
 			dataType="Object";
 			class PositionInfo
@@ -80557,7 +79854,7 @@ class Mission
 			id=18031;
 			type="mti_factions_cis_Scythe";
 		};
-		class Item165
+		class Item145
 		{
 			dataType="Group";
 			side="East";
@@ -80608,7 +79905,7 @@ class Mission
 			};
 			id=18033;
 		};
-		class Item166
+		class Item146
 		{
 			dataType="Object";
 			class PositionInfo
@@ -80626,7 +79923,7 @@ class Mission
 			id=18034;
 			type="mti_factions_cis_Scythe";
 		};
-		class Item167
+		class Item147
 		{
 			dataType="Group";
 			side="East";
@@ -80677,7 +79974,7 @@ class Mission
 			};
 			id=18036;
 		};
-		class Item168
+		class Item148
 		{
 			dataType="Object";
 			class PositionInfo
@@ -80695,7 +79992,7 @@ class Mission
 			id=18037;
 			type="mti_factions_cis_Scythe";
 		};
-		class Item169
+		class Item149
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -80740,7 +80037,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item170
+		class Item150
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -80784,7 +80081,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item171
+		class Item151
 		{
 			dataType="Layer";
 			name="CIS Command Post V2";
@@ -81279,7 +80576,7 @@ class Mission
 			id=18197;
 			atlOffset=0.32966614;
 		};
-		class Item172
+		class Item152
 		{
 			dataType="Group";
 			side="East";
@@ -81332,7 +80629,7 @@ class Mission
 			id=18198;
 			atlOffset=2.9369202;
 		};
-		class Item173
+		class Item153
 		{
 			dataType="Object";
 			class PositionInfo
@@ -81352,7 +80649,7 @@ class Mission
 			type="mti_factions_cis_Scythe";
 			atlOffset=2.9369202;
 		};
-		class Item174
+		class Item154
 		{
 			dataType="Group";
 			side="East";
@@ -81405,7 +80702,7 @@ class Mission
 			id=18201;
 			atlOffset=2.9487915;
 		};
-		class Item175
+		class Item155
 		{
 			dataType="Object";
 			class PositionInfo
@@ -81425,7 +80722,7 @@ class Mission
 			type="mti_factions_cis_Scythe";
 			atlOffset=2.9487915;
 		};
-		class Item176
+		class Item156
 		{
 			dataType="Group";
 			side="East";
@@ -81476,7 +80773,7 @@ class Mission
 			};
 			id=18207;
 		};
-		class Item177
+		class Item157
 		{
 			dataType="Object";
 			class PositionInfo
@@ -81494,7 +80791,7 @@ class Mission
 			id=18208;
 			type="mti_factions_cis_Scythe";
 		};
-		class Item178
+		class Item158
 		{
 			dataType="Group";
 			side="East";
@@ -81546,7 +80843,7 @@ class Mission
 			};
 			id=18210;
 		};
-		class Item179
+		class Item159
 		{
 			dataType="Object";
 			class PositionInfo
@@ -81565,7 +80862,7 @@ class Mission
 			id=18211;
 			type="mti_factions_cis_Scythe";
 		};
-		class Item180
+		class Item160
 		{
 			dataType="Group";
 			side="East";
@@ -81618,7 +80915,7 @@ class Mission
 			id=18213;
 			atlOffset=2.4151611;
 		};
-		class Item181
+		class Item161
 		{
 			dataType="Object";
 			class PositionInfo
@@ -81638,7 +80935,7 @@ class Mission
 			type="mti_factions_cis_DF9_AT";
 			atlOffset=2.4151611;
 		};
-		class Item182
+		class Item162
 		{
 			dataType="Group";
 			side="East";
@@ -81691,7 +80988,7 @@ class Mission
 			id=18216;
 			atlOffset=-1.5258789e-005;
 		};
-		class Item183
+		class Item163
 		{
 			dataType="Object";
 			class PositionInfo
@@ -81711,7 +81008,7 @@ class Mission
 			type="mti_factions_cis_DF9_AT";
 			atlOffset=-1.5258789e-005;
 		};
-		class Item184
+		class Item164
 		{
 			dataType="Group";
 			side="East";
@@ -81764,7 +81061,7 @@ class Mission
 			id=18249;
 			atlOffset=2.4494324;
 		};
-		class Item185
+		class Item165
 		{
 			dataType="Object";
 			class PositionInfo
@@ -81784,7 +81081,7 @@ class Mission
 			type="mti_factions_cis_DF9_AT";
 			atlOffset=2.4494324;
 		};
-		class Item186
+		class Item166
 		{
 			dataType="Group";
 			side="East";
@@ -81800,13 +81097,13 @@ class Mission
 						angles[]={0.015998369,4.5812602,6.2771854};
 					};
 					side="East";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=18253;
 					type="mti_factions_cis_B1_Crew";
-					atlOffset=5.8600769;
+					atlOffset=0.014282227;
 				};
 			};
 			class Attributes
@@ -81835,14 +81132,14 @@ class Mission
 				};
 			};
 			id=18252;
-			atlOffset=-0.22581482;
+			atlOffset=0.014282227;
 		};
-		class Item187
+		class Item167
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11587.192,154.63573,14996.221};
+				position[]={11587.192,154.87582,14996.221};
 				angles[]={0.015998369,4.5812602,6.2771854};
 			};
 			side="East";
@@ -81855,9 +81152,9 @@ class Mission
 			};
 			id=18254;
 			type="mti_factions_cis_DF9_AT";
-			atlOffset=-0.22581482;
+			atlOffset=0.014282227;
 		};
-		class Item188
+		class Item168
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -81902,7 +81199,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item189
+		class Item169
 		{
 			dataType="Marker";
 			position[]={18245.529,77.573997,14354.08};
@@ -81913,7 +81210,7 @@ class Mission
 			id=18256;
 			atlOffset=0.00047302246;
 		};
-		class Item190
+		class Item170
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -81958,7 +81255,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item191
+		class Item171
 		{
 			dataType="Marker";
 			position[]={15535.937,140.776,12486.474};
@@ -81969,7 +81266,7 @@ class Mission
 			id=18258;
 			atlOffset=-0.00018310547;
 		};
-		class Item192
+		class Item172
 		{
 			dataType="Group";
 			side="East";
@@ -82020,7 +81317,7 @@ class Mission
 			};
 			id=18259;
 		};
-		class Item193
+		class Item173
 		{
 			dataType="Object";
 			class PositionInfo
@@ -82038,7 +81335,7 @@ class Mission
 			id=18260;
 			type="mti_factions_cis_Scythe";
 		};
-		class Item194
+		class Item174
 		{
 			dataType="Group";
 			side="East";
@@ -82089,7 +81386,7 @@ class Mission
 			};
 			id=18262;
 		};
-		class Item195
+		class Item175
 		{
 			dataType="Object";
 			class PositionInfo
@@ -82105,6 +81402,727 @@ class Mission
 				reportOwnPosition=1;
 			};
 			id=18263;
+			type="mti_factions_cis_Scythe";
+		};
+		class Item176
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12446.924,208.9489,15317.808};
+						angles[]={0.019999012,0,0.02599225};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=18267;
+					type="JLTS_Droid_B1_Crew";
+					atlOffset=4.2126007;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=18267;
+						item1=18266;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=18265;
+			atlOffset=1.5258789e-005;
+		};
+		class Item177
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12446.924,208.94746,15317.758};
+				angles[]={0.019999012,0,0.02599225};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=18266;
+			type="mti_factions_cis_Scythe";
+			atlOffset=1.5258789e-005;
+		};
+		class Item178
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12457.435,209.22427,15318.7};
+						angles[]={0.015998369,0,0.035984326};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=18270;
+					type="JLTS_Droid_B1_Crew";
+					atlOffset=4.2135925;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=18270;
+						item1=18269;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=18268;
+			atlOffset=-1.5258789e-005;
+		};
+		class Item179
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12457.435,209.22284,15318.65};
+				angles[]={0.015998369,0,0.035984326};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=18269;
+			type="mti_factions_cis_Scythe";
+			atlOffset=-1.5258789e-005;
+		};
+		class Item180
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12459.383,209.5061,15305.073};
+						angles[]={0.017997233,0,0.027993103};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=18273;
+					type="JLTS_Droid_B1_Crew";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=18273;
+						item1=18272;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=18271;
+		};
+		class Item181
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12458.803,209.47061,15306.022};
+				angles[]={0.017997233,0,0.027993103};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=18272;
+			type="mti_factions_cis_Scythe";
+		};
+		class Item182
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12449.149,209.19313,15307.833};
+						angles[]={0.017997233,0,0.023998493};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=18276;
+					type="JLTS_Droid_B1_Crew";
+					atlOffset=1.5258789e-005;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=18276;
+						item1=18275;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=18274;
+			atlOffset=1.5258789e-005;
+		};
+		class Item183
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12448.528,209.14499,15309.553};
+				angles[]={0.017997233,0,0.023998493};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=18275;
+			type="mti_factions_cis_Scythe";
+			atlOffset=1.5258789e-005;
+		};
+		class Item184
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12461.278,209.71861,15293.989};
+						angles[]={0.013995145,0,0.037981652};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=18279;
+					type="JLTS_Droid_B1_Crew";
+					atlOffset=4.2137604;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=18279;
+						item1=18278;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=18277;
+			atlOffset=-6.1035156e-005;
+		};
+		class Item185
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12461.278,209.71718,15293.939};
+				angles[]={0.013995145,0,0.037981652};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=18278;
+			type="mti_factions_cis_Scythe";
+			atlOffset=-6.1035156e-005;
+		};
+		class Item186
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12449.489,209.44046,15293.295};
+						angles[]={0.011995304,0,0.027990974};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=18282;
+					type="JLTS_Droid_B1_Crew";
+					atlOffset=4.212265;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=18282;
+						item1=18281;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=18280;
+			atlOffset=-4.5776367e-005;
+		};
+		class Item187
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12449.489,209.43903,15293.245};
+				angles[]={0.011995304,0,0.027990974};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=18281;
+			type="mti_factions_cis_Scythe";
+			atlOffset=-4.5776367e-005;
+		};
+		class Item188
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12503.533,210.27792,15288.837};
+						angles[]={0.0039967569,0,0.0060001095};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=18285;
+					type="JLTS_Droid_B1_Crew";
+					atlOffset=4.210434;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=18285;
+						item1=18284;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=18283;
+		};
+		class Item189
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12503.533,210.27649,15288.787};
+				angles[]={0.0039967569,0,0.0060001095};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=18284;
+			type="mti_factions_cis_Scythe";
+		};
+		class Item190
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12505.437,210.34581,15274.538};
+						angles[]={0.0060001095,0,0.0019834081};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=18288;
+					type="JLTS_Droid_B1_Crew";
+					atlOffset=4.210434;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=18288;
+						item1=18287;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=18286;
+			atlOffset=1.5258789e-005;
+		};
+		class Item191
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12505.437,210.34438,15274.488};
+				angles[]={0.0060001095,0,0.0019834081};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=18287;
+			type="mti_factions_cis_Scythe";
+			atlOffset=1.5258789e-005;
+		};
+		class Item192
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12506.489,210.46008,15258.467};
+						angles[]={0.011995304,0,0.0060001095};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=18291;
+					type="JLTS_Droid_B1_Crew";
+					atlOffset=4.2107086;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=18291;
+						item1=18290;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=18289;
+			atlOffset=1.5258789e-005;
+		};
+		class Item193
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12506.489,210.45865,15258.417};
+				angles[]={0.011995304,0,0.0060001095};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=18290;
+			type="mti_factions_cis_Scythe";
+			atlOffset=1.5258789e-005;
+		};
+		class Item194
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12508.025,210.49176,15239.739};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+					};
+					id=18294;
+					type="JLTS_Droid_B1_Crew";
+					atlOffset=4.2103271;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=18294;
+						item1=18293;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=18292;
+		};
+		class Item195
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12508.025,210.49033,15239.689};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=18293;
 			type="mti_factions_cis_Scythe";
 		};
 	};
