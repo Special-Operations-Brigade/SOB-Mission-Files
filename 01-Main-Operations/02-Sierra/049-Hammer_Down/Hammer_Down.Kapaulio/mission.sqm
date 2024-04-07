@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=51735;
+		nextID=51750;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2548;
+		nextID=2712;
 	};
 	class Camera
 	{
-		pos[]={15767.407,40.572964,786.23187};
-		dir[]={-0.41825348,-0.45199507,-0.78789067};
-		up[]={-0.21193218,0.89201975,-0.39923042};
-		aside[]={-0.88326365,5.5879354e-009,0.46888173};
+		pos[]={15749.879,25.258842,731.9035};
+		dir[]={0.8996371,-0.28037977,0.33474657};
+		up[]={0.26278251,0.95988673,0.097779132};
+		aside[]={0.34873545,1.2334203e-007,-0.93722904};
 	};
 };
 binarizationWanted=0;
@@ -755,6 +755,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -774,19 +787,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
 				};
 			};
 		};
@@ -1815,14 +1815,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="OPTRE_RS_ConsoleDoorLogo";
-									expression="_this setObjectTextureGlobal [0, _value];";
+									property="ace_rearm_rearmCargo";
+									expression="if (_value != (if (isNumber (configOf _this >> 'ace_rearm_defaultSupply')) then {getNumber (configOf _this >> 'ace_rearm_defaultSupply')} else {(if (getAmmoCargo _this > 0) then {getAmmoCargo _this} else {-1})})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="screen_co.paa";
+											singleType="SCALAR";
+											value=1000000;
 										};
 									};
 								};
@@ -1854,14 +1854,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="ace_rearm_rearmCargo";
-									expression="if (_value != (if (isNumber (configOf _this >> 'ace_rearm_defaultSupply')) then {getNumber (configOf _this >> 'ace_rearm_defaultSupply')} else {(if (getAmmoCargo _this > 0) then {getAmmoCargo _this} else {-1})})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+									property="OPTRE_RS_ConsoleDoorLogo";
+									expression="_this setObjectTextureGlobal [0, _value];";
 									class Value
 									{
 										class data
 										{
-											singleType="SCALAR";
-											value=1000000;
+											singleType="STRING";
+											value="screen_co.paa";
 										};
 									};
 								};
@@ -1901,14 +1901,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="OPTRE_RS_ConsoleDoorLogo";
-									expression="_this setObjectTextureGlobal [0, _value];";
+									property="ace_rearm_rearmCargo";
+									expression="if (_value != (if (isNumber (configOf _this >> 'ace_rearm_defaultSupply')) then {getNumber (configOf _this >> 'ace_rearm_defaultSupply')} else {(if (getAmmoCargo _this > 0) then {getAmmoCargo _this} else {-1})})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="screen_co.paa";
+											singleType="SCALAR";
+											value=10000;
 										};
 									};
 								};
@@ -1940,14 +1940,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="ace_rearm_rearmCargo";
-									expression="if (_value != (if (isNumber (configOf _this >> 'ace_rearm_defaultSupply')) then {getNumber (configOf _this >> 'ace_rearm_defaultSupply')} else {(if (getAmmoCargo _this > 0) then {getAmmoCargo _this} else {-1})})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+									property="OPTRE_RS_ConsoleDoorLogo";
+									expression="_this setObjectTextureGlobal [0, _value];";
 									class Value
 									{
 										class data
 										{
-											singleType="SCALAR";
-											value=10000;
+											singleType="STRING";
+											value="screen_co.paa";
 										};
 									};
 								};
@@ -2193,14 +2193,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="OPTRE_RS_ConsoleDoorLogo";
-									expression="_this setObjectTextureGlobal [0, _value];";
+									property="ace_rearm_rearmCargo";
+									expression="if (_value != (if (isNumber (configOf _this >> 'ace_rearm_defaultSupply')) then {getNumber (configOf _this >> 'ace_rearm_defaultSupply')} else {(if (getAmmoCargo _this > 0) then {getAmmoCargo _this} else {-1})})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="screen_co.paa";
+											singleType="SCALAR";
+											value=1000000;
 										};
 									};
 								};
@@ -2232,14 +2232,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="ace_rearm_rearmCargo";
-									expression="if (_value != (if (isNumber (configOf _this >> 'ace_rearm_defaultSupply')) then {getNumber (configOf _this >> 'ace_rearm_defaultSupply')} else {(if (getAmmoCargo _this > 0) then {getAmmoCargo _this} else {-1})})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+									property="OPTRE_RS_ConsoleDoorLogo";
+									expression="_this setObjectTextureGlobal [0, _value];";
 									class Value
 									{
 										class data
 										{
-											singleType="SCALAR";
-											value=1000000;
+											singleType="STRING";
+											value="screen_co.paa";
 										};
 									};
 								};
@@ -2398,14 +2398,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="OPTRE_RS_ConsoleDoorLogo";
-									expression="_this setObjectTextureGlobal [0, _value];";
+									property="ace_rearm_rearmCargo";
+									expression="if (_value != (if (isNumber (configOf _this >> 'ace_rearm_defaultSupply')) then {getNumber (configOf _this >> 'ace_rearm_defaultSupply')} else {(if (getAmmoCargo _this > 0) then {getAmmoCargo _this} else {-1})})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="screen_co.paa";
+											singleType="SCALAR";
+											value=1000000;
 										};
 									};
 								};
@@ -2437,14 +2437,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="ace_rearm_rearmCargo";
-									expression="if (_value != (if (isNumber (configOf _this >> 'ace_rearm_defaultSupply')) then {getNumber (configOf _this >> 'ace_rearm_defaultSupply')} else {(if (getAmmoCargo _this > 0) then {getAmmoCargo _this} else {-1})})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+									property="OPTRE_RS_ConsoleDoorLogo";
+									expression="_this setObjectTextureGlobal [0, _value];";
 									class Value
 									{
 										class data
 										{
-											singleType="SCALAR";
-											value=1000000;
+											singleType="STRING";
+											value="screen_co.paa";
 										};
 									};
 								};
@@ -33215,12 +33215,14 @@ class Mission
 					dataType="Layer";
 					name="Police Station-Medium Gendarmerie";
 					id=40246;
+					atlOffset=25.16;
 				};
 				class Item1
 				{
 					dataType="Layer";
 					name="Prison";
 					id=39346;
+					atlOffset=25.16;
 				};
 				class Item2
 				{
@@ -33234,7 +33236,7 @@ class Mission
 							dataType="Layer";
 							name="Muro Esterno";
 							id=39554;
-							atlOffset=0.14295769;
+							atlOffset=25.16;
 						};
 						class Item1
 						{
@@ -33248,23 +33250,26 @@ class Mission
 									dataType="Layer";
 									name="Attesa 01";
 									id=39858;
+									atlOffset=25.16;
 								};
 								class Item1
 								{
 									dataType="Layer";
 									name="Attesa 02";
 									id=39870;
+									atlOffset=25.16;
 								};
 							};
 							id=39845;
+							atlOffset=25.16;
 						};
 					};
 					id=39431;
-					atlOffset=0.07147789;
+					atlOffset=25.16;
 				};
 			};
 			id=40309;
-			atlOffset=0.41815758;
+			atlOffset=25.16;
 		};
 		class Item23
 		{
