@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1560;
+		nextID=1562;
 	};
 	class LayerIndexProvider
 	{
-		nextID=219;
+		nextID=438;
 	};
 	class Camera
 	{
-		pos[]={11789.633,391.34509,-86.512276};
-		dir[]={-0.057708707,-0.63581085,0.76971978};
-		up[]={-0.047535714,0.7718448,0.63402814};
-		aside[]={0.99722868,7.5917342e-007,0.074765459};
+		pos[]={11661.008,101.87025,116.38675};
+		dir[]={0.92656946,-0.29935333,0.22778834};
+		up[]={0.29070273,0.95413637,0.071466677};
+		aside[]={0.23873626,-7.1013346e-009,-0.97109717};
 	};
 };
 binarizationWanted=0;
@@ -73,7 +73,6 @@ addons[]=
 	"ls_armor_bluefor",
 	"mti_armoury_common",
 	"mti_armoury_fieldsupport",
-	"mti_armoury_assassin",
 	"ace_gforces",
 	"ace_parachute",
 	"A3_Modules_F_Curator_Curator",
@@ -83,7 +82,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=46;
+		items=45;
 		class Item0
 		{
 			className="lsb_modules";
@@ -355,18 +354,12 @@ class AddonsMetaData
 		};
 		class Item43
 		{
-			className="mti_armoury_assassin";
-			name="MokTech Industries - Assassin";
-			author="MokTech Industries";
-		};
-		class Item44
-		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item45
+		class Item44
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
@@ -424,6 +417,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -451,19 +457,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
 				};
 			};
 		};
@@ -8666,7 +8659,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=200;
@@ -8700,7 +8692,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=201;
@@ -8734,7 +8725,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=202;
@@ -8768,7 +8758,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=203;
@@ -8802,7 +8791,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=204;
@@ -8836,7 +8824,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=205;
@@ -12856,7 +12843,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=311;
@@ -12904,7 +12890,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=312;
@@ -16798,7 +16783,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=439;
@@ -16846,7 +16830,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=440;
@@ -16894,7 +16877,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=441;
@@ -16942,7 +16924,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=442;
@@ -16990,7 +16971,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=443;
@@ -17038,7 +17018,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=444;
@@ -17086,7 +17065,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=445;
@@ -17134,7 +17112,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=446;
@@ -17182,7 +17159,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=447;
@@ -17230,7 +17206,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=448;
@@ -17278,7 +17253,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=449;
@@ -17326,7 +17300,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=450;
@@ -17374,7 +17347,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=451;
@@ -17422,7 +17394,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=452;
@@ -17470,7 +17441,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=453;
@@ -17518,7 +17488,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=454;
@@ -17566,7 +17535,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=455;
@@ -17613,7 +17581,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=456;
@@ -17661,7 +17628,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=457;
@@ -17708,7 +17674,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=458;
@@ -17755,7 +17720,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=459;
@@ -17803,7 +17767,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=460;
@@ -17851,7 +17814,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=461;
@@ -17899,7 +17861,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=462;
@@ -19999,7 +19960,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=508;
@@ -20047,7 +20007,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=509;
@@ -20095,7 +20054,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=510;
@@ -20143,7 +20101,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=511;
@@ -20191,7 +20148,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=512;
@@ -20239,7 +20195,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=513;
@@ -20287,7 +20242,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=514;
@@ -20335,7 +20289,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=515;
@@ -20383,7 +20336,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=516;
@@ -21246,7 +21198,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=535;
@@ -21281,7 +21232,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=536;
@@ -21316,7 +21266,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=537;
@@ -23429,7 +23378,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=592;
@@ -23463,7 +23411,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=593;
@@ -23497,7 +23444,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=594;
@@ -23531,7 +23477,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=595;
@@ -31531,7 +31476,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=852;
@@ -31579,7 +31523,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=853;
@@ -31627,7 +31570,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=854;
@@ -31675,7 +31617,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=855;
@@ -31723,7 +31664,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=856;
@@ -31771,7 +31711,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=857;
@@ -31819,7 +31758,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=858;
@@ -31867,7 +31805,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=859;
@@ -31915,7 +31852,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=860;
@@ -31963,7 +31899,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=861;
@@ -32011,7 +31946,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=862;
@@ -32059,7 +31993,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=863;
@@ -32107,7 +32040,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=864;
@@ -32155,7 +32087,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=865;
@@ -32203,7 +32134,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=866;
@@ -32251,7 +32181,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=867;
@@ -32299,7 +32228,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=868;
@@ -32347,7 +32275,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=869;
@@ -32395,7 +32322,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=870;
@@ -32443,7 +32369,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=871;
@@ -32491,7 +32416,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=872;
@@ -32539,7 +32463,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=873;
@@ -32587,7 +32510,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=874;
@@ -32635,7 +32557,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=875;
@@ -32683,7 +32604,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=876;
@@ -32731,7 +32651,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=877;
@@ -32779,7 +32698,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=878;
@@ -32827,7 +32745,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=879;
@@ -32875,7 +32792,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=880;
@@ -32923,7 +32839,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=881;
@@ -32972,7 +32887,6 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=882;
@@ -33020,7 +32934,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=883;
@@ -33068,7 +32981,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=884;
@@ -33116,7 +33028,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=885;
@@ -33164,7 +33075,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=886;
@@ -33212,7 +33122,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=887;
@@ -33260,7 +33169,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=888;
@@ -33308,7 +33216,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=889;
@@ -33356,7 +33263,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=890;
@@ -33404,7 +33310,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=891;
@@ -33452,7 +33357,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=892;
@@ -33500,7 +33404,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=893;
@@ -33548,7 +33451,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=894;
@@ -33596,7 +33498,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=895;
@@ -33644,7 +33545,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=896;
@@ -33693,7 +33593,6 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=897;
@@ -33741,7 +33640,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=898;
@@ -33789,7 +33687,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=899;
@@ -33837,7 +33734,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=900;
@@ -33885,7 +33781,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=901;
@@ -33933,7 +33828,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=902;
@@ -33981,7 +33875,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=903;
@@ -34030,7 +33923,6 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=904;
@@ -34079,7 +33971,6 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=905;
@@ -34128,7 +34019,6 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=906;
@@ -34177,7 +34067,6 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=907;
@@ -34226,7 +34115,6 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=908;
@@ -34274,7 +34162,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=909;
@@ -34322,7 +34209,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=910;
@@ -34370,7 +34256,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=911;
@@ -34419,7 +34304,6 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=912;
@@ -34468,7 +34352,6 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=913;
@@ -34517,7 +34400,6 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=914;
@@ -34565,7 +34447,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=915;
@@ -34613,7 +34494,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=916;
@@ -34802,7 +34682,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=920;
@@ -34850,7 +34729,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=921;
@@ -34898,7 +34776,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=922;
@@ -50972,7 +50849,6 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=1363;
@@ -51005,7 +50881,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=1364;
@@ -51108,7 +50983,6 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=1367;
@@ -51141,7 +51015,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												createAsSimpleObject=1;
 												disableSimulation=1;
 											};
 											id=1368;
@@ -52211,7 +52084,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=1406;
@@ -52245,7 +52117,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=1407;
@@ -52279,7 +52150,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=1408;
@@ -52313,7 +52183,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=1409;
@@ -52348,7 +52217,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=1410;
@@ -52383,7 +52251,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=1411;
@@ -52418,7 +52285,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=1412;
@@ -52453,7 +52319,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										createAsSimpleObject=1;
 										disableSimulation=1;
 									};
 									id=1413;
@@ -52729,7 +52594,7 @@ class Mission
 							name="Player Spawn";
 							class Entities
 							{
-								items=22;
+								items=21;
 								class Item0
 								{
 									dataType="Group";
@@ -60196,476 +60061,6 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={11850.06,103.68454,332.99829};
-												angles[]={0,4.712389,0};
-											};
-											side="West";
-											flags=6;
-											class Attributes
-											{
-												description="Squad Leader @Covert Operations";
-												isPlayable=1;
-												class Inventory
-												{
-													class uniform
-													{
-														typeName="lsd_gar_bodyGlove_uniform";
-														isBackpack=0;
-													};
-													map="ItemMap";
-													compass="ItemCompass";
-													watch="ItemWatch";
-													radio="JLTS_clone_comlink";
-													gps="ItemGPS";
-												};
-											};
-											id=1487;
-											type="mti_armoury_assassin_unit_assassin";
-											atlOffset=0.024902344;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male08ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.04;
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="mti_common_Group_Preset";
-													expression="[_this, _value] call mti_common_fnc_initPlayer";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=13;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="mti_common_resistance_ion";
-													expression="_this setVariable [""mti_common_resistance_ion"", true];";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute5
-												{
-													property="face";
-													expression="_this setface _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="";
-														};
-													};
-												};
-												nAttributes=6;
-											};
-										};
-										class Item1
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={11850.06,103.68454,326.99829};
-												angles[]={0,4.712389,0};
-											};
-											side="West";
-											flags=4;
-											class Attributes
-											{
-												description="Covert Ops Trooper";
-												isPlayable=1;
-												class Inventory
-												{
-													class uniform
-													{
-														typeName="lsd_gar_bodyGlove_uniform";
-														isBackpack=0;
-													};
-													map="ItemMap";
-													compass="ItemCompass";
-													watch="ItemWatch";
-													radio="JLTS_clone_comlink";
-													gps="ItemGPS";
-												};
-											};
-											id=1488;
-											type="mti_armoury_assassin_unit_assassin";
-											atlOffset=0.024902344;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male01ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.02;
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="mti_common_Group_Preset";
-													expression="[_this, _value] call mti_common_fnc_initPlayer";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=13;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="mti_common_resistance_ion";
-													expression="_this setVariable [""mti_common_resistance_ion"", true];";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute5
-												{
-													property="face";
-													expression="_this setface _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="";
-														};
-													};
-												};
-												nAttributes=6;
-											};
-										};
-										class Item2
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={11850.06,103.68454,330.99829};
-												angles[]={0,4.712389,0};
-											};
-											side="West";
-											flags=4;
-											class Attributes
-											{
-												description="Covert Ops Trooper";
-												isPlayable=1;
-												class Inventory
-												{
-													class uniform
-													{
-														typeName="lsd_gar_bodyGlove_uniform";
-														isBackpack=0;
-													};
-													map="ItemMap";
-													compass="ItemCompass";
-													watch="ItemWatch";
-													radio="JLTS_clone_comlink";
-													gps="ItemGPS";
-												};
-											};
-											id=1489;
-											type="mti_armoury_assassin_unit_assassin";
-											atlOffset=0.024902344;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male01ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.02;
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="mti_common_Group_Preset";
-													expression="[_this, _value] call mti_common_fnc_initPlayer";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=13;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="mti_common_resistance_ion";
-													expression="_this setVariable [""mti_common_resistance_ion"", true];";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute5
-												{
-													property="face";
-													expression="_this setface _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="";
-														};
-													};
-												};
-												nAttributes=6;
-											};
-										};
-										class Item3
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={11850.06,103.68454,328.99829};
-												angles[]={0,4.712389,0};
-											};
-											side="West";
-											flags=4;
-											class Attributes
-											{
-												description="Covert Ops Trooper";
-												isPlayable=1;
-												class Inventory
-												{
-													class uniform
-													{
-														typeName="lsd_gar_bodyGlove_uniform";
-														isBackpack=0;
-													};
-													map="ItemMap";
-													compass="ItemCompass";
-													watch="ItemWatch";
-													radio="JLTS_clone_comlink";
-													gps="ItemGPS";
-												};
-											};
-											id=1490;
-											type="mti_armoury_assassin_unit_assassin";
-											atlOffset=0.024902344;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male01ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.02;
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="mti_common_Group_Preset";
-													expression="[_this, _value] call mti_common_fnc_initPlayer";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=13;
-														};
-													};
-												};
-												class Attribute4
-												{
-													property="mti_common_resistance_ion";
-													expression="_this setVariable [""mti_common_resistance_ion"", true];";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute5
-												{
-													property="face";
-													expression="_this setface _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="";
-														};
-													};
-												};
-												nAttributes=6;
-											};
-										};
-									};
-									class Attributes
-									{
-									};
-									id=1486;
-									atlOffset=0.024902344;
-								};
-								class Item16
-								{
-									dataType="Group";
-									side="West";
-									class Entities
-									{
-										items=4;
-										class Item0
-										{
-											dataType="Object";
-											class PositionInfo
-											{
 												position[]={11813.87,103.63501,338.35571};
 												angles[]={0,1.5707963,0};
 											};
@@ -60998,7 +60393,7 @@ class Mission
 									id=1491;
 									atlOffset=19.994041;
 								};
-								class Item17
+								class Item16
 								{
 									dataType="Group";
 									side="West";
@@ -61724,7 +61119,7 @@ class Mission
 									id=1496;
 									atlOffset=0.042747498;
 								};
-								class Item18
+								class Item17
 								{
 									dataType="Group";
 									side="West";
@@ -61916,7 +61311,7 @@ class Mission
 									id=1505;
 									atlOffset=0.033905029;
 								};
-								class Item19
+								class Item18
 								{
 									dataType="Group";
 									side="West";
@@ -62642,7 +62037,7 @@ class Mission
 									id=1508;
 									atlOffset=0.03427124;
 								};
-								class Item20
+								class Item19
 								{
 									dataType="Group";
 									side="West";
@@ -63368,7 +62763,7 @@ class Mission
 									id=1517;
 									atlOffset=0.03427124;
 								};
-								class Item21
+								class Item20
 								{
 									dataType="Group";
 									side="West";
@@ -63714,7 +63109,7 @@ class Mission
 								};
 							};
 							id=1417;
-							atlOffset=165.53931;
+							atlOffset=136.05202;
 						};
 						class Item27
 						{
@@ -64569,7 +63964,7 @@ class Mission
 						};
 					};
 					id=0;
-					atlOffset=259.99768;
+					atlOffset=122.91998;
 				};
 				class Item1
 				{
@@ -65001,7 +64396,7 @@ class Mission
 				};
 			};
 			id=1559;
-			atlOffset=28.589714;
+			atlOffset=28.588921;
 		};
 	};
 	class Connections
