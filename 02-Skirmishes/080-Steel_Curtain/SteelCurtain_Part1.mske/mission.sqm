@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1264;
+		nextID=1372;
 	};
 	class Camera
 	{
-		pos[]={21750.787,255.92047,18726.684};
-		dir[]={0.015651982,-0.29144293,-0.95649225};
-		up[]={0.0047696242,0.95657665,-0.29143482};
-		aside[]={-0.99989516,-1.4170837e-008,-0.016364263};
+		pos[]={21428.389,83.702919,18782.424};
+		dir[]={-0.56288183,-0.6541754,-0.50526536};
+		up[]={-0.48682535,0.75632852,-0.43699461};
+		aside[]={-0.66801876,-7.1167597e-007,0.74419224};
 	};
 };
 binarizationWanted=0;
@@ -1036,19 +1036,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -1076,6 +1063,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
@@ -1223,7 +1223,7 @@ class CustomAttributes
 				class data
 				{
 					singleType="BOOL";
-					value=0;
+					value=1;
 				};
 			};
 		};
@@ -9106,6 +9106,7 @@ class Mission
 			};
 			id=3034;
 			type="CUP_R_Boulder_01_EP1";
+			atlOffset=-5.9604645e-008;
 		};
 		class Item185
 		{
@@ -10528,7 +10529,7 @@ class Mission
 			};
 			id=6529;
 			type="Land_MobileCrane_01_F";
-			atlOffset=2.4474983;
+			atlOffset=2.4475002;
 		};
 		class Item225
 		{
@@ -10563,7 +10564,7 @@ class Mission
 			};
 			id=6534;
 			type="Land_SY_01_stockpile_01_F";
-			atlOffset=-2;
+			atlOffset=-2.0000002;
 		};
 		class Item227
 		{
