@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1253;
+		nextID=1300;
 	};
 	class Camera
 	{
 		pos[]={11539.433,69.085236,11644.799};
-		dir[]={0.3205688,-0.53350246,0.78269833};
-		up[]={0.20220523,0.84579664,0.49370179};
-		aside[]={0.92539442,6.184564e-009,-0.37901378};
+		dir[]={-0.60504889,-0.53944218,0.58559197};
+		up[]={-0.38762483,0.8420226,0.37515977};
+		aside[]={0.69545865,-1.4901161e-008,0.71856606};
 	};
 };
 binarizationWanted=0;
@@ -527,19 +527,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -559,6 +546,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
@@ -650,7 +650,7 @@ class CustomAttributes
 				class data
 				{
 					singleType="BOOL";
-					value=0;
+					value=1;
 				};
 			};
 		};
@@ -33979,7 +33979,7 @@ class Mission
 							};
 							id=24667;
 							type="3AS_CIS_Door_Prop";
-							atlOffset=0.050774574;
+							atlOffset=0.050773621;
 						};
 						class Item27
 						{
@@ -33996,15 +33996,15 @@ class Mission
 							};
 							id=24668;
 							type="3as_XX10";
-							atlOffset=4.2566519;
+							atlOffset=4.2566509;
 						};
 					};
 					id=24640;
-					atlOffset=2.2585659;
+					atlOffset=2.2585649;
 				};
 			};
 			id=24639;
-			atlOffset=5.5131741;
+			atlOffset=5.5131731;
 		};
 		class Item148
 		{
@@ -50145,7 +50145,7 @@ class Mission
 					};
 					id=26218;
 					type="mti_factions_cis_B1_Crew";
-					atlOffset=4.2566504;
+					atlOffset=4.2565217;
 				};
 			};
 			class Attributes
@@ -50199,7 +50199,7 @@ class Mission
 					};
 					id=26220;
 					type="mti_factions_cis_B1_Crew";
-					atlOffset=4.2566519;
+					atlOffset=4.2564335;
 				};
 			};
 			class Attributes
@@ -50229,7 +50229,7 @@ class Mission
 				};
 			};
 			id=26219;
-			atlOffset=4.2566519;
+			atlOffset=4.2566509;
 		};
 	};
 	class Connections
