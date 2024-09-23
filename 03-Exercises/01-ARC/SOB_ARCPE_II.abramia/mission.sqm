@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=48;
+		nextID=53;
 	};
 	class Camera
 	{
-		pos[]={833.14844,202.13361,6275.6997};
-		dir[]={0.63675076,-0.43271393,-0.63823289};
-		up[]={0.30562803,0.90152359,-0.30633941};
-		aside[]={-0.70793742,-8.8650268e-007,-0.70629525};
+		pos[]={833.14844,185.42911,6275.6997};
+		dir[]={-0.18675885,-0.77143914,-0.60830969};
+		up[]={-0.2264118,0.63630033,-0.73746729};
+		aside[]={-0.95597726,-1.4209654e-006,0.29349622};
 	};
 };
 binarizationWanted=0;
@@ -3067,7 +3067,7 @@ class Mission
 				angles[]={0,0.05544766,0};
 			};
 			side="East";
-			flags=4;
+			flags=6;
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
@@ -3189,7 +3189,7 @@ class Mission
 				angles[]={0,0.004893844,0};
 			};
 			side="East";
-			flags=4;
+			flags=6;
 			class Attributes
 			{
 				lock="LOCKEDPLAYER";
@@ -4975,7 +4975,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
 					class Value
 					{
 						class data
@@ -9326,7 +9326,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
 					class Value
 					{
 						class data
@@ -9428,7 +9428,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
 					class Value
 					{
 						class data
@@ -9598,7 +9598,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
 					class Value
 					{
 						class data
@@ -9700,7 +9700,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
 					class Value
 					{
 						class data
@@ -9924,7 +9924,7 @@ class Mission
 				};
 			};
 			id=924;
-			atlOffset=7.6293945e-006;
+			atlOffset=1.5258789e-005;
 		};
 		class Item72
 		{
@@ -9941,7 +9941,7 @@ class Mission
 			};
 			id=925;
 			type="mti_factions_cis_AAT_CIS";
-			atlOffset=7.6293945e-006;
+			atlOffset=1.5258789e-005;
 		};
 		class Item73
 		{

@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=142;
+		nextID=156;
 	};
 	class Camera
 	{
-		pos[]={16038.83,352.01337,6810.5562};
-		dir[]={-0.0431378,-0.40297481,0.91424245};
-		up[]={-0.018996252,0.91517502,0.40259999};
-		aside[]={0.99893427,-1.5448386e-006,0.047132302};
+		pos[]={16034.818,321.38522,6829.1636};
+		dir[]={-0.18298168,-0.58238006,0.79211414};
+		up[]={-0.13109241,0.81287271,0.5674901};
+		aside[]={0.97438765,-1.2460223e-006,0.22508574};
 	};
 };
 binarizationWanted=0;
@@ -496,19 +496,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -536,6 +523,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
@@ -17597,7 +17597,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={16000.901,298.67001,6864.1143};
-										angles[]={-0,4.712389,0};
+										angles[]={0,4.712389,0};
 									};
 									name="Kix";
 									id=1721;
@@ -17691,7 +17691,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={16000.78,298.67001,6865.1479};
-										angles[]={-0,4.712389,0};
+										angles[]={0,4.712389,0};
 									};
 									name="Bezzy";
 									id=1914;
@@ -18571,7 +18571,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16025.647,302.24127,6869.3931};
-				angles[]={-0,0,0.00077204045};
+				angles[]={0,0,0.00077204045};
 			};
 			side="Empty";
 			flags=4;
@@ -26149,6 +26149,7 @@ class Mission
 					};
 					id=2214;
 					type="mti_factions_cis_B1_Support";
+					atlOffset=7.6293945e-006;
 				};
 				class Item2
 				{
@@ -26165,6 +26166,7 @@ class Mission
 					};
 					id=2215;
 					type="mti_factions_cis_B1_E5";
+					atlOffset=-7.6293945e-006;
 				};
 				class Item3
 				{
