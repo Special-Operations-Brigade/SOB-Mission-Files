@@ -51,7 +51,6 @@ force ace_advanced_throwing_showThrowArc = true;
 // ACE Advanced Vehicle Damage
 force ace_vehicle_damage_enableCarDamage = false;
 force ace_vehicle_damage_enabled = false;
-force ace_vehicle_damage_removeAmmoDuringCookoff = false;
 
 // ACE AI
 force ace_ai_assignNVG = true;
@@ -72,7 +71,7 @@ force ace_arsenal_loadoutsSaveVoice = false;
 
 // ACE Artillery
 force ace_artillerytables_advancedCorrections = false;
-force ace_artillerytables_disableArtilleryComputer = true;
+force ace_artillerytables_disableArtilleryComputer = false;
 force ace_mk6mortar_airResistanceEnabled = false;
 force ace_mk6mortar_allowCompass = true;
 force ace_mk6mortar_allowComputerRangefinder = false;
@@ -81,7 +80,7 @@ force ace_mk6mortar_useAmmoHandling = false;
 // ACE Captives
 force ace_captives_allowHandcuffOwnSide = true;
 force ace_captives_allowSurrender = true;
-force ace_captives_requireSurrender = 1;
+force ace_captives_requireSurrender = 0;
 force ace_captives_requireSurrenderAi = false;
 
 // ACE Casings
@@ -90,9 +89,9 @@ force ace_casings_maxCasings = 250;
 
 // ACE Common
 force ace_common_allowFadeMusic = true;
-force ace_common_checkPBOsAction = 0;
-force ace_common_checkPBOsCheckAll = false;
-force ace_common_checkPBOsWhitelist = "[]";
+force ace_common_checkPBOsAction = 1;
+force ace_common_checkPBOsCheckAll = true;
+force ace_common_checkPBOsWhitelist = "[""ChatWheelRedux"",""kka3_TFAR_Animations"",""KKA3_ACE_Extension_Anim"",""KKA3_ACE_Extension_Anim_A2"",""KKA3_ACE_Extension_Anim_dire"",""kka3_gestures"",""kka3_gestures_ace"",""light"",""lighty"",""pvttunt"",""smokerework"",""ANZ_ReducedHazeMod"",""3rdPersonView"",""dfs_3rdperson_v2.00"",""A3TI"",""ASBE"",""lambs_suppression"",""PLP_starSphere"",""PH_TacSwap"",""PH_TacReady"",""better_inventory"",""PLP_LadderTweakRemastered"",""msr_cba_compats"",""msr_functions"",""vts_weaponresting"",""escapefromtarkov_footsteps"",""escapefromtarkov_gear"",""escapefromtarkov_sounds"",""rwyl_main"",""MoreAircraftDisplays"",""Turret_Enhanced"",""MIRA_Vehicle_Medical"",""DIS_enhanced_GPS"",""DIS_enhanced_map_ace"",""DNI_ZeusFPSMonitor"",""crowsza_ace"",""crowsza_drawbuild"",""crowsza_main"",""crowsza_misc"",""crowsza_pingbox"",""crowsza_teleport"",""crowsza_tfar"",""crowsza_zeus_text"",""zei""]";
 force ace_common_deployedSwayFactor = 1;
 force ace_common_displayTextColor = [0,0,0,0.1];
 force ace_common_displayTextFontColor = [1,1,1,1];
@@ -104,14 +103,15 @@ force ace_common_settingFeedbackIcons = 1;
 force ace_common_settingProgressBarLocation = 0;
 force ace_common_swayFactor = 1;
 
-// ACE Cook off
+// ACE Cook-off
 force ace_cookoff_ammoCookoffDuration = 0;
+ace_cookoff_cookoffDuration = 1;
 force ace_cookoff_destroyVehicleAfterCookoff = false;
-force ace_cookoff_enable = 2;
 force ace_cookoff_enableAmmobox = false;
 force ace_cookoff_enableAmmoCookoff = false;
 force ace_cookoff_enableFire = true;
 force ace_cookoff_probabilityCoef = 0.4;
+ace_cookoff_removeAmmoDuringCookoff = true;
 
 // ACE Crew Served Weapons
 force ace_csw_ammoHandling = 2;
@@ -162,10 +162,9 @@ force acex_fortify_settingHint = 1;
 
 // ACE Fragmentation Simulation
 force ace_frag_enabled = true;
-force ace_frag_maxTrack = 5;
-force ace_frag_maxTrackPerFrame = 5;
 force ace_frag_reflectionsEnabled = true;
 force ace_frag_spallEnabled = true;
+ace_frag_spallIntensity = 1;
 
 // ACE G-Forces
 force ace_gforces_coef = 1;
@@ -187,7 +186,7 @@ force acex_headless_log = true;
 force acex_headless_transferLoadout = 1;
 
 // ACE Hearing
-force ace_hearing_autoAddEarplugsToUnits = false;
+ace_hearing_autoAddEarplugsToUnits = 1;
 force ace_hearing_disableEarRinging = true;
 force ace_hearing_earplugsVolume = 0.5;
 force ace_hearing_enableCombatDeafness = true;
@@ -196,11 +195,14 @@ force ace_hearing_unconsciousnessVolume = 0.4;
 
 // ACE Interaction
 force ace_interaction_disableNegativeRating = true;
+ace_interaction_enableAnimActions = true;
 force ace_interaction_enableGroupRenaming = true;
 force ace_interaction_enableMagazinePassing = true;
 force ace_interaction_enableTeamManagement = true;
 force ace_interaction_enableWeaponAttachments = true;
+ace_interaction_interactWithEnemyCrew = 0;
 force ace_interaction_interactWithTerrainObjects = false;
+ace_interaction_remoteTeamManagement = true;
 
 // ACE Interaction Menu
 ace_gestures_showOnInteractionMenu = 2;
@@ -225,6 +227,7 @@ ace_interact_menu_useListMenu = true;
 ace_interact_menu_useListMenuSelf = true;
 
 // ACE Kill Tracker
+ace_killtracker_showCrewKills = false;
 force ace_killtracker_trackAI = true;
 
 // ACE Logistics
@@ -240,6 +243,7 @@ force ace_rearm_enabled = true;
 force ace_rearm_level = 0;
 force ace_rearm_supply = 0;
 force ace_refuel_cargoRate = 10;
+ace_refuel_enabled = true;
 force ace_refuel_hoseLength = 12;
 force ace_refuel_progressDuration = 2;
 force ace_refuel_rate = 1;
@@ -253,7 +257,7 @@ force ace_magazinerepack_timePerBeltLink = 8;
 force ace_magazinerepack_timePerMagazine = 1;
 
 // ACE Map
-force ace_map_BFT_Enabled = false;
+force ace_map_BFT_Enabled = true;
 force ace_map_BFT_HideAiGroups = true;
 force ace_map_BFT_Interval = 30;
 force ace_map_BFT_ShowPlayerNames = false;
@@ -502,9 +506,10 @@ force ace_scopes_deduceBarometricPressureFromTerrainAltitude = false;
 force ace_scopes_defaultZeroRange = 100;
 force ace_scopes_enabled = false;
 force ace_scopes_forceUseOfAdjustmentTurrets = false;
+ace_scopes_inScopeAdjustment = false;
 force ace_scopes_overwriteZeroRange = false;
 force ace_scopes_simplifiedZeroing = false;
-force ace_scopes_useLegacyUI = false;
+ace_scopes_useLegacyUI = false;
 force ace_scopes_zeroReferenceBarometricPressure = 1013.25;
 force ace_scopes_zeroReferenceHumidity = 0;
 force ace_scopes_zeroReferenceTemperature = 15;
@@ -538,6 +543,8 @@ force ace_fastroping_autoAddFRIES = false;
 force ace_fastroping_requireRopeItems = false;
 force ace_gunbag_swapGunbagEnabled = true;
 force ace_hitreactions_minDamageToTrigger = 0.1;
+ace_hitreactions_weaponDropChanceArmHitAI = 0;
+ace_hitreactions_weaponDropChanceArmHitPlayer = 0;
 ace_inventory_inventoryDisplaySize = 0;
 force ace_laser_dispersionCount = 2;
 force ace_laser_showLaserOnMap = 0;
@@ -546,7 +553,8 @@ force ace_microdagr_mapDataAvailable = 2;
 force ace_microdagr_waypointPrecision = 3;
 force ace_noradio_enabled = true;
 force ace_optionsmenu_showNewsOnMainMenu = true;
-force ace_overpressure_distanceCoefficient = 1;
+ace_overpressure_backblastDistanceCoefficient = 1;
+ace_overpressure_overpressureDistanceCoefficient = 1;
 force ace_parachute_failureChance = 0.0518587;
 force ace_parachute_hideAltimeter = false;
 force ace_tagging_quickTag = 2;
@@ -912,7 +920,22 @@ force FSPLUS_Napalm = false;
 force FSPLUS_Not230mmBarrage = true;
 force FSPLUS_RodsfromGod = false;
 force FSPLUS_Smoke_white = true;
-force FSPLUS_Variable_Nuke = false;
+
+// Fire support PLUS (Freestyle's Nuclear Blast)
+FSNB_AllowWeapons = true;
+FSNB_BlastWave = true;
+FSNB_CondensationRing = true;
+FSNB_Crater = true;
+FSNB_Debug = false;
+FSNB_DirectRad = true;
+FSNB_DustWave = true;
+FSNB_Fireball = true;
+FSNB_Fires = 0.1;
+FSNB_LingerSmoke = true;
+FSNB_MushroomCloud = true;
+FSNB_SmokeSpike = true;
+FSNB_Sound = true;
+FSNB_StaticRad = -1;
 
 // Freestyle's Crash Landing
 force fscl_captiveSystem = true;
@@ -1272,6 +1295,7 @@ force mti_factions_cis_dispenser_coolDown = 60;
 
 // MokTech Industries - Common
 force mti_common_enableLogging = true;
+mti_common_loadoutWeightCheck = true;
 force mti_common_respawnUpdateEnabled = true;
 force mti_common_stanceChangeEnabled = true;
 force mti_common_teleporterDuration = 2;
@@ -1490,7 +1514,9 @@ OPTRE_START_ON_INIT = true;
 // OPTRE Settings
 OPTRE_AircraftHUD_colour = [0.082,0.408,0.039,1];
 OPTRE_Debug_Mode = false;
+OPTRE_Enable_AI_Door_On_Gear_Pelican = true;
 force OPTRE_Enable_Humans_To_Detach = false;
+OPTRE_Enable_Player_Door_On_Gear_Pelican = true;
 force OPTRE_Enable_Supercombustion_dev = true;
 force OPTRE_Enable_Turret_Detach = true;
 force OPTRE_Hijack_FriendlyFireEnabled = false;
@@ -1500,7 +1526,12 @@ force OPTRE_Jackal_Randomize = true;
 force OPTRE_Spartan_Non_Detachable_Turrets = "";
 force OPTRE_Spartan_Randomize = true;
 
+// OPTRE:FC Settings
+OPTRE_Enable_AI_Door_On_Gear_Spirit = true;
+OPTRE_Enable_Player_Door_On_Gear_Spirit = true;
+
 // Sci-fi Support PLUS
+ScifiSupportPlus_AmbientShipSound_Radius = "5000";
 force ScifiSupportPlus_Archer = true;
 force ScifiSupportPlus_ArcherBarrage = true;
 force ScifiSupportPlus_CrashShip = true;
@@ -1514,17 +1545,17 @@ force ScifiSupportPlus_JumpShipIn = true;
 force ScifiSupportPlus_JumpShipOut = true;
 force ScifiSupportPlus_LAATc = true;
 force ScifiSupportPlus_MACStrike = true;
-force ScifiSupportPlus_MoveShip = true;
+ScifiSupportPlus_MoveShip_Speed = "0.001";
 force ScifiSupportPlus_OrbitalAutocannon = true;
 force ScifiSupportPlus_OrbitalBlasterCannonBlue = true;
 force ScifiSupportPlus_OrbitalBlasterCannonBlueHE = true;
 force ScifiSupportPlus_OrbitalBlasterCannonRed = true;
 force ScifiSupportPlus_OrbitalBlasterCannonRedHE = true;
 force ScifiSupportPlus_Pelicanvehicledrop = true;
-force ScifiSupportPlus_SelectShip = true;
 force ScifiSupportPlus_ShredderCannon = true;
 force ScifiSupportPlus_TurboLaser = true;
 force ScifiSupportPlus_TurboLaserVolley = true;
+ScifiSupportPlus_UNSC_ArmedFrigate = true;
 force ScifiSupportPlus_UNSC_ConstructionPod = true;
 force ScifiSupportPlus_UNSC_OrbitalVehicleDeployment = true;
 force ScifiSupportPlus_UNSC_sup_pod = true;
@@ -1666,12 +1697,14 @@ zen_vision_enableWhiteHotRedCold = false;
 // Zeus Enhanced - Attributes
 zen_attributes_enableAbilities = true;
 zen_attributes_enableAmmo = true;
+zen_attributes_enableAmmoCargo = true;
 zen_attributes_enableArsenal = true;
 zen_attributes_enableBuildingMarker = true;
 zen_attributes_enableDamage = true;
 zen_attributes_enableEngine = true;
 zen_attributes_enableExecute = true;
 zen_attributes_enableFuel = true;
+zen_attributes_enableFuelCargo = true;
 zen_attributes_enableGarage = true;
 zen_attributes_enableGroupBehaviour = true;
 zen_attributes_enableGroupCombatMode = true;
@@ -1691,6 +1724,7 @@ zen_attributes_enableMarkerText = true;
 zen_attributes_enableName = true;
 zen_attributes_enablePlateNumber = true;
 zen_attributes_enableRank = true;
+zen_attributes_enableRepairCargo = true;
 zen_attributes_enableRespawnPosition = true;
 zen_attributes_enableRespawnVehicle = true;
 zen_attributes_enableSensors = true;
@@ -1711,9 +1745,11 @@ zen_attributes_enableWaypointTimeout = true;
 zen_attributes_enableWaypointType = true;
 
 // Zeus Enhanced - Faction Filter
+zen_faction_filter_0_ = true;
 zen_faction_filter_0_3AS_CIS = true;
 zen_faction_filter_0_3AS_Rebel = true;
 zen_faction_filter_0_EMP_Greystone_PMC = true;
+zen_faction_filter_0_ibr_LartaFac = true;
 zen_faction_filter_0_JLTS_CIS = true;
 zen_faction_filter_0_LS_CIS = true;
 zen_faction_filter_0_LS_PIRATES = true;
@@ -1722,11 +1758,10 @@ zen_faction_filter_0_LSI_STRMC = true;
 zen_faction_filter_0_mti_factions_bns = true;
 zen_faction_filter_0_mti_factions_cis = true;
 zen_faction_filter_0_mti_factions_revanites = true;
+zen_faction_filter_0_mti_factions_sith_imperials = true;
 zen_faction_filter_0_NCA_categoryPyrishiCollective = true;
 zen_faction_filter_0_NCA_categorySeparatistArmy = true;
 zen_faction_filter_0_O_DBA_CIS_F = true;
-zen_faction_filter_0_O_DBA_CISOOM_F = true;
-zen_faction_filter_0_O_DBA_CISOOM_F_groups = true;
 zen_faction_filter_0_OPF_F = true;
 zen_faction_filter_0_OPF_G_F = true;
 zen_faction_filter_0_OPF_GEN_F = true;
@@ -1780,6 +1815,9 @@ zen_faction_filter_1_TKE_UCN_Drop_Pods = true;
 zen_faction_filter_1_WBK_AI = true;
 zen_faction_filter_1_WBK_AI_Melee = true;
 zen_faction_filter_1_WM_Empire = true;
+zen_faction_filter_1_WPEC_Category_EclipseCompany = true;
+zen_faction_filter_1_YUL_army = true;
+zen_faction_filter_2_3AS_BlackSun = true;
 zen_faction_filter_2_IND_C_F = true;
 zen_faction_filter_2_IND_E_F = true;
 zen_faction_filter_2_IND_F = true;
@@ -1797,6 +1835,8 @@ zen_faction_filter_2_OPTRE_Ins = true;
 zen_faction_filter_2_OPTRE_Ins_groups = true;
 zen_faction_filter_2_OPTRE_PD = true;
 zen_faction_filter_2_OPTRE_UEG_Civ = true;
+zen_faction_filter_2_SFA_Mando_Assets = true;
+zen_faction_filter_2_SFA_Revanite_Assets = true;
 zen_faction_filter_3_3AS_Civilian = true;
 zen_faction_filter_3_CIV_F = true;
 zen_faction_filter_3_CIV_IDAP_F = true;
