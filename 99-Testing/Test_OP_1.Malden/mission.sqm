@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=78;
+		nextID=80;
 	};
 	class Camera
 	{
-		pos[]={689.50061,90.861046,12232.247};
-		dir[]={0.076223493,-0.6211704,-0.78010768};
-		up[]={0.06041763,0.78359199,-0.61831087};
-		aside[]={-0.99536204,5.067559e-07,-0.097259164};
+		pos[]={692.96295,71.90226,12220.36};
+		dir[]={0.077153474,-0.52551782,-0.8474192};
+		up[]={0.047661375,0.85070133,-0.52346313};
+		aside[]={-0.99598557,6.4531923e-07,-0.090681911};
 	};
 };
 binarizationWanted=0;
@@ -36,6 +36,8 @@ addons[]=
 	"JLTS_weapons_Core",
 	"JLTS_radios",
 	"ls_armor_bluefor",
+	"ace_gforces",
+	"ace_parachute",
 	"A3_Modules_F_Curator_Curator",
 	"3as_GNK_Prop",
 	"A3_Ui_F"
@@ -44,7 +46,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=10;
 		class Item0
 		{
 			className="A3_Structures_F_Bootcamp";
@@ -86,19 +88,26 @@ class AddonsMetaData
 		};
 		class Item6
 		{
+			className="ace_parachute";
+			name="ACE3 - Parachute";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item7
+		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item8
 		{
 			className="A3_Drones_F";
 			name="Arma 3 Beta - Drones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item9
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
@@ -149,19 +158,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -181,6 +177,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
