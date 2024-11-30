@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=421;
+		nextID=640;
 	};
 	class Camera
 	{
-		pos[]={1092.9617,299.09903,7134.9961};
-		dir[]={0.69078201,-0.41622946,-0.59127593};
-		up[]={0.31621268,0.90926349,-0.27066374};
-		aside[]={-0.65028232,4.6333298e-08,-0.75971788};
+		pos[]={2205.2412,58.876392,5789.9756};
+		dir[]={-0.49542713,-0.16789556,0.85226935};
+		up[]={-0.084377773,0.9858048,0.1451527};
+		aside[]={0.86454171,0,0.50256109};
 	};
 };
 binarizationWanted=0;
@@ -1011,6 +1011,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -1026,23 +1039,10 @@ class CustomAttributes
 							class data
 							{
 								singleType="STRING";
-								value="Counter";
+								value="LRG_RespawnOnStartPosition";
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
 				};
 			};
 		};
@@ -14221,7 +14221,8 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=5153;
 			type="land_ReachWallGateHouse";
@@ -30882,13 +30883,13 @@ class Mission
 							class PositionInfo
 							{
 								position[]={1304.6272,20.57107,7117.7109};
-								angles[]={0,2.5643773,0};
+								angles[]={0,2.5643826,0};
 							};
 							side="Empty";
 							flags=5;
 							class Attributes
 							{
-								dynamicSimulation=1;
+								disableSimulation=1;
 							};
 							id=16366;
 							type="Land_ModularOutPostBuildingEmpty";
@@ -30917,13 +30918,13 @@ class Mission
 							class PositionInfo
 							{
 								position[]={1315.1195,20.57107,7101.5977};
-								angles[]={0,2.5643773,0};
+								angles[]={0,2.5643826,0};
 							};
 							side="Empty";
 							flags=5;
 							class Attributes
 							{
-								dynamicSimulation=1;
+								disableSimulation=1;
 							};
 							id=16367;
 							type="Land_ModularOutPostBuildingEmpty";
@@ -30952,13 +30953,13 @@ class Mission
 							class PositionInfo
 							{
 								position[]={1325.5278,20.57107,7085.6147};
-								angles[]={0,2.5643773,0};
+								angles[]={0,2.5643826,0};
 							};
 							side="Empty";
 							flags=5;
 							class Attributes
 							{
-								dynamicSimulation=1;
+								disableSimulation=1;
 							};
 							id=16368;
 							type="Land_ModularOutPostBuildingEmpty";
@@ -30986,14 +30987,14 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={1375.364,21.934097,7019.4102};
-								angles[]={0,5.7059703,0};
+								position[]={1375.3644,21.934031,7019.4102};
+								angles[]={0,5.7059755,0};
 							};
 							side="Empty";
 							flags=5;
 							class Attributes
 							{
-								dynamicSimulation=1;
+								disableSimulation=1;
 							};
 							id=16369;
 							type="OPTRE_RS_Warehouse";
@@ -31021,13 +31022,13 @@ class Mission
 							class PositionInfo
 							{
 								position[]={1356.9584,20.57107,7037.3481};
-								angles[]={0,2.5643773,0};
+								angles[]={0,2.5643826,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								dynamicSimulation=1;
+								disableSimulation=1;
 							};
 							id=16370;
 							type="Land_ModularOutPostBuildingQuaters";
@@ -31056,13 +31057,13 @@ class Mission
 							class PositionInfo
 							{
 								position[]={1346.5504,20.57107,7053.3311};
-								angles[]={0,2.5643773,0};
+								angles[]={0,2.5643826,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								dynamicSimulation=1;
+								disableSimulation=1;
 							};
 							id=16371;
 							type="Land_ModularOutPostBuildingQuaters";
@@ -31091,13 +31092,13 @@ class Mission
 							class PositionInfo
 							{
 								position[]={1336.0579,20.57107,7069.4443};
-								angles[]={0,2.5643773,0};
+								angles[]={0,2.5643826,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								dynamicSimulation=1;
+								disableSimulation=1;
 							};
 							id=16372;
 							type="Land_ModularOutPostBuildingQuaters";
@@ -40001,7 +40002,8 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=19421;
 			type="land_ReachWallGateHouse";
@@ -41092,10 +41094,11 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				disableSimulation=1;
 			};
 			id=19503;
 			type="SFA_Radar_Large";
+			atlOffset=-2.3841858e-07;
 		};
 		class Item336
 		{
@@ -41733,8 +41736,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={4484.8052,14.3659,3009.1919};
-												angles[]={0,3.5933537,0};
+												position[]={4484.8047,14.366128,3009.1917};
+												angles[]={0,3.5933528,0};
 											};
 											side="Empty";
 											class Attributes
@@ -41744,7 +41747,7 @@ class Mission
 											};
 											id=23366;
 											type="B_Ship_Gun_01_F";
-											atlOffset=15.627;
+											atlOffset=15.627228;
 										};
 										class Item19
 										{
