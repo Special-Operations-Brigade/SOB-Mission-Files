@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8;
+		nextID=16;
 	};
 	class Camera
 	{
-		pos[]={4569.562,99.933739,3811.9043};
-		dir[]={-0.38531488,-0.43401864,-0.814363};
-		up[]={-0.18562928,0.90090054,-0.3923265};
-		aside[]={-0.90393841,-6.7171641e-08,0.42769739};
+		pos[]={4343.9731,433.27921,4243.8828};
+		dir[]={0.12917005,-0.65222389,-0.74693984};
+		up[]={0.11114097,0.75802636,-0.6426847};
+		aside[]={-0.98537439,0,-0.17040309};
 	};
 };
 binarizationWanted=0;
@@ -393,6 +393,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -420,19 +433,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
 				};
 			};
 		};
@@ -515,7 +515,20 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=3;
+		class Attribute3
+		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		nAttributes=4;
 	};
 };
 class Mission
@@ -13203,7 +13216,7 @@ class Mission
 										{
 											dataType="Trigger";
 											position[]={1911.9863,14.115619,1556.7097};
-											angle=-1.1751559;
+											angle=-1.1751556;
 											class Attributes
 											{
 												sizeA=5;
@@ -13221,7 +13234,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={1908.5177,14.156349,1548.4049};
-												angles[]={0,5.1080294,-0};
+												angles[]={0,5.1080294,0};
 											};
 											id=220;
 											type="LRG_ModuleMedical";
@@ -15720,7 +15733,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4841.2153,8.7070885,4365.5645};
-				angles[]={-0,1.6211358,0};
+				angles[]={0,1.6211358,0};
 			};
 			side="Empty";
 			flags=4;
@@ -15754,7 +15767,7 @@ class Mission
 					};
 					id=274;
 					type="OPTRE_UNSC_Army_Soldier_Rifleman_AR_WDL";
-					atlOffset=0.4187746;
+					atlOffset=1.7302675;
 				};
 			};
 			class Attributes
@@ -15783,7 +15796,7 @@ class Mission
 				};
 			};
 			id=273;
-			atlOffset=0.4187746;
+			atlOffset=0.41877413;
 		};
 		class Item101
 		{
@@ -15801,7 +15814,7 @@ class Mission
 			};
 			id=275;
 			type="OPTRE_Static_M247H_Shielded_Tripod";
-			atlOffset=0.4187746;
+			atlOffset=0.41877413;
 		};
 	};
 	class Connections
