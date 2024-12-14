@@ -12,26 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=56213;
-	};
-	class MarkerIDProvider
-	{
-		nextID=2;
+		nextID=56210;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2235;
+		nextID=1845;
 	};
 	class Camera
 	{
-		pos[]={2448.4141,108.23454,10220.848};
-		dir[]={-0.70202994,-0.50797707,-0.49911916};
-		up[]={-0.41400886,0.86137009,-0.29434609};
-		aside[]={-0.57944727,4.7730282e-08,0.81501478};
+		pos[]={5194.3813,218.00502,12036.531};
+		dir[]={0.29624963,-0.53974289,-0.78800797};
+		up[]={0.18993589,0.84182781,-0.5052194};
+		aside[]={-0.93605924,2.3197208e-07,-0.35190839};
 	};
 };
 binarizationWanted=0;
-sourceName="Operation_Spearhook_Finale_EDIT";
+sourceName="Spearhook_Finale";
 addons[]=
 {
 	"3AS_Prop_Platforms",
@@ -173,15 +169,13 @@ addons[]=
 	"OPTRE_Jackal_F",
 	"ace_grenades",
 	"A3_Characters_F_AoW_Headgear",
-	"SFA_sith_Equipment",
-	"JLTS_core",
-	"A3_Ui_F"
+	"SFA_sith_Equipment"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=120;
+		items=118;
 		class Item0
 		{
 			className="3AS_Prop_Platforms";
@@ -908,19 +902,6 @@ class AddonsMetaData
 			name="SFA Sith Equipment";
 			author="Galek";
 		};
-		class Item118
-		{
-			className="JLTS_core";
-			name="JLTS The Great War - Core";
-			author="MrClock";
-		};
-		class Item119
-		{
-			className="A3_Ui_F";
-			name="Arma 3 - User Interface";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
 	};
 };
 class DynamicSimulation
@@ -972,10 +953,23 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -1007,22 +1001,9 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
 		nAttributes=2;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -1143,7 +1124,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=996;
+		items=993;
 		class Item0
 		{
 			dataType="Object";
@@ -60694,38 +60675,6 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=56204;
-		};
-		class Item993
-		{
-			dataType="Marker";
-			position[]={9857.5107,0,3961.8889};
-			name="marker_0";
-			type="JLTS_loc_commandpost";
-			colorName="ColorGUER";
-			a=2;
-			b=2;
-			id=56210;
-			atlOffset=-33.794529;
-		};
-		class Item994
-		{
-			dataType="Marker";
-			position[]={10663.108,0,2433.6204};
-			name="marker_1";
-			type="JLTS_loc_shield";
-			colorName="ColorGUER";
-			id=56211;
-			atlOffset=-17.751492;
-		};
-		class Item995
-		{
-			dataType="Marker";
-			position[]={11409.471,0,4165.6572};
-			name="marker_2";
-			type="JLTS_loc_shield";
-			colorName="ColorGUER";
-			id=56212;
-			atlOffset=-32.835171;
 		};
 	};
 	class Connections
