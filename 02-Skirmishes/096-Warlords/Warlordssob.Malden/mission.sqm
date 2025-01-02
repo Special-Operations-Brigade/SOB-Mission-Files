@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=26;
+		nextID=33;
 	};
 	class Camera
 	{
-		pos[]={11649.517,38.678185,4487.772};
-		dir[]={-0.28289536,-0.92746574,-0.24454038};
-		up[]={-0.70165205,0.37391767,-0.60652244};
-		aside[]={-0.65396565,-1.6301783e-07,0.75653517};
+		pos[]={11102.992,96.090302,4398.2549};
+		dir[]={-0.89640647,-0.19001466,-0.40044296};
+		up[]={-0.17349088,0.98178041,-0.077501878};
+		aside[]={-0.40787324,-1.7462298e-09,0.91304022};
 	};
 };
 binarizationWanted=0;
-sourceName="SOB_Warlords";
+sourceName="Warlordssob";
 addons[]=
 {
 	"A3_Modules_F_Warlords",
@@ -465,19 +465,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -505,6 +492,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
