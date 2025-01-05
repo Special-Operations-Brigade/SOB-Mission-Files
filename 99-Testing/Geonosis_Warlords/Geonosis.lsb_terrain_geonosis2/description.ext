@@ -1,3 +1,4 @@
+
 class CfgWLRequisitionPresets
 {
 	class SOBAssetsGEO // --- class name used in the Init module
@@ -63,7 +64,7 @@ class CfgWLRequisitionPresets
 				};
 				class B_soldier_Melee_SW
 				{
-					cost = 10000; 
+					cost = 20000; 
 					requirements[] = {}; 
 				};
 			};
@@ -193,14 +194,15 @@ class CfgWLRequisitionPresets
 					requirements[] = { "A" };
 				};
 			};
+
 			class Naval
 			{
-				class optre_catfish_aa_f
+			class optre_catfish_aa_f
 				{
 					cost = 500;
 					requirements[] = { "W" };
 				};
-				class optre_catfish_atgm_f
+				class optre_catfish_atgm_f 
 				{
 					cost = 700;
 					requirements[] = { "W" };
@@ -221,6 +223,7 @@ class CfgWLRequisitionPresets
 					requirements[] = { "W" };
 				};
 			};
+
 			class Gear
 			{
 				class mti_supplies_crate_common_explosives
@@ -295,7 +298,7 @@ class CfgWLRequisitionPresets
 		};
 		class EAST // --- assets available for OPFOR
 		{
-		class Infantry
+			class Infantry
 			{
 				class mti_factions_cis_B1_E5
 				{
@@ -372,14 +375,27 @@ class CfgWLRequisitionPresets
 					cost = 9000; 
 					requirements[] = {}; 
 				};
-
+				class O_soldier_Melee_SW
+				{
+					cost = 20000; 
+					requirements[] = {}; 
+				};
 			};
-
 			class Vehicles
 			{
 				class 3AS_Fliknot_F
 				{
 					cost = 150;
+					requirements[] = {};
+				};
+				class 3AS_SAC_Brown
+				{
+					cost = 250;
+					requirements[] = {};
+				};
+				class 3AS_PAC_Brown
+				{
+					cost = 400;
 					requirements[] = {};
 				};
 				class mti_factions_cis_ast
@@ -448,11 +464,9 @@ class CfgWLRequisitionPresets
 					requirements[] = {};
 				};
 			};
-
-
 			class Aircraft
 			{
-				class 3mti_factions_cis_Vulture_Base
+				class mti_factions_cis_Vulture_Base
 				{
 					cost = 1500;
 					requirements[] = { "A" };
@@ -483,7 +497,6 @@ class CfgWLRequisitionPresets
 					requirements[] = { "H" };
 				};
 			};
-
 			class Naval
 			{
 				class optre_catfish_aa_f

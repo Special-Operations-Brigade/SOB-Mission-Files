@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=22707;
+		nextID=22717;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1380;
+		nextID=1472;
 	};
 	class Camera
 	{
-		pos[]={339.51932,1016.5228,7808.1465};
-		dir[]={-0.7183972,-0.27496448,0.63902819};
-		up[]={-0.20545608,0.9614498,0.18275797};
-		aside[]={0.66464639,-3.6123674e-07,0.74719822};
+		pos[]={3179.3596,1023.364,5167.3325};
+		dir[]={0.77242446,-0.28730109,-0.56640863};
+		up[]={0.23168622,0.95784032,-0.16989243};
+		aside[]={-0.59133935,0,-0.80642301};
 	};
 };
 binarizationWanted=0;
-sourceName="Geonosiswarlords";
+sourceName="Geonosis";
 addons[]=
 {
 	"A3_Modules_F_Warlords",
@@ -987,7 +987,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -1024,7 +1024,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -1123,6 +1123,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Geonosis Warlords";
+		overviewText="Geonosis";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.40000001;
@@ -1147,7 +1148,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=176;
+		items=177;
 		class Item0
 		{
 			dataType="Layer";
@@ -33473,7 +33474,6 @@ class Mission
 			};
 			id=11494;
 			type="3as_GNK";
-			atlOffset=0.096496582;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -86511,6 +86511,36 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item176
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3165.8804,922.76947,5140.6201};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=22716;
+					type="O_soldier_Melee_SW";
+					atlOffset=-6.1035156e-05;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=22715;
+			atlOffset=-6.1035156e-05;
 		};
 	};
 	class Connections
