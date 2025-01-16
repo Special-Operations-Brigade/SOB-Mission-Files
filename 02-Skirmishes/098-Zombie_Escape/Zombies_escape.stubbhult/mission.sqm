@@ -13,7 +13,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1376;
+		nextID=1394;
 	};
 	class LayerIndexProvider
 	{
@@ -21,10 +21,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3018.7307,64.046265,10763.443};
-		dir[]={-0.63421685,-0.49027318,-0.59786141};
-		up[]={-0.35675791,0.87156457,-0.33630666};
-		aside[]={-0.68595457,-1.1485827e-07,0.72766733};
+		pos[]={12008.949,30.252996,11694.706};
+		dir[]={-0.87118542,-0.36806601,-0.3249509};
+		up[]={-0.34486377,0.92979956,-0.12863418};
+		aside[]={-0.34948456,1.9592699e-07,0.93695796};
 	};
 };
 binarizationWanted=0;
@@ -59,13 +59,17 @@ addons[]=
 	"OPTRE_Vehicles_Cart",
 	"mti_modules",
 	"SWLB_groundholders",
-	"A3_Missions_F_Oldman"
+	"A3_Missions_F_Oldman",
+	"WBK_ZombieCreatures_Units",
+	"WBK_Zombies_Smasher",
+	"WBK_Zombies_Corrupted",
+	"WBK_Zombies_Goliaph"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=32;
 		class Item0
 		{
 			className="A3_Structures_F_Exp";
@@ -246,6 +250,30 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item28
+		{
+			className="WBK_ZombieCreatures_Units";
+			name="WBK_ZombieCreatures";
+			author="WebKnight";
+		};
+		class Item29
+		{
+			className="WBK_Zombies_Smasher";
+			name="WBK_Zombies_Smasher";
+			author="WebKnight";
+		};
+		class Item30
+		{
+			className="WBK_Zombies_Corrupted";
+			name="WBK_Zombies_Corrupted";
+			author="WebKnight";
+		};
+		class Item31
+		{
+			className="WBK_Zombies_Goliaph";
+			name="WBK_Zombies_Goliaph";
+			author="WebKnight";
+		};
 	};
 };
 class DynamicSimulation
@@ -271,10 +299,6 @@ randomSeed=1527972;
 class ScenarioData
 {
 	author="Arc-1308 Ramsey";
-	overViewPicture="\z\mti\Addons\common\data\insignias\SOB_insignia_ca.paa";
-	overViewPictureLocked="\z\mti\Addons\common\data\insignias\SOB_insignia_ca.paa";
-	onLoadMission="Take a shower";
-	loadScreen="\z\mti\Addons\common\data\insignias\SOB_insignia_ca.paa";
 	briefing=0;
 	debriefing=0;
 	saving=0;
@@ -461,7 +485,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=46;
+		items=50;
 		class Item0
 		{
 			dataType="Layer";
@@ -24276,6 +24300,206 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item46
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11970.869,14.324383,11676.694};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=1382;
+					type="Zombie_Special_OPFOR_Boomer";
+					atlOffset=1.0490417e-05;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11978.413,14.288827,11675.336};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1393;
+					type="WBK_SpecialZombie_Smasher_Acid_3";
+					atlOffset=-2.1934509e-05;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1381;
+			atlOffset=1.0490417e-05;
+		};
+		class Item47
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11958.88,14.472219,11681.443};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=1384;
+					type="WBK_SpecialZombie_Corrupted_3";
+					atlOffset=-1.5258789e-05;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1383;
+			atlOffset=-1.5258789e-05;
+		};
+		class Item48
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11974.86,14.749212,11689.84};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=1386;
+					type="WBK_Goliaph_3";
+					atlOffset=4.7683716e-06;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1385;
+			atlOffset=4.7683716e-06;
+		};
+		class Item49
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11988.679,14.938132,11694.52};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=1388;
+					type="Zombie_Special_OPFOR_Leaper_1";
+					atlOffset=-2.4795532e-05;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11989.479,14.792933,11688.214};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1389;
+					type="Zombie_Special_OPFOR_Leaper_2";
+					atlOffset=-5.7220459e-06;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11988.292,14.619715,11682.052};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1390;
+					type="Zombie_Special_OPFOR_Screamer";
+					atlOffset=-5.9127808e-05;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11983.529,14.549783,11682.66};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1391;
+					type="WBK_SpecialZombie_Smasher_3";
+					atlOffset=-5.4359436e-05;
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11986.734,14.433386,11676.163};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1392;
+					type="WBK_SpecialZombie_Smasher_Hellbeast_3";
+					atlOffset=-7.6293945e-06;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1387;
+			atlOffset=-2.4795532e-05;
 		};
 	};
 	class Connections
