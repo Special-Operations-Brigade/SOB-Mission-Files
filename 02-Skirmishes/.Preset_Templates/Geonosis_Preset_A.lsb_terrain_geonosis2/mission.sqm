@@ -8,6 +8,7 @@ class EditorData
 	toggles=34;
 	mods[]=
 	{
+		"WBK_Zombies_AdvancedEditorSettings",
 		"3denEnhanced"
 	};
 	class ItemIDProvider
@@ -16,14 +17,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=48;
+		nextID=76;
 	};
 	class Camera
 	{
-		pos[]={1237.2,850.83966,2494.5398};
-		dir[]={0.94062346,-0.33903623,-0.021051256};
-		up[]={0.33896288,0.94076347,-0.007585302};
-		aside[]={-0.022380246,1.3996669e-07,-0.99983144};
+		pos[]={1502.61,1030.2828,2432.6965};
+		dir[]={-0.56941384,-0.55565745,0.60595572};
+		up[]={-0.38050449,0.83141404,0.40492249};
+		aside[]={0.72880578,9.4179995e-07,0.68485123};
 	};
 };
 binarizationWanted=0;
@@ -45,7 +46,7 @@ addons[]=
 	"A3_Structures_F_Bootcamp_VR_Helpers",
 	"ls_hallway",
 	"3AS_Prop_Terminals",
-	"mti_common",
+	"mti_arsenal",
 	"OPTRE_UNSC_Structure_Military",
 	"A3_Characters_F",
 	"A3_Weapons_F",
@@ -179,8 +180,8 @@ class AddonsMetaData
 		};
 		class Item15
 		{
-			className="mti_common";
-			name="MokTech Industries - Common";
+			className="mti_arsenal";
+			name="MokTech Industries - Arsenal";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
@@ -2211,7 +2212,7 @@ class Mission
 																};
 															};
 															id=66;
-															atlOffset=2.251709;
+															atlOffset=2.262085;
 														};
 														class Item62
 														{
@@ -7289,8 +7290,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7324,8 +7325,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7359,8 +7360,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7394,8 +7395,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7429,8 +7430,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7464,8 +7465,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7498,8 +7499,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7532,8 +7533,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7566,8 +7567,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7600,8 +7601,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7634,8 +7635,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7668,8 +7669,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7703,8 +7704,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7738,8 +7739,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7773,8 +7774,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7807,8 +7808,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7841,8 +7842,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7875,8 +7876,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7909,8 +7910,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -7943,8 +7944,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="mti_common_Arsenal_Preset";
-											expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+											property="mti_arsenal_Arsenal_Preset";
+											expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 											class Value
 											{
 												class data
@@ -22168,7 +22169,7 @@ class Mission
 							name="marker_18";
 							text="Droid Factory";
 							type="JLTS_CIS_unknown";
-							angle=165;
+							angle=164.99997;
 							id=595;
 							atlOffset=-3.78302;
 						};
@@ -29492,7 +29493,7 @@ class Mission
 							name="marker_19";
 							text="Droid Factory";
 							type="JLTS_CIS_unknown";
-							angle=344.99997;
+							angle=344.99991;
 							id=1001;
 							atlOffset=-8.0547485;
 						};
