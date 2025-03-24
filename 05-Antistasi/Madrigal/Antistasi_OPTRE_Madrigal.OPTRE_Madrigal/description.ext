@@ -1,0 +1,30 @@
+#include "..\missionDescription\master.hpp"
+
+OnLoadName = $STR_A3UE_maps_Madrigal_mapname_short;
+OnLoadMission = $STR_A3UE_maps_Madrigal_loadText;
+briefingName = $STR_A3UE_maps_Madrigal_mapname;
+overviewText = $STR_A3UE_maps_Madrigal_description;
+loadScreen = "Pictures\Mission\pic.jpg"; // NB, this will resolve from root
+overviewPicture = "Pictures\Mission\pic.jpg"; // NB, this will resolve from root
+
+
+class CfgDiscordRichPresence 
+{
+    applicationID="1270380812684230746";
+    defaultDetails="In campaign";
+    defaultState="Madrigal";
+    defaultLargeImageKey="madrigal";
+    defaultLargeImageText="Rebelling in Madrigal";
+    defaultSmallImageKey="au-logo";
+    defaultSmallImageText="Antistasi Ultimate";
+    useTimeElapsed=1;
+};
+//Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=769440155
+class CfgNotifications
+{
+    #include "..\missionDescription\CfgNotificationsContents.hpp"
+};
+
+class CfgDebriefing {
+    #include "..\missionDescription\CfgDebriefingContents.hpp"
+};
