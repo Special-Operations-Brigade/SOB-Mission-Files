@@ -1,0 +1,29 @@
+#include "..\missionDescription\master.hpp"
+
+OnLoadName = $STR_A3UE_maps_Kapaulio_mapname_short;
+OnLoadMission = $STR_A3UE_maps_Kapaulio_mapname;
+briefingName = $STR_A3UE_maps_Kapaulio_mapname;
+overviewText = $STR_A3UE_maps_Kapaulio_mapname;
+loadScreen = "Pictures\Mission\PIC.jpg"; // NB, this will resolve from root
+overviewPicture = "Pictures\Mission\PIC.jpg"; // NB, this will resolve from root
+
+class CfgDiscordRichPresence 
+{
+    applicationID="1270380812684230746";
+    defaultDetails="In campaign";
+    defaultState="Saint Kapaulio";
+    defaultLargeImageKey="kapaulio";
+    defaultLargeImageText="Rebelling in Saint Kapaulio";
+    defaultSmallImageKey="au-logo";
+    defaultSmallImageText="Antistasi Ultimate";
+    useTimeElapsed=1;
+};
+//Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=939686262
+class CfgNotifications
+{
+    #include "..\missionDescription\CfgNotificationsContents.hpp"
+};
+
+class CfgDebriefing {
+    #include "..\missionDescription\CfgDebriefingContents.hpp"
+};
