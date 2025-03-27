@@ -6,24 +6,29 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=1025;
+	mods[]=
+	{
+		"WBK_Zombies_AdvancedEditorSettings",
+		"3denEnhanced"
+	};
 	class ItemIDProvider
 	{
 		nextID=1435;
 	};
 	class LayerIndexProvider
 	{
-		nextID=312;
+		nextID=335;
 	};
 	class Camera
 	{
-		pos[]={1931.5709,205.84183,17542.127};
+		pos[]={2017.8142,240.15015,17348.863};
 		dir[]={0.49992248,-0.47517127,-0.72408253};
 		up[]={0.26997554,0.87989169,-0.39103016};
 		aside[]={-0.82291985,-1.1431985e-07,-0.5681622};
 	};
 };
 binarizationWanted=0;
-sourceName="playerslotantistasi";
+sourceName="SOB_Antistasi_test";
 addons[]=
 {
 	"A3_Ui_F",
@@ -32,7 +37,9 @@ addons[]=
 	"A3_Characters_F",
 	"A3_Modules_F_Hc",
 	"A3_Weapons_F",
+	"ace_explosives",
 	"A3_Weapons_F_Ammoboxes",
+	"ace_cargo",
 	"A3_Structures_F_EPC_Civ_InfoBoards",
 	"A3_Structures_F_Ind_Cargo",
 	"A3_Structures_F_Mil_Flags",
@@ -41,6 +48,7 @@ addons[]=
 	"CUP_Editor_A2_Roads_Config",
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Structures_F_Walls",
+	"ace_logistics_wirecutter",
 	"A3_Signs_F",
 	"A3_Structures_F_Wrecks",
 	"A3_Structures_F_Civ_Garbage",
@@ -58,7 +66,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=17;
+		items=20;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -96,72 +104,93 @@ class AddonsMetaData
 		};
 		class Item5
 		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item6
+		{
+			className="ace_cargo";
+			name="ACE3 - Cargo";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item7
+		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item8
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item9
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item10
 		{
 			className="CUP_CAStructures_Mil";
 			name="CUP_CAStructures_Mil";
 		};
-		class Item9
+		class Item11
 		{
 			className="CUP_Editor_A2_Roads_Config";
 			name="CUP_Editor_A2_Roads_Config";
 		};
-		class Item10
+		class Item12
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item13
+		{
+			className="ace_logistics_wirecutter";
+			name="ACE3 - Logistics Wire Cutter";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item14
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item15
 		{
 			className="A3_Structures_F_Wrecks";
 			name="Arma 3 - Vehicle Wrecks";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item16
 		{
 			className="CUP_CAMisc_E_WF";
 			name="CUP_CAMisc_E_WF";
 		};
-		class Item14
+		class Item17
 		{
 			className="CUP_Misc_e_Config";
 			name="CUP_Misc_e_Config";
 		};
-		class Item15
+		class Item18
 		{
 			className="CUP_CAStructures_E_Mil";
 			name="CUP_CAStructures_E_Mil";
 		};
-		class Item16
+		class Item19
 		{
 			className="CUP_WarfareBuildings";
 			name="CUP_WarfareBuildings";
@@ -172,6 +201,27 @@ randomSeed=8998726;
 class ScenarioData
 {
 	author="Antistasi Ultimate Dev Team";
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=0;
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
@@ -2122,6 +2172,19 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="QUOTE(LRG_Config_Zeus)";
+							expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="ModuleCurator_F_Owner";
 							expression="_this setVariable ['Owner',_value,true];";
 							class Value
@@ -2133,7 +2196,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="ModuleCurator_F_Forced";
 							expression="_this setVariable ['Forced',_value,true];";
@@ -2146,7 +2209,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute3
 						{
 							property="ModuleCurator_F_Name";
 							expression="_this setVariable ['Name',_value,true];";
@@ -2159,7 +2222,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute4
 						{
 							property="ModuleCurator_F_Addons";
 							expression="_this setVariable ['Addons',_value,true];";
@@ -2172,7 +2235,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=4;
+						nAttributes=5;
 					};
 				};
 				class Item1
@@ -5622,7 +5685,7 @@ class Mission
 							colorName="ColorGreen";
 							a=5;
 							b=5;
-							angle=228.90965;
+							angle=228.90964;
 							id=847;
 							atlOffset=246.14381;
 						};
@@ -6109,7 +6172,7 @@ class Mission
 							colorName="ColorGreen";
 							a=94.710114;
 							b=65.818459;
-							angle=223.89291;
+							angle=223.8929;
 							id=1378;
 							atlOffset=0.46084595;
 						};
@@ -6761,7 +6824,7 @@ class Mission
 							colorName="ColorBrown";
 							a=80.489746;
 							b=55.738037;
-							angle=0.88996875;
+							angle=0.88996869;
 							id=189;
 							atlOffset=0.0031738281;
 						};
@@ -6788,7 +6851,7 @@ class Mission
 							colorName="ColorBrown";
 							a=80.489746;
 							b=46.626835;
-							angle=0.88996869;
+							angle=0.88996863;
 							id=208;
 							atlOffset=0.055903435;
 						};
@@ -6816,7 +6879,7 @@ class Mission
 							colorName="ColorBrown";
 							a=87.915451;
 							b=76.988754;
-							angle=0.88996869;
+							angle=0.88996863;
 							id=216;
 							atlOffset=0.30142212;
 						};
@@ -13786,7 +13849,7 @@ class Mission
 							type="rectangle";
 							a=99.020477;
 							b=118.70475;
-							angle=222.30336;
+							angle=222.30334;
 							id=1309;
 						};
 						class Item22
@@ -14901,6 +14964,7 @@ class Mission
 			dataType="Layer";
 			name="antistasi player slots";
 			id=1428;
+			atlOffset=25.16;
 		};
 		class Item340
 		{
