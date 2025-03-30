@@ -1,0 +1,30 @@
+#include "..\missionDescription\master.hpp"
+
+OnLoadName = $STR_A3UE_maps_Abramia_mapname_short;
+OnLoadMission = $STR_A3UE_maps_Abramia_loadText;
+briefingName = $STR_A3UE_maps_Abramia_mapname;
+overviewText = $STR_A3UE_maps_Abramia_description;
+loadScreen = "Pictures\Mission\pic.jpg"; // NB, this will resolve from root
+overviewPicture = "Pictures\Mission\pic.jpg"; // NB, this will resolve from root
+
+#include "\x\A3A\addons\core\Includes\script_mod.hpp"
+class CfgDiscordRichPresence 
+{
+    applicationID="1270380812684230746";
+    defaultDetails="In campaign";
+    defaultState="Isla Abramia";
+    defaultLargeImageKey="abramia";
+    defaultLargeImageText="Rebelling in Isla Abramia";
+    defaultSmallImageKey="au-logo";
+    defaultSmallImageText="Antistasi Ultimate";
+    useTimeElapsed=1;
+};
+//Workshop Link: https://steamcommunity.com/sharedfiles/filedetails/?id=648775794
+class CfgNotifications
+{
+    #include "..\missionDescription\CfgNotificationsContents.hpp"
+};
+
+class CfgDebriefing {
+    #include "..\missionDescription\CfgDebriefingContents.hpp"
+};
