@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3206;
+		nextID=3314;
 	};
 	class Camera
 	{
-		pos[]={6231.2002,44.845848,12351.085};
+		pos[]={6266.5718,125.2078,12734.715};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
-sourceName="playerslotantistasi";
+sourceName="Antistasi_UMB_Colombia";
 addons[]=
 {
 	"A3_Modules_F",
@@ -38,10 +38,14 @@ addons[]=
 	"A3_Structures_F_Ind_Transmitter_Tower",
 	"A3_Structures_F_Exp_Military_ContainerBases",
 	"A3_Structures_F_Enoch_Industrial_Cargo",
+	"ace_cargo",
 	"A3_Structures_F_Heli_Ind_Cargo",
 	"A3_Structures_F_Mil_Shelters",
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Structures_F_Argo_Military_Bunkers",
+	"emr_main",
+	"ace_logistics_wirecutter",
+	"ace_concertina_wire",
 	"A3_Structures_F_Exp_Military_Trenches",
 	"A3_Structures_F_Ind_Cargo",
 	"A3_Structures_F_Mil_BagFence",
@@ -49,6 +53,8 @@ addons[]=
 	"A3_Structures_F_Households_Slum",
 	"A3_Structures_F_Walls",
 	"A3_Signs_F",
+	"ace_interaction",
+	"ace_dragging",
 	"A3_Structures_F_Argo_Military_Fortifications",
 	"A3_Structures_F_Enoch_Military_Barracks",
 	"A3_Structures_F_Argo_Walls_Military",
@@ -62,6 +68,7 @@ addons[]=
 	"A3_Structures_F_Naval_Piers",
 	"A3_Structures_F_Exp_Walls_BackAlleys",
 	"A3_Structures_F_EPC_Civ_Accessories",
+	"ace_sitting",
 	"A3_Structures_F_Mil_BagBunker",
 	"A3_Props_F_Orange_Humanitarian_Camps",
 	"A3_Structures_F_Argo_Walls_City",
@@ -69,16 +76,19 @@ addons[]=
 	"A3_Structures_F_Households_House_Small02",
 	"A3_Structures_F_Households_House_Small01",
 	"A3_Supplies_F_Heli_Slingload",
+	"ace_refuel",
 	"A3_Structures_F_Oldman_Signs_Traffic",
 	"A3_Structures_F_Orange_Signs_Mines",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"A3_Structures_F_Exp_Walls_Concrete",
 	"A3_Weapons_F_Ammoboxes",
+	"ace_rearm",
 	"A3_Structures_F_Ind_CarService",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Characters_F",
 	"A3_Modules_F_Hc",
 	"A3_Weapons_F",
+	"ace_explosives",
 	"A3_Structures_F_EPC_Civ_InfoBoards",
 	"A3_Structures_F_Mil_Flags",
 	"A3_Structures_F_Enoch_Civilian_Police",
@@ -88,7 +98,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=24;
+		items=34;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -133,124 +143,194 @@ class AddonsMetaData
 		};
 		class Item6
 		{
+			className="ace_cargo";
+			name="ACE3 - Cargo";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item7
+		{
 			className="A3_Structures_F_Heli";
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item8
 		{
 			className="A3_Structures_F_Argo";
 			name="Arma 3 Malden - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item9
+		{
+			className="emr_main";
+			name="Enhanced Movement Rework";
+			author="Simplex Team";
+			url="https://github.com/SceptreOfficial/Enhanced-Movement-Rework";
+		};
+		class Item10
+		{
+			className="ace_logistics_wirecutter";
+			name="ACE3 - Logistics Wire Cutter";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item11
+		{
+			className="ace_concertina_wire";
+			name="ACE3 - Concertina Wire";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item12
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item13
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item14
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item15
+		{
+			className="ace_interaction";
+			name="ACE3 - Interaction";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item16
+		{
+			className="ace_dragging";
+			name="ACE3 - Dragging";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item17
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item18
 		{
 			className="A3_Structures_F_Exp_Civilian";
 			name="Arma 3 Apex - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item19
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item20
+		{
+			className="ace_sitting";
+			name="ACE3 - Sitting";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item21
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item22
 		{
 			className="A3_Structures_F_Exp_Industrial";
 			name="Arma 3 Apex - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item16
+		class Item23
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
+		class Item24
+		{
+			className="ace_refuel";
+			name="ACE3 - Refuel";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item25
 		{
 			className="A3_Structures_F_Oldman";
 			name="Arma 3 Old Man - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item18
+		class Item26
 		{
 			className="A3_Structures_F_Orange";
 			name="Arma 3 Orange - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item19
+		class Item27
 		{
 			className="A3_Supplies_F_Exp";
 			name="Arma 3 Apex - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item20
+		class Item28
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item21
+		class Item29
+		{
+			className="ace_rearm";
+			name="ACE3 - Rearm";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item30
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item22
+		class Item31
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item23
+		class Item32
+		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item33
 		{
 			className="A3_Structures_F_Enoch_Civilian";
 			name="Arma 3 Contact Platform - Civilian Buildings";
@@ -300,6 +380,24 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+	class Category1
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
 				};
 			};
 		};
@@ -3747,7 +3845,7 @@ class Mission
 							colorName="ColorCIV";
 							a=8;
 							b=8;
-							angle=48.815983;
+							angle=48.815979;
 							id=87675;
 							atlOffset=-0.00016784668;
 						};
@@ -3813,7 +3911,7 @@ class Mission
 							colorName="ColorGreen";
 							a=5;
 							b=5;
-							angle=100.51957;
+							angle=100.51956;
 							id=87672;
 						};
 						class Item46
@@ -3826,7 +3924,7 @@ class Mission
 							colorName="ColorGreen";
 							a=5;
 							b=5;
-							angle=94.18499;
+							angle=94.184982;
 							id=87673;
 						};
 						class Item47
@@ -8303,7 +8401,7 @@ class Mission
 							colorName="ColorBrown";
 							a=235.3965;
 							b=218.83447;
-							angle=333.49994;
+							angle=333.49991;
 							id=87896;
 							atlOffset=23.550846;
 						};
@@ -24360,7 +24458,7 @@ class Mission
 							colorName="ColorGreen";
 							a=5;
 							b=5;
-							angle=113.88495;
+							angle=113.88494;
 							id=87726;
 							atlOffset=-3.8146973e-06;
 						};
@@ -24678,7 +24776,7 @@ class Mission
 							colorName="ColorGUER";
 							a=65.78009;
 							b=100;
-							angle=28.642292;
+							angle=28.64229;
 							id=1122;
 						};
 						class Item2
@@ -25456,7 +25554,7 @@ class Mission
 							colorName="ColorGreen";
 							a=20;
 							b=5;
-							angle=176.15192;
+							angle=176.1519;
 							id=1137;
 							atlOffset=1.148756;
 						};
@@ -25858,7 +25956,7 @@ class Mission
 							colorName="ColorGreen";
 							a=10;
 							b=5;
-							angle=201.83493;
+							angle=201.83492;
 							id=1145;
 							atlOffset=9.8611984;
 						};
@@ -26116,7 +26214,7 @@ class Mission
 							colorName="ColorGreen";
 							a=20;
 							b=5;
-							angle=197.88393;
+							angle=197.88391;
 							id=1149;
 							atlOffset=-7.6293945e-06;
 						};
@@ -28314,7 +28412,7 @@ class Mission
 							colorName="ColorGreen";
 							a=5;
 							b=5;
-							angle=25.326551;
+							angle=25.32655;
 							id=1157;
 						};
 						class Item1
@@ -29542,7 +29640,7 @@ class Mission
 							colorName="ColorGreen";
 							a=10;
 							b=5;
-							angle=156.99478;
+							angle=156.99477;
 							id=86897;
 							atlOffset=1.9073486e-06;
 						};
@@ -29802,7 +29900,7 @@ class Mission
 							colorName="ColorGreen";
 							a=10;
 							b=5;
-							angle=288.83939;
+							angle=288.83936;
 							id=1181;
 						};
 						class Item1
@@ -39961,7 +40059,7 @@ class Mission
 							colorName="ColorGreen";
 							a=10;
 							b=5;
-							angle=179.4041;
+							angle=179.40408;
 							id=1260;
 							atlOffset=5.1613579;
 						};
@@ -40653,7 +40751,7 @@ class Mission
 							colorName="ColorGreen";
 							a=10.836;
 							b=5;
-							angle=192.91992;
+							angle=192.91991;
 							id=86957;
 							atlOffset=5.1372833;
 						};
@@ -41100,7 +41198,7 @@ class Mission
 							colorName="ColorGreen";
 							a=10;
 							b=5;
-							angle=91.063286;
+							angle=91.063278;
 							id=1280;
 							atlOffset=5.1609802;
 						};
@@ -41406,7 +41504,7 @@ class Mission
 							colorName="ColorGreen";
 							a=15;
 							b=5;
-							angle=306.69885;
+							angle=306.69882;
 							id=1284;
 							atlOffset=5.2054596;
 						};
@@ -41711,7 +41809,7 @@ class Mission
 							colorName="ColorGUER";
 							a=101.17023;
 							b=109.76055;
-							angle=27.506834;
+							angle=27.506832;
 							id=1289;
 						};
 						class Item2
@@ -43282,7 +43380,7 @@ class Mission
 							colorName="ColorGreen";
 							a=12.762884;
 							b=5;
-							angle=358.11023;
+							angle=358.1102;
 							id=907;
 							atlOffset=1.5335197;
 						};
@@ -47050,7 +47148,7 @@ class Mission
 							colorName="ColorGreen";
 							a=12.023899;
 							b=5;
-							angle=14.088751;
+							angle=14.08875;
 							id=776;
 						};
 						class Item1
@@ -48607,7 +48705,7 @@ class Mission
 							colorName="ColorGreen";
 							a=5;
 							b=5;
-							angle=221.86783;
+							angle=221.86781;
 							id=822;
 							atlOffset=22.604263;
 						};
@@ -48621,7 +48719,7 @@ class Mission
 							colorName="ColorBlue";
 							a=130;
 							b=130;
-							angle=7.1425252;
+							angle=7.1425247;
 							id=823;
 							atlOffset=22.119112;
 						};
@@ -49981,6 +50079,19 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="QUOTE(LRG_Config_Zeus)";
+							expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="ModuleCurator_F_Owner";
 							expression="_this setVariable ['Owner',_value,true];";
 							class Value
@@ -49992,7 +50103,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="ModuleCurator_F_Forced";
 							expression="_this setVariable ['Forced',_value,true];";
@@ -50005,7 +50116,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute3
 						{
 							property="ModuleCurator_F_Name";
 							expression="_this setVariable ['Name',_value,true];";
@@ -50018,7 +50129,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute4
 						{
 							property="ModuleCurator_F_Addons";
 							expression="_this setVariable ['Addons',_value,true];";
@@ -50031,7 +50142,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=4;
+						nAttributes=5;
 					};
 				};
 				class Item1
@@ -50590,7 +50701,7 @@ class Mission
 							};
 							id=87909;
 							type="I_G_Soldier_F";
-							atlOffset=-7.6293945e-06;
+							atlOffset=3.6239624e-05;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -52266,7 +52377,7 @@ class Mission
 					colorName="ColorRed";
 					a=108.30891;
 					b=163.759;
-					angle=352.54749;
+					angle=352.54745;
 					id=87849;
 					atlOffset=359.33551;
 				};
@@ -52280,7 +52391,7 @@ class Mission
 					colorName="ColorYellow";
 					a=6.4089999;
 					b=5.434;
-					angle=176.28897;
+					angle=176.28896;
 					id=87850;
 					atlOffset=271.51401;
 				};
@@ -52294,7 +52405,7 @@ class Mission
 					colorName="ColorYellow";
 					a=6.4089999;
 					b=5.434;
-					angle=181.62897;
+					angle=181.62895;
 					id=87852;
 					atlOffset=351.04001;
 				};
@@ -52308,7 +52419,7 @@ class Mission
 					colorName="ColorGreen";
 					a=5;
 					b=5;
-					angle=87.634209;
+					angle=87.634201;
 					id=87858;
 					atlOffset=243.29401;
 				};
@@ -52406,7 +52517,7 @@ class Mission
 					colorName="ColorRed";
 					a=213.2296;
 					b=340.59534;
-					angle=352.54694;
+					angle=352.54691;
 					id=87868;
 					atlOffset=359.33557;
 				};
@@ -52420,7 +52531,7 @@ class Mission
 					colorName="ColorYellow";
 					a=6.4089999;
 					b=5.434;
-					angle=176.28897;
+					angle=176.28896;
 					id=87869;
 					atlOffset=271.51355;
 				};
@@ -52434,7 +52545,7 @@ class Mission
 					colorName="ColorYellow";
 					a=6.4089999;
 					b=5.434;
-					angle=181.62897;
+					angle=181.62895;
 					id=87870;
 					atlOffset=351.03955;
 				};
@@ -52891,6 +53002,7 @@ class Mission
 			dataType="Layer";
 			name="antistasi player slots";
 			id=87932;
+			atlOffset=-87.577431;
 		};
 	};
 	class Connections
