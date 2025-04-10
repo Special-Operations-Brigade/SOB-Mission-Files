@@ -17,14 +17,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=30;
+		nextID=40;
 	};
 	class Camera
 	{
 		pos[]={9893.6729,435.0715,2884.9253};
-		dir[]={0.47954303,-0.59536695,0.64469171};
-		up[]={0.35533094,0.80345511,0.47770208};
-		aside[]={0.80239171,-6.1117316e-07,-0.59684372};
+		dir[]={0.086525336,-0.60354775,0.79265219};
+		up[]={0.065494224,0.79732704,0.59998262};
+		aside[]={0.99412423,-6.0952152e-07,-0.10851731};
 	};
 };
 binarizationWanted=0;
@@ -328,6 +328,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -358,19 +371,6 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
 		nAttributes=2;
 	};
 	class Category1
@@ -379,7 +379,7 @@ class CustomAttributes
 		class Attribute0
 		{
 			property="ENH_AddObjectsToZeus";
-			expression="        if (!is3DEN && isServer && _value) then        {            private _objects = allMissionObjects '';            allCurators apply {_x addCuratorEditableObjects [_objects, true]};            addMissionEventHandler ['EntityCreated',            {                params ['_entity'];                allCurators apply {_x addCuratorEditableObjects [[_entity], true]};            }];        }";
+			expression="        if (_value isEqualType true) then {_value = 2};        if (!is3DEN && isServer && _value > 0) then        {            _value spawn" \n "            {" \n "                params ['_value'];" \n "                waitUntil {sleep 1; allCurators isNotEqualTo []};" \n "                if (_value == 1 || _value == 2) then                {                    allCurators apply {_x addCuratorEditableObjects [allMissionObjects '', true]};                };                if (_value == 2) then                {                    addMissionEventHandler ['EntityCreated',                    {                        params ['_entity'];                        allCurators apply {_x addCuratorEditableObjects [[_entity], true]};                    }];                };            };        }";
 			class Value
 			{
 				class data
