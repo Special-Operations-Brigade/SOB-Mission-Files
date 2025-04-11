@@ -21,7 +21,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=331;
+		nextID=435;
 	};
 	class Camera
 	{
@@ -731,6 +731,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -750,19 +763,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
 				};
 			};
 		};
@@ -137404,7 +137404,7 @@ class Mission
 				{
 					dataType="Trigger";
 					position[]={13180.286,1310.792,11249.568};
-					angle=0.70141232;
+					angle=0.70141226;
 					class Attributes
 					{
 						condition="this && (alive nearestObject [thisTrigger, ""JLTS_UST_turret_CIS""])";
