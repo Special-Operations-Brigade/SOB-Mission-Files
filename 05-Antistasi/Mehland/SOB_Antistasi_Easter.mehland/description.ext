@@ -1,0 +1,29 @@
+#include "..\missionDescription\master.hpp"
+
+OnLoadName = $STR_A3UE_maps_Other_Altis_mapname_short;
+OnLoadMission = $STR_A3UE_maps_Other_Altis_loadText;
+briefingName = $STR_A3UE_maps_Other_Altis_mapname;
+overviewText = $STR_A3UE_maps_Other_Altis_description;
+loadScreen = "Pictures\Mission\pic.jpg";
+overviewPicture = "Pictures\Mission\pic.jpg";
+
+class CfgDiscordRichPresence 
+{
+    applicationID="1270380812684230746";
+    defaultDetails="In campaign";
+    defaultState="Mehland";
+    defaultLargeImageKey="mehland";
+    defaultLargeImageText="Rebelling in Mehland";
+    defaultSmallImageKey="au-logo";
+    defaultSmallImageText="Antistasi Ultimate";
+    useTimeElapsed=1;
+};
+//Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3317364155
+class CfgNotifications
+{
+    #include "..\missionDescription\CfgNotificationsContents.hpp"
+};
+
+class CfgDebriefing {
+    #include "..\missionDescription\CfgDebriefingContents.hpp"
+};
