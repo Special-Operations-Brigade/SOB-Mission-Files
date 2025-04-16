@@ -190,13 +190,14 @@ acex_headless_transferLoadout = 0;
 
 // ACE Hearing
 ace_hearing_autoAddEarplugsToUnits = 1;
-ace_hearing_disableEarRinging = false;
+force ace_hearing_disableEarRinging = true;
 ace_hearing_earplugsVolume = 0.5;
-ace_hearing_enableCombatDeafness = true;
+force ace_hearing_enableCombatDeafness = false;
 ace_hearing_enabledForZeusUnits = true;
 ace_hearing_enableNoiseDucking = true;
 ace_hearing_explosionDeafnessCoefficient = 1;
 ace_hearing_unconsciousnessVolume = 0.4;
+
 
 // ACE Interaction
 ace_interaction_disableNegativeRating = false;
