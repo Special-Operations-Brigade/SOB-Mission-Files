@@ -1,0 +1,455 @@
+class CfgWLRequisitionPresets
+{
+	class SOBAssetsGEO // --- class name used in the Init module
+	{
+		class WEST // --- assets available for BLUFOR
+		{
+			class Infantry
+			{
+				class mti_armoury_trooper_unit_CR
+				{
+					cost = 100; 
+					requirements[] = {}; 
+				};
+				class NCA_republicCloneTrooper_medic
+				{
+					cost = 125; 
+					requirements[] = {}; 
+				};
+				class mti_armoury_fieldsupport_unit_Medic
+				{
+					cost = 200;
+					requirements[] = {}; 
+				};
+				class NCA_republicCloneTrooper_marksmen
+				{
+					cost = 200; 
+					requirements[] = {}; 
+				};
+				class NCA_republicCloneTrooper_heavy
+				{
+					cost = 200; 
+					requirements[] = {}; 
+				};
+				class SWLB_clone_sniper_base_P1
+				{
+					cost = 240; 
+					requirements[] = {}; 
+				};
+				class NCA_republicCloneTrooper_AT
+				{
+					cost = 300; 
+					requirements[] = {}; 
+				};
+				class NCA_republicCloneTrooper_AA
+				{
+					cost = 300; 
+					requirements[] = {}; 
+				};
+			};
+			class Vehicles
+			{
+				class MTI_Barc_Sidecar
+				{
+					cost = 350;
+					requirements[] = {};
+				};
+				class MTI_Barc
+				{
+					cost = 350;
+					requirements[] = {};
+				};
+				class MTI_MUTT_I
+				{
+					cost = 300;
+					requirements[] = {};
+				};
+				class MTI_MUTT_L
+				{
+					cost = 300;
+					requirements[] = {};
+				};
+				class MTI_ISP_Base
+				{
+					cost = 550;
+					requirements[] = {};
+				};
+				class MTI_PX10
+				{
+					cost = 750;
+					requirements[] = {};
+				};
+				class MTI_PX10_R3
+				{
+					cost = 750;
+					requirements[] = {};
+				};
+				class 3AS_RX200_Base
+				{
+					cost = 2200;
+					requirements[] = {};
+				};
+				class 3AS_Saber_M1
+				{
+					cost = 2350;
+					requirements[] = {};
+				};
+				class 3AS_Saber_Super
+				{
+					cost = 2500;
+					requirements[] = {};
+				};
+				class 3AS_UTAT
+				{
+					cost = 3000;
+					requirements[] = {};
+				};
+				class 3AS_ATAP_Base
+				{
+					cost = 6000;
+					requirements[] = {};
+				};
+				class 3AS_ATTE_TCW
+				{
+					cost = 12000;
+					requirements[] = {};
+				};
+				class MTI_Juggernaut
+				{
+					cost = 15000;
+					requirements[] = {};
+				};
+			};
+			class Aircraft
+			{
+
+			};
+
+			class Naval
+			{
+			class optre_catfish_aa_f
+				{
+					cost = 500;
+					requirements[] = { "W" };
+				};
+				class optre_catfish_atgm_f 
+				{
+					cost = 700;
+					requirements[] = { "W" };
+				};
+				class optre_catfish_mg_f
+				{
+					cost = 300;
+					requirements[] = { "W" };
+				};
+				class optre_catfish_gauss_f
+				{
+					cost = 500;
+					requirements[] = { "W" };
+				};
+				class optre_catfish_unarmed_f
+				{
+					cost = 100;
+					requirements[] = { "W" };
+				};
+			};
+
+			class Gear
+			{
+				class mti_supplies_crate_common_explosives
+				{
+					cost = 200;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_common_medical_adv
+				{
+					cost = 250;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_trooper_squad
+				{
+					cost = 350;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_fieldsupport_squad
+				{
+					cost = 400;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_arc_squad
+				{
+					cost = 550;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_common_ammo_gl
+				{
+					cost = 550;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_common_grenades
+				{
+					cost = 450;
+					requirements[] = {};
+				};
+			};
+			class Defences
+			{
+				class 3AS_Keeradak_F
+				{
+					cost = 650;
+					requirements[] = {};
+					offset[] = { 0, 5.3, 0 }; 
+				};
+				class MTI_Ven_Cannon_Small
+				{
+					cost = 4650;
+					requirements[] = {};
+					offset[] = { 0, 5.3, 0 }; 
+				};
+				class MTI_HeavyRepeater
+				{
+					cost = 550;
+					requirements[] = {};
+					offset[] = { 0, 5.3, 0 }; 
+				};
+				class MTI_Mortar
+				{
+					cost = 350;
+					requirements[] = {};
+					offset[] = { 0, 5.3, 0 }; 
+				};
+				class OPTRE_Static_AA
+				{
+					cost = 650;
+					requirements[] = {};
+					offset[] = { 0, 5.3, 0 }; 
+				};
+			};
+		};
+		class EAST // --- assets available for OPFOR
+		{
+			class Infantry
+			{
+				class mti_factions_cis_B1_E5
+				{
+					cost = 50; 
+					requirements[] = {}; 
+				};
+				class mti_factions_cis_B1_prototype_base
+				{
+					cost = 50; 
+					requirements[] = {}; 
+				};
+				class mti_factions_cis_B1_SBB3
+				{
+					cost = 70; 
+					requirements[] = {}; 
+				};
+				class mti_factions_cis_B1_Support
+				{
+					cost = 100;
+					requirements[] = {}; 
+				};
+				class mti_factions_cis_B1_SL
+				{
+					cost = 150; 
+					requirements[] = {}; 
+				};
+				class mti_factions_cis_B1_Sniper
+				{
+					cost = 200; 
+					requirements[] = {}; 
+				};
+				class mti_factions_cis_B1_AT
+				{
+					cost = 200; 
+					requirements[] = {}; 
+				};
+				class mti_factions_cis_B1_AA
+				{
+					cost = 200; 
+					requirements[] = {}; 
+				};
+				class mti_factions_cis_OOM_Marine
+				{
+					cost = 300; 
+					requirements[] = {}; 
+				};
+				class mti_factions_cis_B1_prototype_AT
+				{
+					cost = 300; 
+					requirements[] = {}; 
+				};
+				class NCA_separatistArmy_BX_unit
+				{
+					cost = 1000; 
+					requirements[] = {}; 
+				};
+				class NCA_separatistArmy_BX_unit_sniper
+				{
+					cost = 3500; 
+					requirements[] = {}; 
+				};
+			};
+			class Vehicles
+			{
+				class 3AS_Fliknot_F
+				{
+					cost = 150;
+					requirements[] = {};
+				};
+				class 3AS_SAC_Brown
+				{
+					cost = 250;
+					requirements[] = {};
+				};
+				class 3AS_PAC_Brown
+				{
+					cost = 400;
+					requirements[] = {};
+				};
+				class mti_factions_cis_ast
+				{
+					cost = 600;
+					requirements[] = {};
+				};
+				class mti_factions_cis_GAT_Light_Olive
+				{
+					cost = 1250;
+					requirements[] = {};
+				};
+				class mti_factions_cis_AAT_CIS
+				{
+					cost = 2250;
+					requirements[] = {};
+				};
+				class mti_factions_cis_GAT
+				{
+					cost = 2550;
+					requirements[] = {};
+				};
+				class mti_factions_cis_n99
+				{
+					cost = 2550;
+					requirements[] = {};
+				};
+				class mti_factions_cis_MTT
+				{
+					cost = 9000;
+					requirements[] = {};
+				};
+				class mti_factions_cis_AAT_Red
+				{
+					cost = 12000;
+					requirements[] = {};
+				};
+				class mti_factions_cis_AAT_Super
+				{
+					cost = 20000;
+					requirements[] = {};
+				};
+			};
+			class Aircraft
+			{
+			};
+			class Naval
+			{
+				class optre_catfish_aa_f
+				{
+					cost = 500;
+					requirements[] = { "W" };
+				};
+				class optre_catfish_atgm_f
+				{
+					cost = 700;
+					requirements[] = { "W" };
+				};
+				class optre_catfish_mg_f
+				{
+					cost = 300;
+					requirements[] = { "W" };
+				};
+				class optre_catfish_gauss_f
+				{
+					cost = 500;
+					requirements[] = { "W" };
+				};
+				class optre_catfish_unarmed_f
+				{
+					cost = 100;
+					requirements[] = { "W" };
+				};
+			};	
+			class Gear
+			{
+				class mti_supplies_crate_common_explosives
+				{
+					cost = 200;
+					requirements[] = {};
+				};
+				class Box_IED_Exp_F
+				{
+					cost = 400;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_common_medical_adv
+				{
+					cost = 250;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_trooper_squad
+				{
+					cost = 350;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_fieldsupport_squad
+				{
+					cost = 400;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_arc_squad
+				{
+					cost = 550;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_common_ammo_gl
+				{
+					cost = 550;
+					requirements[] = {};
+				};
+				class mti_supplies_crate_common_grenades
+				{
+					cost = 450;
+					requirements[] = {};
+				};
+			};
+			class Defences
+			{
+				class mti_factions_cis_J10s
+				{
+					cost = 450;
+					requirements[] = {};
+					offset[] = { 0, 5.3, 0 }; 
+				};
+				class MTI_HeavyRepeater
+				{
+					cost = 550;
+					requirements[] = {};
+					offset[] = { 0, 5.3, 0 }; 
+				};
+				class mti_factions_cis_ParticleCannon
+				{
+					cost = 1650;
+					requirements[] = {};
+					offset[] = { 0, 5.3, 0 }; 
+				};
+				class mti_factions_cis_J1_Leggs
+				{
+					cost = 2050;
+					requirements[] = {};
+					offset[] = { 0, 5.3, 0 }; 
+				};
+			};
+		};
+	};
+};
