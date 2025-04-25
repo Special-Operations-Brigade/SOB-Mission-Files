@@ -21,7 +21,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=130;
+		nextID=147;
 	};
 	class Camera
 	{
@@ -489,6 +489,20 @@ class AddonsMetaData
 		};
 	};
 };
+class DynamicSimulation
+{
+	class EnableRadiuses
+	{
+		Prop=150;
+		EmptyVehicle=2500;
+		Vehicle=2500;
+		Group=1500;
+	};
+	class EnableRadiuseCoefs
+	{
+		IsMoving=3;
+	};
+};
 dlcs[]=
 {
 	"OPTRE",
@@ -519,6 +533,7 @@ class ScenarioData
 		gameType="Coop";
 		maxPlayers=100;
 	};
+	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes
 {
@@ -526,19 +541,6 @@ class CustomAttributes
 	{
 		name="Multiplayer";
 		class Attribute0
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -567,6 +569,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
@@ -671,6 +686,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Fallen Void";
+		overviewText="Fallen Void";
 		timeOfChanges=1800.0002;
 		startWeather=0.34999999;
 		startFog=0.029999999;
@@ -47912,7 +47928,7 @@ class Mission
 					};
 					id=3169;
 					type="mti_factions_cis_B1_Crew";
-					atlOffset=-0.010177612;
+					atlOffset=-0.010178566;
 				};
 			};
 			class Attributes
@@ -48087,6 +48103,7 @@ class Mission
 				};
 			};
 			id=3173;
+			atlOffset=9.5367432e-07;
 		};
 		class Item155
 		{
@@ -48103,6 +48120,7 @@ class Mission
 			};
 			id=3174;
 			type="mti_factions_cis_FlakCannon";
+			atlOffset=9.5367432e-07;
 		};
 		class Item156
 		{
@@ -48325,7 +48343,7 @@ class Mission
 					};
 					id=3187;
 					type="O_UAV_AI";
-					atlOffset=6.4530525;
+					atlOffset=6.4530544;
 				};
 			};
 			class Attributes
@@ -48808,7 +48826,7 @@ class Mission
 					};
 					id=3213;
 					type="C_Man_casual_9_F";
-					atlOffset=-4.7683716e-07;
+					atlOffset=-9.5367432e-07;
 				};
 			};
 			class Attributes
@@ -48817,7 +48835,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=3212;
-			atlOffset=-4.7683716e-07;
+			atlOffset=-9.5367432e-07;
 		};
 		class Item178
 		{
