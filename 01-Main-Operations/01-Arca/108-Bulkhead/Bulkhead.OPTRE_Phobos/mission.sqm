@@ -21,14 +21,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=456;
+		nextID=501;
 	};
 	class Camera
 	{
-		pos[]={5449.9561,389.15002,3300.0979};
-		dir[]={-0.64859533,-0.087933525,0.75603878};
-		up[]={-0.05725586,0.99612737,0.066740669};
-		aside[]={0.75898004,1.2654345e-07,0.65111917};
+		pos[]={3455.7615,341.16608,6036.9878};
+		dir[]={-0.74326462,-0.36573714,0.56017321};
+		up[]={-0.29207495,0.93071812,0.22012694};
+		aside[]={0.60187197,0,0.79859251};
 	};
 };
 binarizationWanted=0;
@@ -93,9 +93,11 @@ addons[]=
 	"A3_Weapons_F",
 	"JLTS_weapons_Core",
 	"JLTS_radios",
-	"TKE_General_Gear",
-	"TKE_Uniform_Revamp",
+	"mti_katarnOS",
+	"OPTRE_UNSC_Units_ONI",
 	"mti_armoury_trooper",
+	"tfar_core",
+	"ace_medical_vitals",
 	"ace_gforces",
 	"ace_parachute",
 	"mti_armoury_fieldsupport",
@@ -112,7 +114,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=67;
+		items=69;
 		class Item0
 		{
 			className="TKE_Props";
@@ -436,15 +438,16 @@ class AddonsMetaData
 		};
 		class Item54
 		{
-			className="TKE_General_Gear";
-			name="TKE_General_Gear";
-			author="Rogue771";
+			className="mti_katarnOS";
+			name="MokTech Industries - Katarn_OS";
+			author="MokTech Industries";
+			url="https://discord.gg/Pu2gdBd7Te/";
 		};
 		class Item55
 		{
-			className="TKE_Uniform_Revamp";
-			name="TKE_Uniform_Revamp";
-			author="Rogue771";
+			className="OPTRE_UNSC_Units";
+			name="OPTRE_UNSC_Units_ONI";
+			author="Article 2 Studios";
 		};
 		class Item56
 		{
@@ -454,62 +457,75 @@ class AddonsMetaData
 		};
 		class Item57
 		{
+			className="tfar_core";
+			name="TFAR - Core";
+			author="Task Force Arrowhead Radio Team";
+		};
+		class Item58
+		{
+			className="ace_medical_vitals";
+			name="ACE3 - Medical Vitals";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item59
+		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item58
+		class Item60
 		{
 			className="mti_armoury_fieldsupport";
 			name="MokTech Industries - Field Support";
 			author="MokTech Industries";
 		};
-		class Item59
+		class Item61
 		{
 			className="LRG_Medical";
 			name="LRG Fundamentals";
 			author="Last Resort Gaming";
 			url="http:";
 		};
-		class Item60
+		class Item62
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item61
+		class Item63
 		{
 			className="OPTRE_Vehicles";
 			name="OPTRE_Vehicles_Cart";
 			author="Article 2 Studios";
 		};
-		class Item62
+		class Item64
 		{
 			className="mti_modules";
 			name="MokTech Industries - Modules";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item63
+		class Item65
 		{
 			className="CUP_Editor_Signs_Config";
 			name="CUP_Editor_Signs_Config";
 		};
-		class Item64
+		class Item66
 		{
 			className="CUP_CAStructures_E_Ind_Oil_Mine";
 			name="CUP_CAStructures_E_Ind_Oil_Mine";
 		};
-		class Item65
+		class Item67
 		{
 			className="mti_logistics";
 			name="MokTech Industries - Logistics";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item66
+		class Item68
 		{
 			className="ace_map";
 			name="ACE3 - Map";
@@ -565,19 +581,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -605,6 +608,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
@@ -57806,7 +57822,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3462.7646,336.83444,6032.0151};
-						angles[]={0,6.0243635,-0};
+						angles[]={0,6.0243635,0};
 					};
 					side="Empty";
 					flags=4;
@@ -57840,7 +57856,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3463.7322,336.83444,6032.272};
-						angles[]={0,6.0243382,-0};
+						angles[]={0,6.0243382,0};
 					};
 					side="Empty";
 					flags=4;
@@ -57874,7 +57890,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3464.7,336.83444,6032.5278};
-						angles[]={0,6.0243382,-0};
+						angles[]={0,6.0243382,0};
 					};
 					side="Empty";
 					flags=4;
@@ -57908,7 +57924,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3488.6179,336.82819,5985.2954};
-						angles[]={-0,0.81584877,0};
+						angles[]={0,0.81584877,0};
 					};
 					side="Empty";
 					flags=4;
@@ -57943,7 +57959,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3489.3013,336.82819,5984.5669};
-						angles[]={-0,0.81579065,0};
+						angles[]={0,0.81579065,0};
 					};
 					side="Empty";
 					flags=4;
@@ -57978,7 +57994,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3489.9871,336.82819,5983.8384};
-						angles[]={-0,0.81594843,0};
+						angles[]={0,0.81594843,0};
 					};
 					side="Empty";
 					flags=4;
@@ -59662,7 +59678,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3527.7139,336.07434,6058.3179};
-						angles[]={-0,5.5283222,0};
+						angles[]={0,5.5283222,0};
 					};
 					title="Guest Arsenal";
 					id=44515;
@@ -59720,12 +59736,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -59738,7 +59754,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44520;
@@ -59890,12 +59907,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -59908,7 +59925,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44521;
@@ -60060,12 +60078,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -60078,7 +60096,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44522;
@@ -60230,12 +60249,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -60248,7 +60267,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44523;
@@ -60413,12 +60433,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -60431,7 +60451,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44525;
@@ -60699,12 +60720,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -60717,7 +60738,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44526;
@@ -60894,12 +60916,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -60912,7 +60934,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44527;
@@ -61194,12 +61217,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -61212,7 +61235,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44529;
@@ -61403,12 +61427,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -61421,7 +61445,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44531;
@@ -61546,12 +61571,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -61564,7 +61589,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44532;
@@ -61689,12 +61715,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -61707,7 +61733,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44533;
@@ -61846,12 +61873,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -61864,7 +61891,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44535;
@@ -61988,12 +62016,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -62006,7 +62034,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44536;
@@ -62143,12 +62172,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -62161,7 +62190,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44538;
@@ -62259,12 +62289,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -62277,7 +62307,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44539;
@@ -62375,12 +62406,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -62393,7 +62424,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44540;
@@ -62491,12 +62523,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -62509,7 +62541,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44541;
@@ -62620,12 +62653,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -62638,7 +62671,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44543;
@@ -62723,12 +62757,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -62741,7 +62775,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44544;
@@ -62839,12 +62874,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -62857,7 +62892,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44545;
@@ -62942,12 +62978,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -62960,7 +62996,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44546;
@@ -63058,12 +63095,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -63076,7 +63113,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44548;
@@ -63239,12 +63277,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -63257,7 +63295,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44549;
@@ -63420,12 +63459,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -63438,7 +63477,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44550;
@@ -63601,12 +63641,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -63619,7 +63659,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44551;
@@ -63795,12 +63836,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -63813,7 +63854,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44553;
@@ -63976,12 +64018,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -63994,7 +64036,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44554;
@@ -64157,12 +64200,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -64175,7 +64218,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44555;
@@ -64338,12 +64382,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -64356,7 +64400,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44556;
@@ -64532,12 +64577,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -64550,7 +64595,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44558;
@@ -64674,12 +64720,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -64692,7 +64738,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44559;
@@ -64829,12 +64876,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -64847,7 +64894,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44561;
@@ -64932,12 +64980,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -64950,7 +64998,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44562;
@@ -65048,12 +65097,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -65066,7 +65115,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44563;
@@ -65151,12 +65201,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -65169,7 +65219,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44564;
@@ -65267,12 +65318,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -65285,7 +65336,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44566;
@@ -65370,12 +65422,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -65388,7 +65440,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44567;
@@ -65486,12 +65539,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -65504,7 +65557,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44568;
@@ -65589,12 +65643,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -65607,7 +65661,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44569;
@@ -65705,12 +65760,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -65723,7 +65778,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44571;
@@ -65886,12 +65942,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -65904,7 +65960,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44572;
@@ -66067,12 +66124,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -66085,7 +66142,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44573;
@@ -66248,12 +66306,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -66266,7 +66324,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44574;
@@ -66442,12 +66501,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -66460,7 +66519,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44576;
@@ -66623,12 +66683,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -66641,7 +66701,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44577;
@@ -66804,12 +66865,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -66822,7 +66883,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44578;
@@ -66985,12 +67047,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -67003,7 +67065,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44579;
@@ -67179,12 +67242,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -67197,7 +67260,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44581;
@@ -67296,12 +67360,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -67314,7 +67378,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44582;
@@ -67387,12 +67452,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -67405,7 +67470,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44583;
@@ -67478,12 +67544,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -67496,7 +67562,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44584;
@@ -67583,12 +67650,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -67601,7 +67668,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44586;
@@ -67713,12 +67781,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -67731,7 +67799,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44587;
@@ -67843,12 +67912,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -67861,7 +67930,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44588;
@@ -67973,12 +68043,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -67991,7 +68061,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44589;
@@ -68100,7 +68171,7 @@ class Mission
 													class PositionInfo
 													{
 														position[]={3481.6816,336.07559,5974.7646};
-														angles[]={0,5.714334,-0};
+														angles[]={0,5.714334,0};
 													};
 													side="West";
 													flags=6;
@@ -68117,12 +68188,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -68135,7 +68206,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44591;
@@ -68243,7 +68315,7 @@ class Mission
 													class PositionInfo
 													{
 														position[]={3479.9968,336.07559,5973.6851};
-														angles[]={0,5.7152395,-0};
+														angles[]={0,5.7152395,0};
 													};
 													side="West";
 													flags=4;
@@ -68260,12 +68332,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -68278,7 +68350,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44592;
@@ -68390,12 +68463,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -68408,7 +68481,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44593;
@@ -68507,12 +68581,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -68525,7 +68599,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44594;
@@ -68624,12 +68699,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -68642,7 +68717,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44595;
@@ -68741,12 +68817,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -68759,7 +68835,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44596;
@@ -68872,12 +68949,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -68890,7 +68967,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44598;
@@ -68976,12 +69054,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -68994,7 +69072,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44599;
@@ -69080,12 +69159,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -69098,7 +69177,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44600;
@@ -69184,12 +69264,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -69202,7 +69282,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44601;
@@ -69288,12 +69369,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -69306,7 +69387,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44602;
@@ -69392,12 +69474,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -69410,7 +69492,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44603;
@@ -69496,12 +69579,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -69514,7 +69597,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44604;
@@ -69600,12 +69684,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -69618,7 +69702,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44605;
@@ -69718,12 +69803,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -69736,7 +69821,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44607;
@@ -69822,12 +69908,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -69840,7 +69926,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44608;
@@ -69940,12 +70027,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -69958,7 +70045,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44610;
@@ -70043,12 +70131,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -70061,7 +70149,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44611;
@@ -70147,12 +70236,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -70165,7 +70254,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44612;
@@ -70251,12 +70341,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -70269,7 +70359,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44613;
@@ -70355,12 +70446,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -70373,7 +70464,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44614;
@@ -70459,12 +70551,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -70477,7 +70569,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44615;
@@ -70563,12 +70656,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -70581,7 +70674,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44616;
@@ -70667,12 +70761,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -70685,7 +70779,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44617;
@@ -70784,12 +70879,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -70802,7 +70897,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44619;
@@ -70888,12 +70984,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -70906,7 +71002,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44620;
@@ -70992,12 +71089,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -71010,7 +71107,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44621;
@@ -71096,12 +71194,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -71114,7 +71212,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44622;
@@ -71200,12 +71299,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -71218,7 +71317,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44623;
@@ -71304,12 +71404,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -71322,7 +71422,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44624;
@@ -71408,12 +71509,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -71426,7 +71527,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44625;
@@ -71512,12 +71614,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -71530,7 +71632,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44626;
@@ -71630,12 +71733,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -71648,7 +71751,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44628;
@@ -71747,12 +71851,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -71765,7 +71869,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44629;
@@ -71838,12 +71943,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -71856,7 +71961,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44630;
@@ -71929,12 +72035,12 @@ class Mission
 															};
 															class uniform
 															{
-																typeName="TKE_VoidSuitCiv_U_B";
+																typeName="mti_armoury_trooper_uniform_CR";
 																isBackpack=0;
 															};
 															class vest
 															{
-																typeName="mti_armoury_trooper_vest_base";
+																typeName="V_RebreatherB";
 																isBackpack=0;
 															};
 															class backpack
@@ -71947,7 +72053,8 @@ class Mission
 															watch="ItemWatch";
 															radio="JLTS_clone_comlink";
 															gps="ItemGPS";
-															headgear="TKE_FCrewHelmCiv";
+															goggles="MTI_KatarnOS_HUD";
+															headgear="OPTRE_ONI_Researcher_Headgear";
 														};
 													};
 													id=44631;
@@ -72025,7 +72132,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={3487.0693,336.07431,6017.4424};
-										angles[]={0,3.0985422,-0};
+										angles[]={0,3.0985422,0};
 									};
 									side="Empty";
 									flags=4;
@@ -72042,7 +72149,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={3479.0728,336.07431,6017.1006};
-										angles[]={0,6.240149,-0};
+										angles[]={0,6.240149,0};
 									};
 									id=44634;
 									type="LRG_ModuleMedical";
@@ -72051,7 +72158,7 @@ class Mission
 								{
 									dataType="Trigger";
 									position[]={3481.0457,336.25275,6031.3354};
-									angle=5.1361542;
+									angle=5.1361532;
 									class Attributes
 									{
 										sizeA=5;
@@ -72092,7 +72199,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={3477.7622,336.07431,5987.3965};
-										angles[]={-0,1.6013285,0};
+										angles[]={0,1.6013285,0};
 									};
 									name="HC1";
 									isPlayable=1;
@@ -72105,7 +72212,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={3476.7937,336.07431,5988.4277};
-										angles[]={-0,1.6013285,0};
+										angles[]={0,1.6013285,0};
 									};
 									name="curatorEditable";
 									id=44639;
@@ -72534,7 +72641,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={3477.8218,336.07431,5989.3965};
-										angles[]={-0,1.6013285,0};
+										angles[]={0,1.6013285,0};
 									};
 									name="HC2";
 									isPlayable=1;
@@ -73026,7 +73133,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={3479.4041,337.80591,6045.9521};
-										angles[]={-0,1.601153,0};
+										angles[]={0,1.601153,0};
 									};
 									side="Empty";
 									flags=4;
@@ -73119,7 +73226,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3424.3643,336.69818,5915.7466};
-				angles[]={0,4.886271,-0};
+				angles[]={0,4.886271,0};
 			};
 			side="Empty";
 			flags=1;
@@ -73137,7 +73244,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3453.1443,336.66388,5910.9331};
-				angles[]={0,1.8233287,-0};
+				angles[]={0,1.8233287,0};
 			};
 			side="Empty";
 			flags=1;
@@ -73154,7 +73261,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3422.6853,337.33871,5919.2197};
-				angles[]={0,1.8233287,-0};
+				angles[]={0,1.8233287,0};
 			};
 			side="Empty";
 			flags=1;
@@ -73171,7 +73278,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3467.4028,337.21945,5915.7124};
-				angles[]={0,4.2192669,-0};
+				angles[]={0,4.2192669,0};
 			};
 			side="Empty";
 			flags=5;
@@ -73189,7 +73296,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3395.4324,349.82596,6047.0176};
-				angles[]={0,4.2192669,-0};
+				angles[]={0,4.2192669,0};
 			};
 			side="Empty";
 			flags=5;
@@ -73206,7 +73313,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3522.7363,338.76404,6010.1182};
-				angles[]={0,4.2983131,-0};
+				angles[]={0,4.2983131,0};
 			};
 			side="Empty";
 			flags=5;
@@ -73223,7 +73330,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3388.7949,338.71823,5996.8423};
-				angles[]={0,4.2192669,-0};
+				angles[]={0,4.2192669,0};
 			};
 			side="Empty";
 			flags=5;
@@ -73240,7 +73347,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3419.1992,338.25793,5988.2339};
-				angles[]={0,6.1807203,-0};
+				angles[]={0,6.1807203,0};
 			};
 			side="Empty";
 			flags=5;
@@ -73257,7 +73364,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3320.7488,338.04227,6037.1313};
-				angles[]={0,4.2192669,-0};
+				angles[]={0,4.2192669,0};
 			};
 			side="Empty";
 			flags=5;
@@ -73273,7 +73380,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3427.1172,336.38779,6091.5088};
-				angles[]={0,4.2192669,-0};
+				angles[]={0,4.2192669,0};
 			};
 			side="Empty";
 			flags=5;
@@ -73289,7 +73396,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3417.8057,336.1713,6052.1523};
-				angles[]={0,6.0790682,-0};
+				angles[]={0,6.0790682,0};
 			};
 			side="Empty";
 			flags=5;
@@ -73305,7 +73412,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3351.2168,337.38043,6019.3042};
-				angles[]={0,4.2192669,-0};
+				angles[]={0,4.2192669,0};
 			};
 			side="Empty";
 			flags=5;
