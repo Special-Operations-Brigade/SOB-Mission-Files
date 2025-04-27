@@ -1824,14 +1824,14 @@ force TFAR_fullDuplex = true;
 force TFAR_giveLongRangeRadioToGroupLeaders = false;
 force TFAR_giveMicroDagrToSoldier = false;
 force TFAR_givePersonalRadioToRegularSoldier = false;
-force TFAR_globalRadioRangeCoef = 1;
+force TFAR_globalRadioRangeCoef = 0.5;
 force TFAR_instantiate_instantiateAtBriefing = false;
 force TFAR_objectInterceptionEnabled = true;
-force TFAR_objectInterceptionStrength = 400;
+force TFAR_objectInterceptionStrength = 1800;
 force tfar_radiocode_east = "_opfor";
 force tfar_radiocode_independent = "_independent";
 force tfar_radiocode_west = "_bluefor";
-force tfar_radioCodesDisabled = true;
+force tfar_radioCodesDisabled = false;
 force TFAR_SameLRFrequenciesForSide = false;
 force TFAR_SameSRFrequenciesForSide = false;
 force TFAR_setting_defaultFrequencies_lr_east = "";
@@ -1858,7 +1858,7 @@ force TFAR_spectatorCanHearFriendlies = true;
 force TFAR_takingRadio = 2;
 force TFAR_Teamspeak_Channel_Name = "ARCATFAR";
 force TFAR_Teamspeak_Channel_Password = "Arca";
-force tfar_terrain_interception_coefficient = 7;
+force tfar_terrain_interception_coefficient = 20;
 force TFAR_voiceCone = true;
 
 // TTS Beam Laser
