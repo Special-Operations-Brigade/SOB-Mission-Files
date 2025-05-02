@@ -21,14 +21,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=153;
+		nextID=181;
 	};
 	class Camera
 	{
-		pos[]={3610.9587,290.34836,2657.1794};
-		dir[]={0.74272358,-0.41206521,0.52779728};
-		up[]={0.33589295,0.9111529,0.23869355};
-		aside[]={0.57926255,-4.7344656e-08,-0.81514442};
+		pos[]={3789.9724,185.17989,2598.1787};
+		dir[]={0.0081708981,-0.53888661,0.84233993};
+		up[]={0.0052270885,0.84237677,0.53886199};
+		aside[]={0.9999541,-3.956302e-11,-0.0096997973};
 	};
 };
 binarizationWanted=0;
@@ -412,6 +412,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -442,19 +455,6 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
 		nAttributes=2;
 	};
 	class Category1
@@ -463,12 +463,12 @@ class CustomAttributes
 		class Attribute0
 		{
 			property="ENH_AddObjectsToZeus";
-			expression="        if (!is3DEN && isServer && _value) then        {            private _objects = allMissionObjects '';            allCurators apply {_x addCuratorEditableObjects [_objects, true]};            addMissionEventHandler ['EntityCreated',            {                params ['_entity'];                allCurators apply {_x addCuratorEditableObjects [[_entity], true]};            }];        }";
+			expression="        if (_value isEqualType true) then {_value = 2};        if (!is3DEN && isServer && _value > 0) then        {            _value spawn" \n "            {" \n "                params ['_value'];" \n "                waitUntil {sleep 1; allCurators isNotEqualTo []};" \n "                if (_value == 1 || _value == 2) then                {                    allCurators apply {_x addCuratorEditableObjects [allMissionObjects '', true]};                };                if (_value == 2) then                {                    addMissionEventHandler ['EntityCreated',                    {                        params ['_entity'];                        allCurators apply {_x addCuratorEditableObjects [[_entity], true]};                    }];                };            };        }";
 			class Value
 			{
 				class data
 				{
-					singleType="BOOL";
+					singleType="SCALAR";
 					value=1;
 				};
 			};
@@ -674,6 +674,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=4;
@@ -767,6 +768,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -837,6 +839,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -910,6 +913,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=54;
@@ -981,6 +985,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=57;
@@ -1052,6 +1057,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=60;
@@ -1145,6 +1151,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -1243,6 +1250,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -1342,6 +1350,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -1415,6 +1424,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=90;
@@ -1484,6 +1494,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=93;
@@ -1555,6 +1566,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=96;
@@ -1626,6 +1638,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=99;
@@ -1696,6 +1709,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -1790,6 +1804,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -1885,6 +1900,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -1954,6 +1970,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=121;
@@ -2024,6 +2041,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=124;
@@ -2095,6 +2113,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=127;
@@ -2166,6 +2185,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=130;
@@ -2234,6 +2254,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -2306,6 +2327,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=152;
@@ -2377,6 +2399,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=155;
@@ -2448,6 +2471,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=158;
@@ -2519,6 +2543,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				receiveRemoteTargets=1;
 			};
 			id=161;
@@ -2617,6 +2642,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -2714,6 +2740,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -2785,6 +2812,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -2858,6 +2886,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -2928,6 +2957,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -3000,6 +3030,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -3072,6 +3103,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -3091,6 +3123,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=197;
 			type="3AS_Pad_CIS_Prop";
@@ -3106,6 +3140,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=198;
 			type="3AS_Pad_CIS_Prop";
@@ -3121,6 +3157,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=199;
 			type="3AS_Pad_CIS_Prop";
@@ -3137,6 +3175,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=201;
 			type="3AS_Pad_CIS_Prop";
@@ -3715,6 +3755,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=268;
 			type="mti_factions_cis_AAT_Arid";
@@ -4144,6 +4185,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=305;
 			type="MTI_HeavyRepeater";
@@ -5040,6 +5083,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -5659,6 +5703,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=484;
 			type="mti_factions_cis_AAT_Woodland";
@@ -5783,6 +5828,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=489;
 			type="mti_factions_cis_AAT_CIS";
@@ -5880,6 +5926,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -5979,6 +6026,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=498;
 			type="mti_factions_cis_n99";
@@ -6104,6 +6152,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=502;
 			type="mti_factions_cis_MTT";
@@ -6434,6 +6483,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=900;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6452,6 +6503,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=901;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6470,6 +6523,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=902;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6488,6 +6543,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=903;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6505,6 +6562,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=904;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -6523,6 +6582,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=905;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -6541,6 +6602,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=906;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -6559,6 +6622,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=907;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -6633,6 +6698,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -6646,7 +6712,7 @@ class Mission
 			dataType="Layer";
 			name="AA FOB (Winter)";
 			id=925;
-			atlOffset=1.1365051;
+			atlOffset=57.360001;
 		};
 		class Item146
 		{
@@ -6667,6 +6733,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=934;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6685,6 +6753,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=935;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6703,6 +6773,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=936;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6721,6 +6793,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=937;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6738,6 +6812,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=938;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -6756,6 +6832,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=939;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -6774,6 +6852,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=940;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -6792,6 +6872,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=941;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -6866,6 +6948,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -6893,6 +6976,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=951;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6911,6 +6996,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=952;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6929,6 +7016,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=953;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6947,6 +7036,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=954;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -6964,6 +7055,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=955;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -6982,6 +7075,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=956;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -7000,6 +7095,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=957;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -7018,6 +7115,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=958;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -7092,6 +7191,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -7162,6 +7262,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -7232,6 +7333,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -7251,6 +7353,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=989;
 			type="mti_factions_cis_hmp_transport";
@@ -7267,6 +7371,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=994;
 			type="mti_factions_cis_hmp_transport";
@@ -7283,6 +7389,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=995;
 			type="mti_factions_cis_hmp_transport";
@@ -7298,6 +7406,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=996;
 			type="mti_factions_cis_hmp_transport";
@@ -7313,6 +7423,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=998;
 			type="mti_factions_cis_hmp_gunship";
@@ -7328,6 +7440,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1003;
 			type="mti_factions_cis_hmp_gunship";
@@ -7344,6 +7458,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1005;
 			type="mti_factions_cis_Vulture_AA";
@@ -7360,6 +7476,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1008;
 			type="mti_factions_cis_Vulture_AA";
@@ -7376,6 +7494,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1009;
 			type="mti_factions_cis_Vulture_AA";
@@ -7392,6 +7512,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1010;
 			type="mti_factions_cis_Vulture_AA";
@@ -7408,6 +7530,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1012;
 			type="mti_factions_cis_Vulture_S";
@@ -7423,6 +7547,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1016;
 			type="mti_factions_cis_MAF_Gun";
@@ -7438,6 +7564,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1020;
 			type="mti_factions_cis_MAF_Gun";
@@ -7507,6 +7635,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
+				dynamicSimulation=1;
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;
 				reportOwnPosition=1;
@@ -7527,6 +7656,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1025;
 			type="mti_factions_cis_AAT_CIS";
@@ -7542,6 +7673,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1029;
 			type="mti_factions_cis_AAT_CIS";
@@ -7558,6 +7691,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1031;
 			type="mti_factions_cis_n99";
@@ -7575,6 +7710,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsSimpleObject=1;
+				dynamicSimulation=1;
 			};
 			id=1035;
 			type="mti_factions_cis_MTT";
@@ -25884,7 +26021,7 @@ class Mission
 			dataType="Layer";
 			name="AA FOB (Winter)";
 			id=1481;
-			atlOffset=0.38537598;
+			atlOffset=57.360001;
 		};
 		class Item310
 		{
@@ -25906,13 +26043,15 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 						reportRemoteTargets=1;
 						receiveRemoteTargets=1;
 						reportOwnPosition=1;
 					};
 					id=1482;
 					type="mti_factions_cis_Scythe";
-					atlOffset=-3.0517578e-05;
+					atlOffset=-0.022613525;
 				};
 				class Item1
 				{
@@ -25927,9 +26066,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1483;
 					type="3AS_HeavyRepeater_Armoured";
+					atlOffset=0.025634766;
 				};
 				class Item2
 				{
@@ -25944,9 +26086,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1484;
 					type="3AS_HeavyRepeater_Armoured";
+					atlOffset=-0.077728271;
 				};
 				class Item3
 				{
@@ -25961,9 +26106,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1485;
 					type="3AS_HeavyRepeater_Armoured";
+					atlOffset=-0.1953125;
 				};
 				class Item4
 				{
@@ -25978,9 +26126,12 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1486;
 					type="3AS_HeavyRepeater_Armoured";
+					atlOffset=-0.087524414;
 				};
 				class Item5
 				{
@@ -25994,6 +26145,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1487;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -26012,6 +26165,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1488;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -26029,6 +26184,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1489;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -26047,6 +26204,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1490;
 					type="land_3AS_cis_wall_Bunker_v2_Snow";
@@ -26064,6 +26223,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1491;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -26081,6 +26242,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1492;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -26099,6 +26262,8 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1493;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
@@ -26117,13 +26282,15 @@ class Mission
 					class Attributes
 					{
 						skill=0.35000002;
+						createAsSimpleObject=1;
+						dynamicSimulation=1;
 					};
 					id=1494;
 					type="land_3AS_cis_wall_Corner_v2_Snow";
 				};
 			};
 			id=1495;
-			atlOffset=0.42819214;
+			atlOffset=0.42782593;
 		};
 		class Item311
 		{
