@@ -71,10 +71,10 @@ force ace_arsenal_loadoutsSaveVoice = false;
 
 // ACE Artillery
 force ace_artillerytables_advancedCorrections = false;
-force ace_artillerytables_disableArtilleryComputer = true;
+force ace_artillerytables_disableArtilleryComputer = false;
 force ace_mk6mortar_airResistanceEnabled = false;
 force ace_mk6mortar_allowCompass = true;
-force ace_mk6mortar_allowComputerRangefinder = false;
+force ace_mk6mortar_allowComputerRangefinder = true;
 force ace_mk6mortar_useAmmoHandling = false;
 
 // ACE Captives
