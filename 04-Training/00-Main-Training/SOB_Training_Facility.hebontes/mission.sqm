@@ -8,6 +8,7 @@ class EditorData
 	toggles=1026;
 	mods[]=
 	{
+		"WBK_Zombies_AdvancedEditorSettings",
 		"3denEnhanced"
 	};
 	class ItemIDProvider
@@ -16,14 +17,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=529;
+		nextID=610;
 	};
 	class Camera
 	{
-		pos[]={8783.3516,50.021358,3561.5757};
-		dir[]={0.08696381,-0.63319451,0.76910347};
-		up[]={0.071143724,0.77398717,0.62919271};
-		aside[]={0.99367839,-1.8044375e-08,-0.11235823};
+		pos[]={4657.6255,36.43066,1681.1643};
+		dir[]={0.20904946,-0.39901698,0.89280111};
+		up[]={0.0909703,0.91694105,0.38851231};
+		aside[]={0.9736681,1.3900717e-08,-0.22798431};
 	};
 };
 binarizationWanted=0;
@@ -65,7 +66,7 @@ addons[]=
 	"A3_Structures_F_Mil_Helipads",
 	"3as_GNK_Prop",
 	"mti_logistics",
-	"mti_common",
+	"mti_arsenal",
 	"3AS_Prop_Barricades",
 	"mti_capitalships",
 	"ls_stone_cover",
@@ -92,11 +93,11 @@ addons[]=
 	"A3_Modules_F_Sites",
 	"cba_ai",
 	"3AS_AAT",
-	"NCA_vehicles_AAT",
+	"NCA_vehicles_aat",
 	"mti_factions_cis",
 	"3AS_GAT",
 	"3AS_MTT",
-	"ls_flags",
+	"RSPN_Assets",
 	"A3_Structures_F_Mark_VR_Shapes",
 	"A3_Structures_F_Bootcamp_VR_Blocks",
 	"A3_Structures_F_Bootcamp_VR_CoverObjects",
@@ -106,13 +107,14 @@ addons[]=
 	"A3_Structures_F_Mark_Training",
 	"JLTS_weapons_Statics_generator",
 	"A3_Structures_F_Mil_BagFence",
-	"A3_Props_F_Orange_Humanitarian_Camps"
+	"A3_Props_F_Orange_Humanitarian_Camps",
+	"mti_common"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=66;
+		items=67;
 		class Item0
 		{
 			className="JLTS_core";
@@ -318,10 +320,9 @@ class AddonsMetaData
 		};
 		class Item33
 		{
-			className="A3_Drones_F";
-			name="Arma 3 Beta - Drones";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			className="3as_GNK_Prop";
+			name="3as_GNK_Prop";
+			author="3rd Army Studios";
 		};
 		class Item34
 		{
@@ -332,8 +333,8 @@ class AddonsMetaData
 		};
 		class Item35
 		{
-			className="mti_common";
-			name="MokTech Industries - Common";
+			className="mti_arsenal";
+			name="MokTech Industries - Arsenal";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
@@ -467,9 +468,10 @@ class AddonsMetaData
 		};
 		class Item56
 		{
-			className="NCA_vehicles_AAT";
-			name="NCA_vehicles_AAT";
+			className="NCA_vehicles";
+			name="21st Auxiliary Assets - Vehicles";
 			author="21st Auxiliary Assets";
+			url="https://discord.gg/21stNovaCorps";
 		};
 		class Item57
 		{
@@ -490,9 +492,8 @@ class AddonsMetaData
 		};
 		class Item60
 		{
-			className="ls_flags";
-			name="ls_flags";
-			author="Legion Studios";
+			className="RSPN_Assets";
+			name="RSPN_Assets";
 		};
 		class Item61
 		{
@@ -525,6 +526,13 @@ class AddonsMetaData
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item66
+		{
+			className="mti_common";
+			name="MokTech Industries - Common";
+			author="MokTech Industries";
+			url="https://discord.gg/Pu2gdBd7Te/";
 		};
 	};
 };
@@ -735,7 +743,7 @@ class CustomAttributes
 		class Attribute0
 		{
 			property="ENH_AddObjectsToZeus";
-			expression="        if (!is3DEN && isServer && _value) then        {            private _objects = allMissionObjects '';            allCurators apply {_x addCuratorEditableObjects [_objects, true]};            addMissionEventHandler ['EntityCreated',            {                params ['_entity'];                allCurators apply {_x addCuratorEditableObjects [[_entity], true]};            }];        }";
+			expression="        if (_value isEqualType true) then {_value = 2};        if (!is3DEN && isServer && _value > 0) then        {            _value spawn" \n "            {" \n "                params ['_value'];" \n "                waitUntil {sleep 1; allCurators isNotEqualTo []};" \n "                if (_value == 1 || _value == 2) then                {                    allCurators apply {_x addCuratorEditableObjects [allMissionObjects '', true]};                };                if (_value == 2) then                {                    addMissionEventHandler ['EntityCreated',                    {                        params ['_entity'];                        allCurators apply {_x addCuratorEditableObjects [[_entity], true]};                    }];                };            };        }";
 			class Value
 			{
 				class data
@@ -19506,6 +19514,7 @@ class Mission
 							};
 							id=1463;
 							type="OPTRE_cart";
+							atlOffset=4.5776367e-05;
 						};
 						class Item8
 						{
@@ -19523,6 +19532,7 @@ class Mission
 							};
 							id=1464;
 							type="OPTRE_cart";
+							atlOffset=4.5776367e-05;
 						};
 						class Item9
 						{
@@ -19540,6 +19550,7 @@ class Mission
 							};
 							id=1465;
 							type="OPTRE_cart";
+							atlOffset=4.5776367e-05;
 						};
 						class Item10
 						{
@@ -19557,6 +19568,7 @@ class Mission
 							};
 							id=1466;
 							type="OPTRE_cart";
+							atlOffset=4.5776367e-05;
 						};
 						class Item11
 						{
@@ -19870,7 +19882,7 @@ class Mission
 							};
 							id=1480;
 							type="OPTRE_cart";
-							atlOffset=0.066726685;
+							atlOffset=0.066772461;
 						};
 						class Item25
 						{
@@ -19903,7 +19915,7 @@ class Mission
 						};
 					};
 					id=1197;
-					atlOffset=0.16607666;
+					atlOffset=0.16609192;
 				};
 				class Item6
 				{
@@ -24259,7 +24271,7 @@ class Mission
 							colorName="ColorWEST";
 							a=10;
 							b=112.882;
-							angle=224.35556;
+							angle=224.35555;
 							id=1613;
 							atlOffset=150.94403;
 						};
@@ -25048,7 +25060,7 @@ class Mission
 					state=1;
 					class Entities
 					{
-						items=33;
+						items=31;
 						class Item0
 						{
 							dataType="Object";
@@ -25249,8 +25261,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25283,8 +25295,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25318,8 +25330,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25352,8 +25364,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25386,8 +25398,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25420,8 +25432,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25435,74 +25447,6 @@ class Mission
 							};
 						};
 						class Item14
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={5559.7842,189.02882,1332.9171};
-								angles[]={0,4.7123909,0};
-							};
-							side="Empty";
-							class Attributes
-							{
-								dynamicSimulation=1;
-							};
-							id=1676;
-							type="mti_arsenal_covertops";
-							atlOffset=11.996964;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=5;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item15
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={5559.8027,189.02882,1335.4004};
-								angles[]={0,4.7123899,0};
-							};
-							side="Empty";
-							class Attributes
-							{
-								dynamicSimulation=1;
-							};
-							id=1677;
-							type="mti_arsenal_covertops";
-							atlOffset=11.996964;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=5;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item16
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25522,8 +25466,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25536,7 +25480,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item17
+						class Item15
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25556,8 +25500,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25570,7 +25514,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item18
+						class Item16
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25586,7 +25530,7 @@ class Mission
 							type="3AS_HoloTable_Octagon_Prop";
 							atlOffset=197.00912;
 						};
-						class Item19
+						class Item17
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25602,7 +25546,7 @@ class Mission
 							type="3AS_HoloTable_Octagon_Prop";
 							atlOffset=4.4803925;
 						};
-						class Item20
+						class Item18
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25618,7 +25562,7 @@ class Mission
 							type="3AS_HoloTable_Rectangle_Prop";
 							atlOffset=2.9508362;
 						};
-						class Item21
+						class Item19
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25637,8 +25581,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25651,7 +25595,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item22
+						class Item20
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25670,8 +25614,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25684,7 +25628,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item23
+						class Item21
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25704,8 +25648,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25718,7 +25662,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item24
+						class Item22
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25737,8 +25681,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25751,7 +25695,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item25
+						class Item23
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25770,8 +25714,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25784,7 +25728,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item26
+						class Item24
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25803,8 +25747,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25817,7 +25761,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item27
+						class Item25
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25836,8 +25780,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25850,7 +25794,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item28
+						class Item26
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25869,8 +25813,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25883,7 +25827,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item29
+						class Item27
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25918,7 +25862,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item30
+						class Item28
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25953,7 +25897,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item31
+						class Item29
 						{
 							dataType="Object";
 							class PositionInfo
@@ -25972,8 +25916,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -25986,7 +25930,7 @@ class Mission
 								nAttributes=1;
 							};
 						};
-						class Item32
+						class Item30
 						{
 							dataType="Object";
 							class PositionInfo
@@ -26005,8 +25949,8 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="mti_common_Arsenal_Preset";
-									expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+									property="mti_arsenal_Arsenal_Preset";
+									expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 									class Value
 									{
 										class data
@@ -56911,7 +56855,7 @@ class Mission
 						class Attribute0
 						{
 							property="ENH_HoldAction";
-							expression="            _value params ['_name', '_iconIdle', '_iconProgress', '_conditionShow', '_conditionProgress', '_codeStart', '_codeProgress', '_codeCompletion', '_codeInterrupt', '_duration', '_priority', '_showUnconscious', '_showWindow'];            if (!is3DEN && (_name != '')) then            {                [                    _this,                    _name,                    _iconIdle,                    _iconProgress,                    _conditionShow,                    _conditionProgress,                    compile _codeStart,                    compile _codeProgress,                    compile format ['%1 %2', '[_this select 0, _this select 2] remoteExecCall [''removeAction'', 0]; remoteExecCall ['''', _this select 0];', _codeCompletion],                    compile _codeInterrupt,                    nil,                    _duration,                    _priority,                    true,                    _showUnconscious,                    _showWindow                ] remoteExecCall ['BIS_fnc_holdActionAdd', 0, _this];            };";
+							expression="            _value params ['_name', '_iconIdle', '_iconProgress', '_conditionShow', '_conditionProgress', '_codeStart', '_codeProgress', '_codeCompletion', '_codeInterrupt', '_duration', '_priority', '_showUnconscious', '_showWindow', '_removeAfterUse'];            if (!is3DEN && (_name != '')) then            {                if _removeAfterUse then                {                    _codeCompletion = format ['%1 %2', '[_this select 0, _this select 2] remoteExecCall [''removeAction'', 0]; remoteExecCall ['''', _this select 0];', _codeCompletion];                };                [                    _this,                    _name,                    _iconIdle,                    _iconProgress,                    _conditionShow,                    _conditionProgress,                    compile _codeStart,                    compile _codeProgress,                    compile _codeCompletion,                    compile _codeInterrupt,                    nil,                    _duration,                    _priority,                    _removeAfterUse,                    _showUnconscious,                    _showWindow                ] remoteExecCall ['BIS_fnc_holdActionAdd', 0, _this];            };";
 							class Value
 							{
 								class data
@@ -67486,8 +67430,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="mti_common_Arsenal_Preset";
-					expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 					class Value
 					{
 						class data
@@ -67520,8 +67464,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="mti_common_Arsenal_Preset";
-					expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 					class Value
 					{
 						class data
@@ -67554,8 +67498,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="mti_common_Arsenal_Preset";
-					expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 					class Value
 					{
 						class data
@@ -67588,8 +67532,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="mti_common_Arsenal_Preset";
-					expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 					class Value
 					{
 						class data
@@ -67621,8 +67565,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="mti_common_Arsenal_Preset";
-					expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 					class Value
 					{
 						class data
@@ -67654,8 +67598,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="mti_common_Arsenal_Preset";
-					expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 					class Value
 					{
 						class data
@@ -67687,8 +67631,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="mti_common_Arsenal_Preset";
-					expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 					class Value
 					{
 						class data
@@ -67721,8 +67665,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="mti_common_Arsenal_Preset";
-					expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 					class Value
 					{
 						class data
@@ -67755,8 +67699,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="mti_common_Arsenal_Preset";
-					expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 					class Value
 					{
 						class data
@@ -67789,8 +67733,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="mti_common_Arsenal_Preset";
-					expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 					class Value
 					{
 						class data
