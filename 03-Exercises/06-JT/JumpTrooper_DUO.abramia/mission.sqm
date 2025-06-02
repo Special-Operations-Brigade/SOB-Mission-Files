@@ -8,6 +8,7 @@ class EditorData
 	toggles=1;
 	mods[]=
 	{
+		"WBK_Zombies_AdvancedEditorSettings",
 		"3denEnhanced"
 	};
 	class ItemIDProvider
@@ -16,14 +17,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=51;
+		nextID=64;
 	};
 	class Camera
 	{
 		pos[]={8078.8677,115.25372,1777.9712};
 		dir[]={0.56558764,-0.48910376,0.6639986};
 		up[]={0.31715524,0.87222379,0.37233961};
-		aside[]={0.76126862,-5.1542884e-008,-0.64844102};
+		aside[]={0.76126862,-5.1542884e-08,-0.64844102};
 	};
 };
 binarizationWanted=0;
@@ -53,7 +54,6 @@ addons[]=
 	"JLTS_characters_CloneArmor",
 	"ls_armor_bluefor",
 	"A3_Weapons_F_Items",
-	"ace_medical_engine",
 	"ace_medical_treatment",
 	"ace_realisticnames",
 	"ace_attach",
@@ -61,13 +61,13 @@ addons[]=
 	"mti_armoury_arc",
 	"mti_supplies",
 	"A3_Characters_F",
-	"mti_common"
+	"mti_arsenal"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=29;
+		items=28;
 		class Item0
 		{
 			className="3AS_Cliffs_Tatooine";
@@ -204,49 +204,42 @@ class AddonsMetaData
 		};
 		class Item22
 		{
-			className="ace_medical_engine";
-			name="ACE3 - Medical Engine";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item23
-		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item24
+		class Item23
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item25
+		class Item24
 		{
 			className="ace_chemlights";
-			name="ace_chemlights";
+			name="ACE3 - Chemlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item26
+		class Item25
 		{
 			className="mti_armoury_arc";
 			name="MokTech Industries - ARC";
 			author="MokTech Industries";
 		};
-		class Item27
+		class Item26
 		{
 			className="mti_supplies";
 			name="MokTech Industries - Supplies";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item28
+		class Item27
 		{
-			className="mti_common";
-			name="MokTech Industries - Common";
+			className="mti_arsenal";
+			name="MokTech Industries - Arsenal";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
@@ -350,7 +343,7 @@ class CustomAttributes
 		class Attribute0
 		{
 			property="ENH_AddObjectsToZeus";
-			expression="    if (!is3DEN && isServer && _value && !(allCurators isEqualTo [])) then    {      0 spawn      {        scriptName 'ENH_Attribute_AddObjectsToZeus';        while {true} do        {          {          _x addCuratorEditableObjects            [              entities [[], ['Logic'], true],              true            ];          } count allCurators;          sleep 60;        };      };    }";
+			expression="        if (_value isEqualType true) then {_value = 2};        if (!is3DEN && isServer && _value > 0) then        {            _value spawn" \n "            {" \n "                params ['_value'];" \n "                waitUntil {sleep 1; allCurators isNotEqualTo []};" \n "                if (_value == 1 || _value == 2) then                {                    allCurators apply {_x addCuratorEditableObjects [allMissionObjects '', true]};                };                if (_value == 2) then                {                    addMissionEventHandler ['EntityCreated',                    {                        params ['_entity'];                        allCurators apply {_x addCuratorEditableObjects [[_entity], true]};                    }];                };            };        }";
 			class Value
 			{
 				class data
@@ -376,7 +369,7 @@ class CustomAttributes
 		class Attribute2
 		{
 			property="ENH_mapIndicators";
-			expression="if (!is3DEN && !(_value isEqualTo [false, false, false, false]) && hasInterface) then {disableMapIndicators _value}";
+			expression="if (!is3DEN && (_value isNotEqualTo [false, false, false, false]) && hasInterface) then {disableMapIndicators _value}";
 			class Value
 			{
 				class data
@@ -1481,7 +1474,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={9419.4004,36.531048,1221.3356};
-						angles[]={2.3841858e-007,3.1415935,0};
+						angles[]={2.3841858e-07,3.1415935,0};
 					};
 					side="Empty";
 					class Attributes
@@ -1498,7 +1491,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={9416.8467,35.942455,1204.4027};
-						angles[]={2.3841858e-007,3.1415935,0};
+						angles[]={2.3841858e-07,3.1415935,0};
 					};
 					side="Empty";
 					class Attributes
@@ -1515,7 +1508,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={9417.4707,36.284435,1213.3077};
-						angles[]={2.3841858e-007,3.1415935,0};
+						angles[]={2.3841858e-07,3.1415935,0};
 					};
 					side="Empty";
 					class Attributes
@@ -1532,7 +1525,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={9419.7637,36.218002,1192.3898};
-						angles[]={2.3841858e-007,3.1415935,0};
+						angles[]={2.3841858e-07,3.1415935,0};
 					};
 					side="Empty";
 					class Attributes
@@ -1566,7 +1559,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={9422.876,36.153858,1188.5441};
-						angles[]={0,1.4423497,2.3645445e-007};
+						angles[]={0,1.4423497,2.3645445e-07};
 					};
 					side="Empty";
 					class Attributes
@@ -1989,7 +1982,7 @@ class Mission
 					};
 					id=751;
 					type="Land_ModularOutPostBuildingQuaters";
-					atlOffset=-1.9073486e-006;
+					atlOffset=-1.9073486e-06;
 				};
 				class Item11
 				{
@@ -2768,7 +2761,7 @@ class Mission
 			};
 			id=779;
 			type="Land_3AS_Generator_Imp";
-			atlOffset=1.9073486e-006;
+			atlOffset=1.9073486e-06;
 		};
 		class Item13
 		{
@@ -2842,7 +2835,7 @@ class Mission
 					};
 					id=791;
 					type="mti_factions_cis_B1_E5";
-					atlOffset=3.8146973e-006;
+					atlOffset=3.8146973e-06;
 				};
 				class Item3
 				{
@@ -3113,7 +3106,7 @@ class Mission
 					};
 					id=869;
 					type="mti_factions_cis_B1_E5";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 				};
 				class Item3
 				{
@@ -5688,7 +5681,7 @@ class Mission
 						class Attribute2
 						{
 							property="ENH_parachute";
-							expression="  if (!is3DEN && _value) then  {    if (local _this) then    {      private _parachute = createVehicle ['Steerable_Parachute_F', getPosATL _this, [], 0, 'FLY'];      _this moveInDriver _parachute;    };  }";
+							expression="    if (!is3DEN && _value) then    {        if (local _this) then        {            private _parachute = createVehicle ['Steerable_Parachute_F', getPosATL _this, [], 0, 'FLY'];            _this moveInDriver _parachute;        };    }";
 							class Value
 							{
 								class data
@@ -5892,7 +5885,7 @@ class Mission
 					};
 					id=1015;
 					type="mti_factions_cis_B1_SL";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 				};
 				class Item1
 				{
@@ -5941,14 +5934,14 @@ class Mission
 					};
 					id=1018;
 					type="mti_factions_cis_B1_AT";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=1014;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item61
 		{
@@ -6834,7 +6827,7 @@ class Mission
 					};
 					id=1070;
 					type="mti_factions_cis_B1_Crew";
-					atlOffset=-3.8146973e-006;
+					atlOffset=-3.8146973e-06;
 				};
 				class Item1
 				{
@@ -6933,7 +6926,7 @@ class Mission
 					};
 					id=1074;
 					type="mti_factions_cis_B1_Crew";
-					atlOffset=2.0980835e-005;
+					atlOffset=2.0980835e-05;
 				};
 				class Item1
 				{
@@ -7016,7 +7009,7 @@ class Mission
 				};
 			};
 			id=1072;
-			atlOffset=4.3869019e-005;
+			atlOffset=4.3869019e-05;
 		};
 		class Item78
 		{
@@ -7034,7 +7027,7 @@ class Mission
 			};
 			id=1073;
 			type="mti_factions_cis_AAT_Woodland";
-			atlOffset=4.3869019e-005;
+			atlOffset=4.3869019e-05;
 		};
 		class Item79
 		{
@@ -7058,7 +7051,7 @@ class Mission
 					};
 					id=1079;
 					type="O_UAV_AI";
-					atlOffset=3.8146973e-006;
+					atlOffset=3.8146973e-06;
 				};
 				class Item1
 				{
@@ -7322,7 +7315,7 @@ class Mission
 			};
 			id=1087;
 			type="3AS_HoloTable_Rectangle_Prop";
-			atlOffset=3.8146973e-006;
+			atlOffset=3.8146973e-06;
 		};
 		class Item84
 		{
@@ -8793,8 +8786,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="mti_common_Arsenal_Preset";
-					expression="if (_value > 0) then {[_this, _value] call mti_common_fnc_initArsenal;}";
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
 					class Value
 					{
 						class data
