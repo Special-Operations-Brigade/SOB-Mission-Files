@@ -21,7 +21,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=68;
+		nextID=73;
 	};
 	class Camera
 	{
@@ -42,21 +42,14 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"A3_Weapons_F",
 	"JLTS_weapons_Core",
-	"ls_armor_bluefor",
+	"ls_characters_clone_legacy",
 	"JLTS_radios",
 	"ace_spectator",
 	"3AS_Structures_FOB",
 	"A3_Characters_F_Common",
-	"mti_factions_cis",
-	"mti_armoury_commando",
-	"3AS_Weapons",
-	"ace_realisticnames",
-	"ace_attach",
-	"ace_chemlights",
-	"A3_Weapons_F_Items",
-	"ace_medical_treatment",
 	"3AS_Intel",
 	"3AS_Prop_Crates",
+	"mti_factions_cis",
 	"JLTS_characters_DroidArmor",
 	"3AS_Prop_Platforms",
 	"mti_supplies",
@@ -66,7 +59,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=23;
+		items=18;
 		class Item0
 		{
 			className="mti_aircraft";
@@ -116,8 +109,8 @@ class AddonsMetaData
 		};
 		class Item7
 		{
-			className="ls_armor_bluefor";
-			name="Legion Dissension: Bluefor Armor";
+			className="ls_characters";
+			name="Legion Studios: Core - Characters";
 			author="Legion Studios";
 		};
 		class Item8
@@ -141,75 +134,42 @@ class AddonsMetaData
 		};
 		class Item11
 		{
-			className="mti_factions_cis";
-			name="MokTech Industries - CIS";
-			author="MokTech Industries";
-		};
-		class Item12
-		{
-			className="mti_armoury_commando";
-			name="MokTech Industries - Commando";
-			author="MokTech Industries";
-		};
-		class Item13
-		{
-			className="3AS_Weapons";
-			name="3AS_Weapons";
-			author="3rd Army Studios";
-		};
-		class Item14
-		{
-			className="ace_attach";
-			name="ACE3 - Attach";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item15
-		{
-			className="ace_chemlights";
-			name="ACE3 - Chemlights";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item16
-		{
-			className="ace_medical_treatment";
-			name="ACE3 - Medical Treatment";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item17
-		{
 			className="3AS_Intel";
 			name="3AS_Intel";
 			author="3rd Army Studios";
 		};
-		class Item18
+		class Item12
 		{
 			className="3AS_Prop_Crates";
 			name="3AS_Prop_Crates";
 			author="3rd Army Studios";
 		};
-		class Item19
+		class Item13
+		{
+			className="mti_factions_cis";
+			name="MokTech Industries - CIS";
+			author="MokTech Industries";
+		};
+		class Item14
 		{
 			className="JLTS_characters_DroidArmor";
 			name="JLTS The Great War - Droids";
 			author="MrClock";
 		};
-		class Item20
+		class Item15
 		{
 			className="3AS_Prop_Platforms";
 			name="3AS_Prop_Platforms";
 			author="3rd Army Studios";
 		};
-		class Item21
+		class Item16
 		{
 			className="mti_supplies";
 			name="MokTech Industries - Supplies";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item22
+		class Item17
 		{
 			className="mti_factions_cishuman";
 			name="MokTech Industries - cishuman";
@@ -225,10 +185,6 @@ class DynamicSimulation
 		Vehicle=2000;
 		Group=2000;
 	};
-};
-dlcs[]=
-{
-	"Expansion"
 };
 randomSeed=5584241;
 class ScenarioData
@@ -603,7 +559,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=73;
+		items=65;
 		class Item0
 		{
 			dataType="Object";
@@ -3013,70 +2969,9 @@ class Mission
 			class Attributes
 			{
 			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=3;
-				};
-				class Links
-				{
-					items=3;
-					class Item0
-					{
-						linkID=0;
-						item0=477;
-						item1=476;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=478;
-						item1=476;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-					class Item2
-					{
-						linkID=2;
-						item0=479;
-						item1=476;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0,0};
-						};
-					};
-				};
-			};
 			id=475;
 		};
 		class Item11
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7167.9873,41.709999,8471.0176};
-				angles[]={0,0.05544766,0};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				lock="LOCKEDPLAYER";
-				dynamicSimulation=1;
-			};
-			id=476;
-			type="mti_factions_cis_bawhag";
-		};
-		class Item12
 		{
 			dataType="Group";
 			side="East";
@@ -3135,516 +3030,9 @@ class Mission
 			class Attributes
 			{
 			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=3;
-				};
-				class Links
-				{
-					items=3;
-					class Item0
-					{
-						linkID=0;
-						item0=486;
-						item1=489;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=487;
-						item1=489;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-					class Item2
-					{
-						linkID=2;
-						item0=488;
-						item1=489;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0,0};
-						};
-					};
-				};
-			};
 			id=485;
 		};
-		class Item13
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7144.6279,41.709999,8473.0586};
-				angles[]={0,0.004893844,0};
-			};
-			side="East";
-			flags=6;
-			class Attributes
-			{
-				lock="LOCKEDPLAYER";
-				dynamicSimulation=1;
-			};
-			id=489;
-			type="mti_factions_cis_bawhag";
-		};
-		class Item14
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5717.5825,39.661335,9682.5654};
-						angles[]={0,5.504703,0};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						health=0;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="mti_armoury_commando_uniform_sl";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=7;
-									class Item0
-									{
-										name="3AS_100Rnd_EC40_mag";
-										count=10;
-										ammoLeft=100;
-									};
-									class Item1
-									{
-										name="3AS_5Rnd_EC80_mag";
-										count=3;
-										ammoLeft=5;
-									};
-									class Item2
-									{
-										name="3AS_AntiArmour_mag";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item3
-									{
-										name="3AS_15Rnd_EC30_mag";
-										count=3;
-										ammoLeft=15;
-									};
-									class Item4
-									{
-										name="SmokeShell";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item5
-									{
-										name="SmokeShellGreen";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item6
-									{
-										name="Chemlight_green";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="FirstAidKit";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="mti_armoury_commando_vest_sl";
-								isBackpack=0;
-							};
-							class backpack
-							{
-								typeName="mti_armoury_commando_backpack_sl";
-								isBackpack=1;
-							};
-							headgear="mti_armoury_commando_helmet_sl";
-						};
-					};
-					id=493;
-					type="mti_armoury_commando_unit_base";
-					atlOffset=0.083198547;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ENH_AmbientAnimations";
-							expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
-							class Value
-							{
-								class data
-								{
-									singleType="ARRAY";
-									class value
-									{
-										items=4;
-										class Item0
-										{
-											class data
-											{
-												singleType="STRING";
-												value="PRONE_INJURED_U1";
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="ARRAY";
-												class value
-												{
-													items=1;
-													class Item0
-													{
-														class data
-														{
-															singleType="STRING";
-															value="ainjppnemstpsnonwnondnon";
-														};
-													};
-												};
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=0;
-											};
-										};
-										class Item3
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=0;
-											};
-										};
-									};
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=492;
-			atlOffset=0.083198547;
-		};
-		class Item15
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5682.6895,39.67263,9651.1758};
-						angles[]={0,1.0530046,0};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						health=0;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="mti_armoury_commando_uniform_tech";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=7;
-									class Item0
-									{
-										name="3AS_100Rnd_EC40_mag";
-										count=10;
-										ammoLeft=100;
-									};
-									class Item1
-									{
-										name="3AS_5Rnd_EC80_mag";
-										count=3;
-										ammoLeft=5;
-									};
-									class Item2
-									{
-										name="3AS_AntiArmour_mag";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item3
-									{
-										name="3AS_15Rnd_EC30_mag";
-										count=3;
-										ammoLeft=15;
-									};
-									class Item4
-									{
-										name="SmokeShell";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item5
-									{
-										name="SmokeShellGreen";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item6
-									{
-										name="Chemlight_green";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="FirstAidKit";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="mti_armoury_commando_vest_tech_black";
-								isBackpack=0;
-							};
-							class backpack
-							{
-								typeName="mti_armoury_commando_backpack_tech";
-								isBackpack=1;
-							};
-							headgear="mti_armoury_commando_helmet_tech";
-						};
-					};
-					id=495;
-					type="mti_armoury_commando_unit_base";
-					atlOffset=7.2479248e-05;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ENH_AmbientAnimations";
-							expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
-							class Value
-							{
-								class data
-								{
-									singleType="ARRAY";
-									class value
-									{
-										items=4;
-										class Item0
-										{
-											class data
-											{
-												singleType="STRING";
-												value="PRONE_INJURED";
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="ARRAY";
-												class value
-												{
-													items=8;
-													class Item0
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredangryrifle01";
-														};
-													};
-													class Item1
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredcoughrifle02";
-														};
-													};
-													class Item2
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlookingrifle01";
-														};
-													};
-													class Item3
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlookingrifle02";
-														};
-													};
-													class Item4
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlookingrifle03";
-														};
-													};
-													class Item5
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlookingrifle04";
-														};
-													};
-													class Item6
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlookingrifle05";
-														};
-													};
-													class Item7
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlyingrifle01";
-														};
-													};
-												};
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=0;
-											};
-										};
-										class Item3
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=0;
-											};
-										};
-									};
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male01ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=494;
-			atlOffset=7.2479248e-05;
-		};
-		class Item16
+		class Item12
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3660,510 +3048,7 @@ class Mission
 			id=502;
 			type="3AS_Intel_DataChip_Prop";
 		};
-		class Item17
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5999.042,172.10893,9443.9268};
-						angles[]={0,5.391583,0};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						health=0;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="mti_armoury_commando_uniform_sniper";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=7;
-									class Item0
-									{
-										name="3AS_100Rnd_EC40_mag";
-										count=10;
-										ammoLeft=100;
-									};
-									class Item1
-									{
-										name="3AS_5Rnd_EC80_mag";
-										count=3;
-										ammoLeft=5;
-									};
-									class Item2
-									{
-										name="3AS_AntiArmour_mag";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item3
-									{
-										name="3AS_15Rnd_EC30_mag";
-										count=3;
-										ammoLeft=15;
-									};
-									class Item4
-									{
-										name="SmokeShell";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item5
-									{
-										name="SmokeShellGreen";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item6
-									{
-										name="Chemlight_green";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="FirstAidKit";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="mti_armoury_commando_vest_sniper";
-								isBackpack=0;
-							};
-							class backpack
-							{
-								typeName="mti_armoury_commando_backpack_sniper";
-								isBackpack=1;
-							};
-							headgear="mti_armoury_commando_helmet_sniper";
-						};
-					};
-					id=504;
-					type="mti_armoury_commando_unit_base";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ENH_AmbientAnimations";
-							expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
-							class Value
-							{
-								class data
-								{
-									singleType="ARRAY";
-									class value
-									{
-										items=4;
-										class Item0
-										{
-											class data
-											{
-												singleType="STRING";
-												value="PRONE_INJURED";
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="ARRAY";
-												class value
-												{
-													items=8;
-													class Item0
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredangryrifle01";
-														};
-													};
-													class Item1
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredcoughrifle02";
-														};
-													};
-													class Item2
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlookingrifle01";
-														};
-													};
-													class Item3
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlookingrifle02";
-														};
-													};
-													class Item4
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlookingrifle03";
-														};
-													};
-													class Item5
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlookingrifle04";
-														};
-													};
-													class Item6
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlookingrifle05";
-														};
-													};
-													class Item7
-													{
-														class data
-														{
-															singleType="STRING";
-															value="acts_injuredlyingrifle01";
-														};
-													};
-												};
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=0;
-											};
-										};
-										class Item3
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=0;
-											};
-										};
-									};
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male02ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=503;
-		};
-		class Item18
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5379.8418,40.238544,9821.4492};
-						angles[]={4.9197178,0,0};
-					};
-					side="West";
-					flags=3;
-					class Attributes
-					{
-						health=0;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="mti_armoury_commando_uniform_heavy";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=7;
-									class Item0
-									{
-										name="3AS_100Rnd_EC40_mag";
-										count=10;
-										ammoLeft=100;
-									};
-									class Item1
-									{
-										name="3AS_5Rnd_EC80_mag";
-										count=3;
-										ammoLeft=5;
-									};
-									class Item2
-									{
-										name="3AS_AntiArmour_mag";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item3
-									{
-										name="3AS_15Rnd_EC30_mag";
-										count=3;
-										ammoLeft=15;
-									};
-									class Item4
-									{
-										name="SmokeShell";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item5
-									{
-										name="SmokeShellGreen";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item6
-									{
-										name="Chemlight_green";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="FirstAidKit";
-										count=1;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="mti_armoury_commando_backpack_heavy";
-								isBackpack=1;
-							};
-							headgear="mti_armoury_commando_helmet_heavy";
-						};
-					};
-					id=506;
-					type="mti_armoury_commando_unit_base";
-					atlOffset=1.85112;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ENH_AmbientAnimations";
-							expression="            if (_value # 0 != '') then            {                _value params ['_animSet', '_anims', '_canExit', '_attach'];                                _this setVariable ['ENH_ambientAnimations_anims', _anims];                _this disableAI 'ANIM';                if (_attach && !is3DEN) then                {                    private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];                    _this setVariable ['ENH_ambientAnimations_logic', _logic];                    [_this, _logic] call BIS_fnc_attachToRelative;                };                                ENH_fnc_ambientAnimations_play =                {                    params ['_unit'];                    private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);                    [_unit, _anim] remoteExec ['switchMove', 0];                };                                ENH_fnc_ambientAnimations_exit =                {                    params ['_unit'];                    if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};                    _unit setVariable ['ENH_ambientAnimations_exit', true];                    detach _unit;                    deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);                    if (alive _unit) then                    {                        [_unit, ''] remoteExec ['switchMove', 0];                        _unit enableAI 'ANIM';                    };                    _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];                    _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];                    _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];                };                                private _EHAnimDone = _this addEventHandler ['AnimDone',                    {                        params ['_unit'];                        if (alive _unit) then                        {                            _unit call ENH_fnc_ambientAnimations_play;                        }                        else                        {                            _unit call ENH_fnc_ambientAnimations_exit;                        };                    }                ];                _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                                if (_canExit && !is3DEN) then                {                    private _EHKilled = _this addEventHandler ['Killed',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHKilled', _EHKilled];                    private _EHDammaged = _this addEventHandler ['Dammaged',                    {                        (_this select 0) call ENH_fnc_ambientAnimations_exit;                    }];                    _this setVariable ['ENH_EHDammaged', _EHDammaged];                    _this spawn                    {                        scriptName 'ENH_Attribute_AmbientAnimations';                        params ['_unit'];                        waitUntil                        {                            sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}                        };                        _unit call ENH_fnc_ambientAnimations_exit;                    };                };                _this call ENH_fnc_ambientAnimations_play;            };";
-							class Value
-							{
-								class data
-								{
-									singleType="ARRAY";
-									class value
-									{
-										items=4;
-										class Item0
-										{
-											class data
-											{
-												singleType="STRING";
-												value="BRIEFING_POINT_LEFT";
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="ARRAY";
-												class value
-												{
-													items=9;
-													class Item0
-													{
-														class data
-														{
-															singleType="STRING";
-															value="hubbriefing_loop";
-														};
-													};
-													class Item1
-													{
-														class data
-														{
-															singleType="STRING";
-															value="hubbriefing_loop";
-														};
-													};
-													class Item2
-													{
-														class data
-														{
-															singleType="STRING";
-															value="hubbriefing_loop";
-														};
-													};
-													class Item3
-													{
-														class data
-														{
-															singleType="STRING";
-															value="hubbriefing_lookaround1";
-														};
-													};
-													class Item4
-													{
-														class data
-														{
-															singleType="STRING";
-															value="hubbriefing_lookaround2";
-														};
-													};
-													class Item5
-													{
-														class data
-														{
-															singleType="STRING";
-															value="hubbriefing_pointleft";
-														};
-													};
-													class Item6
-													{
-														class data
-														{
-															singleType="STRING";
-															value="hubbriefing_scratch";
-														};
-													};
-													class Item7
-													{
-														class data
-														{
-															singleType="STRING";
-															value="hubbriefing_stretch";
-														};
-													};
-													class Item8
-													{
-														class data
-														{
-															singleType="STRING";
-															value="hubbriefing_talkaround";
-														};
-													};
-												};
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=0;
-											};
-										};
-										class Item3
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=0;
-											};
-										};
-									};
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=505;
-			atlOffset=1.85112;
-		};
-		class Item19
+		class Item13
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4179,7 +3064,7 @@ class Mission
 			id=513;
 			type="3as_Crate3_1_prop";
 		};
-		class Item20
+		class Item14
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4196,7 +3081,7 @@ class Mission
 			id=517;
 			type="3as_small_crate_prop";
 		};
-		class Item21
+		class Item15
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4213,7 +3098,7 @@ class Mission
 			id=518;
 			type="3AS_Small_Box_9_Blue_Prop";
 		};
-		class Item22
+		class Item16
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4230,7 +3115,7 @@ class Mission
 			id=519;
 			type="3as_Small_Box_7_prop";
 		};
-		class Item23
+		class Item17
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4247,7 +3132,7 @@ class Mission
 			id=521;
 			type="3AS_BoxBarricade2";
 		};
-		class Item24
+		class Item18
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4264,7 +3149,7 @@ class Mission
 			id=523;
 			type="3AS_BoxBarricade5";
 		};
-		class Item25
+		class Item19
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4281,7 +3166,7 @@ class Mission
 			id=526;
 			type="3AS_BoxBarricade3";
 		};
-		class Item26
+		class Item20
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4298,7 +3183,7 @@ class Mission
 			id=527;
 			type="3AS_BoxBarricade4";
 		};
-		class Item27
+		class Item21
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4315,7 +3200,7 @@ class Mission
 			id=528;
 			type="3AS_BoxBarricade5";
 		};
-		class Item28
+		class Item22
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4333,7 +3218,7 @@ class Mission
 			type="3as_medium_crate_stack_2_prop";
 			atlOffset=0.084793091;
 		};
-		class Item29
+		class Item23
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4350,7 +3235,7 @@ class Mission
 			type="3as_medium_crate_stack_3_prop";
 			atlOffset=0.085510254;
 		};
-		class Item30
+		class Item24
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4367,7 +3252,7 @@ class Mission
 			type="3as_small_crate_stack_1_prop";
 			atlOffset=0.085506439;
 		};
-		class Item31
+		class Item25
 		{
 			dataType="Group";
 			side="East";
@@ -4419,7 +3304,7 @@ class Mission
 			};
 			id=533;
 		};
-		class Item32
+		class Item26
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4435,54 +3320,7 @@ class Mission
 			id=534;
 			type="mti_factions_cis_Deka_Shield";
 		};
-		class Item33
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5719.3701,39.602108,9690.3281};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=537;
-					type="mti_factions_cis_B2";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-			};
-			class Attributes
-			{
-				garbageCollect=1;
-				dynamicSimulation=1;
-			};
-			id=536;
-		};
-		class Item34
+		class Item27
 		{
 			dataType="Group";
 			side="East";
@@ -4710,7 +3548,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item35
+		class Item28
 		{
 			dataType="Group";
 			side="East";
@@ -4937,7 +3775,7 @@ class Mission
 			};
 			id=573;
 		};
-		class Item36
+		class Item29
 		{
 			dataType="Group";
 			side="East";
@@ -5197,7 +4035,7 @@ class Mission
 			};
 			id=590;
 		};
-		class Item37
+		class Item30
 		{
 			dataType="Group";
 			side="East";
@@ -5409,7 +4247,7 @@ class Mission
 			};
 			id=609;
 		};
-		class Item38
+		class Item31
 		{
 			dataType="Group";
 			side="East";
@@ -5684,7 +4522,7 @@ class Mission
 			};
 			id=625;
 		};
-		class Item39
+		class Item32
 		{
 			dataType="Group";
 			side="East";
@@ -5974,7 +4812,7 @@ class Mission
 			};
 			id=645;
 		};
-		class Item40
+		class Item33
 		{
 			dataType="Group";
 			side="East";
@@ -6173,7 +5011,7 @@ class Mission
 			};
 			id=666;
 		};
-		class Item41
+		class Item34
 		{
 			dataType="Group";
 			side="East";
@@ -6340,7 +5178,7 @@ class Mission
 			};
 			id=681;
 		};
-		class Item42
+		class Item35
 		{
 			dataType="Group";
 			side="East";
@@ -6616,7 +5454,7 @@ class Mission
 			};
 			id=694;
 		};
-		class Item43
+		class Item36
 		{
 			dataType="Group";
 			side="East";
@@ -6867,7 +5705,7 @@ class Mission
 			id=714;
 			atlOffset=-7.6293945e-06;
 		};
-		class Item44
+		class Item37
 		{
 			dataType="Group";
 			side="East";
@@ -7084,7 +5922,7 @@ class Mission
 			};
 			id=732;
 		};
-		class Item45
+		class Item38
 		{
 			dataType="Group";
 			side="East";
@@ -7297,7 +6135,7 @@ class Mission
 			};
 			id=748;
 		};
-		class Item46
+		class Item39
 		{
 			dataType="Group";
 			side="East";
@@ -7479,7 +6317,7 @@ class Mission
 			};
 			id=765;
 		};
-		class Item47
+		class Item40
 		{
 			dataType="Group";
 			side="East";
@@ -7677,7 +6515,7 @@ class Mission
 			};
 			id=779;
 		};
-		class Item48
+		class Item41
 		{
 			dataType="Group";
 			side="East";
@@ -7877,7 +6715,7 @@ class Mission
 			};
 			id=794;
 		};
-		class Item49
+		class Item42
 		{
 			dataType="Group";
 			side="East";
@@ -8095,7 +6933,7 @@ class Mission
 			id=809;
 			atlOffset=-4.7683716e-07;
 		};
-		class Item50
+		class Item43
 		{
 			dataType="Group";
 			side="East";
@@ -8234,7 +7072,7 @@ class Mission
 			};
 			id=825;
 		};
-		class Item51
+		class Item44
 		{
 			dataType="Group";
 			side="East";
@@ -8463,7 +7301,7 @@ class Mission
 			};
 			id=836;
 		};
-		class Item52
+		class Item45
 		{
 			dataType="Group";
 			side="East";
@@ -8706,7 +7544,7 @@ class Mission
 			};
 			id=853;
 		};
-		class Item53
+		class Item46
 		{
 			dataType="Group";
 			side="East";
@@ -8759,7 +7597,7 @@ class Mission
 			};
 			id=870;
 		};
-		class Item54
+		class Item47
 		{
 			dataType="Group";
 			side="East";
@@ -8842,7 +7680,7 @@ class Mission
 			id=875;
 			atlOffset=-0.060943604;
 		};
-		class Item55
+		class Item48
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8859,7 +7697,7 @@ class Mission
 			type="mti_factions_cis_GAT_AA";
 			atlOffset=-0.060943604;
 		};
-		class Item56
+		class Item49
 		{
 			dataType="Group";
 			side="East";
@@ -9061,7 +7899,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item57
+		class Item50
 		{
 			dataType="Group";
 			side="East";
@@ -9163,7 +8001,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item58
+		class Item51
 		{
 			dataType="Group";
 			side="East";
@@ -9363,7 +8201,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item59
+		class Item52
 		{
 			dataType="Group";
 			side="East";
@@ -9465,7 +8303,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item60
+		class Item53
 		{
 			dataType="Group";
 			side="East";
@@ -9544,35 +8382,7 @@ class Mission
 			};
 			id=917;
 		};
-		class Item61
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7139.8281,41.711437,8476.7813};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=923;
-					type="mti_factions_cis_B2";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=922;
-		};
-		class Item62
+		class Item54
 		{
 			dataType="Group";
 			side="East";
@@ -9678,7 +8488,7 @@ class Mission
 			id=924;
 			atlOffset=1.5258789e-05;
 		};
-		class Item63
+		class Item55
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9695,7 +8505,7 @@ class Mission
 			type="mti_factions_cis_AAT_CIS";
 			atlOffset=1.5258789e-05;
 		};
-		class Item64
+		class Item56
 		{
 			dataType="Group";
 			side="East";
@@ -9749,7 +8559,7 @@ class Mission
 			};
 			id=929;
 		};
-		class Item65
+		class Item57
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9767,7 +8577,7 @@ class Mission
 			id=930;
 			type="mti_factions_cis_Scythe";
 		};
-		class Item66
+		class Item58
 		{
 			dataType="Layer";
 			name="Small Platform_2";
@@ -10057,7 +8867,7 @@ class Mission
 			id=945;
 			atlOffset=0.53573608;
 		};
-		class Item67
+		class Item59
 		{
 			dataType="Layer";
 			name="Small Platform_3";
@@ -10347,7 +9157,7 @@ class Mission
 			id=954;
 			atlOffset=1.4752808;
 		};
-		class Item68
+		class Item60
 		{
 			dataType="Group";
 			side="East";
@@ -10402,7 +9212,7 @@ class Mission
 			id=963;
 			atlOffset=4.5694733;
 		};
-		class Item69
+		class Item61
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10421,7 +9231,7 @@ class Mission
 			type="mti_factions_cis_Scythe";
 			atlOffset=4.5694733;
 		};
-		class Item70
+		class Item62
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10454,7 +9264,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item71
+		class Item63
 		{
 			dataType="Group";
 			side="East";
@@ -10894,7 +9704,7 @@ class Mission
 			};
 			id=981;
 		};
-		class Item72
+		class Item64
 		{
 			dataType="Group";
 			side="East";
