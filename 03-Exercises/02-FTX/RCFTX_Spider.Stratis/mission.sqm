@@ -21,14 +21,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=197;
+		nextID=209;
 	};
 	class Camera
 	{
-		pos[]={2611.875,70.771729,637.4101};
-		dir[]={0.56664264,-0.30031192,-0.76729977};
-		up[]={0.17840774,0.95383912,-0.24158384};
-		aside[]={-0.80443245,4.7388312e-08,-0.59406477};
+		pos[]={1267.9572,247.77338,6032.5796};
+		dir[]={-0.0052409624,-0.3957561,0.91834217};
+		up[]={-0.0022585311,0.91835582,0.3957499};
+		aside[]={0.99998504,1.0149733e-08,0.0057068854};
 	};
 };
 binarizationWanted=0;
@@ -62,7 +62,8 @@ addons[]=
 	"A3_Structures_F_Enoch_Infrastructure_Roads",
 	"A3_Structures_F_EPC_Dominants_GhostHotel",
 	"3AS_Structures_FOB",
-	"ls_platforms",
+	"mti_factions_props",
+	"ls_props_structures",
 	"3AS_Prop_Crates",
 	"CUP_Editor_Rocks_Config",
 	"3AS_Prop_Barricades",
@@ -77,14 +78,13 @@ addons[]=
 	"A3_Structures_F_Mil_BagBunker",
 	"A3_Characters_F_Common",
 	"JLTS_characters_DroidArmor",
-	"lsd_units_redfor",
 	"mti_datapad",
 	"A3_Weapons_F_Explosives",
 	"A3_Structures_F_Exp_Infrastructure_Airports",
 	"A3_Modules_F",
 	"mti_aircraft",
 	"A3_Characters_F",
-	"ls_armor_bluefor",
+	"ls_characters_clone_legacy",
 	"3AS_Prop_Terminals",
 	"A3_Modules_F_Curator_Curator",
 	"3AS_CIS_Wheeled_PAC",
@@ -266,70 +266,70 @@ class AddonsMetaData
 		};
 		class Item25
 		{
-			className="ls_platforms";
-			name="ls_platforms";
-			author="kripto202";
+			className="mti_factions_props";
+			name="MokTech Industries - Props";
+			author="MokTech Industries";
 		};
 		class Item26
+		{
+			className="ls_props";
+			name="Legion Studios: Core - Props";
+			author="Legion Studios";
+		};
+		class Item27
 		{
 			className="3AS_Prop_Crates";
 			name="3AS_Prop_Crates";
 			author="3rd Army Studios";
 		};
-		class Item27
+		class Item28
 		{
 			className="CUP_Editor_Rocks_Config";
 			name="CUP_Editor_Rocks_Config";
 		};
-		class Item28
+		class Item29
 		{
 			className="3AS_Prop_Barricades";
 			name="3AS_Prop_Barricades";
 			author="3rd Army Studios";
 		};
-		class Item29
+		class Item30
 		{
 			className="A3_Rocks_F";
 			name="Arma 3 - Rocks and Stones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item30
+		class Item31
 		{
 			className="A3_Rocks_F_Enoch";
 			name="Arma 3 Contact Platform - Rocks and Stones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item31
+		class Item32
 		{
 			className="3as_ModularPlatforms";
 			name="3as_ModularPlatforms";
 			author="3rd Army Studios";
 		};
-		class Item32
+		class Item33
 		{
 			className="OPTRE_BW_Buildings";
 			name="OPTRE_BW_ModularBuildings";
 		};
-		class Item33
+		class Item34
 		{
 			className="A3_Structures_F_Tank";
 			name="Arma 3 Tank - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item34
+		class Item35
 		{
 			className="JLTS_characters_DroidArmor";
 			name="JLTS The Great War - Droids";
 			author="MrClock";
-		};
-		class Item35
-		{
-			className="lsd_units_redfor";
-			name="Legion Studios - Dissension: Redfor Units";
-			author="Legion Studios";
 		};
 		class Item36
 		{
@@ -361,8 +361,8 @@ class AddonsMetaData
 		};
 		class Item40
 		{
-			className="ls_armor_bluefor";
-			name="Legion Dissension: Bluefor Armor";
+			className="ls_characters";
+			name="Legion Studios: Core - Characters";
 			author="Legion Studios";
 		};
 		class Item41
@@ -455,6 +455,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -474,19 +487,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
 				};
 			};
 		};
@@ -19100,7 +19100,7 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=5;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
@@ -19150,54 +19150,6 @@ class Mission
 				};
 				class Item1
 				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={1246.2495,181.89073,6147.2891};
-						angles[]={0,0.92673492,0};
-					};
-					side="East";
-					class Attributes
-					{
-					};
-					id=2811;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=227.4955;
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={1246.2495,181.89073,6147.2891};
-						angles[]={0,0.92673492,0};
-					};
-					side="East";
-					class Attributes
-					{
-					};
-					id=2812;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=227.4955;
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={1246.2495,181.89073,6147.2891};
-						angles[]={0,0.92673492,0};
-					};
-					side="East";
-					class Attributes
-					{
-					};
-					id=2813;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=227.4955;
-				};
-				class Item4
-				{
 					dataType="Waypoint";
 					loiterRadius=400;
 					loiterAltitude=-3.4028235e+38;
@@ -19218,11 +19170,11 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=4;
+					nextID=1;
 				};
 				class Links
 				{
-					items=4;
+					items=1;
 					class Item0
 					{
 						linkID=0;
@@ -19231,39 +19183,6 @@ class Mission
 						class CustomData
 						{
 							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=2811;
-						item1=2809;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-					class Item2
-					{
-						linkID=2;
-						item0=2812;
-						item1=2809;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item3
-					{
-						linkID=3;
-						item0=2813;
-						item1=2809;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={2};
 						};
 					};
 				};
@@ -19277,7 +19196,7 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=5;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
@@ -19296,54 +19215,6 @@ class Mission
 					atlOffset=35.714607;
 				};
 				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4368.6831,1.9123275,7803.6821};
-						angles[]={0,2.092545,0};
-					};
-					side="East";
-					class Attributes
-					{
-					};
-					id=2050;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=37.628269;
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4368.6831,1.9123275,7803.6821};
-						angles[]={0,2.092545,0};
-					};
-					side="East";
-					class Attributes
-					{
-					};
-					id=2051;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=37.628269;
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4368.6831,1.9123275,7803.6821};
-						angles[]={0,2.092545,0};
-					};
-					side="East";
-					class Attributes
-					{
-					};
-					id=2052;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=37.628269;
-				};
-				class Item4
 				{
 					dataType="Waypoint";
 					loiterRadius=350;
@@ -19366,11 +19237,11 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=4;
+					nextID=1;
 				};
 				class Links
 				{
-					items=4;
+					items=1;
 					class Item0
 					{
 						linkID=0;
@@ -19379,39 +19250,6 @@ class Mission
 						class CustomData
 						{
 							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=2050;
-						item1=2048;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-					class Item2
-					{
-						linkID=2;
-						item0=2051;
-						item1=2048;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item3
-					{
-						linkID=3;
-						item0=2052;
-						item1=2048;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={2};
 						};
 					};
 				};
