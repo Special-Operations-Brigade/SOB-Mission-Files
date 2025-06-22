@@ -1,0 +1,15 @@
+Hint "Reactor set to Explode\n In 3 Minutes";
+Sleep 60;
+Hint "Reactor Explosion in\n 2 Minutes";
+Sleep 60;
+Hint "Reactor Explosion in\n 1 Minute";
+Sleep 30;
+Hint "Reactor Explosion in\n 30 Seconds!";
+Sleep 15;
+Hint "Reactor Explosion in\n 15 Seconds";
+Sleep 5;
+Hint "Reactor Explosion in\n 10 Seconds";
+Sleep 5;
+Hint "Reactor Explosion in\n 5 Second.";
+Sleep 5;
+Hint "Reactor Has Exploded";

@@ -1,0 +1,12 @@
+"Marker_0" setmarkeralpha 1;
+"Marker_1" setmarkeralpha 1;
+"Marker_2" setmarkeralpha 1;
+"Marker_3" setmarkeralpha 1;
+"Marker_4" setmarkeralpha 1;
+"Marker_5" setmarkeralpha 1;
+"Marker_6" setmarkeralpha 1;
+"Marker_7" setmarkeralpha 1;
+"Marker_8" setmarkeralpha 1;
+"Marker_9" setmarkeralpha 1;
+"marker_10" setMarkerAlpha 1;
+player removeaction 0;
