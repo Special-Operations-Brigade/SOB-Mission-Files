@@ -17,11 +17,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=7;
+		nextID=14;
 	};
 	class Camera
 	{
-		pos[]={14599.419,34.38335,16749.439};
+		pos[]={14599.419,63.493507,16749.439};
 		dir[]={0.7644605,-0.6445958,0.015093419};
 		up[]={0.6444732,0.76450741,0.012723858};
 		aside[]={0.019741038,7.5613616e-07,-0.99986649};
@@ -38,7 +38,7 @@ addons[]=
 	"A3_Weapons_F",
 	"JLTS_weapons_Core",
 	"JLTS_radios",
-	"ls_armor_bluefor",
+	"ls_characters_clone_legacy",
 	"mti_armoury_common",
 	"ace_gforces",
 	"ace_parachute",
@@ -100,8 +100,8 @@ class AddonsMetaData
 		};
 		class Item7
 		{
-			className="ls_armor_bluefor";
-			name="Legion Dissension: Bluefor Armor";
+			className="ls_characters";
+			name="Legion Studios: Core - Characters";
 			author="Legion Studios";
 		};
 		class Item8
@@ -185,6 +185,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -212,19 +225,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
 				};
 			};
 		};
@@ -370,7 +370,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={14616.673,18.670126,16751.566};
-								angles[]={-0,1.5707963,0};
+								angles[]={0,1.5707963,0};
 							};
 							side="Empty";
 							flags=4;
@@ -405,7 +405,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={14616.673,18.670126,16750.566};
-								angles[]={-0,1.5707964,0};
+								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=4;
@@ -440,7 +440,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={14616.673,18.670126,16749.566};
-								angles[]={-0,1.5707964,0};
+								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=4;
@@ -475,7 +475,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={14616.673,18.670126,16748.566};
-								angles[]={-0,1.5707964,0};
+								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=4;
@@ -510,7 +510,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={14616.673,18.670126,16747.566};
-								angles[]={-0,1.5707964,0};
+								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=4;
@@ -545,7 +545,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={14616.673,18.670126,16746.566};
-								angles[]={-0,1.5707964,0};
+								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
 							flags=4;
@@ -2960,7 +2960,7 @@ class Mission
 														class Attribute3
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -2986,7 +2986,7 @@ class Mission
 														class Attribute5
 														{
 															property="ENH_unitTraits_audibleCoef";
-															expression="[_this, ['AudibleCoef', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['AudibleCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -3012,7 +3012,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -3064,7 +3064,7 @@ class Mission
 														class Attribute11
 														{
 															property="ENH_unitTraits_loadCoef";
-															expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -3103,7 +3103,7 @@ class Mission
 														class Attribute14
 														{
 															property="ENH_unitTraits_camouflage";
-															expression="[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -3116,7 +3116,7 @@ class Mission
 														class Attribute15
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -3406,7 +3406,7 @@ class Mission
 														class Attribute3
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -3432,7 +3432,7 @@ class Mission
 														class Attribute5
 														{
 															property="ENH_unitTraits_audibleCoef";
-															expression="[_this, ['AudibleCoef', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['AudibleCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -3458,7 +3458,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -3510,7 +3510,7 @@ class Mission
 														class Attribute11
 														{
 															property="ENH_unitTraits_loadCoef";
-															expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -3549,7 +3549,7 @@ class Mission
 														class Attribute14
 														{
 															property="ENH_unitTraits_camouflage";
-															expression="[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -3562,7 +3562,7 @@ class Mission
 														class Attribute15
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5312,7 +5312,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5390,7 +5390,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5403,7 +5403,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5479,7 +5479,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5557,7 +5557,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5570,7 +5570,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5646,7 +5646,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5724,7 +5724,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5737,7 +5737,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5813,7 +5813,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5891,7 +5891,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5904,7 +5904,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -5994,7 +5994,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -6072,7 +6072,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -6085,7 +6085,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -6161,7 +6161,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -6239,7 +6239,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -6252,7 +6252,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -6328,7 +6328,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -6406,7 +6406,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -6419,7 +6419,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -6495,7 +6495,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -6573,7 +6573,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -6586,7 +6586,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -7698,7 +7698,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -7776,7 +7776,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -7789,7 +7789,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -7864,7 +7864,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -7942,7 +7942,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -7955,7 +7955,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8030,7 +8030,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8108,7 +8108,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8121,7 +8121,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8196,7 +8196,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8274,7 +8274,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8287,7 +8287,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8375,7 +8375,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8453,7 +8453,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8466,7 +8466,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8541,7 +8541,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8619,7 +8619,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8632,7 +8632,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8707,7 +8707,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8785,7 +8785,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8798,7 +8798,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8873,7 +8873,7 @@ class Mission
 														class Attribute0
 														{
 															property="ENH_unitTraits_engineer";
-															expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8951,7 +8951,7 @@ class Mission
 														class Attribute6
 														{
 															property="ENH_unitTrait_explosiveSpecialist";
-															expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -8964,7 +8964,7 @@ class Mission
 														class Attribute7
 														{
 															property="ENH_unitTraits_medic";
-															expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 															class Value
 															{
 																class data
@@ -9835,7 +9835,7 @@ class Mission
 													class PositionInfo
 													{
 														position[]={14671.919,17.911438,16761.98};
-														angles[]={-0,4.712389,0};
+														angles[]={0,4.712389,0};
 													};
 													side="West";
 													flags=6;
@@ -9961,7 +9961,7 @@ class Mission
 													class PositionInfo
 													{
 														position[]={14671.919,17.911438,16759.98};
-														angles[]={-0,4.712389,0};
+														angles[]={0,4.712389,0};
 													};
 													side="West";
 													flags=4;
@@ -13169,7 +13169,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={14627.303,17.910004,16743.598};
-												angles[]={-0,3.1415927,0};
+												angles[]={0,3.1415927,0};
 											};
 											side="Empty";
 											flags=4;
@@ -14168,7 +14168,7 @@ class Mission
 											class PositionInfo
 											{
 												position[]={14624.311,19.641777,16711.598};
-												angles[]={-0,4.712389,0};
+												angles[]={0,4.712389,0};
 											};
 											side="Empty";
 											flags=4;
