@@ -21,14 +21,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1004;
+		nextID=1065;
 	};
 	class Camera
 	{
-		pos[]={8521.6084,1544.1456,8183.957};
-		dir[]={0.64684874,-0.68726552,-0.33054781};
-		up[]={0.61199063,0.7264061,-0.31273496};
-		aside[]={-0.45504436,1.0780059e-07,-0.89047569};
+		pos[]={1237.1515,144.94337,9717.5527};
+		dir[]={-0.089816049,-0.55295521,0.82837498};
+		up[]={-0.059605025,0.83321011,0.54973966};
+		aside[]={0.99419206,-2.0780135e-08,0.10779528};
 	};
 };
 binarizationWanted=0;
@@ -660,19 +660,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -700,6 +687,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
@@ -18583,14 +18583,14 @@ class Mission
 															dataType="Object";
 															class PositionInfo
 															{
-																position[]={1240.2357,130.9783,9735.3408};
-																angles[]={0,0.88513994,0};
+																position[]={1240.236,130.97844,9735.3408};
+																angles[]={0,0.8851437,0};
 															};
 															side="West";
 															flags=7;
 															class Attributes
 															{
-																name="Control_1";
+																name="Control";
 																description="Control @Control";
 																isPlayer=1;
 																isPlayable=1;
@@ -18611,7 +18611,7 @@ class Mission
 															};
 															id=17628;
 															type="B_officer_F";
-															atlOffset=0.010131836;
+															atlOffset=0.010269165;
 															class CustomAttributes
 															{
 																class Attribute0
@@ -18739,14 +18739,14 @@ class Mission
 															dataType="Object";
 															class PositionInfo
 															{
-																position[]={1238.9697,130.97855,9736.8896};
-																angles[]={0,0.88513994,0};
+																position[]={1238.97,130.97844,9736.8896};
+																angles[]={0,0.8851437,0};
 															};
 															side="West";
 															flags=5;
 															class Attributes
 															{
-																name="Control_Alpha_1";
+																name="Control_Alpha";
 																description="Control Alpha";
 																isPlayable=1;
 																class Inventory
@@ -18766,7 +18766,7 @@ class Mission
 															};
 															id=17629;
 															type="B_officer_F";
-															atlOffset=0.010803223;
+															atlOffset=0.010696411;
 															class CustomAttributes
 															{
 																class Attribute0
@@ -18894,14 +18894,14 @@ class Mission
 															dataType="Object";
 															class PositionInfo
 															{
-																position[]={1237.7034,130.97855,9738.4375};
-																angles[]={0,0.88513994,0};
+																position[]={1237.703,130.97844,9738.4375};
+																angles[]={0,0.8851437,0};
 															};
 															side="West";
 															flags=5;
 															class Attributes
 															{
-																name="Control_Bravo_1";
+																name="Control_Bravo";
 																description="Control Bravo";
 																isPlayable=1;
 																class Inventory
@@ -18921,7 +18921,7 @@ class Mission
 															};
 															id=17630;
 															type="B_officer_F";
-															atlOffset=0.01121521;
+															atlOffset=0.011108398;
 															class CustomAttributes
 															{
 																class Attribute0
@@ -19049,14 +19049,14 @@ class Mission
 															dataType="Object";
 															class PositionInfo
 															{
-																position[]={1236.437,130.97855,9739.9854};
-																angles[]={0,0.88513994,0};
+																position[]={1236.437,130.97844,9739.9854};
+																angles[]={0,0.8851437,0};
 															};
 															side="West";
 															flags=5;
 															class Attributes
 															{
-																name="Control_Charlie_1";
+																name="Control_Charlie";
 																description="Control Charlie";
 																isPlayable=1;
 																class Inventory
@@ -19076,7 +19076,7 @@ class Mission
 															};
 															id=17631;
 															type="B_officer_F";
-															atlOffset=0.011627197;
+															atlOffset=0.011520386;
 															class CustomAttributes
 															{
 																class Attribute0
@@ -19204,7 +19204,7 @@ class Mission
 													{
 													};
 													id=17627;
-													atlOffset=0.010131836;
+													atlOffset=0.010269165;
 												};
 												class Item1
 												{
