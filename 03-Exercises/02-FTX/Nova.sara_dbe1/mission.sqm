@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=514;
+	toggles=2;
 	mods[]=
 	{
 		"WBK_Zombies_AdvancedEditorSettings",
@@ -13,7 +13,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2458;
+		nextID=2461;
 	};
 	class MarkerIDProvider
 	{
@@ -21,14 +21,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=389;
+		nextID=418;
 	};
 	class Camera
 	{
-		pos[]={13958.838,112.62874,16476.264};
-		dir[]={0.667584,-0.44876513,-0.59410578};
-		up[]={0.33523864,0.8936469,-0.29834005};
-		aside[]={-0.66480494,-9.5460564e-08,-0.74702507};
+		pos[]={3259.9148,22.826651,2683.4753};
+		dir[]={0.6163289,-0.4126671,-0.67070454};
+		up[]={0.27922243,0.91088194,-0.30385685};
+		aside[]={-0.73632437,0,-0.67662877};
 	};
 };
 binarizationWanted=0;
@@ -47,13 +47,14 @@ addons[]=
 	"mti_factions_cis",
 	"3AS_Prop_Platforms",
 	"3AS_Prop_Catwalks",
+	"mti_factions_props",
 	"lsb_structures",
 	"3AS_Prop_Crates",
 	"3AS_Prop_Barricades",
 	"3AS_Structures_LandingPads",
 	"JLTS_core_droids",
 	"A3_Ui_F",
-	"ls_flags",
+	"ls_props",
 	"JLTS_characters_DroidArmor",
 	"3AS_Prop_Trenches",
 	"A3_Rocks_F_Exp_Cliff",
@@ -65,13 +66,11 @@ addons[]=
 	"3AS_Prop_MB",
 	"lsb_fob_hBlock",
 	"A3_Characters_F_Common",
-	"ls_units_purplefor",
-	"lsd_units_redfor",
 	"A3_Characters_F",
 	"A3_Weapons_F",
 	"JLTS_weapons_Core",
 	"JLTS_radios",
-	"ls_armor_bluefor",
+	"ls_characters_clone_legacy",
 	"mti_armoury_arc",
 	"A3_Modules_F_Curator_Curator",
 	"mti_aircraft",
@@ -83,7 +82,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=41;
+		items=40;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -159,183 +158,177 @@ class AddonsMetaData
 		};
 		class Item12
 		{
+			className="mti_factions_props";
+			name="MokTech Industries - Props";
+			author="MokTech Industries";
+		};
+		class Item13
+		{
 			className="lsb_structures";
 			name="Legion Battlefields: Structures";
 			author="Legion Studios";
 		};
-		class Item13
+		class Item14
 		{
 			className="3AS_Prop_Crates";
 			name="3AS_Prop_Crates";
 			author="3rd Army Studios";
 		};
-		class Item14
+		class Item15
 		{
 			className="3AS_Prop_Barricades";
 			name="3AS_Prop_Barricades";
 			author="3rd Army Studios";
 		};
-		class Item15
+		class Item16
 		{
 			className="3AS_Structures_LandingPads";
 			name="3AS_Structures_LandingPads";
 			author="3rd Army Studios";
 		};
-		class Item16
+		class Item17
 		{
 			className="JLTS_core_droids";
 			name="JLTS The Great War - Core droids";
 			author="MrClock";
 		};
-		class Item17
+		class Item18
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item18
+		class Item19
 		{
-			className="ls_flags";
-			name="ls_flags";
+			className="ls_props";
+			name="Legion Studios: Core - Props";
 			author="Legion Studios";
 		};
-		class Item19
+		class Item20
 		{
 			className="JLTS_characters_DroidArmor";
 			name="JLTS The Great War - Droids";
 			author="MrClock";
 		};
-		class Item20
+		class Item21
 		{
 			className="3AS_Prop_Trenches";
 			name="3AS_Prop_Trenches";
 			author="3rd Army Studios";
 		};
-		class Item21
+		class Item22
 		{
 			className="A3_Rocks_F_Exp";
 			name="Arma 3 Apex - Rocks and Stones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item22
+		class Item23
 		{
 			className="3AS_Structures_ShieldGenerator";
 			name="3AS_Structures_ShieldGenerator";
 			author="3rd Army Studios";
 		};
-		class Item23
+		class Item24
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item25
 		{
 			className="ace_logistics_wirecutter";
 			name="ACE3 - Logistics Wire Cutter";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item25
+		class Item26
 		{
 			className="ace_concertina_wire";
 			name="ACE3 - Concertina Wire";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item26
+		class Item27
 		{
 			className="3AS_Prop_MB";
 			name="3AS_Prop_MB";
 			author="3rd Army Studios";
 		};
-		class Item27
+		class Item28
 		{
 			className="lsb_fob_hBlock";
 			name="Legion Battlefields: Vanilla Replacements";
 			author="Legion Studios";
 		};
-		class Item28
+		class Item29
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
-		{
-			className="ls_units_purplefor";
-			name="Legion Studios - Core: Civilian Units";
-			author="Legion Studios";
-		};
 		class Item30
-		{
-			className="lsd_units_redfor";
-			name="Legion Studios - Dissension: Redfor Units";
-			author="Legion Studios";
-		};
-		class Item31
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item32
+		class Item31
 		{
 			className="JLTS_weapons_Core";
 			name="JLTS The Great War - Weapons Core";
 			author="MrClock";
 		};
-		class Item33
+		class Item32
 		{
 			className="JLTS_radios";
 			name="JLTS The Great War - Radios";
 			author="MrClock";
 		};
-		class Item34
+		class Item33
 		{
-			className="ls_armor_bluefor";
-			name="Legion Dissension: Bluefor Armor";
+			className="ls_characters";
+			name="Legion Studios: Core - Characters";
 			author="Legion Studios";
 		};
-		class Item35
+		class Item34
 		{
 			className="mti_armoury_arc";
 			name="MokTech Industries - ARC";
 			author="MokTech Industries";
 		};
-		class Item36
+		class Item35
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item37
+		class Item36
 		{
 			className="mti_aircraft";
 			name="MokTech Industries - Aircraft";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item38
+		class Item37
 		{
 			className="3AS_Rocks";
 			name="3AS_Rocks";
 			author="3rd Army Studios";
 		};
-		class Item39
+		class Item38
 		{
 			className="mti_arsenal";
 			name="MokTech Industries - Arsenal";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item40
+		class Item39
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
@@ -394,19 +387,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -434,6 +414,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
@@ -560,7 +553,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=171;
+		items=168;
 		class Item0
 		{
 			dataType="Logic";
@@ -12693,7 +12686,7 @@ class Mission
 			{
 			};
 			id=1568;
-			type="mti_factions_cis_mortar";
+			type="mti_factions_cis_Mortar";
 			atlOffset=5.3003845;
 		};
 		class Item14
@@ -12708,7 +12701,7 @@ class Mission
 			{
 			};
 			id=1570;
-			type="mti_factions_cis_mortar";
+			type="mti_factions_cis_Mortar";
 			atlOffset=5.3032227;
 		};
 		class Item15
@@ -12723,7 +12716,7 @@ class Mission
 			{
 			};
 			id=1572;
-			type="mti_factions_cis_mortar";
+			type="mti_factions_cis_Mortar";
 			atlOffset=5.2573547;
 		};
 		class Item16
@@ -15324,7 +15317,7 @@ class Mission
 													{
 													};
 													id=1758;
-													type="mti_factions_cis_Eweb_Armoured";
+													type="mti_factions_cis_EWeb_Armoured";
 													atlOffset=0.061859131;
 												};
 												class Item2
@@ -18582,7 +18575,7 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=8;
+				items=9;
 				class Item0
 				{
 					dataType="Object";
@@ -18735,6 +18728,54 @@ class Mission
 					};
 					id=1982;
 					type="mti_factions_cis_B1_SBB3";
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11788.426,307.66806,13876.653};
+						angles[]={0,4.3040171,0};
+					};
+					side="East";
+					flags=1;
+					class Attributes
+					{
+						init="this disableAI ""PATH"";";
+					};
+					id=2460;
+					type="mti_factions_cis_OOM_Commander";
+					atlOffset=3.48526;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
@@ -19299,68 +19340,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11787.485,307.66833,13876.357};
-						angles[]={0,4.2803698,0};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-						init="this disableAI ""PATH"";";
-						ignoreByDynSimulGrid=1;
-					};
-					id=2015;
-					type="mti_factions_cis_TS";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male02PER";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-			};
-			class Attributes
-			{
-				dynamicSimulation=1;
-			};
-			id=2014;
-		};
-		class Item102
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={11793.117,313.56467,13865.243};
 					};
 					side="East";
@@ -19400,7 +19379,7 @@ class Mission
 			};
 			id=2016;
 		};
-		class Item103
+		class Item102
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19417,7 +19396,7 @@ class Mission
 			id=2017;
 			type="mti_factions_cis_pd_turret";
 		};
-		class Item104
+		class Item103
 		{
 			dataType="Group";
 			side="East";
@@ -19584,7 +19563,7 @@ class Mission
 			};
 			id=2019;
 		};
-		class Item105
+		class Item104
 		{
 			dataType="Group";
 			side="East";
@@ -19713,7 +19692,7 @@ class Mission
 			};
 			id=2028;
 		};
-		class Item106
+		class Item105
 		{
 			dataType="Group";
 			side="East";
@@ -19881,7 +19860,7 @@ class Mission
 			};
 			id=2037;
 		};
-		class Item107
+		class Item106
 		{
 			dataType="Group";
 			side="East";
@@ -20048,7 +20027,7 @@ class Mission
 			};
 			id=2046;
 		};
-		class Item108
+		class Item107
 		{
 			dataType="Group";
 			side="East";
@@ -20217,7 +20196,7 @@ class Mission
 			};
 			id=2055;
 		};
-		class Item109
+		class Item108
 		{
 			dataType="Group";
 			side="East";
@@ -20383,7 +20362,7 @@ class Mission
 			};
 			id=2064;
 		};
-		class Item110
+		class Item109
 		{
 			dataType="Group";
 			side="East";
@@ -20551,7 +20530,7 @@ class Mission
 			};
 			id=2073;
 		};
-		class Item111
+		class Item110
 		{
 			dataType="Group";
 			side="East";
@@ -20718,7 +20697,7 @@ class Mission
 			};
 			id=2082;
 		};
-		class Item112
+		class Item111
 		{
 			dataType="Group";
 			side="East";
@@ -20770,7 +20749,7 @@ class Mission
 			id=2091;
 			atlOffset=5.3107758;
 		};
-		class Item113
+		class Item112
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20788,7 +20767,7 @@ class Mission
 			type="mti_factions_cis_Deka_Static";
 			atlOffset=5.3107758;
 		};
-		class Item114
+		class Item113
 		{
 			dataType="Group";
 			side="East";
@@ -20840,7 +20819,7 @@ class Mission
 			id=2094;
 			atlOffset=5.5291252;
 		};
-		class Item115
+		class Item114
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20858,7 +20837,7 @@ class Mission
 			type="mti_factions_cis_Deka_Static_Sniper";
 			atlOffset=5.5291252;
 		};
-		class Item116
+		class Item115
 		{
 			dataType="Group";
 			side="East";
@@ -20908,135 +20887,7 @@ class Mission
 			id=2097;
 			atlOffset=0.0019264221;
 		};
-		class Item117
-		{
-			dataType="Group";
-			side="Civilian";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14042.849,32.356403,16251.036};
-						angles[]={0,4.4349689,0};
-					};
-					side="Civilian";
-					flags=7;
-					class Attributes
-					{
-						init="this disableAI ""PATH"";";
-						ignoreByDynSimulGrid=1;
-					};
-					id=2102;
-					type="ls_civ_zabrak_m_scientist";
-					atlOffset=0.0044898987;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male04ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-			};
-			class Attributes
-			{
-				dynamicSimulation=1;
-			};
-			id=2101;
-			atlOffset=0.0044898987;
-		};
-		class Item118
-		{
-			dataType="Group";
-			side="Civilian";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14042.814,32.356674,16237.143};
-						angles[]={0,5.4092641,0};
-					};
-					side="Civilian";
-					flags=7;
-					class Attributes
-					{
-						init="this disableAI ""PATH"";";
-						ignoreByDynSimulGrid=1;
-					};
-					id=2104;
-					type="ls_civ_zabrak_m_scientist";
-					atlOffset=0.0047607422;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male11ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-			};
-			class Attributes
-			{
-				dynamicSimulation=1;
-			};
-			id=2103;
-			atlOffset=0.0047607422;
-		};
-		class Item119
+		class Item116
 		{
 			dataType="Group";
 			side="East";
@@ -21189,7 +21040,7 @@ class Mission
 			id=2108;
 			atlOffset=0.00099945068;
 		};
-		class Item120
+		class Item117
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21205,13 +21056,13 @@ class Mission
 			type="mti_factions_cis_AAT_CIS";
 			atlOffset=0.00099945068;
 		};
-		class Item121
+		class Item118
 		{
 			dataType="Group";
 			side="East";
 			class Entities
 			{
-				items=5;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
@@ -21260,51 +21111,6 @@ class Mission
 				};
 				class Item1
 				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14356.66,1.90219,16775.592};
-					};
-					side="East";
-					class Attributes
-					{
-					};
-					id=2116;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=21.837566;
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14356.66,1.90219,16775.592};
-					};
-					side="East";
-					class Attributes
-					{
-					};
-					id=2117;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=21.837566;
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={14356.66,1.90219,16775.592};
-					};
-					side="East";
-					class Attributes
-					{
-					};
-					id=2118;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=21.837566;
-				};
-				class Item4
-				{
 					dataType="Waypoint";
 					loiterRadius=300;
 					loiterAltitude=400;
@@ -21324,11 +21130,11 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=4;
+					nextID=1;
 				};
 				class Links
 				{
-					items=4;
+					items=1;
 					class Item0
 					{
 						linkID=0;
@@ -21339,45 +21145,12 @@ class Mission
 							role=1;
 						};
 					};
-					class Item1
-					{
-						linkID=1;
-						item0=2116;
-						item1=2114;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-					class Item2
-					{
-						linkID=2;
-						item0=2117;
-						item1=2114;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item3
-					{
-						linkID=3;
-						item0=2118;
-						item1=2114;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={2};
-						};
-					};
 				};
 			};
 			id=2113;
 			atlOffset=428.13901;
 		};
-		class Item122
+		class Item119
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21393,13 +21166,13 @@ class Mission
 			type="mti_factions_cis_hmp_transport";
 			atlOffset=428.13901;
 		};
-		class Item123
+		class Item120
 		{
 			dataType="Group";
 			side="East";
 			class Entities
 			{
-				items=5;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
@@ -21448,54 +21221,6 @@ class Mission
 				};
 				class Item1
 				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12570.48,-207.0074,14428.89};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=2121;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=-406.32492;
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12570.48,-207.0074,14428.89};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=2122;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=-406.32492;
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12570.48,-207.0074,14428.89};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=2123;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=-406.32492;
-				};
-				class Item4
-				{
 					dataType="Waypoint";
 					loiterRadius=300;
 					loiterAltitude=-3.4028235e+38;
@@ -21515,11 +21240,11 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=4;
+					nextID=1;
 				};
 				class Links
 				{
-					items=4;
+					items=1;
 					class Item0
 					{
 						linkID=0;
@@ -21530,45 +21255,12 @@ class Mission
 							role=1;
 						};
 					};
-					class Item1
-					{
-						linkID=1;
-						item0=2121;
-						item1=2124;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-					class Item2
-					{
-						linkID=2;
-						item0=2122;
-						item1=2124;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item3
-					{
-						linkID=3;
-						item0=2123;
-						item1=2124;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={2};
-						};
-					};
 				};
 			};
 			id=2119;
 			atlOffset=336.80902;
 		};
-		class Item124
+		class Item121
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21584,7 +21276,7 @@ class Mission
 			type="mti_factions_cis_hmp_transport";
 			atlOffset=336.80902;
 		};
-		class Item125
+		class Item122
 		{
 			dataType="Group";
 			side="East";
@@ -21662,7 +21354,7 @@ class Mission
 			};
 			id=2125;
 		};
-		class Item126
+		class Item123
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21679,7 +21371,7 @@ class Mission
 			id=2126;
 			type="mti_factions_cis_n99";
 		};
-		class Item127
+		class Item124
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21714,7 +21406,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item128
+		class Item125
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21748,7 +21440,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item129
+		class Item126
 		{
 			dataType="Marker";
 			position[]={10247.627,157.048,5500.9629};
@@ -21763,7 +21455,7 @@ class Mission
 			id=2131;
 			atlOffset=134.64619;
 		};
-		class Item130
+		class Item127
 		{
 			dataType="Object";
 			class PositionInfo
@@ -21780,7 +21472,7 @@ class Mission
 			type="3AS_HoloTable_Rectangle_Green_Prop";
 			atlOffset=1.4689999;
 		};
-		class Item131
+		class Item128
 		{
 			dataType="Layer";
 			name="Ground Spawn";
@@ -22528,7 +22220,7 @@ class Mission
 																class Attribute3
 																{
 																	property="ENH_unitTraits_engineer";
-																	expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -22554,7 +22246,7 @@ class Mission
 																class Attribute5
 																{
 																	property="ENH_unitTraits_audibleCoef";
-																	expression="[_this, ['AudibleCoef', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['AudibleCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -22580,7 +22272,7 @@ class Mission
 																class Attribute7
 																{
 																	property="ENH_unitTraits_medic";
-																	expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -22632,7 +22324,7 @@ class Mission
 																class Attribute11
 																{
 																	property="ENH_unitTraits_loadCoef";
-																	expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -22671,7 +22363,7 @@ class Mission
 																class Attribute14
 																{
 																	property="ENH_unitTraits_camouflage";
-																	expression="[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -22684,7 +22376,7 @@ class Mission
 																class Attribute15
 																{
 																	property="ENH_unitTrait_explosiveSpecialist";
-																	expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -22976,7 +22668,7 @@ class Mission
 																class Attribute3
 																{
 																	property="ENH_unitTraits_engineer";
-																	expression="[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -23002,7 +22694,7 @@ class Mission
 																class Attribute5
 																{
 																	property="ENH_unitTraits_audibleCoef";
-																	expression="[_this, ['AudibleCoef', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['AudibleCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -23028,7 +22720,7 @@ class Mission
 																class Attribute7
 																{
 																	property="ENH_unitTraits_medic";
-																	expression="[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -23080,7 +22772,7 @@ class Mission
 																class Attribute11
 																{
 																	property="ENH_unitTraits_loadCoef";
-																	expression="[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -23119,7 +22811,7 @@ class Mission
 																class Attribute14
 																{
 																	property="ENH_unitTraits_camouflage";
-																	expression="[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -23132,7 +22824,7 @@ class Mission
 																class Attribute15
 																{
 																	property="ENH_unitTrait_explosiveSpecialist";
-																	expression="[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]";
+																	expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
 																	class Value
 																	{
 																		class data
@@ -24617,7 +24309,7 @@ class Mission
 			id=2280;
 			atlOffset=74.043015;
 		};
-		class Item132
+		class Item129
 		{
 			dataType="Group";
 			side="East";
@@ -24669,7 +24361,7 @@ class Mission
 			id=2283;
 			atlOffset=5.1146851;
 		};
-		class Item133
+		class Item130
 		{
 			dataType="Object";
 			class PositionInfo
@@ -24687,13 +24379,13 @@ class Mission
 			type="mti_factions_cis_Deka_Static_Sniper";
 			atlOffset=5.1146851;
 		};
-		class Item134
+		class Item131
 		{
 			dataType="Group";
 			side="East";
 			class Entities
 			{
-				items=5;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
@@ -24743,54 +24435,6 @@ class Mission
 				};
 				class Item1
 				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12361.466,233.65443,13890.6};
-					};
-					side="East";
-					class Attributes
-					{
-						ignoreByDynSimulGrid=1;
-					};
-					id=2289;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=1.9247742;
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12361.466,233.65443,13890.6};
-					};
-					side="East";
-					class Attributes
-					{
-						ignoreByDynSimulGrid=1;
-					};
-					id=2290;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=1.9247742;
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12361.466,233.65443,13890.6};
-					};
-					side="East";
-					class Attributes
-					{
-						ignoreByDynSimulGrid=1;
-					};
-					id=2291;
-					type="lsd_cis_oomPilot_standard";
-					atlOffset=1.9247742;
-				};
-				class Item4
-				{
 					dataType="Waypoint";
 					loiterRadius=1125;
 					loiterAltitude=300;
@@ -24811,11 +24455,11 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=4;
+					nextID=1;
 				};
 				class Links
 				{
-					items=4;
+					items=1;
 					class Item0
 					{
 						linkID=0;
@@ -24826,45 +24470,12 @@ class Mission
 							role=1;
 						};
 					};
-					class Item1
-					{
-						linkID=1;
-						item0=2289;
-						item1=2287;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-					class Item2
-					{
-						linkID=2;
-						item0=2290;
-						item1=2287;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item3
-					{
-						linkID=3;
-						item0=2291;
-						item1=2287;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={2};
-						};
-					};
 				};
 			};
 			id=2286;
 			atlOffset=185.192;
 		};
-		class Item135
+		class Item132
 		{
 			dataType="Object";
 			class PositionInfo
@@ -24880,7 +24491,7 @@ class Mission
 			type="mti_factions_cis_hmp_transport";
 			atlOffset=185.192;
 		};
-		class Item136
+		class Item133
 		{
 			dataType="Object";
 			class PositionInfo
@@ -24897,7 +24508,7 @@ class Mission
 			type="MTI_LAATi_Base";
 			atlOffset=0.25797844;
 		};
-		class Item137
+		class Item134
 		{
 			dataType="Group";
 			side="East";
@@ -25074,7 +24685,7 @@ class Mission
 			};
 			id=2354;
 		};
-		class Item138
+		class Item135
 		{
 			dataType="Group";
 			side="East";
@@ -25345,7 +24956,7 @@ class Mission
 			id=2364;
 			atlOffset=1.9073486e-06;
 		};
-		class Item139
+		class Item136
 		{
 			dataType="Group";
 			side="East";
@@ -25600,7 +25211,7 @@ class Mission
 			};
 			id=2380;
 		};
-		class Item140
+		class Item137
 		{
 			dataType="Group";
 			side="East";
@@ -25774,7 +25385,7 @@ class Mission
 			};
 			id=2395;
 		};
-		class Item141
+		class Item138
 		{
 			dataType="Group";
 			side="East";
@@ -26031,7 +25642,7 @@ class Mission
 			id=2405;
 			atlOffset=3.0517578e-05;
 		};
-		class Item142
+		class Item139
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26049,7 +25660,7 @@ class Mission
 			type="Land_Cliff_wall_tall_F";
 			atlOffset=-20.884888;
 		};
-		class Item143
+		class Item140
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26067,7 +25678,7 @@ class Mission
 			type="Land_Cliff_wall_tall_F";
 			atlOffset=-16.922333;
 		};
-		class Item144
+		class Item141
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26085,7 +25696,7 @@ class Mission
 			type="Land_Cliff_wall_tall_F";
 			atlOffset=-7.37677;
 		};
-		class Item145
+		class Item142
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26103,7 +25714,7 @@ class Mission
 			type="Land_Cliff_wall_tall_F";
 			atlOffset=7.4145813;
 		};
-		class Item146
+		class Item143
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26121,7 +25732,7 @@ class Mission
 			type="3AS_Rock_22_Mossy";
 			atlOffset=4.2377319;
 		};
-		class Item147
+		class Item144
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26140,7 +25751,7 @@ class Mission
 			type="3AS_Rock_19_Mossy";
 			atlOffset=9.4378052;
 		};
-		class Item148
+		class Item145
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26159,7 +25770,7 @@ class Mission
 			type="3AS_Rock_19_Mossy";
 			atlOffset=11.14801;
 		};
-		class Item149
+		class Item146
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26178,7 +25789,7 @@ class Mission
 			type="3AS_Rock_19_Mossy";
 			atlOffset=6.3146667;
 		};
-		class Item150
+		class Item147
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26196,7 +25807,7 @@ class Mission
 			id=2428;
 			type="3AS_Rock_19_Mossy";
 		};
-		class Item151
+		class Item148
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26215,7 +25826,7 @@ class Mission
 			type="3AS_Rock_19_Mossy";
 			atlOffset=1.4702148;
 		};
-		class Item152
+		class Item149
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26234,7 +25845,7 @@ class Mission
 			type="3AS_Rock_19_Mossy";
 			atlOffset=0.0018310547;
 		};
-		class Item153
+		class Item150
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26252,7 +25863,7 @@ class Mission
 			type="Land_Cliff_wall_tall_F";
 			atlOffset=-23.633423;
 		};
-		class Item154
+		class Item151
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -26295,7 +25906,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item155
+		class Item152
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26313,7 +25924,7 @@ class Mission
 			type="Land_Cliff_wall_tall_F";
 			atlOffset=-24.123652;
 		};
-		class Item156
+		class Item153
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26331,7 +25942,7 @@ class Mission
 			type="Land_Cliff_wall_tall_F";
 			atlOffset=-19.912935;
 		};
-		class Item157
+		class Item154
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26349,7 +25960,7 @@ class Mission
 			type="Land_Cliff_wall_tall_F";
 			atlOffset=-21.642984;
 		};
-		class Item158
+		class Item155
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26368,7 +25979,7 @@ class Mission
 			type="3AS_Rock_19_Mossy";
 			atlOffset=-0.48109436;
 		};
-		class Item159
+		class Item156
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26387,7 +25998,7 @@ class Mission
 			type="3AS_Rock_19_Mossy";
 			atlOffset=-1.3281822;
 		};
-		class Item160
+		class Item157
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26405,7 +26016,7 @@ class Mission
 			type="3AS_LargeCrate_1_cis";
 			atlOffset=3.8936768;
 		};
-		class Item161
+		class Item158
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26423,7 +26034,7 @@ class Mission
 			type="3AS_LargeCrate_1_cis";
 			atlOffset=3.8500748;
 		};
-		class Item162
+		class Item159
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26440,7 +26051,7 @@ class Mission
 			};
 			id=2441;
 			type="mti_arsenal_arc";
-			atlOffset=1.2450027;
+			atlOffset=0.72936058;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26459,7 +26070,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item163
+		class Item160
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26477,7 +26088,7 @@ class Mission
 			type="Land_Hangar_F";
 			atlOffset=1.38801;
 		};
-		class Item164
+		class Item161
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26495,7 +26106,7 @@ class Mission
 			id=2445;
 			type="3AS_Barricade_cis_Prop";
 		};
-		class Item165
+		class Item162
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26513,7 +26124,7 @@ class Mission
 			id=2446;
 			type="3AS_Barricade_cis_Prop";
 		};
-		class Item166
+		class Item163
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26530,7 +26141,7 @@ class Mission
 			id=2447;
 			type="3AS_CIS_Console_5_Prop";
 		};
-		class Item167
+		class Item164
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26547,7 +26158,7 @@ class Mission
 			id=2448;
 			type="3AS_CIS_Console_4_Prop";
 		};
-		class Item168
+		class Item165
 		{
 			dataType="Object";
 			class PositionInfo
@@ -26564,7 +26175,7 @@ class Mission
 			id=2449;
 			type="3AS_CIS_Console_4_Prop";
 		};
-		class Item169
+		class Item166
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -26606,7 +26217,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item170
+		class Item167
 		{
 			dataType="Logic";
 			class PositionInfo
