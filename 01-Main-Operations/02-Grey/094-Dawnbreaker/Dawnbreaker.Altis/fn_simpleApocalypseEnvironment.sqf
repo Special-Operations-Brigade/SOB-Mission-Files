@@ -237,9 +237,9 @@ comment "Code to be executed on the server-side";
 		"Land_Wreck_Car2_F",
 		"Land_Wreck_Car3_F",
 		"Land_Wreck_Car3_F",
-		"Land_Wreck_CarDismantled_F",
+		"3AS_BoxBarricade5",
 		"3AS_GAT_wreck_static",
-		"Land_Wreck_HMMWV_F",
+		"3AS_GAT_Light_wreck_static",
 		"Land_Wreck_HMMWV_F",
 		"Land_Wreck_Hunter_F",
 		"Land_Wreck_Hunter_F",
@@ -248,11 +248,11 @@ comment "Code to be executed on the server-side";
 		"Land_Wreck_Offroad2_F",
 		"Land_Wreck_Skodovka_F",
 		"3AS_LAAT_Mk1_StaticWreck",
-		"Land_Wreck_Slammer_F",
-		"Land_Wreck_Slammer_hull_F",
-		"Land_Wreck_Slammer_turret_F",
+		"3AS_LAAT_Mk2_StaticWreck",
+		"3AS_RTT_destroy_static",
+		"BloodPool_01_Large_New_F",
 		"3AS_Saber_01_destroy_Static",
-		"Land_Wreck_T72_turret_F",
+		"3AS_BARCSidecar_destroyed_static",
 		"Land_Wreck_Truck_dropside_F",
 		"Land_Wreck_Truck_F",
 		"Land_Wreck_Truck_F",
@@ -260,22 +260,24 @@ comment "Code to be executed on the server-side";
 		"Land_Wreck_Ural_F",
 		"Land_Wreck_Ural_F",
 		"Land_Wreck_Van_F",
-		"Land_Bulldozer_01_wreck_F",
-		"Land_Excavator_01_wreck_F"
+		"3AS_Jug_destroy_static",
+		"3AS_Deka_Wreck"
 	];
 	
 	_classNames = 
 	[
 		"CraterLong",
 		"CraterLong_small",
+		"Land_Barricade_01_10m_F",
+		"3AS_BoxBarricade3",
 		"CraterLong_02_F",
 		"CraterLong_02_small_F",
 		"Land_A_Villa_ruins_EP1",
 		"Land_Sara_zluty_statek_ruins",
 		"Land_Cargo40_china_color_V1_ruins_F",
 		"Land_Cargo40_military_ruins_F",
-		"Land_Cargo40_china_color_V2_ruins_F",
-		"Land_Cargo20_china_color_V1_ruins_F",
+		"3AS_Debris6_Prop",
+		"3AS_Debris2_Prop",
 		"Land_Cargo20_military_ruins_F",
 		"Land_Cargo20_china_color_V2_ruins_F",
 		"Crater",
@@ -306,10 +308,7 @@ comment "Code to be executed on the server-side";
 		"3AS_Junk_Pile",
 		"3AS_Debris9_Prop",
 		"3AS_Junk_Pile_1",
-		"3AS_ADSD_wreck_static",
-		"Land_HistoricalPlaneDebris_02_F",
-		"Land_HistoricalPlaneDebris_03_F",
-		"Land_HistoricalPlaneDebris_04_F"
+		"3AS_ADSD_wreck_static"
 	];
 	{
 		comment "spawn wrecks on roads all over";

@@ -45,10 +45,10 @@ missionNamespace setVariable ["_weaponConfigs", [
     ["ACE_elasticBandage", "mti_Mag_DC15LE_HP", ""]
 ]]; 
 
-missionNamespace setVariable ["_items", ["MTI_EmergencyFlare","ACE_fieldDressing","mti_Mag_ThermalDet","WBK_ShoulderLampItem_Strong","ItemMap","MTI_BactaPatch","ACE_EntrenchingTool"]];
+missionNamespace setVariable ["_items", ["TKE_MercHelmV2VisorPolice","B_Carryall_cbr","mti_armoury_commando_helmet_base","mti_armoury_trooper_backpack_medic","mti_armoury_trooper_backpack_base","mti_factions_mando_backpack_JT12","mti_factions_zombies_helmet_SOBARC","mti_armoury_fieldsupport_helmet_FS_Tanker","mti_armoury_jumptrooper_helmet_Trooper","mti_factions_zombies_helmet_SOB","mti_armoury_arc_vest_trooper","MTI_EmergencyFlare","ACE_fieldDressing","mti_Mag_ThermalDet","WBK_ShoulderLampItem_Strong","ItemMap","MTI_BactaPatch","ACE_EntrenchingTool"]];
 
 // Add rare items array
-missionNamespace setVariable ["_rareItems", ["mti_armoury_trooper_nvg_Chip","JLTS_clone_comlink","ACE_surgicalKit"]]; // Example rare items, replace with your own
+missionNamespace setVariable ["_rareItems", ["mti_factions_zombies_vest_RAMZ","TKE_AlicePackUCN","TKE_FlakJacketPV1","mti_armoury_trooper_backpack_RTO","mti_armoury_arc_backpack_base","mti_armoury_fieldsupport_backpack_fsb_trooper","mti_armoury_trooper_helmet_elite","mti_armoury_commando_vest_base","mti_armoury_trooper_nvg_Chip","JLTS_clone_comlink","ACE_surgicalKit"]]; // Example rare items, replace with your own
 
 
 fnc_spawnLoot = {
@@ -65,7 +65,7 @@ fnc_spawnLoot = {
         };
         _bIdx = _building getVariable ["DB_buildingIndex", -1];
         if !(_building getVariable ["hasLoot", false]) then {
-            if ((_bIdx % 10) == 0) then { // Only spawn loot in every 10th building globally
+            if ((_bIdx % 5) == 0) then { // Only spawn loot in every 5th building globally
                 _positions = _building buildingPos -1;
                 if (count _positions > 0) then {
                     _building setVariable ["hasLoot", true, true];

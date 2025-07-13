@@ -21,7 +21,7 @@
 			"Zombie_G_RA_FIA",
 			"Zombie_Special_GREENFOR_Boomer",
 			"Zombie_Special_GREENFOR_Leaper_2",
-			"WBK_SpecialZombie_Smasher_1"
+			"Zombie_Special_GREENFOR_Screamer"
 		];
 
 		allCivilianVehicleClassNames =[
@@ -43,7 +43,11 @@
 			"O_G_Van_01_transport_F",
 			"OPTRE_M12_FAV_ins",
 			"3AS_BarcSideCar_501",
-			"B_Truck_01_transport_F"
+			"B_Truck_01_transport_F",
+			"C_Van_01_fuel_F",
+			"C_Offroad_01_repair_F",
+			"B_G_Quadbike_01_F",
+			"mti_factions_rebels_Jeep"
 		];
 
 		allBlackListedAirportObjects = [
@@ -481,6 +485,7 @@
 						_agent = createAgent [_class,getPos _spawn,[],0,"CAN_COLLIDE"];
 						_veh = createVehicle [_classV, getPos _spawn, [], 0, "NONE"];
 						_veh setFuel 0.1; // Set vehicle to 10% fuel
+						_veh setDamage 0.5; // 50% health
 						_veh addEventHandler ['Hit',{['play', _this select 0] call BIS_fnc_carAlarm;}];
 						{_veh disableCollisionWith _x;} foreach AllCivilianPedestrians;
 						_agent moveInDriver _veh;
@@ -573,6 +578,43 @@
 		_updateRate = 1.5;
 		_debug = false;
 		[_maxUnitCount,_maxRoads,_minTravenDistance,_maxTravelDistance,_deleteDistance,_movementUpdateRate,_updateRate,_debug] spawn CIVPOP_fnc_initIDAPVehicles;
+
+		// Spawn empty vehicles for player use
+		[] spawn {
+			private _maxEmptyVehicles = 13;
+			private _spawnedVehicles = [];
+			while {isPopulateWorldAllowed} do {
+				_vs = missionNamespace getVariable ["validRoadsForPedestrians", []];
+				// Remove null vehicles
+				_spawnedVehicles = _spawnedVehicles - [objNull];
+				// Delete vehicles too far from players
+				{
+					private _veh = _x;
+					private _minDist = 1e10;
+					{
+						private _player = _x;
+						private _dist = _player distance _veh;
+						if (_dist < _minDist) then {_minDist = _dist;};
+					} forEach ([includeZeus] call CIVPOP_fnc_getAllPlayers);
+					if (_minDist > 2000) then {deleteVehicle _veh;};
+				} forEach _spawnedVehicles;
+				// Spawn new vehicles if below max
+				if (count _spawnedVehicles < _maxEmptyVehicles) then {
+					if (isNil "_vs" || {count _vs == 0}) exitWith {};
+					private _spawn = selectRandom _vs;
+					if (isNil "_spawn" || {_spawn isEqualTo objNull}) exitWith {};
+					private _isValid = [_spawn] call CIVPOP_fnc_checkForNearbyBlacklistedObjects;
+					if (!_isValid) exitWith {};
+					private _classV = selectRandom allIDAPVehicleClassNames;
+					private _veh = createVehicle [_classV, getPos _spawn, [], 0, "NONE"];
+					_veh setFuel 0.08; // 8% fuel
+					_veh setDamage 0.5; // 50% health
+					_veh setVariable ["isCivPopEmptyVehicle", true];
+					_spawnedVehicles pushBack _veh;
+				};
+				sleep 10;
+			};
+		};
 	};
 	call CIVPOP_fnc_startSystem;
 }] remoteExec ["Spawn",2];
