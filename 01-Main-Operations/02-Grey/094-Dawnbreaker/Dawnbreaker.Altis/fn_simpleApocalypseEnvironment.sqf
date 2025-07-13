@@ -24,7 +24,7 @@ comment "Code to be executed on all clients and JIP";
 
 	comment "visual settings";
 	setViewDistance 2000;
-    setObjectViewDistance 1000;
+	setObjectViewDistance 1000;
 	setTerrainGrid 25;
 
 	waitUntil {!isNil "AllZombieScenarioTerrainLights"};
@@ -132,24 +132,19 @@ comment "Code to be executed on the server-side";
 	comment "Play player get up animation and effects";
 	[[],{
 
-		comment "Play video locally";
-		if (vehicle player isEqualTo player) then 
-		{
+	comment "Play video locally for all players, including JIP and respawn";
+	private _playIntro = {
+		if (vehicle player isEqualTo player) then {
 			[1, "BLACK", 30, 1] spawn BIS_fnc_fadeEffect;
 			["intro.ogv"] spawn BIS_fnc_playVideo;
-		};
-
-		sleep 25;
-
-		comment "Play first track";
-		if (isServer) then {["Music_Arrival"] remoteExec ["playMusic",0];};
-
-		if (vehicle player isEqualTo player) then 
-		{
-			comment"private _anim = selectRandom ['acts_flashes_recovery_1','acts_flashes_recovery_2','acts_getting_up_player','acts_unconsciousStandUp_part1'];";
+			sleep 25;
+			comment "Play first track";
+			if (isServer) then {["Music_Arrival"] remoteExec ["playMusic",0];};
 			[player,"acts_unconsciousStandUp_part1"] remoteExec ["switchMove",0];
 			player switchCamera "INTERNAL";
 		};
+	};
+	[] spawn _playIntro;
 	}] remoteExec ["Spawn",0];
 
 	comment "Set Weather";
