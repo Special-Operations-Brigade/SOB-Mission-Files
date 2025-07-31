@@ -6,25 +6,20 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=1;
-	mods[]=
-	{
-		"WBK_Zombies_AdvancedEditorSettings",
-		"3denEnhanced"
-	};
 	class ItemIDProvider
 	{
 		nextID=146;
 	};
 	class LayerIndexProvider
 	{
-		nextID=14;
+		nextID=21;
 	};
 	class Camera
 	{
-		pos[]={14599.419,63.493507,16749.439};
-		dir[]={0.7644605,-0.6445958,0.015093419};
-		up[]={0.6444732,0.76450741,0.012723858};
-		aside[]={0.019741038,7.5613616e-07,-0.99986649};
+		pos[]={14627.113,109.40413,16814.752};
+		dir[]={0.055196915,-0.64808482,-0.75965798};
+		up[]={0.046966661,0.76154608,-0.64639157};
+		aside[]={-0.99743623,9.9140379e-07,-0.072473586};
 	};
 };
 binarizationWanted=0;
@@ -33,18 +28,14 @@ addons[]=
 {
 	"mti_arsenal",
 	"3as_GNK_Prop",
-	"RSPN_Assets",
 	"A3_Characters_F",
 	"A3_Weapons_F",
 	"JLTS_weapons_Core",
 	"JLTS_radios",
 	"ls_characters_clone_legacy",
-	"mti_armoury_common",
 	"ace_gforces",
 	"ace_parachute",
-	"mti_armoury_fieldsupport",
 	"3AS_Structures_ShieldGenerator",
-	"LRG_Medical",
 	"A3_Modules_F_Curator_Curator",
 	"OPTRE_Vehicles_Cart",
 	"mti_modules"
@@ -53,7 +44,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=12;
 		class Item0
 		{
 			className="mti_arsenal";
@@ -69,87 +60,63 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="RSPN_Assets";
-			name="RSPN_Assets";
-		};
-		class Item3
-		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item4
+		class Item3
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item4
 		{
 			className="JLTS_weapons_Core";
 			name="JLTS The Great War - Weapons Core";
 			author="MrClock";
 		};
-		class Item6
+		class Item5
 		{
 			className="JLTS_radios";
 			name="JLTS The Great War - Radios";
 			author="MrClock";
 		};
-		class Item7
+		class Item6
 		{
 			className="ls_characters";
 			name="Legion Studios: Core - Characters";
 			author="Legion Studios";
 		};
-		class Item8
-		{
-			className="mti_armoury_common";
-			name="MokTech Industries - Common";
-			author="MokTech Industries";
-		};
-		class Item9
+		class Item7
 		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item10
-		{
-			className="mti_armoury_fieldsupport";
-			name="MokTech Industries - Field Support";
-			author="MokTech Industries";
-		};
-		class Item11
+		class Item8
 		{
 			className="3AS_Structures_ShieldGenerator";
 			name="3AS_Structures_ShieldGenerator";
 			author="3rd Army Studios";
 		};
-		class Item12
-		{
-			className="LRG_Medical";
-			name="LRG Fundamentals";
-			author="Last Resort Gaming";
-			url="http:";
-		};
-		class Item13
+		class Item9
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item10
 		{
 			className="OPTRE_Vehicles";
 			name="OPTRE_Vehicles_Cart";
 			author="Article 2 Studios";
 		};
-		class Item15
+		class Item11
 		{
 			className="mti_modules";
 			name="MokTech Industries - Modules";
@@ -185,19 +152,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -228,6 +182,19 @@ class CustomAttributes
 				};
 			};
 		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
 		nAttributes=2;
 	};
 	class Category1
@@ -235,14 +202,14 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
-			property="ENH_AddObjectsToZeus";
-			expression="        if (_value isEqualType true) then {_value = 2};        if (!is3DEN && isServer && _value > 0) then        {            _value spawn" \n "            {" \n "                params ['_value'];" \n "                waitUntil {sleep 1; allCurators isNotEqualTo []};" \n "                if (_value == 1 || _value == 2) then                {                    allCurators apply {_x addCuratorEditableObjects [allMissionObjects '', true]};                };                if (_value == 2) then                {                    addMissionEventHandler ['EntityCreated',                    {                        params ['_entity'];                        allCurators apply {_x addCuratorEditableObjects [[_entity], true]};                    }];                };            };        }";
+			property="cba_settings_hasSettingsFile";
+			expression="false";
 			class Value
 			{
 				class data
 				{
-					singleType="SCALAR";
-					value=2;
+					singleType="BOOL";
+					value=1;
 				};
 			};
 		};
@@ -259,68 +226,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute2
-		{
-			property="ENH_mapIndicators";
-			expression="if (!is3DEN && (_value isNotEqualTo [false, false, false, false]) && hasInterface) then {disableMapIndicators _value}";
-			class Value
-			{
-				class data
-				{
-					singleType="ARRAY";
-					class value
-					{
-						items=4;
-						class Item0
-						{
-							class data
-							{
-								singleType="BOOL";
-								value=1;
-							};
-						};
-						class Item1
-						{
-							class data
-							{
-								singleType="BOOL";
-								value=1;
-							};
-						};
-						class Item2
-						{
-							class data
-							{
-								singleType="BOOL";
-								value=1;
-							};
-						};
-						class Item3
-						{
-							class data
-							{
-								singleType="BOOL";
-								value=1;
-							};
-						};
-					};
-				};
-			};
-		};
-		class Attribute3
-		{
-			property="cba_settings_hasSettingsFile";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
-				};
-			};
-		};
-		nAttributes=4;
+		nAttributes=2;
 	};
 };
 class Mission
@@ -373,14 +279,13 @@ class Mission
 								angles[]={0,1.5707963,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 								dynamicSimulation=1;
 							};
 							id=1;
 							type="mti_arsenal_trooper";
-							atlOffset=3.8146973e-06;
+							atlOffset=0.72934723;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -408,14 +313,13 @@ class Mission
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 								dynamicSimulation=1;
 							};
 							id=2;
 							type="mti_arsenal_commando";
-							atlOffset=3.8146973e-06;
+							atlOffset=0.72934723;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -443,14 +347,13 @@ class Mission
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 								dynamicSimulation=1;
 							};
 							id=3;
 							type="mti_arsenal_arc";
-							atlOffset=3.8146973e-06;
+							atlOffset=0.72934723;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -478,14 +381,13 @@ class Mission
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 								dynamicSimulation=1;
 							};
 							id=4;
 							type="mti_arsenal_covertops";
-							atlOffset=3.8146973e-06;
+							atlOffset=0.72934723;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -513,14 +415,13 @@ class Mission
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 								dynamicSimulation=1;
 							};
 							id=5;
 							type="mti_arsenal_fieldsupport";
-							atlOffset=3.8146973e-06;
+							atlOffset=0.72934723;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -548,14 +449,13 @@ class Mission
 								angles[]={0,1.5707964,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 								dynamicSimulation=1;
 							};
 							id=6;
 							type="mti_arsenal_pilot";
-							atlOffset=3.8146973e-06;
+							atlOffset=0.72934723;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -2248,7 +2148,7 @@ class Mission
 									name="Player Spawn_1";
 									class Entities
 									{
-										items=22;
+										items=21;
 										class Item0
 										{
 											dataType="Group";
@@ -2319,19 +2219,6 @@ class Mission
 														};
 														class Attribute2
 														{
-															property="QUOTE(LRG_Mission_Maker)";
-															expression="_this setUnitTrait ['Mission Maker', _value, true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute3
-														{
 															property="mti_common_Pilot";
 															expression="[_this, 'pilot', _value] call mti_common_fnc_setUnitTrait;";
 															class Value
@@ -2343,7 +2230,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -2356,7 +2243,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -2369,7 +2256,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
+														class Attribute5
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -2382,7 +2269,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute7
+														class Attribute6
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -2395,7 +2282,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute8
+														class Attribute7
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -2408,7 +2295,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=9;
+														nAttributes=8;
 													};
 												};
 												class Item1
@@ -2473,19 +2360,6 @@ class Mission
 														};
 														class Attribute2
 														{
-															property="QUOTE(LRG_Mission_Maker)";
-															expression="_this setUnitTrait ['Mission Maker', _value, true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute3
-														{
 															property="mti_common_Pilot";
 															expression="[_this, 'pilot', _value] call mti_common_fnc_setUnitTrait;";
 															class Value
@@ -2497,7 +2371,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -2510,7 +2384,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -2523,7 +2397,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
+														class Attribute5
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -2536,7 +2410,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute7
+														class Attribute6
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -2549,7 +2423,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute8
+														class Attribute7
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -2562,7 +2436,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=9;
+														nAttributes=8;
 													};
 												};
 												class Item2
@@ -2627,19 +2501,6 @@ class Mission
 														};
 														class Attribute2
 														{
-															property="QUOTE(LRG_Mission_Maker)";
-															expression="_this setUnitTrait ['Mission Maker', _value, true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute3
-														{
 															property="mti_common_Pilot";
 															expression="[_this, 'pilot', _value] call mti_common_fnc_setUnitTrait;";
 															class Value
@@ -2651,7 +2512,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -2664,7 +2525,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -2677,7 +2538,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
+														class Attribute5
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -2690,7 +2551,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute7
+														class Attribute6
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -2703,7 +2564,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute8
+														class Attribute7
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -2716,7 +2577,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=9;
+														nAttributes=8;
 													};
 												};
 												class Item3
@@ -2781,19 +2642,6 @@ class Mission
 														};
 														class Attribute2
 														{
-															property="QUOTE(LRG_Mission_Maker)";
-															expression="_this setUnitTrait ['Mission Maker', _value, true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute3
-														{
 															property="mti_common_Pilot";
 															expression="[_this, 'pilot', _value] call mti_common_fnc_setUnitTrait;";
 															class Value
@@ -2805,7 +2653,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -2818,7 +2666,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -2831,7 +2679,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
+														class Attribute5
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -2844,7 +2692,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute7
+														class Attribute6
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -2857,7 +2705,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute8
+														class Attribute7
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -2870,7 +2718,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=9;
+														nAttributes=8;
 													};
 												};
 											};
@@ -2933,73 +2781,8 @@ class Mission
 														};
 														class Attribute1
 														{
-															property="ace_isEOD";
-															expression="_this setVariable ['ACE_isEOD', _value, true]";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute2
-														{
-															property="mti_common_Group_Preset";
-															expression="[_this, _value] call mti_common_fnc_initPlayer";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=1;
-																};
-															};
-														};
-														class Attribute3
-														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute4
-														{
-															property="QUOTE(LRG_Mission_Maker)";
-															expression="_this setUnitTrait ['Mission Maker', _value, true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute5
-														{
-															property="ENH_unitTraits_audibleCoef";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['AudibleCoef', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=0.1;
-																};
-															};
-														};
-														class Attribute6
-														{
-															property="ace_advanced_fatigue_performanceFactor";
-															expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
+															property="ace_isEngineer";
+															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
 															{
 																class data
@@ -3009,33 +2792,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
-														{
-															property="speaker";
-															expression="_this setspeaker _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="STRING";
-																	value="Male04ENG";
-																};
-															};
-														};
-														class Attribute9
+														class Attribute2
 														{
 															property="mti_common_Pilot";
 															expression="[_this, 'pilot', _value] call mti_common_fnc_setUnitTrait;";
@@ -3048,85 +2805,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute10
-														{
-															property="ENH_unitTrait_UAVHacker";
-															expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute11
-														{
-															property="ENH_unitTraits_loadCoef";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=0.1;
-																};
-															};
-														};
-														class Attribute12
-														{
-															property="ace_isMedic";
-															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=2;
-																};
-															};
-														};
-														class Attribute13
-														{
-															property="pitch";
-															expression="_this setpitch _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=1;
-																};
-															};
-														};
-														class Attribute14
-														{
-															property="ENH_unitTraits_camouflage";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=0.1;
-																};
-															};
-														};
-														class Attribute15
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute16
+														class Attribute3
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -3139,10 +2818,49 @@ class Mission
 																};
 															};
 														};
-														class Attribute17
+														class Attribute4
 														{
-															property="ace_isEngineer";
-															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+															property="ace_isEOD";
+															expression="_this setVariable ['ACE_isEOD', _value, true]";
+															class Value
+															{
+																class data
+																{
+																	singleType="BOOL";
+																	value=1;
+																};
+															};
+														};
+														class Attribute5
+														{
+															property="pitch";
+															expression="_this setpitch _value;";
+															class Value
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=1;
+																};
+															};
+														};
+														class Attribute6
+														{
+															property="speaker";
+															expression="_this setspeaker _value;";
+															class Value
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="Male04ENG";
+																};
+															};
+														};
+														class Attribute7
+														{
+															property="ace_advanced_fatigue_performanceFactor";
+															expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
 															class Value
 															{
 																class data
@@ -3152,7 +2870,33 @@ class Mission
 																};
 															};
 														};
-														nAttributes=18;
+														class Attribute8
+														{
+															property="ace_isMedic";
+															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+															class Value
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=2;
+																};
+															};
+														};
+														class Attribute9
+														{
+															property="mti_common_Group_Preset";
+															expression="[_this, _value] call mti_common_fnc_initPlayer";
+															class Value
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=1;
+																};
+															};
+														};
+														nAttributes=10;
 													};
 												};
 												class Item1
@@ -3214,19 +2958,6 @@ class Mission
 														};
 														class Attribute2
 														{
-															property="QUOTE(LRG_Mission_Maker)";
-															expression="_this setUnitTrait ['Mission Maker', _value, true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute3
-														{
 															property="mti_common_Pilot";
 															expression="[_this, 'pilot', _value] call mti_common_fnc_setUnitTrait;";
 															class Value
@@ -3238,7 +2969,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -3251,7 +2982,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -3264,7 +2995,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
+														class Attribute5
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -3277,7 +3008,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute7
+														class Attribute6
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -3290,7 +3021,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute8
+														class Attribute7
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -3303,7 +3034,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute8
 														{
 															property="ace_advanced_fatigue_performanceFactor";
 															expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
@@ -3316,7 +3047,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute10
+														class Attribute9
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -3329,7 +3060,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=11;
+														nAttributes=10;
 													};
 												};
 												class Item2
@@ -3379,73 +3110,8 @@ class Mission
 														};
 														class Attribute1
 														{
-															property="ace_isEOD";
-															expression="_this setVariable ['ACE_isEOD', _value, true]";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute2
-														{
-															property="mti_common_Group_Preset";
-															expression="[_this, _value] call mti_common_fnc_initPlayer";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=1;
-																};
-															};
-														};
-														class Attribute3
-														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute4
-														{
-															property="QUOTE(LRG_Mission_Maker)";
-															expression="_this setUnitTrait ['Mission Maker', _value, true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute5
-														{
-															property="ENH_unitTraits_audibleCoef";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['AudibleCoef', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=0.1;
-																};
-															};
-														};
-														class Attribute6
-														{
-															property="ace_advanced_fatigue_performanceFactor";
-															expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
+															property="ace_isEngineer";
+															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
 															{
 																class data
@@ -3455,33 +3121,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
-														{
-															property="speaker";
-															expression="_this setspeaker _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="STRING";
-																	value="Male04ENG";
-																};
-															};
-														};
-														class Attribute9
+														class Attribute2
 														{
 															property="mti_common_Pilot";
 															expression="[_this, 'pilot', _value] call mti_common_fnc_setUnitTrait;";
@@ -3494,85 +3134,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute10
-														{
-															property="ENH_unitTrait_UAVHacker";
-															expression="[_this, ['UAVHacker', _value]] remoteExec ['setUnitTrait', _this]";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute11
-														{
-															property="ENH_unitTraits_loadCoef";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['LoadCoef', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=0.1;
-																};
-															};
-														};
-														class Attribute12
-														{
-															property="ace_isMedic";
-															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=2;
-																};
-															};
-														};
-														class Attribute13
-														{
-															property="pitch";
-															expression="_this setpitch _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=1;
-																};
-															};
-														};
-														class Attribute14
-														{
-															property="ENH_unitTraits_camouflage";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['CamouflageCoef', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=0.1;
-																};
-															};
-														};
-														class Attribute15
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute16
+														class Attribute3
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -3585,10 +3147,49 @@ class Mission
 																};
 															};
 														};
-														class Attribute17
+														class Attribute4
 														{
-															property="ace_isEngineer";
-															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+															property="ace_isEOD";
+															expression="_this setVariable ['ACE_isEOD', _value, true]";
+															class Value
+															{
+																class data
+																{
+																	singleType="BOOL";
+																	value=1;
+																};
+															};
+														};
+														class Attribute5
+														{
+															property="pitch";
+															expression="_this setpitch _value;";
+															class Value
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=1;
+																};
+															};
+														};
+														class Attribute6
+														{
+															property="speaker";
+															expression="_this setspeaker _value;";
+															class Value
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="Male04ENG";
+																};
+															};
+														};
+														class Attribute7
+														{
+															property="ace_advanced_fatigue_performanceFactor";
+															expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
 															class Value
 															{
 																class data
@@ -3598,7 +3199,33 @@ class Mission
 																};
 															};
 														};
-														nAttributes=18;
+														class Attribute8
+														{
+															property="ace_isMedic";
+															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+															class Value
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=2;
+																};
+															};
+														};
+														class Attribute9
+														{
+															property="mti_common_Group_Preset";
+															expression="[_this, _value] call mti_common_fnc_initPlayer";
+															class Value
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=1;
+																};
+															};
+														};
+														nAttributes=10;
 													};
 												};
 											};
@@ -3675,19 +3302,6 @@ class Mission
 														};
 														class Attribute2
 														{
-															property="QUOTE(LRG_Mission_Maker)";
-															expression="_this setUnitTrait ['Mission Maker', _value, true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute3
-														{
 															property="mti_common_Pilot";
 															expression="[_this, 'pilot', _value] call mti_common_fnc_setUnitTrait;";
 															class Value
@@ -3699,7 +3313,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -3712,7 +3326,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -3725,7 +3339,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
+														class Attribute5
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -3738,7 +3352,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute7
+														class Attribute6
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -3751,7 +3365,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute8
+														class Attribute7
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -3764,7 +3378,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute8
 														{
 															property="ace_advanced_fatigue_performanceFactor";
 															expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
@@ -3777,7 +3391,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute10
+														class Attribute9
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -3790,7 +3404,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=11;
+														nAttributes=10;
 													};
 												};
 											};
@@ -5311,19 +4925,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -5335,7 +4936,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -5348,7 +4949,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -5361,7 +4962,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -5374,7 +4975,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -5387,33 +4988,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -5426,7 +5001,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -5439,7 +5014,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item1
@@ -5478,19 +5053,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -5502,7 +5064,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -5515,7 +5077,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -5528,7 +5090,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -5541,7 +5103,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -5554,33 +5116,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -5593,7 +5129,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -5606,7 +5142,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item2
@@ -5645,19 +5181,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -5669,7 +5192,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -5682,7 +5205,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -5695,7 +5218,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -5708,7 +5231,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -5721,33 +5244,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -5760,7 +5257,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -5773,7 +5270,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item3
@@ -5812,19 +5309,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -5836,7 +5320,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -5849,7 +5333,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -5862,7 +5346,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -5875,7 +5359,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -5888,33 +5372,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -5927,7 +5385,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -5940,7 +5398,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 											};
@@ -5993,19 +5451,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -6017,7 +5462,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -6030,7 +5475,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -6043,7 +5488,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -6056,7 +5501,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -6069,33 +5514,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -6108,7 +5527,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -6121,7 +5540,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item1
@@ -6160,19 +5579,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -6184,7 +5590,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -6197,7 +5603,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -6210,7 +5616,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -6223,7 +5629,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -6236,33 +5642,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -6275,7 +5655,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -6288,7 +5668,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item2
@@ -6327,19 +5707,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -6351,7 +5718,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -6364,7 +5731,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -6377,7 +5744,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -6390,7 +5757,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -6403,33 +5770,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -6442,7 +5783,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -6455,7 +5796,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item3
@@ -6494,19 +5835,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -6518,7 +5846,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -6531,7 +5859,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -6544,7 +5872,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -6557,7 +5885,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -6570,33 +5898,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -6609,7 +5911,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -6622,7 +5924,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 											};
@@ -7697,19 +6999,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -7721,7 +7010,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -7734,7 +7023,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -7747,7 +7036,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -7760,7 +7049,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -7773,33 +7062,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -7812,7 +7075,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -7825,7 +7088,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item1
@@ -7863,19 +7126,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -7887,7 +7137,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -7900,7 +7150,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -7913,7 +7163,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -7926,7 +7176,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -7939,33 +7189,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -7978,7 +7202,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -7991,7 +7215,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item2
@@ -8029,19 +7253,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -8053,7 +7264,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -8066,7 +7277,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -8079,7 +7290,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -8092,7 +7303,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -8105,33 +7316,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -8144,7 +7329,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -8157,7 +7342,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item3
@@ -8195,19 +7380,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -8219,7 +7391,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -8232,7 +7404,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -8245,7 +7417,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -8258,7 +7430,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -8271,33 +7443,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -8310,7 +7456,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -8323,7 +7469,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 											};
@@ -8374,19 +7520,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -8398,7 +7531,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -8411,7 +7544,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -8424,7 +7557,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -8437,7 +7570,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -8450,33 +7583,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -8489,7 +7596,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -8502,7 +7609,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item1
@@ -8540,19 +7647,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -8564,7 +7658,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -8577,7 +7671,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -8590,7 +7684,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -8603,7 +7697,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -8616,33 +7710,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -8655,7 +7723,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -8668,7 +7736,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item2
@@ -8706,19 +7774,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -8730,7 +7785,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -8743,7 +7798,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -8756,7 +7811,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -8769,7 +7824,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -8782,33 +7837,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -8821,7 +7850,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -8834,7 +7863,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 												class Item3
@@ -8872,19 +7901,6 @@ class Mission
 													{
 														class Attribute0
 														{
-															property="ENH_unitTraits_engineer";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Engineer', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute1
-														{
 															property="ace_isEngineer";
 															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 															class Value
@@ -8896,7 +7912,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute2
+														class Attribute1
 														{
 															property="mti_common_resistance_ion";
 															expression="_this setVariable [""mti_common_resistance_ion"", true];";
@@ -8909,7 +7925,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute3
+														class Attribute2
 														{
 															property="ace_isEOD";
 															expression="_this setVariable ['ACE_isEOD', _value, true]";
@@ -8922,7 +7938,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute4
+														class Attribute3
 														{
 															property="pitch";
 															expression="_this setpitch _value;";
@@ -8935,7 +7951,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute5
+														class Attribute4
 														{
 															property="speaker";
 															expression="_this setspeaker _value;";
@@ -8948,33 +7964,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute6
-														{
-															property="ENH_unitTrait_explosiveSpecialist";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['ExplosiveSpecialist', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute7
-														{
-															property="ENH_unitTraits_medic";
-															expression="if !(isClass (configFile >> 'CfgPatches' >> 'ace_common')) then {[_this, ['Medic', _value]] remoteExec ['setUnitTrait', _this]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute8
+														class Attribute5
 														{
 															property="ace_isMedic";
 															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -8987,7 +7977,7 @@ class Mission
 																};
 															};
 														};
-														class Attribute9
+														class Attribute6
 														{
 															property="mti_common_Group_Preset";
 															expression="[_this, _value] call mti_common_fnc_initPlayer";
@@ -9000,7 +7990,7 @@ class Mission
 																};
 															};
 														};
-														nAttributes=10;
+														nAttributes=7;
 													};
 												};
 											};
@@ -9828,658 +8818,6 @@ class Mission
 											side="West";
 											class Entities
 											{
-												items=6;
-												class Item0
-												{
-													dataType="Object";
-													class PositionInfo
-													{
-														position[]={14671.919,17.911438,16761.98};
-														angles[]={0,4.712389,0};
-													};
-													side="West";
-													flags=6;
-													class Attributes
-													{
-														description="Squad Leader - Medic @Field Support";
-														isPlayable=1;
-														class Inventory
-														{
-															class uniform
-															{
-																typeName="lsd_gar_bodyGlove_uniform";
-																isBackpack=0;
-															};
-															map="ItemMap";
-															compass="ItemCompass";
-															watch="ItemWatch";
-															radio="JLTS_clone_comlink";
-															gps="ItemGPS";
-														};
-													};
-													id=83;
-													type="mti_armoury_fieldsupport_unit_Medic";
-													class CustomAttributes
-													{
-														class Attribute0
-														{
-															property="ace_isEngineer";
-															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=-1;
-																};
-															};
-														};
-														class Attribute1
-														{
-															property="mti_common_resistance_ion";
-															expression="_this setVariable [""mti_common_resistance_ion"", true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute2
-														{
-															property="face";
-															expression="_this setface _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="STRING";
-																	value="";
-																};
-															};
-														};
-														class Attribute3
-														{
-															property="pitch";
-															expression="_this setpitch _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=1.04;
-																};
-															};
-														};
-														class Attribute4
-														{
-															property="speaker";
-															expression="_this setspeaker _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="STRING";
-																	value="Male08ENG";
-																};
-															};
-														};
-														class Attribute5
-														{
-															property="ace_isMedic";
-															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=2;
-																};
-															};
-														};
-														class Attribute6
-														{
-															property="mti_common_Group_Preset";
-															expression="[_this, _value] call mti_common_fnc_initPlayer";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=15;
-																};
-															};
-														};
-														nAttributes=7;
-													};
-												};
-												class Item1
-												{
-													dataType="Object";
-													class PositionInfo
-													{
-														position[]={14671.919,17.911438,16759.98};
-														angles[]={0,4.712389,0};
-													};
-													side="West";
-													flags=4;
-													class Attributes
-													{
-														description="Field Support Medic";
-														isPlayable=1;
-														class Inventory
-														{
-															class uniform
-															{
-																typeName="lsd_gar_bodyGlove_uniform";
-																isBackpack=0;
-															};
-															map="ItemMap";
-															compass="ItemCompass";
-															watch="ItemWatch";
-															radio="JLTS_clone_comlink";
-															gps="ItemGPS";
-														};
-													};
-													id=84;
-													type="mti_armoury_fieldsupport_unit_Medic";
-													class CustomAttributes
-													{
-														class Attribute0
-														{
-															property="ace_isMedic";
-															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=2;
-																};
-															};
-														};
-														class Attribute1
-														{
-															property="ace_isEngineer";
-															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=-1;
-																};
-															};
-														};
-														class Attribute2
-														{
-															property="speaker";
-															expression="_this setspeaker _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="STRING";
-																	value="Male01ENG";
-																};
-															};
-														};
-														class Attribute3
-														{
-															property="pitch";
-															expression="_this setpitch _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=1.02;
-																};
-															};
-														};
-														class Attribute4
-														{
-															property="mti_common_Group_Preset";
-															expression="[_this, _value] call mti_common_fnc_initPlayer";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=15;
-																};
-															};
-														};
-														class Attribute5
-														{
-															property="mti_common_resistance_ion";
-															expression="_this setVariable [""mti_common_resistance_ion"", true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														nAttributes=6;
-													};
-												};
-												class Item2
-												{
-													dataType="Object";
-													class PositionInfo
-													{
-														position[]={14671.919,17.911438,16757.98};
-														angles[]={0,4.712389,0};
-													};
-													side="West";
-													flags=5;
-													class Attributes
-													{
-														description="Field Support Trooper";
-														isPlayable=1;
-														class Inventory
-														{
-															class uniform
-															{
-																typeName="lsd_gar_bodyGlove_uniform";
-																isBackpack=0;
-															};
-															map="ItemMap";
-															compass="ItemCompass";
-															watch="ItemWatch";
-															radio="JLTS_clone_comlink";
-															gps="ItemGPS";
-														};
-													};
-													id=85;
-													type="mti_armoury_fieldsupport_unit_Trooper";
-													class CustomAttributes
-													{
-														class Attribute0
-														{
-															property="ace_isEngineer";
-															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=2;
-																};
-															};
-														};
-														class Attribute1
-														{
-															property="ace_isEOD";
-															expression="_this setVariable ['ACE_isEOD', _value, true]";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute2
-														{
-															property="mti_common_Group_Preset";
-															expression="[_this, _value] call mti_common_fnc_initPlayer";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=15;
-																};
-															};
-														};
-														class Attribute3
-														{
-															property="mti_common_resistance_ion";
-															expression="_this setVariable [""mti_common_resistance_ion"", true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute4
-														{
-															property="face";
-															expression="_this setface _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="STRING";
-																	value="";
-																};
-															};
-														};
-														nAttributes=5;
-													};
-												};
-												class Item3
-												{
-													dataType="Object";
-													class PositionInfo
-													{
-														position[]={14671.919,17.911438,16755.98};
-														angles[]={0,4.712389,0};
-													};
-													side="West";
-													flags=5;
-													class Attributes
-													{
-														description="Field Support Trooper";
-														isPlayable=1;
-														class Inventory
-														{
-															class uniform
-															{
-																typeName="lsd_gar_bodyGlove_uniform";
-																isBackpack=0;
-															};
-															map="ItemMap";
-															compass="ItemCompass";
-															watch="ItemWatch";
-															radio="JLTS_clone_comlink";
-															gps="ItemGPS";
-														};
-													};
-													id=86;
-													type="mti_armoury_fieldsupport_unit_Trooper";
-													class CustomAttributes
-													{
-														class Attribute0
-														{
-															property="ace_isEngineer";
-															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=2;
-																};
-															};
-														};
-														class Attribute1
-														{
-															property="ace_isEOD";
-															expression="_this setVariable ['ACE_isEOD', _value, true]";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute2
-														{
-															property="mti_common_Group_Preset";
-															expression="[_this, _value] call mti_common_fnc_initPlayer";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=15;
-																};
-															};
-														};
-														class Attribute3
-														{
-															property="mti_common_resistance_ion";
-															expression="_this setVariable [""mti_common_resistance_ion"", true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute4
-														{
-															property="face";
-															expression="_this setface _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="STRING";
-																	value="";
-																};
-															};
-														};
-														nAttributes=5;
-													};
-												};
-												class Item4
-												{
-													dataType="Object";
-													class PositionInfo
-													{
-														position[]={14671.919,17.911438,16753.98};
-														angles[]={0,4.712389,0};
-													};
-													side="West";
-													flags=5;
-													class Attributes
-													{
-														description="Field Support Trooper";
-														isPlayable=1;
-														class Inventory
-														{
-															class uniform
-															{
-																typeName="lsd_gar_bodyGlove_uniform";
-																isBackpack=0;
-															};
-															map="ItemMap";
-															compass="ItemCompass";
-															watch="ItemWatch";
-															radio="JLTS_clone_comlink";
-															gps="ItemGPS";
-														};
-													};
-													id=87;
-													type="mti_armoury_fieldsupport_unit_Trooper";
-													class CustomAttributes
-													{
-														class Attribute0
-														{
-															property="ace_isEngineer";
-															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=2;
-																};
-															};
-														};
-														class Attribute1
-														{
-															property="ace_isEOD";
-															expression="_this setVariable ['ACE_isEOD', _value, true]";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute2
-														{
-															property="mti_common_Group_Preset";
-															expression="[_this, _value] call mti_common_fnc_initPlayer";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=15;
-																};
-															};
-														};
-														class Attribute3
-														{
-															property="mti_common_resistance_ion";
-															expression="_this setVariable [""mti_common_resistance_ion"", true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute4
-														{
-															property="face";
-															expression="_this setface _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="STRING";
-																	value="";
-																};
-															};
-														};
-														nAttributes=5;
-													};
-												};
-												class Item5
-												{
-													dataType="Object";
-													class PositionInfo
-													{
-														position[]={14671.919,17.911438,16751.98};
-														angles[]={0,4.712389,0};
-													};
-													side="West";
-													flags=5;
-													class Attributes
-													{
-														description="Field Support Trooper";
-														isPlayable=1;
-														class Inventory
-														{
-															class uniform
-															{
-																typeName="lsd_gar_bodyGlove_uniform";
-																isBackpack=0;
-															};
-															map="ItemMap";
-															compass="ItemCompass";
-															watch="ItemWatch";
-															radio="JLTS_clone_comlink";
-															gps="ItemGPS";
-														};
-													};
-													id=88;
-													type="mti_armoury_fieldsupport_unit_Trooper";
-													class CustomAttributes
-													{
-														class Attribute0
-														{
-															property="ace_isEngineer";
-															expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=2;
-																};
-															};
-														};
-														class Attribute1
-														{
-															property="ace_isEOD";
-															expression="_this setVariable ['ACE_isEOD', _value, true]";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute2
-														{
-															property="mti_common_Group_Preset";
-															expression="[_this, _value] call mti_common_fnc_initPlayer";
-															class Value
-															{
-																class data
-																{
-																	singleType="SCALAR";
-																	value=15;
-																};
-															};
-														};
-														class Attribute3
-														{
-															property="mti_common_resistance_ion";
-															expression="_this setVariable [""mti_common_resistance_ion"", true];";
-															class Value
-															{
-																class data
-																{
-																	singleType="BOOL";
-																	value=1;
-																};
-															};
-														};
-														class Attribute4
-														{
-															property="face";
-															expression="_this setface _value;";
-															class Value
-															{
-																class data
-																{
-																	singleType="STRING";
-																	value="";
-																};
-															};
-														};
-														nAttributes=5;
-													};
-												};
-											};
-											class Attributes
-											{
-											};
-											id=82;
-										};
-										class Item17
-										{
-											dataType="Group";
-											side="West";
-											class Entities
-											{
 												items=8;
 												class Item0
 												{
@@ -11191,7 +9529,7 @@ class Mission
 											};
 											id=89;
 										};
-										class Item18
+										class Item17
 										{
 											dataType="Group";
 											side="West";
@@ -11380,7 +9718,7 @@ class Mission
 											};
 											id=98;
 										};
-										class Item19
+										class Item18
 										{
 											dataType="Group";
 											side="West";
@@ -12097,7 +10435,7 @@ class Mission
 											};
 											id=101;
 										};
-										class Item20
+										class Item19
 										{
 											dataType="Group";
 											side="West";
@@ -12814,7 +11152,7 @@ class Mission
 											};
 											id=110;
 										};
-										class Item21
+										class Item20
 										{
 											dataType="Group";
 											side="West";
@@ -13155,6 +11493,7 @@ class Mission
 										};
 									};
 									id=10;
+									atlOffset=0.63942719;
 								};
 								class Item1
 								{
@@ -13162,7 +11501,7 @@ class Mission
 									name="Medical Facilities";
 									class Entities
 									{
-										items=4;
+										items=2;
 										class Item0
 										{
 											dataType="Object";
@@ -13183,17 +11522,6 @@ class Mission
 										};
 										class Item1
 										{
-											dataType="Logic";
-											class PositionInfo
-											{
-												position[]={14619.303,17.910004,16743.598};
-											};
-											id=126;
-											type="LRG_ModuleMedical";
-											atlOffset=3.8146973e-06;
-										};
-										class Item2
-										{
 											dataType="Trigger";
 											position[]={14628.303,17.910004,16728.598};
 											class Attributes
@@ -13205,17 +11533,6 @@ class Mission
 											};
 											id=127;
 											type="EmptyDetectorArea10x10";
-											atlOffset=3.8146973e-06;
-										};
-										class Item3
-										{
-											dataType="Logic";
-											class PositionInfo
-											{
-												position[]={14619.303,17.910004,16728.598};
-											};
-											id=128;
-											type="LRG_ModuleMedical";
 											atlOffset=3.8146973e-06;
 										};
 									};
@@ -13311,19 +11628,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="QUOTE(LRG_Config_Zeus)";
-													expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ModuleCurator_F_Owner";
 													expression="_this setVariable ['Owner',_value,true];";
 													class Value
@@ -13335,7 +11639,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
+												class Attribute1
 												{
 													property="ModuleCurator_F_Forced";
 													expression="_this setVariable ['Forced',_value,true];";
@@ -13348,7 +11652,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute3
+												class Attribute2
 												{
 													property="ModuleCurator_F_Name";
 													expression="_this setVariable ['Name',_value,true];";
@@ -13361,7 +11665,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute3
 												{
 													property="ModuleInfo";
 													expression="false";
@@ -13374,7 +11678,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute4
 												{
 													property="ModuleCurator_F_Addons";
 													expression="_this setVariable ['Addons',_value,true];";
@@ -13387,7 +11691,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=6;
+												nAttributes=5;
 											};
 										};
 										class Item3
@@ -13405,19 +11709,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="QUOTE(LRG_Config_Zeus)";
-													expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ModuleCurator_F_Owner";
 													expression="_this setVariable ['Owner',_value,true];";
 													class Value
@@ -13429,7 +11720,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
+												class Attribute1
 												{
 													property="ModuleCurator_F_Forced";
 													expression="_this setVariable ['Forced',_value,true];";
@@ -13442,7 +11733,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute3
+												class Attribute2
 												{
 													property="ModuleCurator_F_Name";
 													expression="_this setVariable ['Name',_value,true];";
@@ -13455,7 +11746,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute3
 												{
 													property="ModuleInfo";
 													expression="false";
@@ -13468,7 +11759,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute4
 												{
 													property="ModuleCurator_F_Addons";
 													expression="_this setVariable ['Addons',_value,true];";
@@ -13481,7 +11772,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=6;
+												nAttributes=5;
 											};
 										};
 										class Item4
@@ -13499,19 +11790,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="QUOTE(LRG_Config_Zeus)";
-													expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ModuleCurator_F_Owner";
 													expression="_this setVariable ['Owner',_value,true];";
 													class Value
@@ -13523,7 +11801,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
+												class Attribute1
 												{
 													property="ModuleCurator_F_Forced";
 													expression="_this setVariable ['Forced',_value,true];";
@@ -13536,7 +11814,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute3
+												class Attribute2
 												{
 													property="ModuleCurator_F_Name";
 													expression="_this setVariable ['Name',_value,true];";
@@ -13549,7 +11827,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute3
 												{
 													property="ModuleInfo";
 													expression="false";
@@ -13562,7 +11840,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute4
 												{
 													property="ModuleCurator_F_Addons";
 													expression="_this setVariable ['Addons',_value,true];";
@@ -13575,7 +11853,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=6;
+												nAttributes=5;
 											};
 										};
 										class Item5
@@ -13592,19 +11870,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="QUOTE(LRG_Config_Zeus)";
-													expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ModuleCurator_F_Owner";
 													expression="_this setVariable ['Owner',_value,true];";
 													class Value
@@ -13616,7 +11881,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
+												class Attribute1
 												{
 													property="ModuleCurator_F_Forced";
 													expression="_this setVariable ['Forced',_value,true];";
@@ -13629,7 +11894,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute3
+												class Attribute2
 												{
 													property="ModuleCurator_F_Name";
 													expression="_this setVariable ['Name',_value,true];";
@@ -13642,7 +11907,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute3
 												{
 													property="ModuleInfo";
 													expression="false";
@@ -13655,7 +11920,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute4
 												{
 													property="ModuleCurator_F_Addons";
 													expression="_this setVariable ['Addons',_value,true];";
@@ -13668,7 +11933,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=6;
+												nAttributes=5;
 											};
 										};
 										class Item6
@@ -13698,19 +11963,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="QUOTE(LRG_Config_Zeus)";
-													expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ModuleCurator_F_Owner";
 													expression="_this setVariable ['Owner',_value,true];";
 													class Value
@@ -13722,7 +11974,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
+												class Attribute1
 												{
 													property="ModuleCurator_F_Forced";
 													expression="_this setVariable ['Forced',_value,true];";
@@ -13735,7 +11987,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute3
+												class Attribute2
 												{
 													property="ModuleCurator_F_Name";
 													expression="_this setVariable ['Name',_value,true];";
@@ -13748,7 +12000,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute3
 												{
 													property="ModuleInfo";
 													expression="false";
@@ -13761,7 +12013,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute4
 												{
 													property="ModuleCurator_F_Addons";
 													expression="_this setVariable ['Addons',_value,true];";
@@ -13774,7 +12026,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=6;
+												nAttributes=5;
 											};
 										};
 										class Item8
@@ -13791,19 +12043,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="QUOTE(LRG_Config_Zeus)";
-													expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ModuleCurator_F_Owner";
 													expression="_this setVariable ['Owner',_value,true];";
 													class Value
@@ -13815,7 +12054,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
+												class Attribute1
 												{
 													property="ModuleCurator_F_Forced";
 													expression="_this setVariable ['Forced',_value,true];";
@@ -13828,7 +12067,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute3
+												class Attribute2
 												{
 													property="ModuleCurator_F_Name";
 													expression="_this setVariable ['Name',_value,true];";
@@ -13841,7 +12080,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute3
 												{
 													property="ModuleInfo";
 													expression="false";
@@ -13854,7 +12093,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute4
 												{
 													property="ModuleCurator_F_Addons";
 													expression="_this setVariable ['Addons',_value,true];";
@@ -13867,7 +12106,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=6;
+												nAttributes=5;
 											};
 										};
 										class Item9
@@ -13885,19 +12124,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="QUOTE(LRG_Config_Zeus)";
-													expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ModuleCurator_F_Owner";
 													expression="_this setVariable ['Owner',_value,true];";
 													class Value
@@ -13909,7 +12135,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
+												class Attribute1
 												{
 													property="ModuleCurator_F_Forced";
 													expression="_this setVariable ['Forced',_value,true];";
@@ -13922,7 +12148,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute3
+												class Attribute2
 												{
 													property="ModuleCurator_F_Name";
 													expression="_this setVariable ['Name',_value,true];";
@@ -13935,7 +12161,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute3
 												{
 													property="ModuleInfo";
 													expression="false";
@@ -13948,7 +12174,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute4
 												{
 													property="ModuleCurator_F_Addons";
 													expression="_this setVariable ['Addons',_value,true];";
@@ -13961,7 +12187,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=6;
+												nAttributes=5;
 											};
 										};
 										class Item10
@@ -13979,19 +12205,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="QUOTE(LRG_Config_Zeus)";
-													expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ModuleCurator_F_Owner";
 													expression="_this setVariable ['Owner',_value,true];";
 													class Value
@@ -14003,7 +12216,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
+												class Attribute1
 												{
 													property="ModuleCurator_F_Forced";
 													expression="_this setVariable ['Forced',_value,true];";
@@ -14016,7 +12229,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute3
+												class Attribute2
 												{
 													property="ModuleCurator_F_Name";
 													expression="_this setVariable ['Name',_value,true];";
@@ -14029,7 +12242,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute3
 												{
 													property="ModuleInfo";
 													expression="false";
@@ -14042,7 +12255,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute4
 												{
 													property="ModuleCurator_F_Addons";
 													expression="_this setVariable ['Addons',_value,true];";
@@ -14055,7 +12268,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=6;
+												nAttributes=5;
 											};
 										};
 										class Item11
@@ -14073,19 +12286,6 @@ class Mission
 											{
 												class Attribute0
 												{
-													property="QUOTE(LRG_Config_Zeus)";
-													expression="if (_value isequalto true) then {[_this] call LR_fnc_ConfigZeus;}";
-													class Value
-													{
-														class data
-														{
-															singleType="BOOL";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
 													property="ModuleCurator_F_Owner";
 													expression="_this setVariable ['Owner',_value,true];";
 													class Value
@@ -14097,7 +12297,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute2
+												class Attribute1
 												{
 													property="ModuleCurator_F_Forced";
 													expression="_this setVariable ['Forced',_value,true];";
@@ -14110,7 +12310,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute3
+												class Attribute2
 												{
 													property="ModuleCurator_F_Name";
 													expression="_this setVariable ['Name',_value,true];";
@@ -14123,7 +12323,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute4
+												class Attribute3
 												{
 													property="ModuleInfo";
 													expression="false";
@@ -14136,7 +12336,7 @@ class Mission
 														};
 													};
 												};
-												class Attribute5
+												class Attribute4
 												{
 													property="ModuleCurator_F_Addons";
 													expression="_this setVariable ['Addons',_value,true];";
@@ -14149,7 +12349,7 @@ class Mission
 														};
 													};
 												};
-												nAttributes=6;
+												nAttributes=5;
 											};
 										};
 									};
@@ -14213,26 +12413,26 @@ class Mission
 								};
 							};
 							id=9;
-							atlOffset=1.9073486e-06;
+							atlOffset=-0.034976959;
 						};
 					};
 					id=0;
-					atlOffset=3.8146973e-06;
+					atlOffset=0.073680878;
 				};
 			};
 			id=145;
-			atlOffset=3.8146973e-06;
+			atlOffset=0.073680878;
 		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=12;
+			nextID=10;
 		};
 		class Links
 		{
-			items=12;
+			items=10;
 			class Item0
 			{
 				linkID=0;
@@ -14276,8 +12476,8 @@ class Mission
 			class Item4
 			{
 				linkID=4;
-				item0=126;
-				item1=125;
+				item0=144;
+				item1=143;
 				class CustomData
 				{
 					type="Sync";
@@ -14286,8 +12486,8 @@ class Mission
 			class Item5
 			{
 				linkID=5;
-				item0=128;
-				item1=127;
+				item0=137;
+				item1=131;
 				class CustomData
 				{
 					type="Sync";
@@ -14296,8 +12496,8 @@ class Mission
 			class Item6
 			{
 				linkID=6;
-				item0=144;
-				item1=143;
+				item0=138;
+				item1=131;
 				class CustomData
 				{
 					type="Sync";
@@ -14306,7 +12506,7 @@ class Mission
 			class Item7
 			{
 				linkID=7;
-				item0=137;
+				item0=139;
 				item1=131;
 				class CustomData
 				{
@@ -14316,7 +12516,7 @@ class Mission
 			class Item8
 			{
 				linkID=8;
-				item0=138;
+				item0=140;
 				item1=131;
 				class CustomData
 				{
@@ -14326,26 +12526,6 @@ class Mission
 			class Item9
 			{
 				linkID=9;
-				item0=139;
-				item1=131;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item10
-			{
-				linkID=10;
-				item0=140;
-				item1=131;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item11
-			{
-				linkID=11;
 				item0=141;
 				item1=131;
 				class CustomData
