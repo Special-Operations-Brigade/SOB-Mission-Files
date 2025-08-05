@@ -1,1 +1,0 @@
-// Ticket display is handled by init.sqf
