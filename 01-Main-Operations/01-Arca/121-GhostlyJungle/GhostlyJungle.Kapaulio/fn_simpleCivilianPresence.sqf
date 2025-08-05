@@ -1,5 +1,11 @@
 [[],{
+	// Only run on server
+	if (!isServer) exitWith {};
+	
 	if !(isNil "isPopulateWorldAllowed") exitWith {};
+
+	// Debug message to confirm system is starting
+	"[CIVPOP] Starting civilian presence system on server" remoteExec ["systemChat", 0];
 
 	CIVPOP_fnc_startSystem = {
 		isPopulateWorldAllowed = true;
@@ -887,6 +893,7 @@
 		_movementUpdateRate = 8; // Increased from 5 for better MP performance
 		_updateRate = 0.5; // Increased from 0.25 for better MP performance
 		_debug = false;
+		"[CIVPOP] Starting pedestrian spawning" remoteExec ["systemChat", 0];
 		[_maxUnitCount,_maxRoads,_minTravenDistance,_maxTravelDistance,_deleteDistance,_movementUpdateRate,_updateRate,_debug] spawn CIVPOP_fnc_initPedestrians;
 
 		comment "Wait 3 seconds then spawn civilian vehicles";
@@ -900,6 +907,7 @@
 			_movementUpdateRate = 15; // Increased from 10 for better MP performance
 			_updateRate = 2; // Increased from 1 for better MP performance
 			_debug = false;
+			"[CIVPOP] Starting civilian vehicle spawning" remoteExec ["systemChat", 0];
 			[_maxUnitCount,_maxRoads,_minTravenDistance,_maxTravelDistance,_deleteDistance,_movementUpdateRate,_updateRate,_debug] spawn CIVPOP_fnc_initGroundVehicles;
 		};
 
@@ -914,6 +922,7 @@
 			_movementUpdateRate = 15; // Increased for better performance
 			_updateRate = 5; // Increased significantly to reduce frequency
 			_debug = false;
+			"[CIVPOP] Starting CIS infantry spawning" remoteExec ["systemChat", 0];
 			[_maxGroupCount,_maxRoads,_minTravenDistance,_maxTravelDistance,_deleteDistance,_movementUpdateRate,_updateRate,_debug] spawn CIVPOP_fnc_initCISGroups;
 		};
 
@@ -928,11 +937,12 @@
 			_movementUpdateRate = 15; // Increased for better performance
 			_updateRate = 4; // Increased to reduce frequency
 			_debug = false;
+			"[CIVPOP] Starting CIS vehicle spawning" remoteExec ["systemChat", 0];
 			[_maxUnitCount,_maxRoads,_minTravenDistance,_maxTravelDistance,_deleteDistance,_movementUpdateRate,_updateRate,_debug] spawn CIVPOP_fnc_initCISVehicles;
 		};
 	};
 	call CIVPOP_fnc_startSystem;
-}] remoteExec ["Spawn",2];
+}] call spawn;
 
 comment "
 // run on server

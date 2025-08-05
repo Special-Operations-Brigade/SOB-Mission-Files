@@ -2,9 +2,15 @@
 
 if ((!isServer) && (player != player)) then {waitUntil {player == player};};
 
-[] execVM "fn_loot.sqf";
-[] execVM "fn_simpleCivilianPresence.sqf";
-[] execVM "fn_simpleApocalypseEnvironment.sqf";
+// Server-side initialization
+if (isServer) then {
+	[] execVM "fn_loot.sqf";
+	[] execVM "fn_simpleCivilianPresence.sqf";
+	[] execVM "fn_simpleApocalypseEnvironment.sqf";
+};
 
-// Initialize ticket display for players
-[] execVM "functions\fn_initTicketSystem.sqf";
+// Client-side initialization  
+if (hasInterface) then {
+	// Initialize ticket display for players
+	[] execVM "functions\fn_initTicketSystem.sqf";
+};
