@@ -33,11 +33,15 @@
 			"OPTRE_M12_FAV_ins",
 			"3AS_BarcSideCar_501",
 			"MTI_Bug_Base",
+			"C_Tractor_01_F",
 			"MTI_Barc_Stretcher",
 			"B_Truck_01_transport_F",
 			"C_Van_01_fuel_F",
 			"C_Offroad_01_repair_F",
-			"B_G_Quadbike_01_F"
+			"B_G_Quadbike_01_F",
+			"OPTRE_m1015_mule_cma",
+			"OPTRE_m1015_mule_fuel_ins",
+			"OPTRE_m1015_mule_cover_ins"
 		];
 
 		allBlackListedAirportObjects = [
@@ -548,7 +552,7 @@
 		[_maxUnitCount,_maxRoads,_minTravenDistance,_maxTravelDistance,_deleteDistance,_movementUpdateRate,_updateRate,_debug] spawn CIVPOP_fnc_initPedestrians;
 
 		comment "Spawn IDAP Personnel (Pedestrians)";
-		_maxUnitCount = 15; // Increased from 8 for more IDAP presence
+		_maxUnitCount = 6; // Increased from 8 for more IDAP presence
 		_maxRoads = 1000;
 		_minTravenDistance = 200;
 		_maxTravelDistance = 400;
@@ -559,7 +563,7 @@
 		[_maxUnitCount,_maxRoads,_minTravenDistance,_maxTravelDistance,_deleteDistance,_movementUpdateRate,_updateRate,_debug] spawn CIVPOP_fnc_initIDAPPedestrians;
 
 		comment "Spawn IDAP Vehicles";
-		_maxUnitCount = 12; // Increased from 4 for more IDAP vehicle presence
+		_maxUnitCount = 8; // Increased from 4 for more IDAP vehicle presence
 		_maxRoads = 1000;
 		_minTravenDistance = 800;
 		_maxTravelDistance = 1200;
