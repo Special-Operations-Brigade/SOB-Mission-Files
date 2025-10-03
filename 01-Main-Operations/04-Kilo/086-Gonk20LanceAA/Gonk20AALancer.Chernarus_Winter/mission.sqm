@@ -21,18 +21,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=199;
+		nextID=231;
 	};
 	class Camera
 	{
-		pos[]={2113.907,184.23846,2355.1399};
-		dir[]={-0.88129902,-0.27151456,-0.38679135};
-		up[]={-0.24862383,0.96243441,-0.10911798};
-		aside[]={-0.40188915,1.6065314e-08,0.91569799};
+		pos[]={11726.295,462.1123,6602.1372};
+		dir[]={-0.31115016,-0.35058811,0.88336158};
+		up[]={-0.11647566,0.93652749,0.33067665};
+		aside[]={0.94322604,1.0593794e-08,0.33223519};
 	};
 };
 binarizationWanted=0;
-sourceName="IceBreakwLive";
+sourceName="Gonk20AALancer";
 addons[]=
 {
 	"JLTS_core_droids",
@@ -714,6 +714,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -723,8 +736,16 @@ class CustomAttributes
 					singleType="ARRAY";
 					class value
 					{
-						items=1;
+						items=2;
 						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="LRG_RespawnOnStartPosition";
+							};
+						};
+						class Item1
 						{
 							class data
 							{
@@ -733,19 +754,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
 				};
 			};
 		};
