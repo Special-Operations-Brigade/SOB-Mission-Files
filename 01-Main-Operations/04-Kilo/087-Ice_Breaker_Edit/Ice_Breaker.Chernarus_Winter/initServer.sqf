@@ -1,1 +1,0 @@
-[west, 125, false] call BIS_fnc_respawnTickets;
