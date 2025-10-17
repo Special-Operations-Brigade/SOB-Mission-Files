@@ -1083,8 +1083,25 @@ force lambs_main_radioGuer = 500;
 force lambs_main_radioShout = 100;
 force lambs_main_radioWest = 500;
 
-// Legion Studios
-ls_setting_impulseHintDisplay = 2;
+// Legion Studios: Core
+force ls_activecamo_allowFiring = false;
+force ls_activecamo_camouflageCoefficient = 0.00215254;
+force ls_activecamo_camouflageCoefficientVehicle = 0;
+force ls_activecamo_cooldown = 10;
+ls_activecamo_enabled = true;
+force ls_activecamo_maxAllowedHits = 3;
+ls_compat_ace_customBloodDropsEnabled = true;
+ls_equipment_enableRangefinderOverlay = true;
+ls_holoprojector_maxDistance = 50;
+force ls_impulsor_enableOverchargeCooldown = false;
+ls_impulsor_hintDisplay = 1;
+force ls_impulsor_overchargeDamageChance = 0;
+ls_lighting_ai_enableFlashlights = true;
+ls_props_reinsertCooldown = 5;
+ls_props_reinsertMessage = "%1 has requested a reinsert.";
+ls_vehicles_disableAutoVectoring = false;
+ls_vehicles_vivLoadingRange = 5;
+ls_weapons_adsSound_enabled = true;
 
 // Lightsaber's And Force
 force IMS_ForceKillFriendlies = false;
