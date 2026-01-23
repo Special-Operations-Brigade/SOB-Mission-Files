@@ -21,11 +21,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=268;
+		nextID=289;
 	};
 	class Camera
 	{
-		pos[]={12848.229,167.69534,3842.5339};
+		pos[]={17736.563,849.82111,13489.817};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
 		aside[]={0.99999994,0,-0};
@@ -482,6 +482,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -509,19 +522,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
 				};
 			};
 		};
