@@ -21,18 +21,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=447;
+		nextID=476;
 	};
 	class Camera
 	{
-		pos[]={14177.411,233.00934,14421.168};
-		dir[]={0.47273639,-0.33234322,-0.816181};
-		up[]={0.16657951,0.94315279,-0.28760073};
-		aside[]={-0.8653639,-5.8719888e-07,-0.50122416};
+		pos[]={14147.668,142.10909,16153.766};
+		dir[]={-0.3744399,-0.52073604,0.76722252};
+		up[]={-0.22839431,0.85371619,0.46797687};
+		aside[]={0.89868343,-3.5943231e-09,0.43859872};
 	};
 };
 binarizationWanted=0;
-sourceName="Nova";
+sourceName="ARCFTX_Storyz";
 addons[]=
 {
 	"A3_Modules_F",
@@ -358,19 +358,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -398,6 +385,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
@@ -489,7 +489,7 @@ class CustomAttributes
 				class data
 				{
 					singleType="BOOL";
-					value=1;
+					value=0;
 				};
 			};
 		};
@@ -20879,6 +20879,7 @@ class Mission
 					};
 					id=2110;
 					type="mti_factions_cis_B1_Crew";
+					atlOffset=1.9073486e-06;
 				};
 				class Item1
 				{
@@ -20888,12 +20889,12 @@ class Mission
 						position[]={13996.441,25.460911,16397.879};
 					};
 					side="East";
-					flags=4;
 					class Attributes
 					{
 					};
 					id=2111;
 					type="mti_factions_cis_B1_Crew";
+					atlOffset=2.000391;
 				};
 				class Item2
 				{
@@ -20903,12 +20904,13 @@ class Mission
 						position[]={13996.441,25.460911,16397.879};
 					};
 					side="East";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=2112;
 					type="mti_factions_cis_B1_Crew";
+					atlOffset=2.000391;
 				};
 				class Item3
 				{
