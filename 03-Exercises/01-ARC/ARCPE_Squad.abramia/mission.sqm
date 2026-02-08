@@ -21,14 +21,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=98;
+		nextID=103;
 	};
 	class Camera
 	{
-		pos[]={851.53125,138.0289,6204.0078};
-		dir[]={-0.77686721,-0.61904466,-0.11524006};
-		up[]={-0.61234671,0.78534979,-0.090835132};
-		aside[]={-0.1467347,1.656008e-08,0.98918468};
+		pos[]={6440.8628,288.86285,8624.9648};
+		dir[]={-0.83659524,-0.42035529,0.35161939};
+		up[]={-0.387633,0.90727824,0.16292444};
+		aside[]={0.38751003,-1.7451239e-06,0.92197675};
 	};
 };
 binarizationWanted=0;
@@ -435,7 +435,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=15;
+									items=17;
 									class Item0
 									{
 										class data
@@ -556,6 +556,22 @@ class CustomAttributes
 											value="ace_medical_ai_requireitems";
 										};
 									};
+									class Item15
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tfar_teamspeak_channel_name";
+										};
+									};
+									class Item16
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tfar_teamspeak_channel_password";
+										};
+									};
 								};
 							};
 						};
@@ -566,7 +582,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=15;
+									items=17;
 									class Item0
 									{
 										class data
@@ -959,6 +975,60 @@ class CustomAttributes
 													{
 														singleType="SCALAR";
 														value=2;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item15
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="EXAMTFAR";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item16
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Knightfall";
 													};
 												};
 												class Item1
@@ -2756,7 +2826,7 @@ class Mission
 							};
 							id=14;
 							type="B_Soldier_SL_F";
-							atlOffset=0.00024414062;
+							atlOffset=0.00024414063;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -4721,7 +4791,7 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+38;
-					position[]={5515.126,50.338669,9659.4062};
+					position[]={5515.126,50.338669,9659.4063};
 					completitionRadius=5;
 					class Effects
 					{
@@ -11512,7 +11582,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7174.1562,41.711437,8473.9912};
+						position[]={7174.1563,41.711437,8473.9912};
 					};
 					side="East";
 					flags=4;
@@ -11527,7 +11597,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7174.1562,41.711437,8473.9912};
+						position[]={7174.1563,41.711437,8473.9912};
 					};
 					side="East";
 					flags=6;

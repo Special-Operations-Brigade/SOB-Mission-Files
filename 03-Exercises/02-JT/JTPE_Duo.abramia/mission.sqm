@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=513;
 	mods[]=
 	{
 		"WBK_Zombies_AdvancedEditorSettings",
@@ -13,18 +13,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1151;
+		nextID=1154;
 	};
 	class LayerIndexProvider
 	{
-		nextID=142;
+		nextID=155;
 	};
 	class Camera
 	{
-		pos[]={9221.6562,195.19978,1914.1063};
-		dir[]={0.016788775,-0.72171688,0.69198483};
-		up[]={0.017504979,0.69218832,0.72150463};
-		aside[]={0.99970591,-9.3132257e-10,-0.024254631};
+		pos[]={8905.1104,58.559494,6275.4722};
+		dir[]={0.82111198,-0.57033229,-0.024066331};
+		up[]={0.57011831,0.82138628,-0.016710032};
+		aside[]={-0.029298564,-3.049754e-07,-0.99961436};
 	};
 };
 binarizationWanted=0;
@@ -54,7 +54,7 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"ace_spectator",
 	"3AS_Structures2_GenericFOB",
-	"NCA_resupply",
+	"mti_armoury_vehicles_laati",
 	"sob_compat_arsenal"
 };
 class AddonsMetaData
@@ -200,10 +200,10 @@ class AddonsMetaData
 		};
 		class Item22
 		{
-			className="NCA_resupply";
-			name="21st Auxiliary Assets - Resupply";
-			author="21st Auxiliary Assets";
-			url="https://discord.gg/21stNovaCorps";
+			className="mti_armoury_vehicles";
+			name="MokTech Industries - Vehicles";
+			author="MokTech Industries";
+			url="https://discord.gg/Pu2gdBd7Te/";
 		};
 		class Item23
 		{
@@ -348,7 +348,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=15;
+									items=17;
 									class Item0
 									{
 										class data
@@ -469,6 +469,22 @@ class CustomAttributes
 											value="ace_medical_ai_requireitems";
 										};
 									};
+									class Item15
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tfar_teamspeak_channel_name";
+										};
+									};
+									class Item16
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tfar_teamspeak_channel_password";
+										};
+									};
 								};
 							};
 						};
@@ -479,7 +495,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=15;
+									items=17;
 									class Item0
 									{
 										class data
@@ -872,6 +888,60 @@ class CustomAttributes
 													{
 														singleType="SCALAR";
 														value=2;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item15
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="EXAMTFAR";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item16
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Knightfall";
 													};
 												};
 												class Item1
@@ -3306,7 +3376,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9441.9062,59.396141,1769.856};
+						position[]={9441.9063,59.396141,1769.856};
 					};
 					side="East";
 					flags=7;
@@ -3323,7 +3393,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9446.9062,57.77713,1764.856};
+						position[]={9446.9063,57.77713,1764.856};
 					};
 					side="East";
 					flags=5;
@@ -3339,7 +3409,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9436.9062,60.46648,1764.856};
+						position[]={9436.9063,60.46648,1764.856};
 					};
 					side="East";
 					flags=5;
@@ -3356,7 +3426,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9451.9062,56.68222,1759.856};
+						position[]={9451.9063,56.68222,1759.856};
 					};
 					side="East";
 					flags=1;
@@ -3551,7 +3621,7 @@ class Mission
 			flags=1;
 			id=865;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3686,7 +3756,7 @@ class Mission
 			flags=1;
 			id=871;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3820,7 +3890,7 @@ class Mission
 			flags=1;
 			id=877;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3954,7 +4024,7 @@ class Mission
 			flags=1;
 			id=883;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4088,7 +4158,7 @@ class Mission
 			flags=1;
 			id=889;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4222,7 +4292,7 @@ class Mission
 			flags=1;
 			id=895;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4356,7 +4426,7 @@ class Mission
 			flags=1;
 			id=901;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4490,7 +4560,7 @@ class Mission
 			flags=1;
 			id=907;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4624,7 +4694,7 @@ class Mission
 			flags=1;
 			id=913;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4758,7 +4828,7 @@ class Mission
 			flags=1;
 			id=919;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4892,7 +4962,7 @@ class Mission
 			flags=1;
 			id=925;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5026,7 +5096,7 @@ class Mission
 			flags=1;
 			id=931;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6633,7 +6703,7 @@ class Mission
 			flags=1;
 			id=1025;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6767,7 +6837,7 @@ class Mission
 			flags=1;
 			id=1031;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6901,7 +6971,7 @@ class Mission
 			flags=1;
 			id=1037;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7035,7 +7105,7 @@ class Mission
 			flags=1;
 			id=1043;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7169,7 +7239,7 @@ class Mission
 			flags=1;
 			id=1049;
 			type="lambs_wp_TaskPatrol";
-			atlOffset=-0.098632812;
+			atlOffset=-0.098632813;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7660,7 +7730,7 @@ class Mission
 					class Attributes
 					{
 						name="zeus_1";
-						description="Proctor @Exercise  Staff";
+						description="Proctor @Exercise Staff";
 						isPlayable=1;
 						class Inventory
 						{
@@ -8906,49 +8976,50 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8916.7881,54.852821,6280.2676};
-				angles[]={0,1.6076639,0};
+				position[]={8944.9482,54.743557,6276.4854};
+				angles[]={-0,3.148298,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=1149;
-			type="NCA_resupplyBox_medical";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
+			id=1151;
+			type="mti_armoury_vehicles_laati_mk2";
 		};
 		class Item96
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8919.8623,54.608208,6280.1484};
-				angles[]={0,3.191818,0};
+				position[]={8920.875,54.588779,6279.3384};
+				angles[]={0,3.1691861,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=1150;
-			type="sob_compat_arsenal_locker_rc";
+			id=1152;
+			type="sob_compat_arsenal_locker_jt";
+			atlOffset=0.23799896;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="mti_arsenal_Arsenal_Preset";
+					expression="if (_value > 0) then {[_this, _value] call mti_arsenal_fnc_initArsenal;}";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=8;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
