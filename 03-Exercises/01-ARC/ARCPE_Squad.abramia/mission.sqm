@@ -13,22 +13,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1033;
+		nextID=1038;
 	};
 	class MarkerIDProvider
 	{
-		nextID=5;
+		nextID=10;
 	};
 	class LayerIndexProvider
 	{
-		nextID=103;
+		nextID=113;
 	};
 	class Camera
 	{
-		pos[]={6440.8628,288.86285,8624.9648};
-		dir[]={-0.83659524,-0.42035529,0.35161939};
-		up[]={-0.387633,0.90727824,0.16292444};
-		aside[]={0.38751003,-1.7451239e-06,0.92197675};
+		pos[]={5367.9604,239.26378,9669.9375};
+		dir[]={-0.86087328,-0.50296444,0.078579679};
+		up[]={-0.50118047,0.86408234,0.045748983};
+		aside[]={0.090905868,-8.6934597e-07,0.99594283};
 	};
 };
 binarizationWanted=0;
@@ -54,13 +54,14 @@ addons[]=
 	"sob_compat_arsenal",
 	"mti_factions_sob",
 	"mti_factions_common",
-	"mti_armoury_vehicles_laati"
+	"mti_armoury_vehicles_laati",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=19;
+		items=20;
 		class Item0
 		{
 			className="3AS_Prop_Terminals";
@@ -184,6 +185,13 @@ class AddonsMetaData
 			name="MokTech Industries - Vehicles";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
+		};
+		class Item19
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -1218,7 +1226,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=73;
+		items=78;
 		class Item0
 		{
 			dataType="Object";
@@ -11716,6 +11724,202 @@ class Mission
 			id=1032;
 			type="mti_armoury_vehicles_laati_mk2";
 			atlOffset=0.0082702637;
+		};
+		class Item73
+		{
+			dataType="Marker";
+			position[]={7155.918,41.709999,8473.5244};
+			name="marker_0";
+			text="Artillery";
+			type="o_art";
+			id=1033;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item74
+		{
+			dataType="Marker";
+			position[]={6652.9761,156.25999,9540.751};
+			name="marker_1";
+			type="o_antiair";
+			id=1034;
+			atlOffset=4.2745819;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item75
+		{
+			dataType="Marker";
+			position[]={6061.564,153.15401,9350.2529};
+			name="marker_2";
+			type="o_antiair";
+			id=1035;
+			atlOffset=-0.00038146973;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item76
+		{
+			dataType="Marker";
+			position[]={4814.2051,190.69099,9231.3564};
+			name="marker_3";
+			type="o_antiair";
+			id=1036;
+			atlOffset=0.00051879883;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item77
+		{
+			dataType="Marker";
+			position[]={5099.4668,11.537,9947.7334};
+			name="marker_4";
+			text="Exfil";
+			type="mil_pickup";
+			id=1037;
+			atlOffset=-0.00046443939;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections

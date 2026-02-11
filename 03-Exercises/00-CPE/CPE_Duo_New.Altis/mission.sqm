@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1;
 	mods[]=
 	{
 		"WBK_Zombies_AdvancedEditorSettings",
@@ -13,18 +13,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=849;
+		nextID=853;
+	};
+	class MarkerIDProvider
+	{
+		nextID=2;
 	};
 	class LayerIndexProvider
 	{
-		nextID=55;
+		nextID=73;
 	};
 	class Camera
 	{
-		pos[]={14638.601,35.772507,16733.811};
-		dir[]={-0.65016747,-0.7034719,-0.2874839};
-		up[]={-0.64340931,0.71066922,-0.28449601};
-		aside[]={-0.40444934,2.4165493e-06,0.91470051};
+		pos[]={7388.9331,110.64516,20880.203};
+		dir[]={0.53689599,-0.80964035,0.23747525};
+		up[]={0.74043429,0.58692133,0.32750359};
+		aside[]={0.40453961,-7.7241566e-08,-0.9146015};
 	};
 };
 binarizationWanted=0;
@@ -72,13 +76,14 @@ addons[]=
 	"sob_compat_arsenal",
 	"mti_modules",
 	"A3_Characters_F_Common",
-	"mti_armoury_vehicles_laati"
+	"mti_armoury_vehicles_laati",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=39;
+		items=40;
 		class Item0
 		{
 			className="3AS_AAT";
@@ -323,6 +328,13 @@ class AddonsMetaData
 			name="MokTech Industries - Vehicles";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
+		};
+		class Item39
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -1161,7 +1173,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=154;
+		items=157;
 		class Item0
 		{
 			dataType="Object";
@@ -5785,7 +5797,7 @@ class Mission
 			name="The Wall";
 			class Entities
 			{
-				items=93;
+				items=92;
 				class Item0
 				{
 					dataType="Object";
@@ -7416,25 +7428,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6109.5884,140.89177,20938.066};
-						angles[]={0,2.385406,0};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-						dynamicSimulation=1;
-					};
-					id=365;
-					type="mti_factions_cis_ParticleCannon";
-					atlOffset=0.031158447;
-				};
-				class Item89
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6064.8198,171.85495,20894.533};
+						position[]={6073.1079,171.9537,20894.385};
 						angles[]={0,5.2651997,0};
 					};
 					side="East";
@@ -7448,9 +7442,9 @@ class Mission
 					};
 					id=369;
 					type="mti_factions_cis_Lance";
-					atlOffset=0.34918213;
+					atlOffset=0.44793701;
 				};
-				class Item90
+				class Item89
 				{
 					dataType="Object";
 					class PositionInfo
@@ -7469,7 +7463,7 @@ class Mission
 					type="3AS_FOB_Light_Tall_Prop";
 					atlOffset=6.288147;
 				};
-				class Item91
+				class Item90
 				{
 					dataType="Object";
 					class PositionInfo
@@ -7488,7 +7482,7 @@ class Mission
 					type="3AS_FOB_Light_Tall_Prop";
 					atlOffset=9.8557892;
 				};
-				class Item92
+				class Item91
 				{
 					dataType="Object";
 					class PositionInfo
@@ -7509,7 +7503,7 @@ class Mission
 				};
 			};
 			id=373;
-			atlOffset=0.32466125;
+			atlOffset=0.81408691;
 		};
 		class Item30
 		{
@@ -11001,33 +10995,45 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6109.5884,138.94128,20938.117};
+						position[]={6110.8022,140.86205,20937.211};
+						angles[]={0,1.8357198,0};
 					};
 					side="East";
-					flags=5;
 					class Attributes
 					{
-						isPlayer=1;
 					};
-					id=841;
-					type="mti_factions_cis_B1_Crew";
-					atlOffset=0.031158447;
+					id=850;
+					type="mti_factions_cis_B1_E5";
+					atlOffset=1.9519196;
 					class CustomAttributes
 					{
 						class Attribute0
 						{
-							property="ls_skill_crewman";
-							expression="if (_value != (getNumber (configOf _this >> ""ls_common_ls_skill_crewman""))) then { _this setVariable ['ls_skill_crewman', _value, true] }";
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="ls_voice_b1Droid";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="SCALAR";
-									value=1;
+									value=1.02;
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -11057,8 +11063,8 @@ class Mission
 					class Item1
 					{
 						linkID=1;
-						item0=841;
-						item1=365;
+						item0=850;
+						item1=849;
 						class CustomData
 						{
 							role=2;
@@ -14116,6 +14122,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6064.8198,172.01897,20894.584};
+						angles[]={0,5.2651997,0};
 					};
 					side="East";
 					flags=1;
@@ -18118,6 +18125,108 @@ class Mission
 			};
 			id=848;
 			type="mti_armoury_vehicles_laati_mk2";
+		};
+		class Item154
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6110.8022,140.86061,20937.16};
+				angles[]={0,1.8357131,0};
+			};
+			side="East";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=849;
+			type="mti_factions_cis_ParticleCannon";
+		};
+		class Item155
+		{
+			dataType="Marker";
+			position[]={7404.4072,78.016998,20889.215};
+			name="marker_0";
+			text="Last Known LAAT Location";
+			type="mil_unknown";
+			colorName="ColorCIV";
+			id=851;
+			atlOffset=0.00042724609;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item156
+		{
+			dataType="Marker";
+			position[]={6999.9419,189.22701,20002.76};
+			name="marker_1";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorEAST";
+			fillName="Border";
+			a=2000;
+			b=2000;
+			drawBorder=1;
+			id=852;
+			atlOffset=-0.00044250488;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections

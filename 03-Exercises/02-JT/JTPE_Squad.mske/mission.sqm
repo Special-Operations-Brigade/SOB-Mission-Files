@@ -13,18 +13,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2302;
+		nextID=2303;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
 	};
 	class LayerIndexProvider
 	{
-		nextID=310;
+		nextID=324;
 	};
 	class Camera
 	{
-		pos[]={16034.658,302.104,6859.001};
-		dir[]={-0.53204554,-0.49068102,0.69007879};
-		up[]={-0.29960576,0.8713339,0.38859764};
-		aside[]={0.79196823,-7.0119859e-07,0.61060274};
+		pos[]={4916.3232,575.0697,6528.7827};
+		dir[]={0.020184273,-0.90382022,0.42743611};
+		up[]={0.042632449,0.42791247,0.90281421};
+		aside[]={0.998887,0,-0.047169171};
 	};
 };
 binarizationWanted=0;
@@ -91,13 +95,14 @@ addons[]=
 	"3AS_Structures2_GenericFOB",
 	"mti_armoury_vehicles_laati",
 	"lsb_modules",
-	"sob_compat_arsenal"
+	"sob_compat_arsenal",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=55;
+		items=56;
 		class Item0
 		{
 			className="3AS_Prop_Catwalks";
@@ -435,6 +440,13 @@ class AddonsMetaData
 			name="SOB Aux - Compat";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
+		};
+		class Item55
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -1297,7 +1309,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=211;
+		items=212;
 		class Item0
 		{
 			dataType="Layer";
@@ -26881,7 +26893,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={16032.073,299.66473,6862.4126};
-						angles[]={0,1.5833957,-0};
+						angles[]={0,1.5833957,0};
 					};
 					side="East";
 					flags=3;
@@ -26962,6 +26974,51 @@ class Mission
 			};
 			id=2300;
 			atlOffset=0.96466064;
+		};
+		class Item211
+		{
+			dataType="Marker";
+			position[]={4819.2549,405.82001,6387.5752};
+			name="marker_0";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorEAST";
+			fillName="Border";
+			a=3000;
+			b=2500;
+			drawBorder=1;
+			id=2302;
+			atlOffset=0.00036621094;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections

@@ -13,22 +13,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1520;
+		nextID=1521;
 	};
 	class MarkerIDProvider
 	{
-		nextID=5;
+		nextID=6;
 	};
 	class LayerIndexProvider
 	{
-		nextID=173;
+		nextID=184;
 	};
 	class Camera
 	{
-		pos[]={6122.5718,119.14393,4063.9495};
-		dir[]={-0.98191255,-0.087097764,0.16875844};
-		up[]={-0.086044155,0.99615973,0.014785169};
-		aside[]={0.16939798,3.0819756e-06,0.98566264};
+		pos[]={5161.4766,982.09943,4286.2822};
+		dir[]={-0.47807282,-0.86572748,0.14895819};
+		up[]={-0.82653224,0.5004819,0.25752738};
+		aside[]={0.29750484,-2.2605291e-06,0.95484245};
 	};
 };
 binarizationWanted=0;
@@ -64,13 +64,14 @@ addons[]=
 	"A3_Modules_F",
 	"mti_modules",
 	"sob_compat_arsenal",
-	"mti_armoury_vehicles_laati"
+	"mti_armoury_vehicles_laati",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -247,6 +248,13 @@ class AddonsMetaData
 			name="MokTech Industries - Vehicles";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
+		};
+		class Item28
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -1281,7 +1289,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=64;
+		items=65;
 		class Item0
 		{
 			dataType="Layer";
@@ -17690,6 +17698,51 @@ class Mission
 			};
 			id=1507;
 			type="mti_armoury_vehicles_laati_mk2";
+		};
+		class Item64
+		{
+			dataType="Marker";
+			position[]={4284.3062,412.508,4241.396};
+			name="marker_0";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorEAST";
+			fillName="Border";
+			a=2300;
+			b=1500;
+			drawBorder=1;
+			id=1520;
+			atlOffset=-0.00015258789;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections
