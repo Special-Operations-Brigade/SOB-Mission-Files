@@ -161,6 +161,7 @@ opfor_statics = [
 
 opfor_recyclable = [
 	["mti_factions_cis_EWeb_Unarmoured",0,round (20 / GRLIB_recycling_percentage),0],
+	["mti_factions_cis_Combat_speeder",0,round (20 / GRLIB_recycling_percentage),0],
 	["mti_factions_cis_GMG",0,round (40 / GRLIB_recycling_percentage),0],
 	["mti_factions_cis_Shellcracker_AA_Static",0,round (80 / GRLIB_recycling_percentage),0],
 	["mti_factions_cis_Shellcracker_AT_Static",0,round (80 / GRLIB_recycling_percentage),0],
