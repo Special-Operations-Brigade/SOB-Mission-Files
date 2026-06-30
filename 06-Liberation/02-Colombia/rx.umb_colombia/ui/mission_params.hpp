@@ -16,7 +16,7 @@ class Params
 		title = "Open Mission Parameters";
 		values[] = { 0, 1 };
 		texts[] = { $STR_PARAMS_DISABLED, $STR_PARAMS_ENABLED };
-		default = 0;
+		default = 1;
 	};
 	class Space1 {
 		title = "";
@@ -70,7 +70,7 @@ class Params
 		title = "Force loading (ignore mod/save errors)";
 		values[] = {0,1};
 		texts[] = { $STR_NO,$STR_YES };
-		default = 0;
+		default = 1;
 	};
 	class LogSettings {
 		title = "Log Mission Settings at startup";
