@@ -1,0 +1,5 @@
+params ["_start_pos", "_radius"];
+
+private _ret_pos = (_start_pos getPos [_radius, floor random 360]);
+_ret_pos set [2, 0];
+_ret_pos;
