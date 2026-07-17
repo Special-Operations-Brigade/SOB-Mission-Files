@@ -190,11 +190,11 @@ set-location "C:\Program Files (x86)\Mikero\DePboTools\bin"
 Write-Host "Booting the Server." -ForegroundColor red -BackgroundColor white
 
 if ($bg -eq 0) {
-	Start-Process -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -port=$Server_port -name=ArcaServer `"-config=$Server_Config`" -autoinit -noLogs -limitFPS=200 `"-ServerMod=$ServerMods`" `"-Mod=$ClientMods`""
+	Start-Process -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -port=$Server_port -name=ArcaServer `"-config=$Server_Config`" -autoinit -limitFPS=200 `"-ServerMod=$ServerMods`" `"-Mod=$ClientMods`""
 }
 
 if ($bg -eq 1) {
-	Start-Process -WindowStyle Hidden -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -port=$Server_port -name=ArcaServer `"-config=$Server_Config`" -noLogs -autoinit -limitFPS=200 `"-ServerMod=$ServerMods`" `"-Mod=$ClientMods`""
+	Start-Process -WindowStyle Hidden -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -port=$Server_port -name=ArcaServer `"-config=$Server_Config`" -autoinit -limitFPS=200 `"-ServerMod=$ServerMods`" `"-Mod=$ClientMods`""
 }
 
 #Boot Headless Client/s
@@ -204,10 +204,10 @@ for ($i=1; $i -le $Headless_Clients; $i++)
 	sleep -seconds 30
 
 	if ($bg -eq 0) {
-    	Start-Process -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -client -connect=127.0.0.1 -port=$Server_port -password=$Password -noLogs -limitFPS=200 `"-Mod=$HCMods`""
+    	Start-Process -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -client -connect=127.0.0.1 -port=$Server_port -password=$Password -limitFPS=200 `"-Mod=$HCMods`""
 	}
 
 	if ($bg -eq 1) {
-    	Start-Process -WindowStyle Hidden -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -client -connect=127.0.0.1 -port=$Server_port -noLogs -password=$Password -limitFPS=200 `"-Mod=$HCMods`""
+    	Start-Process -WindowStyle Hidden -FilePath "$Server_Dir\arma3server_x64.exe" -ArgumentList "-profiles=`"$Server_Profiles`" -client -connect=127.0.0.1 -port=$Server_port -password=$Password -limitFPS=200 `"-Mod=$HCMods`""
 	}
 }
