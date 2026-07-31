@@ -21,14 +21,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1009;
+		nextID=1108;
 	};
 	class Camera
 	{
-		pos[]={9651.7158,190.21822,9798.0059};
-		dir[]={-0.61586428,-0.66828734,0.41732082};
-		up[]={-0.55324739,0.74389911,0.37489012};
-		aside[]={0.56097573,1.23051e-07,0.8278634};
+		pos[]={10448.562,288.82248,8709.9678};
+		dir[]={0.33175784,-0.46379361,0.82148916};
+		up[]={0.17367575,0.88594192,0.43005079};
+		aside[]={0.92724681,2.7848728e-08,-0.37446803};
 	};
 };
 binarizationWanted=0;
@@ -91,7 +91,6 @@ addons[]=
 	"lsb_structures",
 	"mti_factions_common",
 	"JLTS_weapons_E5",
-	"SEA_JLTS_EA_Scopes",
 	"ls_props_structures",
 	"A3_Weapons_F_Acc",
 	"ace_realisticnames",
@@ -123,7 +122,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=70;
+		items=69;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -455,119 +454,113 @@ class AddonsMetaData
 		};
 		class Item51
 		{
-			className="SEA_JLTS_EA_Scopes";
-			name="SEA_JLTS_EA_Scopes";
-			author="Schlabbie";
-		};
-		class Item52
-		{
 			className="ls_props";
 			name="Legion Studios: Core - Props";
 			author="Legion Studios";
 		};
-		class Item53
+		class Item52
 		{
 			className="mti_medical";
 			name="MokTech Industries - Medical";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item54
+		class Item53
 		{
 			className="JLTS_characters_DroidArmor";
 			name="JLTS The Great War - Droids";
 			author="MrClock";
 		};
-		class Item55
+		class Item54
 		{
 			className="3AS_Prop_LaserWalls";
 			name="3AS_Prop_LaserWalls";
 			author="3rd Army Studios";
 		};
-		class Item56
+		class Item55
 		{
 			className="ls_radios";
 			name="Legion Studios: Core - Radios";
 			author="Legion Studios";
 		};
-		class Item57
+		class Item56
 		{
 			className="sob_equipment";
 			name="SOB Aux - Equipment";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item58
+		class Item57
 		{
 			className="mti_armoury_explosives";
 			name="MokTech Industries - Explosives";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item59
+		class Item58
 		{
 			className="JLTS_weapons_RPS6";
 			name="JLTS The Great War - Weapons RPS-6";
 			author="MrClock";
 		};
-		class Item60
+		class Item59
 		{
 			className="mti_modules";
 			name="MokTech Industries - Modules";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item61
+		class Item60
 		{
 			className="mti_factions_sob";
 			name="MokTech Industries - SOB";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item62
+		class Item61
 		{
 			className="mti_armoury_equipment";
 			name="MokTech Industries - Equipment";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item63
+		class Item62
 		{
 			className="JLTS_C_IDs";
 			name="JLTS Contraband - IDs";
 			author="MrClock";
 		};
-		class Item64
+		class Item63
 		{
 			className="JLTS_C_Credits";
 			name="JLTS Contraband - Credits";
 			author="MrClock";
 		};
-		class Item65
+		class Item64
 		{
 			className="CUP_Editor_Plants_Config";
 			name="CUP_Editor_Plants_Config";
 		};
-		class Item66
+		class Item65
 		{
 			className="CUP_Editor_Rocks_Config";
 			name="CUP_Editor_Rocks_Config";
 		};
-		class Item67
+		class Item66
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item68
+		class Item67
 		{
 			className="mti_common";
 			name="MokTech Industries - Common";
 			author="MokTech Industries";
 			url="https://discord.gg/Pu2gdBd7Te/";
 		};
-		class Item69
+		class Item68
 		{
 			className="JLTS_core_droids";
 			name="JLTS The Great War - Core droids";
@@ -624,19 +617,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="SCALAR";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -656,6 +636,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=0;
 				};
 			};
 		};
@@ -1946,7 +1939,7 @@ class Mission
 													dataType="Logic";
 													class PositionInfo
 													{
-														position[]={18170.197,8.7000008,18047.812};
+														position[]={18170.197,8.7000008,18047.813};
 														angles[]={0,1.3538934,0};
 													};
 													name="HC1";
@@ -2784,7 +2777,7 @@ class Mission
 					};
 					id=2762;
 					type="sob_compat_arsenal_locker_arc";
-					atlOffset=2.8610229e-06;
+					atlOffset=0.0307827;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2842,7 +2835,7 @@ class Mission
 				};
 			};
 			id=73;
-			atlOffset=0.045548439;
+			atlOffset=0.049395561;
 		};
 		class Item1
 		{
@@ -3473,7 +3466,7 @@ class Mission
 											};
 											id=232;
 											type="Crater";
-											atlOffset=0.27539062;
+											atlOffset=0.27539063;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -9408,7 +9401,6 @@ class Mission
 							class Attributes
 							{
 								init="this disableAI ""PATH"";";
-								isPlayer=1;
 								class Inventory
 								{
 									class handgun
@@ -9731,7 +9723,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={10421.106,233.56281,8476.5312};
+								position[]={10421.106,233.56281,8476.5313};
 								angles[]={0,1.5208218,0};
 							};
 							side="East";
@@ -10025,7 +10017,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={10404.111,233.56281,8479.9062};
+								position[]={10404.111,233.56281,8479.9063};
 								angles[]={0,1.4266781,0};
 							};
 							side="East";
@@ -10487,7 +10479,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10505.274,213.81602,8572.4062};
+						position[]={10505.274,213.81602,8572.4063};
 						angles[]={1.5707964,2.4905955e-07,5.1048927};
 					};
 					side="Empty";
@@ -10552,7 +10544,7 @@ class Mission
 					};
 					id=796;
 					type="mti_armoury_props_intel_datapad";
-					atlOffset=1.0395508;
+					atlOffset=1.0241089;
 				};
 				class Item84
 				{
@@ -10573,7 +10565,7 @@ class Mission
 				};
 			};
 			id=787;
-			atlOffset=6.1775055;
+			atlOffset=6.1736603;
 		};
 		class Item3
 		{
@@ -10990,7 +10982,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={8487.3584,192.39638,7787.4062};
+												position[]={8487.3584,192.39638,7787.4063};
 											};
 											side="Empty";
 											class Attributes
@@ -12207,7 +12199,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={8426.9355,194.13887,7780.0312};
+								position[]={8426.9355,194.13887,7780.0313};
 								angles[]={0,0.95621699,0};
 							};
 							side="East";
@@ -13806,7 +13798,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9547.209,139.995,9786.9062};
+						position[]={9547.209,139.995,9786.9063};
 					};
 					side="Empty";
 					flags=5;
@@ -16539,7 +16531,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={11387.059,200.33427,9563.2812};
+								position[]={11387.059,200.33427,9563.2813};
 								angles[]={0,5.4721518,0};
 							};
 							side="East";
@@ -19411,7 +19403,7 @@ class Mission
 						angles[]={0,5.663085,0};
 					};
 					side="East";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						class Inventory
@@ -19520,7 +19512,6 @@ class Mission
 					};
 					id=1416;
 					type="mti_factions_cis_B1_E5";
-					atlOffset=1.8075104;
 				};
 			};
 			class Attributes
@@ -20236,7 +20227,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="Friendlies";
+							value="No";
 						};
 					};
 				};
@@ -20249,7 +20240,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="Empty";
+							value="OPFOR";
 						};
 					};
 				};
@@ -20288,7 +20279,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="20";
+							value="50";
 						};
 					};
 				};
@@ -20301,7 +20292,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="50";
+							value="75";
 						};
 					};
 				};
@@ -20314,7 +20305,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="50";
+							value="75";
 						};
 					};
 				};
@@ -20355,7 +20346,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="Friendlies";
+							value="No";
 						};
 					};
 				};
@@ -20368,7 +20359,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="Empty";
+							value="OPFOR";
 						};
 					};
 				};
@@ -20407,7 +20398,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="50";
+							value="90";
 						};
 					};
 				};
@@ -22809,7 +22800,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9966.6562,175.18152,8656.4287};
+						position[]={9966.6563,175.18152,8656.4287};
 						angles[]={6.2651849,2.3781888,6.247201};
 					};
 					side="Empty";
@@ -23241,7 +23232,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9974.1562,174.77647,8657.2686};
+						position[]={9974.1563,174.77647,8657.2686};
 						angles[]={6.2651849,3.9237928,6.247201};
 					};
 					side="Empty";
@@ -31151,7 +31142,7 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+38;
-					position[]={9431.3271,170.72995,8543.4062};
+					position[]={9431.3271,170.72995,8543.4063};
 					class Effects
 					{
 					};
@@ -34909,7 +34900,7 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+38;
-					position[]={10401.602,127.11354,9656.5312};
+					position[]={10401.602,127.11354,9656.5313};
 					class Effects
 					{
 					};
@@ -36132,7 +36123,7 @@ class Mission
 					showWP="NEVER";
 					id=2893;
 					type="Move";
-					atlOffset=0.00024414062;
+					atlOffset=0.00024414063;
 				};
 				class Item11
 				{
@@ -38913,7 +38904,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9371.2266,175.81245,8759.5312};
+						position[]={9371.2266,175.81245,8759.5313};
 					};
 					side="East";
 					flags=7;
@@ -39063,7 +39054,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9376.2266,176.49796,8754.5312};
+						position[]={9376.2266,176.49796,8754.5313};
 					};
 					side="East";
 					flags=5;
@@ -39199,7 +39190,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9366.2266,176.34781,8754.5312};
+						position[]={9366.2266,176.34781,8754.5313};
 					};
 					side="East";
 					flags=5;
@@ -39335,7 +39326,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9381.2266,177.17451,8749.5312};
+						position[]={9381.2266,177.17451,8749.5313};
 					};
 					side="East";
 					flags=5;
@@ -44556,7 +44547,7 @@ class Mission
 		class Item100
 		{
 			dataType="Marker";
-			position[]={9560.4062,139.995,9832.6328};
+			position[]={9560.4063,139.995,9832.6328};
 			name="marker_9";
 			type="JLTS_CIS_unknown";
 			alpha=0;
